@@ -52,7 +52,10 @@ AIOps_incident_management/
 │   ├── nodes/                       # Pipeline nodes (Stages 1 to 7)
 │   │   ├── collect/                 # Stage 1: Telemetry ingestion
 │   │   ├── feature_engineering/     # Stage 2: Feature Extraction
-│   │   ├── preliminary_severity/    # Stage 3: DEVOPS Severity Engine
+│   │   ├── preliminary_severity/    # Stage 3: Severity Engine Node
+│   │   │   ├── severity_config/     # Threshold yaml configs
+│   │   │   ├── severity_engine/     # EMA & Hysteresis rules engine package
+│   │   │   └── severity_node.py     # Stage 3 wrapper node
 │   │   ├── classification/          # Stage 4: LightGBM ML Classifier
 │   │   ├── tumbling_window/         # Stage 5: Prediction smoother
 │   │   ├── forecasting/             # Stage 6: ARIMA TTF Forecaster
@@ -64,10 +67,6 @@ AIOps_incident_management/
 │   ├── src/                         # React components, charts & layout
 │   ├── package.json                 # Node dependencies
 │   └── vite.config.js               # Vite configurations
-│
-└── DEVOPS/                          # Local Shared DEVOPS Package (Self-contained)
-    ├── severity_config/             # Yaml configuration & rulesets
-    └── severity_engine/             # Hysteresis and EMA rules engine
 ```
 
 ---
@@ -171,4 +170,4 @@ Open **[http://localhost:5173](http://localhost:5173)** in your browser to view 
 
 ## 💡 Troubleshooting
 * **Missing Database Error**: If the pipeline or API reports a missing database, run the `run_simulator.py` script first to initialize the SQLite database at `backend/app_data_generator/output/simulator_db.sqlite`.
-* **DEVOPS package missing**: Verify the `DEVOPS` folder is present at the root of the project structure and your execution path points to `backend`.
+* **Database Reset**: You can clear or reset simulation state by deleting the SQLite database at `backend/app_data_generator/output/simulator_db.sqlite` and running `run_simulator.py` again.
