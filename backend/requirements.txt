@@ -1,0 +1,33 @@
+# AIOps Backend — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# Core data
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Machine Learning
+lightgbm>=4.0.0
+scikit-learn>=1.2.0
+joblib>=1.2.0
+
+# Time-Series Forecasting
+pmdarima>=2.0.0
+statsmodels>=0.14.0
+scipy>=1.10.0
+
+# Log parsing
+drain3>=0.9.11
+
+# Progress bars
+tqdm>=4.64.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# API Web Server
+fastapi>=0.95.0
+uvicorn>=0.20.0
+pydantic>=2.0.0
+
+# Configuration parsing
+PyYAML>=6.0

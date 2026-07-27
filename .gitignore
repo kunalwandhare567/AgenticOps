@@ -1,0 +1,56 @@
+# Node dependencies
+node_modules/
+dist/
+dist-ssr/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Python dependencies & environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.venv/
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# SQLite & output files
+backend/app_data_generator/output/
+backend/nodes/feature_engineering/output/
+backend/nodes/preliminary_severity/output/
+backend/nodes/classification/output/
+backend/nodes/tumbling_window/output/
+backend/nodes/forecasting/output/
+backend/nodes/severity_update/output/
+*.sqlite
+*.db
+
+# OS & Editor configurations
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
