@@ -29,7 +29,6 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from app_data_generator.config import (
-    DEVOPS_DIR,
     PIPELINE_OUTPUT_DIR,
     PRELIM_SEVERITY_CSV,
     SEVERITY_THRESHOLDS,
@@ -39,17 +38,9 @@ from app_data_generator.state import PipelineState
 if TYPE_CHECKING:
     from app_data_generator.storage.db_writer import DbWriter
 
-# ── Inject DEVOPS into sys.path once ──────────────────────────────────────────
-_DEVOPS_PARENT = str(DEVOPS_DIR.parent)
-if _DEVOPS_PARENT not in sys.path:
-    sys.path.insert(0, _DEVOPS_PARENT)
-
-# Lazy import — fails gracefully if DEVOPS pkg is missing
-try:
-    from DEVOPS.severity_engine.severity_engine import SeverityEngine  # type: ignore
-    _SEVERITY_ENGINE_AVAILABLE = True
-except ImportError:
-    _SEVERITY_ENGINE_AVAILABLE = False
+# Local import of SeverityEngine
+from .severity_engine.severity_engine import SeverityEngine
+_SEVERITY_ENGINE_AVAILABLE = True
 
 # ── CSV columns (must match schema.sql severity table) ────────────────────────
 _SEVERITY_CSV_COLS = [
