@@ -325,3 +325,126 @@ class AIOpsDashboardService:
             "CASCADING_FAILURE": ["Engage Incident Command", "Isolate Origin Service", "Apply Circuit Breakers", "Track Blast Radius"],
         }
         return steps_map.get(mode, ["Manual Log Review", "Cross-Check Dashboards", "Monitor Recovery"])
+
+
+# =============================================================================
+# Human Gate Service
+# =============================================================================
+
+class HumanGateService:
+    """
+    Service layer for the Human Gate API endpoints.
+
+    Wraps InterruptManager and AuditLogger so api/main.py
+    stays thin (no business logic in the route handlers).
+
+    All methods return plain dicts — ready for JSON serialisation.
+    """
+
+    @staticmethod
+    def _get_manager():
+        """Lazy-import InterruptManager to avoid circular imports at startup."""
+        from nodes.human_gate.interrupt_manager import get_interrupt_manager
+        return get_interrupt_manager()
+
+    @staticmethod
+    def _get_logger():
+        """Lazy-import AuditLogger."""
+        from nodes.human_gate.audit_logger import AuditLogger
+        return AuditLogger()
+
+    # ------------------------------------------------------------------
+    # Pending reviews (for HumanGatePanel polling)
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def get_pending_reviews() -> list[dict]:
+        """
+        Return all reviews currently in WAITING or REVIEWING state.
+        Called by GET /api/human-gate/pending every 2 s from the frontend.
+        """
+        try:
+            return HumanGateService._get_manager().get_pending()
+        except Exception as e:
+            print(f"[HumanGateService] get_pending_reviews error: {e}")
+            return []
+
+    @staticmethod
+    def get_review(review_id: str) -> dict | None:
+        """
+        Return one review by ID and mark it as REVIEWING (operator opened it).
+        Called by GET /api/human-gate/review/{review_id}.
+        """
+        try:
+            manager = HumanGateService._get_manager()
+            manager.mark_reviewing(review_id)   # WAITING → REVIEWING
+            return manager.get_review(review_id)
+        except Exception as e:
+            print(f"[HumanGateService] get_review error: {e}")
+            return None
+
+    # ------------------------------------------------------------------
+    # Decision submission (operator clicks Approve / Reject)
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def submit_decision(
+        review_id: str,
+        decision:  str,
+        operator:  str,
+        reason:    str = "",
+    ) -> dict:
+        """
+        Record an operator decision.  The pipeline's poll_for_decision()
+        will pick up the change within its next 0.1-second polling cycle.
+
+        Called by POST /api/human-gate/decision/{review_id}.
+
+        Args:
+            review_id: UUID of the review.
+            decision:  "APPROVED" or "REJECTED".
+            operator:  Operator username.
+            reason:    Optional rejection reason.
+
+        Returns:
+            Updated review dict or error dict.
+        """
+        try:
+            return HumanGateService._get_manager().submit_decision(
+                review_id = review_id,
+                decision  = decision,
+                operator  = operator,
+                reason    = reason,
+            )
+        except Exception as e:
+            print(f"[HumanGateService] submit_decision error: {e}")
+            return {"error": str(e)}
+
+    # ------------------------------------------------------------------
+    # Metrics & history (for audit / dashboard KPIs)
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def get_metrics() -> dict:
+        """
+        Return Human Gate KPI metrics.
+        Called by GET /api/human-gate/metrics.
+        """
+        try:
+            return HumanGateService._get_logger().get_metrics()
+        except Exception as e:
+            print(f"[HumanGateService] get_metrics error: {e}")
+            return {}
+
+    @staticmethod
+    def get_history(limit: int = 50) -> list[dict]:
+        """
+        Return recent Human Gate audit records.
+        Called by GET /api/human-gate/history.
+        """
+        try:
+            return HumanGateService._get_logger().get_history(limit=limit)
+        except Exception as e:
+            print(f"[HumanGateService] get_history error: {e}")
+            return []
+

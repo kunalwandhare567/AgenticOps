@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Menu } from "lucide-react";
 import Sidebar from "./components/Sidebar";
 import TopHeader from "./components/TopHeader";
 import SummaryCard from "./components/SummaryCard";
@@ -7,6 +8,7 @@ import PredictionCard from "./components/PredictionCard";
 import EvidenceCard from "./components/EvidenceCard";
 import MultiTrendCharts from "./components/MultiTrendCharts";
 import ReliabilityCard from "./components/ReliabilityCard";
+import HumanGatePanel from "./components/HumanGatePanel";
 
 const BACKEND_URL = "http://localhost:8080";
 
@@ -132,6 +134,8 @@ export default function App() {
   const [episodes, setEpisodes] = useState([]);
   const [selectedEpisodeId, setSelectedEpisodeId] = useState(null);
   const [isLive, setIsLive] = useState(true);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [activeMobileTab, setActiveMobileTab] = useState("metrics"); // "metrics" | "incident"
 
   // Helper to load list of episodes
   const fetchEpisodes = async () => {
@@ -213,6 +217,7 @@ export default function App() {
     setIsLive(false);
     setSelectedEpisodeId(id);
     fetchEpisodeDetails(id);
+    setMobileSidebarOpen(false);
   };
 
   // Switch back to viewing live updates
@@ -220,13 +225,44 @@ export default function App() {
     setIsLive(true);
     setSelectedEpisodeId(null);
     fetchLiveState();
+    setMobileSidebarOpen(false);
   };
 
   // Voted active failure mode
   const activeFailureMode = incident ? incident.failure_mode : "NONE";
 
   return (
-    <div className="app">
+    <div className={`app-container ${mobileSidebarOpen ? "sidebar-open" : ""}`}>
+      {/* Mobile Header Bar */}
+      <div className="mobile-header">
+        <button className="mobile-menu-toggle" onClick={() => setMobileSidebarOpen(true)}>
+          <Menu size={22} />
+        </button>
+        <div className="mobile-logo">
+          <span className="logo-mark">◆</span>
+          <span className="logo-text">SENTINEL</span>
+        </div>
+        <div className="mobile-tabs">
+          <button 
+            className={`mobile-tab-btn ${activeMobileTab === "metrics" ? "active" : ""}`}
+            onClick={() => setActiveMobileTab("metrics")}
+          >
+            Metrics
+          </button>
+          <button 
+            className={`mobile-tab-btn ${activeMobileTab === "incident" ? "active" : ""}`}
+            onClick={() => setActiveMobileTab("incident")}
+          >
+            Incident
+          </button>
+        </div>
+      </div>
+
+      {/* Backdrop overlay for mobile sidebar */}
+      {mobileSidebarOpen && (
+        <div className="sidebar-backdrop" onClick={() => setMobileSidebarOpen(false)} />
+      )}
+
       {/* COLUMN 1: LEFT SIDEBAR (Width: ~240px) */}
       <Sidebar
         activeMode={activeFailureMode}
@@ -235,10 +271,12 @@ export default function App() {
         onSelectEpisode={handleSelectEpisode}
         onViewLive={handleViewLive}
         isLive={isLive}
+        mobileSidebarOpen={mobileSidebarOpen}
+        setMobileSidebarOpen={setMobileSidebarOpen}
       />
 
       {/* COLUMN 2: MIDDLE AREA (NOC Charts Panel) */}
-      <div className="center-panel">
+      <div className={`center-panel ${activeMobileTab === "metrics" ? "mobile-active" : "mobile-hidden"}`}>
         <TopHeader />
         
         {/* NOC grid displaying 7 core metrics graphs */}
@@ -246,7 +284,7 @@ export default function App() {
       </div>
 
       {/* COLUMN 3: RIGHT PANEL (Incident metadata stack) */}
-      <div className="right-panel">
+      <div className={`right-panel ${activeMobileTab === "incident" ? "mobile-active" : "mobile-hidden"}`}>
         <SummaryCard 
           incident={incident} 
           onStatusChange={handleStatusChange} 
@@ -256,6 +294,9 @@ export default function App() {
         <DiagnosisCard incident={incident} />
         <ReliabilityCard incident={incident} />
       </div>
+
+      {/* HUMAN GATE PANEL — floats above all content as an overlay */}
+      <HumanGatePanel />
     </div>
   );
 }

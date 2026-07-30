@@ -30,16 +30,28 @@ export default function Sidebar({
   onSelectEpisode,
   onViewLive,
   isLive,
+  mobileSidebarOpen,
+  setMobileSidebarOpen,
 }) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${mobileSidebarOpen ? "open" : ""}`}>
       {/* Brand Header */}
       <div className="sidebar-brand">
-        <span className="brand-mark">◆</span>
-        <div className="brand-text">
-          <span className="brand-title">SENTINEL</span>
-          <span className="brand-sub">AIOps Core</span>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <span className="brand-mark">◆</span>
+          <div className="brand-text">
+            <span className="brand-title">SENTINEL</span>
+            <span className="brand-sub">AIOps Core</span>
+          </div>
         </div>
+        {/* Close Button visible on mobile screens */}
+        <button 
+          className="mobile-sidebar-close" 
+          onClick={() => setMobileSidebarOpen(false)}
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
       </div>
 
       {/* Trained Modes Health checklist */}

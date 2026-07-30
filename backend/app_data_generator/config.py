@@ -38,6 +38,7 @@ CLASSIFICATION_OUTPUT_DIR  = NODES_DIR / "classification" / "output"
 TUMBLING_WINDOW_OUTPUT_DIR = NODES_DIR / "tumbling_window" / "output"
 FORECASTING_OUTPUT_DIR     = NODES_DIR / "forecasting" / "output"
 SEVERITY_UPDATE_OUTPUT_DIR = NODES_DIR / "severity_update" / "output"
+HUMAN_GATE_OUTPUT_DIR      = NODES_DIR / "human_gate"       / "output"
 
 # ── Named output CSV files ────────────────────────────────────────────────────
 ENGINEERED_FEAT_CSV    = FEATURE_ENG_OUTPUT_DIR    / "engineered_features.csv"
@@ -46,6 +47,14 @@ PIPELINE_RESULTS_CSV   = CLASSIFICATION_OUTPUT_DIR  / "pipeline_results.csv"
 TUMBLING_WINDOW_CSV    = TUMBLING_WINDOW_OUTPUT_DIR / "tumbling_window_output.csv"
 FORECASTING_OUTPUT_CSV = FORECASTING_OUTPUT_DIR     / "forecasting_output.csv"
 SEVERITY_UPDATE_CSV    = SEVERITY_UPDATE_OUTPUT_DIR / "severity_update_output.csv"
+HUMAN_GATE_OUTPUT_CSV  = HUMAN_GATE_OUTPUT_DIR      / "human_gate_output.csv"
+HUMAN_GATE_AUDIT_DB    = HUMAN_GATE_OUTPUT_DIR      / "human_gate_audit.db"
+
+# ── Human Gate tuning ─────────────────────────────────────────────────────────
+# Seconds before auto-approve fires when no operator response is received.
+# v1 default: 2 seconds (fast enough for demo, slow enough to actually click).
+# Increase to 30-60 for production use.
+HUMAN_GATE_TIMEOUT_SECONDS: int = 2
 
 # ── Legacy aliases (kept for backward compatibility) ─────────────────────────
 PIPELINE_OUTPUT_DIR  = CLASSIFICATION_OUTPUT_DIR   # most runners use this

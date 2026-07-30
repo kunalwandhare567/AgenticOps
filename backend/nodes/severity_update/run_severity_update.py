@@ -26,10 +26,11 @@ if str(PROJECT_ROOT) not in sys.path:
 import pandas as pd
 from tqdm import tqdm
 
-from app_data_generator.config import PIPELINE_OUTPUT_DIR, FORECASTING_OUTPUT_CSV, PIPELINE_RESULTS_CSV
+from app_data_generator.config import PIPELINE_OUTPUT_DIR, FORECASTING_OUTPUT_CSV, PIPELINE_RESULTS_CSV, DB_PATH
 
 SEVERITY_UPDATE_CSV = PIPELINE_OUTPUT_DIR / "severity_update_output.csv"
 
+from app_data_generator.storage.db_writer import DbWriter
 from nodes.severity_update import SeverityUpdater
 
 _OUTPUT_COLS = [
@@ -107,9 +108,13 @@ def main() -> None:
     updater = SeverityUpdater(dwell_k=5, min_confidence=0.75)
     output_rows = []
 
+    # ── Initialise DbWriter for node_severity_update table ──────────────────
+    pipeline_db = DbWriter(DB_PATH)
+    pipeline_db.setup()
+
     print(f"\n[run_severity_update] Processing {len(fc_df):,} episodes ...\n")
 
-    for _, row in tqdm(fc_df.iterrows(), total=len(fc_df), desc="SeverityUpdate"):
+    for _idx, row in tqdm(fc_df.iterrows(), total=len(fc_df), desc="SeverityUpdate"):
         ep_id = row["episode_id"]
         failure_mode = row.get("failure_mode", "NONE")
 
@@ -154,9 +159,35 @@ def main() -> None:
             "reason":              result["reason"],
         })
 
+        # ── DB: Write to node_severity_update table ─────────────────────────
+        try:
+            pipeline_db.write_severity_update({
+                "cycle":               _idx + 1,   # 1-based row index as cycle proxy
+                "episode_id":          ep_id,
+                "failure_mode":        failure_mode,
+                "timestamp":           None,
+                "elapsed_s":           row.get("elapsed_s"),
+                "preliminary_severity": prelim_sev,
+                "forecast_confidence": row.get("forecast_confidence"),
+                "time_to_failure":     row.get("time_to_failure"),
+                "earliest_ttf_feature": row.get("earliest_ttf_feature"),
+                "impact_band":         result["impact_band"],
+                "urgency_band":        result["urgency_band"],
+                "gate_passed":         result["gate_passed"],
+                "candidate_severity":  result["candidate_severity"],
+                "revised_severity":    result["revised_severity"],
+                "is_escalated":        result["is_escalated"],
+                "is_deescalated":      result["is_deescalated"],
+                "dwell_count":         result["dwell_count"],
+                "reason":              result["reason"],
+            })
+        except Exception as _e:
+            print(f"[run_severity_update] WARN: DB write failed: {_e}")
+
         updater.clear_episode(ep_id)
 
     # ── Write output ──────────────────────────────────────────────────────────
+    pipeline_db.close()
     if not output_rows:
         print("\n[run_severity_update] No rows generated.")
         return

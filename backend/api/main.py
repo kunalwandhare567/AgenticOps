@@ -19,7 +19,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from api.services import AIOpsDashboardService
+from api.services import AIOpsDashboardService, HumanGateService
 
 app = FastAPI(
     title="Sentinel AIOps Incident Detection API",
@@ -39,8 +39,14 @@ app.add_middleware(
 # Cache in-memory overrides for incident statuses
 _status_overrides: Dict[str, str] = {}
 
+# Pydantic models
 class StatusUpdate(BaseModel):
     status: str
+
+class GateDecision(BaseModel):
+    decision: str    # "APPROVED" or "REJECTED"
+    operator: str    # Reviewer username / name
+    reason:   str = ""  # Optional comment (required on REJECT is a UI concern)
 
 @app.get("/api/health")
 def health_check() -> Dict[str, str]:
@@ -87,6 +93,78 @@ def update_incident_status(episode_id: str, body: StatusUpdate) -> Dict[str, str
     
     _status_overrides[episode_id] = status
     return {"episode_id": episode_id, "status": status, "message": "Status updated successfully."}
+
+# =============================================================================
+# Human Gate Routes
+# =============================================================================
+
+@app.get("/api/human-gate/pending")
+def get_pending_reviews() -> List[Dict[str, Any]]:
+    """
+    Return all Human Gate reviews currently awaiting operator decision.
+    Frontend polls this every 2 s to show the HumanGatePanel badge.
+    """
+    return HumanGateService.get_pending_reviews()
+
+
+@app.get("/api/human-gate/review/{review_id}")
+def get_review(review_id: str) -> Dict[str, Any]:
+    """
+    Return full details of one pending review and mark it as REVIEWING.
+    Called when the operator opens the review panel.
+    """
+    data = HumanGateService.get_review(review_id)
+    if not data:
+        raise HTTPException(status_code=404, detail=f"Review {review_id} not found.")
+    return data
+
+
+@app.post("/api/human-gate/decision/{review_id}")
+def submit_gate_decision(review_id: str, body: GateDecision) -> Dict[str, Any]:
+    """
+    Submit an operator's APPROVE or REJECT decision for a pending review.
+    The pipeline runner polling poll_for_decision() will see the status change
+    within its next 0.1-second poll cycle and resume.
+
+    Body:
+        decision : "APPROVED" | "REJECTED"
+        operator : reviewer name/username
+        reason   : optional comment (required on REJECT by UI convention)
+    """
+    decision = body.decision.upper().strip()
+    if decision not in ("APPROVED", "REJECTED"):
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid decision. Use 'APPROVED' or 'REJECTED'."
+        )
+    result = HumanGateService.submit_decision(
+        review_id = review_id,
+        decision  = decision,
+        operator  = body.operator or "operator",
+        reason    = body.reason,
+    )
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+    return result
+
+
+@app.get("/api/human-gate/metrics")
+def get_gate_metrics() -> Dict[str, Any]:
+    """
+    Return Human Gate KPI metrics: approval %, rejection %, auto-approval %,
+    avg response time, false escalation count.
+    """
+    return HumanGateService.get_metrics()
+
+
+@app.get("/api/human-gate/history")
+def get_gate_history(limit: int = 50) -> List[Dict[str, Any]]:
+    """
+    Return recent Human Gate audit records (newest first).
+    Used for historical analysis and offline model improvement.
+    """
+    return HumanGateService.get_history(limit=limit)
+
 
 if __name__ == "__main__":
     import uvicorn

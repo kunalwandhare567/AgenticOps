@@ -40,6 +40,7 @@ from app_data_generator.config import (
     PIPELINE_OUTPUT_DIR, PIPELINE_RESULTS_CSV,
     PRELIM_SEVERITY_CSV, TUMBLING_WINDOW_CSV,
 )
+from app_data_generator.storage.db_writer import DbWriter
 from nodes.collect.queue_bridge import TelemetryQueue
 from app_data_generator.state import PipelineState
 from nodes.preliminary_severity.severity_node import SeverityNode
@@ -175,13 +176,18 @@ def run_pipeline() -> None:
     template_miner = load_template_miner(str(DRAIN_STATE), str(DRAIN_INI))
     known_ids      = load_known_template_ids(str(KNOWN_TEMPLATES_JSON))
 
+    # ── Initialise DbWriter (node outputs + combined pipeline_results) ──────
+    print("[Pipeline] Initialising DbWriter (node output tables) ...")
+    pipeline_db = DbWriter(DB_PATH)
+    pipeline_db.setup()
+
     print("[Pipeline] Initialising DEVOPS SeverityEngine ...")
-    severity_node = SeverityNode(db_writer=None)   # pass db_writer if live DB writes wanted
+    severity_node = SeverityNode(db_writer=None)   # uses its own CSV writer
 
     print("[Pipeline] Loading LightGBM classifier ...")
     model_loaded = load_classifier()
 
-    # Open SQLite connection (read-only polling)
+    # Open SQLite connection (read-only polling from simulator_db)
     db_conn = None
     if DB_PATH.exists():
         db_conn = sqlite3.connect(str(DB_PATH), check_same_thread=False)
@@ -256,14 +262,82 @@ def run_pipeline() -> None:
             state.classifier_input = fe_result.get("classifier_input", {})
             state.evidence         = fe_result.get("evidence", {})
 
+            # ── DB: Feature Engineering node output ───────────────────────────
+            fe_feats = state.classifier_input or {}
+            try:
+                pipeline_db.write_feature_engineering({
+                    "cycle":       cycle,
+                    "episode_id":  state.episode_id,
+                    "failure_mode": state.failure_mode,
+                    "timestamp":   state.timestamp,
+                    "elapsed_s":   state.elapsed_s,
+                    **fe_feats,
+                })
+            except Exception as _e:
+                print(f"[Pipeline] WARN: FE DB write failed: {_e}")
+
             # ── 3. Preliminary Severity (DEVOPS SeverityEngine) ───────────────
             state = severity_node.evaluate(state, cycle)
+
+            # ── DB: Preliminary Severity node output ──────────────────────────
+            sev = state.severity_result  # full SeverityResult or None
+            try:
+                pipeline_db.write_preliminary_severity({
+                    "cycle":                 cycle,
+                    "episode_id":            state.episode_id,
+                    "failure_mode":          state.failure_mode,
+                    "timestamp":             state.timestamp,
+                    "elapsed_s":             state.elapsed_s,
+                    "preliminary_severity":  state.preliminary_severity,
+                    "severity_raw":          getattr(sev, "raw_severity", None),
+                    "weighted_score":        getattr(sev, "weighted_score", None),
+                    "critical_count":        getattr(sev, "critical_count", None),
+                    "warning_count":         getattr(sev, "warning_count", None),
+                    "blast_size":            getattr(sev, "blast_size", None),
+                    "high_risk_mode":        int(getattr(sev, "high_risk_mode", False)),
+                    "blast_radius_growing":  int(getattr(sev, "blast_radius_growing", False)),
+                    "reason":                getattr(sev, "reason", None),
+                    "recommended_action":    getattr(sev, "recommended_action", None),
+                })
+            except Exception as _e:
+                print(f"[Pipeline] WARN: PrelimSev DB write failed: {_e}")
 
             # ── 4. Classification (auto-train if needed) ──────────────────────
             state = classify(state)
 
+            # ── DB: Classification node output ────────────────────────────────
+            try:
+                pipeline_db.write_classification({
+                    "cycle":                   cycle,
+                    "episode_id":              state.episode_id,
+                    "failure_mode":            state.failure_mode,
+                    "timestamp":               state.timestamp,
+                    "elapsed_s":               state.elapsed_s,
+                    "predicted_failure":       state.predicted_failure,
+                    "prediction_probability":  state.prediction_probability,
+                })
+            except Exception as _e:
+                print(f"[Pipeline] WARN: Classification DB write failed: {_e}")
+
             # ── 5. Tumbling Window (labels ONLY — raw features untouched) ─────
             state = window.update(state, cycle)
+
+            # ── DB: Tumbling Window node output ───────────────────────────────
+            try:
+                pipeline_db.write_tumbling_window({
+                    "cycle":             cycle,
+                    "episode_id":        state.episode_id,
+                    "failure_mode":      state.failure_mode,
+                    "timestamp":         state.timestamp,
+                    "elapsed_s":         state.elapsed_s,
+                    "dominant_state":    state.summarized_failure,
+                    "vote_distribution": state.vote_distribution,
+                    "window_margin":     state.window_margin,
+                    "window_full":       state.window_full,
+                    "window_size":       len(state.window_predictions),
+                })
+            except Exception as _e:
+                print(f"[Pipeline] WARN: TumblingWindow DB write failed: {_e}")
 
             # ── Write combined pipeline_results.csv ───────────────────────────
             sev = state.severity_result  # full SeverityResult or None
@@ -293,6 +367,69 @@ def run_pipeline() -> None:
             })
             fh.flush()
 
+            # ── DB: Combined pipeline_results row ─────────────────────────────
+            try:
+                pipeline_db.write_pipeline_results({
+                    "cycle":                      cycle,
+                    "episode_id":                 state.episode_id,
+                    "failure_mode":               state.failure_mode,
+                    "timestamp":                  state.timestamp,
+                    "elapsed_s":                  state.elapsed_s,
+                    # Key FE metrics (prefixed fe_)
+                    "fe_cpu_utilization":         fe_feats.get("cpu_utilization"),
+                    "fe_memory_utilization":      fe_feats.get("memory_utilization"),
+                    "fe_heap_mb":                 fe_feats.get("heap_mb"),
+                    "fe_error_rate":              fe_feats.get("error_rate"),
+                    "fe_p99_latency":             fe_feats.get("p99_latency"),
+                    "fe_p95_latency":             fe_feats.get("p95_latency"),
+                    "fe_db_p99":                  fe_feats.get("db_p99"),
+                    "fe_queue_lag":               fe_feats.get("queue_lag"),
+                    "fe_log_count":               fe_feats.get("log_count"),
+                    "fe_log_critical_count":      fe_feats.get("log_critical_count"),
+                    "fe_log_has_exception":       fe_feats.get("log_has_exception"),
+                    "fe_log_has_novel_template":  fe_feats.get("log_has_novel_template"),
+                    # Preliminary Severity
+                    "preliminary_severity":       state.preliminary_severity,
+                    "severity_weighted_score":    getattr(sev, "weighted_score", None),
+                    "severity_critical_count":    getattr(sev, "critical_count", None),
+                    "severity_warning_count":     getattr(sev, "warning_count", None),
+                    "severity_blast_size":        getattr(sev, "blast_size", None),
+                    "severity_reason":            getattr(sev, "reason", None),
+                    # Classification
+                    "predicted_failure":          state.predicted_failure,
+                    "prediction_probability":     state.prediction_probability,
+                    # Tumbling Window
+                    "dominant_state":             state.summarized_failure,
+                    "vote_distribution":          state.vote_distribution,
+                    "window_margin":              state.window_margin,
+                    "window_full":                state.window_full,
+                    "window_size":                len(state.window_predictions),
+                    # Forecasting — not computed in the live loop yet (see forecasting node)
+                    # These are populated when forecasting is wired in
+                    "forecast_algorithm":         None,
+                    "time_to_failure":            None,
+                    "forecast_confidence":        None,
+                    "threshold_crossed":          None,
+                    "earliest_ttf_feature":       None,
+                    # Severity Update — populated by offline batch runner
+                    "revised_severity":           None,
+                    "candidate_severity":         None,
+                    "impact_band":                None,
+                    "urgency_band":               None,
+                    "gate_passed":                None,
+                    "is_escalated":               None,
+                    "is_deescalated":             None,
+                    "su_reason":                  None,
+                    # Human Gate — NULL until settled
+                    "hg_review_id":               None,
+                    "hg_decision":                None,
+                    "hg_final_severity":          None,
+                    "hg_operator":                None,
+                    "hg_response_ms":             None,
+                })
+            except Exception as _e:
+                print(f"[Pipeline] WARN: pipeline_results DB write failed: {_e}")
+
             # ── Console summary ───────────────────────────────────────────────
             sev_str  = state.preliminary_severity
             pred_str = f"{state.predicted_failure}({state.prediction_probability:.2f})"
@@ -316,12 +453,14 @@ def run_pipeline() -> None:
         fh.close()
         severity_node.close()
         window.close()
+        pipeline_db.close()
         if db_conn:
             db_conn.close()
         print(f"\n  Results    : {PIPELINE_RESULTS_CSV}")
         print(f"  Severity   : {PRELIM_SEVERITY_CSV}")
         print(f"  Window     : {TUMBLING_WINDOW_CSV}")
-        print(f"  Features   : {PIPELINE_OUTPUT_DIR}/engineered_features.csv\n")
+        print(f"  Features   : {PIPELINE_OUTPUT_DIR}/engineered_features.csv")
+        print(f"  Database   : {DB_PATH}\n")
 
 
 # =============================================================================

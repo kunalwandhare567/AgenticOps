@@ -1,0 +1,1 @@
+episode_id,incident_id,failure_mode,old_severity,new_severity,final_severity,decision,operator,reason,confidence,ttf_seconds,impact_band,urgency_band,is_large_jump,escalation_summary,response_ms,timeout_seconds,created_at,decided_at

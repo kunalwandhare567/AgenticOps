@@ -1,7 +1,9 @@
 """
 app_simulator/storage/db_writer.py
 ====================================
-Atomic 3-table SQLite writer.
+Atomic 3-table SQLite writer for raw telemetry.
+Also exposes write methods for all 7 pipeline node outputs (Option 2)
+and the combined pipeline_results table (Option 3).
 
 write_tick() inserts metrics + log + spans in a single transaction.
 All three rows succeed or all three roll back — no partial ticks.
@@ -9,6 +11,7 @@ All three rows succeed or all three roll back — no partial ticks.
 WAL mode allows concurrent readers (FE queries) without blocking the writer.
 """
 from __future__ import annotations
+import json
 import sqlite3
 from pathlib import Path
 
@@ -37,6 +40,10 @@ class DbWriter:
         if self._conn is None:
             raise RuntimeError("DbWriter.setup() has not been called")
         return self._conn
+
+    # =========================================================================
+    # RAW TELEMETRY WRITES (written by run_simulator.py)
+    # =========================================================================
 
     def write_tick(self, metric: dict, log: dict, spans: list[dict]) -> None:
         """
@@ -117,10 +124,255 @@ class DbWriter:
                 vals,
             )
 
+    # =========================================================================
+    # NODE OUTPUT WRITES — Option 2 (dedicated per-node tables)
+    # =========================================================================
+
+    def _insert(self, table: str, row: dict) -> None:
+        """Generic helper: INSERT OR IGNORE into any table."""
+        cols = list(row.keys())
+        vals = list(row.values())
+        with self._conn:
+            self._conn.execute(
+                f"INSERT INTO {table} ({','.join(cols)}) "
+                f"VALUES ({','.join('?' * len(cols))})",
+                vals,
+            )
+
+    def write_feature_engineering(self, row: dict) -> None:
+        """
+        Persist one cycle's Feature Engineering output to node_feature_engineering.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            + all 27 raw metric feature columns + 5 log feature columns.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "cpu_utilization", "memory_utilization", "heap_mb", "db_p99",
+            "disk_read_latency", "disk_write_latency", "error_rate", "gc_pause_p99",
+            "cache_hit_rate", "cache_miss_rate", "active_connections", "network_errors",
+            "p50_latency", "p95_latency", "p99_latency", "queue_lag",
+            "retry_count_per_request", "rps", "upstream_timeout_rate",
+            "circuit_breaker_state", "http_4xx_rate", "http_5xx_rate",
+            "iops_utilization", "thread_pool_queue", "cpu_saturation",
+            "db_connection_pool", "db_connection_wait",
+            "log_count", "log_max_severity", "log_critical_count",
+            "log_has_exception", "log_has_novel_template",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        self._insert("node_feature_engineering", filtered)
+
+    def write_preliminary_severity(self, row: dict) -> None:
+        """
+        Persist one cycle's Preliminary Severity output to node_preliminary_severity.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            preliminary_severity, severity_raw, weighted_score, critical_count,
+            warning_count, blast_size, high_risk_mode, blast_radius_growing,
+            reason, recommended_action.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "preliminary_severity", "severity_raw", "weighted_score",
+            "critical_count", "warning_count", "blast_size",
+            "high_risk_mode", "blast_radius_growing", "reason", "recommended_action",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        self._insert("node_preliminary_severity", filtered)
+
+    def write_classification(self, row: dict) -> None:
+        """
+        Persist one cycle's Classification output to node_classification.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            predicted_failure, prediction_probability.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "predicted_failure", "prediction_probability",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        self._insert("node_classification", filtered)
+
+    def write_tumbling_window(self, row: dict) -> None:
+        """
+        Persist one cycle's Tumbling Window output to node_tumbling_window.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            dominant_state, vote_distribution (dict or str), window_margin,
+            window_full (bool/int), window_size.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "dominant_state", "vote_distribution", "window_margin",
+            "window_full", "window_size",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        # Serialise vote_distribution dict → JSON string if needed
+        if isinstance(filtered.get("vote_distribution"), dict):
+            filtered["vote_distribution"] = json.dumps(filtered["vote_distribution"])
+        if isinstance(filtered.get("window_full"), bool):
+            filtered["window_full"] = int(filtered["window_full"])
+        self._insert("node_tumbling_window", filtered)
+
+    def write_forecasting(self, row: dict) -> None:
+        """
+        Persist one cycle's Forecasting + Convergence output to node_forecasting.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            algorithm_used, history_steps, forecast_horizon_s,
+            time_to_failure, earliest_ttf_feature, forecast_confidence,
+            confidence_reason, threshold_crossed,
+            feature_ttfs (dict), feature_slopes (dict),
+            predictions (dict), current_values (dict).
+
+        Dict fields are serialised to JSON strings automatically.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "algorithm_used", "history_steps", "forecast_horizon_s",
+            "time_to_failure", "earliest_ttf_feature", "forecast_confidence",
+            "confidence_reason", "threshold_crossed",
+            "feature_ttfs", "feature_slopes", "predictions", "current_values",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        # Serialise all dict / list fields to JSON
+        for key in ("feature_ttfs", "feature_slopes", "predictions", "current_values"):
+            if key in filtered and isinstance(filtered[key], (dict, list)):
+                filtered[key] = json.dumps(filtered[key])
+        if isinstance(filtered.get("threshold_crossed"), bool):
+            filtered["threshold_crossed"] = int(filtered["threshold_crossed"])
+        self._insert("node_forecasting", filtered)
+
+    def write_severity_update(self, row: dict) -> None:
+        """
+        Persist one cycle's Severity Update output to node_severity_update.
+
+        Expected keys:
+            cycle, episode_id, failure_mode, timestamp, elapsed_s,
+            preliminary_severity, forecast_confidence, time_to_failure,
+            earliest_ttf_feature, impact_band, urgency_band, gate_passed,
+            candidate_severity, revised_severity, is_escalated, is_deescalated,
+            dwell_count, reason.
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "preliminary_severity", "forecast_confidence", "time_to_failure",
+            "earliest_ttf_feature", "impact_band", "urgency_band", "gate_passed",
+            "candidate_severity", "revised_severity", "is_escalated",
+            "is_deescalated", "dwell_count", "reason",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        for key in ("gate_passed", "is_escalated", "is_deescalated"):
+            if key in filtered and isinstance(filtered[key], bool):
+                filtered[key] = int(filtered[key])
+        self._insert("node_severity_update", filtered)
+
+    def write_human_gate(self, row: dict) -> None:
+        """
+        Persist one Human Gate decision to node_human_gate.
+
+        Expected keys match the human_gate_review table schema:
+            review_id, incident_id, episode_id, failure_mode, failure_label,
+            old_severity, new_severity, final_severity, decision,
+            operator, reason, confidence, ttf_seconds, impact_band, urgency_band,
+            is_large_jump, escalation_summary, response_ms, timeout_seconds,
+            created_at, decided_at, recorded_at.
+        """
+        _COLS = {
+            "review_id", "incident_id", "episode_id", "failure_mode",
+            "failure_label", "old_severity", "new_severity", "final_severity",
+            "decision", "operator", "reason", "confidence", "ttf_seconds",
+            "impact_band", "urgency_band", "is_large_jump", "escalation_summary",
+            "response_ms", "timeout_seconds", "created_at", "decided_at", "recorded_at",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        if isinstance(filtered.get("is_large_jump"), bool):
+            filtered["is_large_jump"] = int(filtered["is_large_jump"])
+        cols = list(filtered.keys())
+        vals = list(filtered.values())
+        with self._conn:
+            self._conn.execute(
+                f"INSERT OR REPLACE INTO node_human_gate ({','.join(cols)}) "
+                f"VALUES ({','.join('?' * len(cols))})",
+                vals,
+            )
+
+    # =========================================================================
+    # COMBINED PIPELINE RESULTS WRITE — Option 3
+    # =========================================================================
+
+    def write_pipeline_results(self, row: dict) -> None:
+        """
+        Persist a full combined pipeline cycle snapshot to pipeline_results.
+
+        Expected keys (all optional except cycle, episode_id):
+            -- Identity
+            cycle, episode_id, failure_mode, timestamp, elapsed_s
+            -- Feature Engineering (key metrics, prefixed fe_)
+            fe_cpu_utilization, fe_memory_utilization, fe_heap_mb,
+            fe_error_rate, fe_p99_latency, fe_p95_latency, fe_db_p99,
+            fe_queue_lag, fe_log_count, fe_log_critical_count,
+            fe_log_has_exception, fe_log_has_novel_template
+            -- Preliminary Severity
+            preliminary_severity, severity_weighted_score, severity_critical_count,
+            severity_warning_count, severity_blast_size, severity_reason
+            -- Classification
+            predicted_failure, prediction_probability
+            -- Tumbling Window
+            dominant_state, vote_distribution, window_margin, window_full, window_size
+            -- Forecasting
+            forecast_algorithm, time_to_failure, forecast_confidence,
+            threshold_crossed, earliest_ttf_feature
+            -- Severity Update
+            revised_severity, candidate_severity, impact_band, urgency_band,
+            gate_passed, is_escalated, is_deescalated, su_reason
+            -- Human Gate (NULL until review settled)
+            hg_review_id, hg_decision, hg_final_severity, hg_operator, hg_response_ms
+        """
+        _COLS = {
+            "cycle", "episode_id", "failure_mode", "timestamp", "elapsed_s",
+            "fe_cpu_utilization", "fe_memory_utilization", "fe_heap_mb",
+            "fe_error_rate", "fe_p99_latency", "fe_p95_latency", "fe_db_p99",
+            "fe_queue_lag", "fe_log_count", "fe_log_critical_count",
+            "fe_log_has_exception", "fe_log_has_novel_template",
+            "preliminary_severity", "severity_weighted_score",
+            "severity_critical_count", "severity_warning_count",
+            "severity_blast_size", "severity_reason",
+            "predicted_failure", "prediction_probability",
+            "dominant_state", "vote_distribution", "window_margin",
+            "window_full", "window_size",
+            "forecast_algorithm", "time_to_failure", "forecast_confidence",
+            "threshold_crossed", "earliest_ttf_feature",
+            "revised_severity", "candidate_severity", "impact_band",
+            "urgency_band", "gate_passed", "is_escalated", "is_deescalated",
+            "su_reason",
+            "hg_review_id", "hg_decision", "hg_final_severity",
+            "hg_operator", "hg_response_ms",
+        }
+        filtered = {k: v for k, v in row.items() if k in _COLS}
+        # Serialise vote_distribution dict → JSON string if needed
+        if isinstance(filtered.get("vote_distribution"), dict):
+            filtered["vote_distribution"] = json.dumps(filtered["vote_distribution"])
+        for key in ("window_full", "threshold_crossed", "gate_passed",
+                    "is_escalated", "is_deescalated",
+                    "fe_log_has_exception", "fe_log_has_novel_template"):
+            if key in filtered and isinstance(filtered[key], bool):
+                filtered[key] = int(filtered[key])
+        self._insert("pipeline_results", filtered)
+
+    # =========================================================================
+    # CLEANUP
+    # =========================================================================
+
     def close(self) -> None:
         """Flush WAL and close connection."""
         if self._conn:
             self._conn.execute("PRAGMA wal_checkpoint(TRUNCATE)")
             self._conn.close()
             self._conn = None
-

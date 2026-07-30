@@ -47,7 +47,9 @@ from app_data_generator.config import (
     ENGINEERED_FEAT_CSV,
     FORECASTING_OUTPUT_CSV,
     TUMBLING_WINDOW_CSV,
+    DB_PATH,
 )
+from app_data_generator.storage.db_writer import DbWriter
 from nodes.forecasting.buffer import reset_all, clear_episode, append_feature_row
 from nodes.forecasting.router import route_forecast
 
@@ -119,6 +121,10 @@ def main() -> None:
     reset_all()
     FORECASTING_OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
+    # ── Initialise DbWriter for node_forecasting table ─────────────────────
+    pipeline_db = DbWriter(DB_PATH)
+    pipeline_db.setup()
+
     episodes   = feat_df["episode_id"].unique()
     output_rows: list[dict] = []
 
@@ -173,7 +179,7 @@ def main() -> None:
             continue
 
         fc = result.get("forecast", {})
-        output_rows.append({
+        row_out = {
             "episode_id":               ep_id,
             "failure_mode":             dominant_state,
             "elapsed_s":                elapsed,
@@ -189,9 +195,35 @@ def main() -> None:
             "current_values_json":      _safe_json(fc.get("current_values")),
             "predictions_json":         _safe_json(fc.get("predictions")),
             "critical_thresholds_json": _safe_json(fc.get("critical_thresholds")),
-        })
+        }
+        output_rows.append(row_out)
+
+        # ── DB: Write to node_forecasting table ───────────────────────────────
+        try:
+            pipeline_db.write_forecasting({
+                "cycle":               None,          # offline batch (no cycle counter)
+                "episode_id":          ep_id,
+                "failure_mode":        dominant_state,
+                "timestamp":           None,
+                "elapsed_s":           elapsed,
+                "algorithm_used":      fc.get("algorithm_used", ""),
+                "history_steps":       fc.get("history_steps", 0),
+                "forecast_horizon_s":  fc.get("forecast_horizon_s"),
+                "time_to_failure":     result.get("time_to_failure"),
+                "earliest_ttf_feature": fc.get("earliest_ttf_feature"),
+                "forecast_confidence": result.get("forecast_confidence", 0.0),
+                "confidence_reason":   result.get("confidence_reason", ""),
+                "threshold_crossed":   result.get("threshold_crossed", False),
+                "feature_ttfs":        fc.get("feature_ttfs"),
+                "feature_slopes":      fc.get("feature_slopes"),
+                "predictions":         fc.get("predictions"),
+                "current_values":      fc.get("current_values"),
+            })
+        except Exception as _e:
+            print(f"[run_forecasting] WARN: DB write failed: {_e}")
 
     # ── Write output ──────────────────────────────────────────────────────────
+    pipeline_db.close()
     if not output_rows:
         print("\n[run_forecasting] No forecast rows generated.")
         return
