@@ -1,0 +1,63 @@
+{
+  "run_timestamp": "2026-08-02T17:54:25.914879+00:00",
+  "tuning_config": {
+    "n_trials": 80,
+    "cv_folds": 5,
+    "metric": "f1",
+    "average": "macro",
+    "random_seed": 42,
+    "early_stopping_rounds": 50
+  },
+  "baseline_metrics": {
+    "accuracy": 0.9891025641025641,
+    "f1_macro": 0.9891004530376886,
+    "f1_weighted": 0.9891004530376886,
+    "f1_per_class": {
+      "BAD_DEPLOY": 1.0,
+      "CACHE_STAMPEDE": 1.0,
+      "CASCADING_FAILURE": 1.0,
+      "CPU_SATURATION": 1.0,
+      "DB_SLOWDOWN": 0.9995835068721366,
+      "DEPENDENCY_TIMEOUT": 1.0,
+      "DISK_IO_SATURATION": 1.0,
+      "ERROR_STORM": 1.0,
+      "LATENCY_SPIKE": 0.9280270956816258,
+      "MEMORY_LEAK": 0.931529315293153,
+      "NONE": 1.0,
+      "QUEUE_BACKUP": 0.9991659716430359,
+      "RETRY_STORM": 1.0
+    }
+  },
+  "tuned_metrics": {
+    "accuracy": 0.9889102564102564,
+    "f1_macro": 0.9889079469955683,
+    "f1_weighted": 0.9889079469955682,
+    "f1_per_class": {
+      "BAD_DEPLOY": 1.0,
+      "CACHE_STAMPEDE": 1.0,
+      "CASCADING_FAILURE": 1.0,
+      "CPU_SATURATION": 1.0,
+      "DB_SLOWDOWN": 0.9995835068721366,
+      "DEPENDENCY_TIMEOUT": 1.0,
+      "DISK_IO_SATURATION": 1.0,
+      "ERROR_STORM": 1.0,
+      "LATENCY_SPIKE": 0.9267259635747565,
+      "MEMORY_LEAK": 0.930327868852459,
+      "NONE": 1.0,
+      "QUEUE_BACKUP": 0.9991659716430359,
+      "RETRY_STORM": 1.0
+    }
+  },
+  "best_params": {
+    "num_leaves": 63,
+    "max_depth": 5,
+    "learning_rate": 0.08012737503998542,
+    "n_estimators": 225,
+    "min_child_samples": 36,
+    "subsample": 0.6831809216468459,
+    "colsample_bytree": 0.728034992108518,
+    "reg_alpha": 0.1165691561324743,
+    "reg_lambda": 6.267062696005991e-07
+  },
+  "best_cv_f1_macro": 0.9891864711416103
+}

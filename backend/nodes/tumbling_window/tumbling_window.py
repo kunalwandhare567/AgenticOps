@@ -40,8 +40,8 @@ from __future__ import annotations
 import csv
 from collections import Counter, deque
 
-from app_data_generator.state import PipelineState
-from app_data_generator.config import PIPELINE_OUTPUT_DIR, TUMBLING_WINDOW_CSV, WINDOW_SIZE
+from Simulator.app_data_generator_for_offline.state import PipelineState
+from Simulator.app_data_generator_for_offline.config import PIPELINE_OUTPUT_DIR, TUMBLING_WINDOW_CSV, WINDOW_SIZE
 
 # ── CSV columns ────────────────────────────────────────────────────────────────
 _WINDOW_CSV_COLS = [

@@ -1,0 +1,935 @@
+episode_id,failure_mode,failure_group,preliminary_severity,ttf_seconds,event,revised_severity,total_window_s,data_source,ttr_seconds
+ep_00001_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.119941
+ep_00003_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00004_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00005_ERROR_STORM,ERROR_STORM,Immediate trigger,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00006_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00007_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.135258
+ep_00008_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P4,238.0,0,P4,238.0,right_censored,
+ep_00009_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P4,238.0,0,P4,238.0,right_censored,
+ep_00010_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P4,51.51,1,P3,238.0,auto_arima_forecast,0.139653
+ep_00012_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.135907
+ep_00013_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P4,3.99,1,P2,238.0,auto_arima_forecast,0.137796
+ep_00015_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.136936
+ep_00016_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P4,86.54,1,P3,238.0,auto_arima_forecast,0.134304
+ep_00017_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P4,35.01,1,P3,238.0,auto_arima_forecast,0.14004
+ep_00018_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.140199
+ep_00019_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.135609
+ep_00020_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P4,238.0,0,P4,238.0,right_censored,
+ep_00021_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.132973
+ep_00022_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.130358
+ep_00023_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.129007
+ep_00024_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.13454
+ep_00025_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P4,137.39,1,P4,238.0,auto_arima_forecast,
+ep_00026_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.129408
+ep_00027_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00028_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P4,238.0,0,P4,238.0,right_censored,
+ep_00029_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.132075
+ep_00030_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.12782
+ep_00031_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.129887
+ep_00032_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.133145
+ep_00034_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.132715
+ep_00036_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.121211
+ep_00037_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00038_RETRY_STORM,RETRY_STORM,Fast accumulation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.163001
+ep_00039_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P4,0.1,1,P2,238.0,auto_arima_forecast,0.140347
+ep_00040_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.130145
+ep_00041_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00042_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P4,0.1,1,P2,238.0,auto_arima_forecast,0.126161
+ep_00043_ERROR_STORM,ERROR_STORM,Immediate trigger,P4,238.0,0,P4,238.0,right_censored,
+ep_00044_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P4,238.0,0,P4,238.0,right_censored_beyond_window,
+ep_00046_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00047_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134969
+ep_00048_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125233
+ep_00049_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,16.59,1,P1,238.0,auto_arima_forecast,0.128702
+ep_00050_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12929
+ep_00051_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128265
+ep_00052_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125101
+ep_00053_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129978
+ep_00054_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125857
+ep_00055_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00056_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131939
+ep_00057_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136297
+ep_00058_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131255
+ep_00059_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127725
+ep_00060_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127692
+ep_00062_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132592
+ep_00063_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131691
+ep_00064_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00066_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00067_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00068_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00070_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00071_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124346
+ep_00072_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00073_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00074_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126244
+ep_00075_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129797
+ep_00076_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00077_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,14.53,1,P1,238.0,auto_arima_forecast,0.129342
+ep_00079_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00080_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131933
+ep_00081_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130524
+ep_00082_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126738
+ep_00083_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00084_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00085_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130199
+ep_00086_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129305
+ep_00087_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00088_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00089_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125181
+ep_00090_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00091_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,227.56,1,P3,238.0,auto_arima_forecast,
+ep_00092_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00093_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00094_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126348
+ep_00095_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00096_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127326
+ep_00098_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00099_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00100_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128798
+ep_00101_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00102_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133361
+ep_00103_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00104_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00105_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,51.86,1,P2,238.0,auto_arima_forecast,0.129703
+ep_00107_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00108_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130239
+ep_00110_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128977
+ep_00111_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132781
+ep_00112_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129421
+ep_00113_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00114_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129583
+ep_00116_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00117_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00118_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128483
+ep_00119_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00120_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00121_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00122_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13007
+ep_00123_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00124_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00125_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00126_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00127_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12454
+ep_00128_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00129_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,238.0,0,P3,238.0,right_censored,
+ep_00130_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128934
+ep_00131_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00132_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128371
+ep_00133_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00134_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00135_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00136_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13799
+ep_00137_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00138_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,62.34,1,P2,238.0,auto_arima_forecast,0.130462
+ep_00140_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,50.51,1,P2,238.0,auto_arima_forecast,0.121582
+ep_00141_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12908
+ep_00142_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00143_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139318
+ep_00144_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00145_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00146_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,135.8,1,P3,238.0,auto_arima_forecast,
+ep_00147_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.150034
+ep_00148_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.123719
+ep_00149_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132724
+ep_00151_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00152_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00153_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126337
+ep_00154_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00155_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125497
+ep_00156_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00157_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00158_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00159_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00160_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,82.64,1,P2,238.0,auto_arima_forecast,0.128
+ep_00161_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127204
+ep_00162_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127381
+ep_00163_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00164_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12638
+ep_00165_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00166_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124925
+ep_00167_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00168_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12868
+ep_00170_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00171_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128185
+ep_00172_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12871
+ep_00173_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13509
+ep_00175_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130076
+ep_00176_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00177_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137094
+ep_00178_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134002
+ep_00179_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00180_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128306
+ep_00181_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00182_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132171
+ep_00183_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00184_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00185_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00186_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12758
+ep_00187_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00188_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00189_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00190_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00191_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130237
+ep_00192_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131921
+ep_00193_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00194_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00195_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127478
+ep_00196_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137193
+ep_00197_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131971
+ep_00198_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128143
+ep_00199_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00200_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,15.47,1,P1,238.0,auto_arima_forecast,0.122909
+ep_00201_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00202_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00203_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00204_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129143
+ep_00205_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,129.92,1,P3,238.0,auto_arima_forecast,
+ep_00206_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00207_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129897
+ep_00208_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00209_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129477
+ep_00210_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00212_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12999
+ep_00213_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00214_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00215_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00217_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13306
+ep_00218_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136313
+ep_00219_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00220_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00221_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00222_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00223_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129261
+ep_00224_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127544
+ep_00225_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00227_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00228_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00229_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126607
+ep_00230_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132315
+ep_00231_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,41.02,1,P2,238.0,auto_arima_forecast,0.126104
+ep_00232_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125154
+ep_00233_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00234_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00235_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128873
+ep_00236_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00237_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00238_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00239_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,206.05,1,P3,238.0,auto_arima_forecast,
+ep_00240_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131089
+ep_00241_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135064
+ep_00242_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124717
+ep_00245_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00246_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00247_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.14954
+ep_00248_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.153101
+ep_00250_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00251_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131412
+ep_00252_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00253_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00254_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00256_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00257_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133219
+ep_00258_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00259_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.123934
+ep_00260_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135323
+ep_00262_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,55.13,1,P2,238.0,auto_arima_forecast,0.133937
+ep_00263_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,59.73,1,P2,238.0,auto_arima_forecast,0.137017
+ep_00264_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129671
+ep_00265_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130538
+ep_00268_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128527
+ep_00269_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125841
+ep_00270_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,30.2,1,P2,238.0,auto_arima_forecast,0.133036
+ep_00272_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127058
+ep_00273_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00274_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.1278
+ep_00275_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127805
+ep_00276_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130284
+ep_00277_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129362
+ep_00278_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00279_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125355
+ep_00280_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00281_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00282_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137325
+ep_00283_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.14035
+ep_00284_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00285_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00286_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00287_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00288_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128985
+ep_00289_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00290_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00291_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,51.43,1,P2,238.0,auto_arima_forecast,0.138876
+ep_00292_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138424
+ep_00293_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00294_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00295_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137741
+ep_00296_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134225
+ep_00297_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132104
+ep_00298_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128514
+ep_00299_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131289
+ep_00300_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134601
+ep_00301_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130449
+ep_00302_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129794
+ep_00303_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00304_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00305_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12913
+ep_00306_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133446
+ep_00307_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00309_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00310_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00311_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.123195
+ep_00313_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127627
+ep_00314_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00315_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133951
+ep_00316_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.152497
+ep_00317_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00318_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132202
+ep_00319_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00320_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00321_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129305
+ep_00322_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133345
+ep_00323_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129558
+ep_00324_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00325_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00326_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00327_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00328_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130697
+ep_00329_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00330_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138134
+ep_00331_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128532
+ep_00332_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00333_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00334_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137783
+ep_00335_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00336_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134442
+ep_00337_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12905
+ep_00338_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00339_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129579
+ep_00340_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00341_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00342_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00343_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128737
+ep_00344_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00345_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.146329
+ep_00346_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.146084
+ep_00347_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00348_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131411
+ep_00349_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132255
+ep_00350_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00351_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126181
+ep_00352_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00353_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128777
+ep_00354_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130833
+ep_00355_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126092
+ep_00356_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128904
+ep_00357_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130408
+ep_00358_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126661
+ep_00359_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00360_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00361_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136113
+ep_00362_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,85.97,1,P2,238.0,auto_arima_forecast,0.127607
+ep_00363_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00364_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00365_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138647
+ep_00366_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131442
+ep_00367_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00368_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139753
+ep_00369_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00370_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135353
+ep_00371_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00372_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131113
+ep_00373_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00374_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00375_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,156.7,1,P3,238.0,auto_arima_forecast,
+ep_00376_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132362
+ep_00377_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00378_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00379_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00380_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00381_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129457
+ep_00382_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126798
+ep_00383_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00384_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128856
+ep_00385_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125926
+ep_00386_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00387_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13293
+ep_00388_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129599
+ep_00389_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127677
+ep_00390_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00391_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00392_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129209
+ep_00393_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00394_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00395_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00396_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132201
+ep_00397_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12969
+ep_00398_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129067
+ep_00399_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00400_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00401_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00402_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124304
+ep_00403_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132834
+ep_00404_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12856
+ep_00405_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00407_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.150407
+ep_00408_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00409_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00410_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136674
+ep_00411_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00412_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00414_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00415_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128669
+ep_00416_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133312
+ep_00417_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,5.53,1,P1,238.0,auto_arima_forecast,0.133644
+ep_00418_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00419_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00420_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00421_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133602
+ep_00422_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.140083
+ep_00423_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00424_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00425_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130382
+ep_00426_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00427_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00428_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130051
+ep_00430_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128824
+ep_00431_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,80.63,1,P2,238.0,auto_arima_forecast,0.125536
+ep_00432_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00433_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00434_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00435_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00436_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00438_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00439_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00440_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130307
+ep_00441_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129965
+ep_00442_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00444_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00445_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00446_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131072
+ep_00447_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00448_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130922
+ep_00449_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00450_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00451_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00452_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131287
+ep_00453_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00454_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125336
+ep_00456_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00457_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132416
+ep_00458_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00459_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00460_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00461_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,82.1,1,P2,238.0,auto_arima_forecast,0.130073
+ep_00462_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00463_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126614
+ep_00464_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127891
+ep_00465_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00466_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125149
+ep_00467_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00468_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137283
+ep_00469_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13026
+ep_00471_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13515
+ep_00472_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00473_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128497
+ep_00474_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127208
+ep_00475_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,23.28,1,P1,238.0,auto_arima_forecast,0.130048
+ep_00476_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00477_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130229
+ep_00478_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134523
+ep_00480_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00482_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00483_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,122.45,1,P3,238.0,auto_arima_forecast,
+ep_00484_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00485_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128153
+ep_00486_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13332
+ep_00487_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136544
+ep_00488_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00489_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00490_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139516
+ep_00491_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00492_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00493_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00494_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131642
+ep_00495_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.140055
+ep_00496_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00497_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134837
+ep_00498_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00499_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133626
+ep_00500_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131329
+ep_00501_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130091
+ep_00502_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130794
+ep_00503_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00504_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00506_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00507_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00509_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00510_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00511_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00512_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00513_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128294
+ep_00514_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128841
+ep_00515_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129745
+ep_00516_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12837
+ep_00517_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13054
+ep_00518_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124573
+ep_00519_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129682
+ep_00520_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00521_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,238.0,0,P3,238.0,right_censored,
+ep_00522_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13266
+ep_00523_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00524_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129968
+ep_00525_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130597
+ep_00526_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127318
+ep_00527_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.153282
+ep_00528_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00529_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00530_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138011
+ep_00531_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00532_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135359
+ep_00533_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00534_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00535_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00536_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00538_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127233
+ep_00539_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00540_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13247
+ep_00541_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126585
+ep_00542_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128393
+ep_00543_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00544_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12821
+ep_00546_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131791
+ep_00547_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00548_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130152
+ep_00549_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,15.75,1,P3,238.0,auto_arima_forecast,
+ep_00550_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127837
+ep_00551_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,75.4,1,P2,238.0,auto_arima_forecast,0.130095
+ep_00552_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129213
+ep_00554_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130695
+ep_00555_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127494
+ep_00556_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138699
+ep_00557_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131756
+ep_00559_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129829
+ep_00560_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00562_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134848
+ep_00563_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00564_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00565_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00566_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135636
+ep_00567_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00568_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00570_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,66.19,1,P2,238.0,auto_arima_forecast,0.127494
+ep_00571_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00572_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00573_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00574_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126476
+ep_00575_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134979
+ep_00576_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00577_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129568
+ep_00578_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00579_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00580_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,88.77,1,P2,238.0,auto_arima_forecast,0.125846
+ep_00581_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00582_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00583_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131473
+ep_00584_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00585_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00586_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00587_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00588_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00589_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00590_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00591_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00593_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128866
+ep_00594_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129028
+ep_00595_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135097
+ep_00596_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,46.05,1,P2,238.0,auto_arima_forecast,0.128433
+ep_00597_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.143705
+ep_00598_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00599_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130991
+ep_00601_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00602_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130711
+ep_00604_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131345
+ep_00605_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00606_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127595
+ep_00607_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00608_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00609_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00610_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00611_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00612_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133196
+ep_00613_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00614_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,63.88,1,P2,238.0,auto_arima_forecast,0.131263
+ep_00615_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.1362
+ep_00616_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00617_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00618_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.141288
+ep_00619_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00620_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00621_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128434
+ep_00622_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00623_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127584
+ep_00624_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00625_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134867
+ep_00626_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.146221
+ep_00627_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00628_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13888
+ep_00629_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00630_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00631_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00632_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00633_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,118.01,1,P2,238.0,auto_arima_forecast,0.132598
+ep_00634_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00635_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00636_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138373
+ep_00637_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00638_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138877
+ep_00639_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00640_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138564
+ep_00641_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00642_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13335
+ep_00643_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00644_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00645_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.143722
+ep_00646_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136595
+ep_00648_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00649_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132489
+ep_00650_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00651_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00652_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00653_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,91.84,1,P2,238.0,auto_arima_forecast,0.129896
+ep_00654_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00655_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126493
+ep_00656_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00657_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,72.91,1,P2,238.0,auto_arima_forecast,0.129151
+ep_00658_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128344
+ep_00659_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135042
+ep_00661_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00662_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00663_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124767
+ep_00664_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00665_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00666_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00667_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129227
+ep_00668_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00669_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13922
+ep_00670_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00671_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134282
+ep_00672_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00673_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128678
+ep_00674_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00675_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00676_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127744
+ep_00677_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130986
+ep_00678_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126259
+ep_00679_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00680_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.148445
+ep_00681_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135751
+ep_00682_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128571
+ep_00684_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136186
+ep_00685_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130323
+ep_00686_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135129
+ep_00687_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00688_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00689_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00690_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00691_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133878
+ep_00692_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136097
+ep_00693_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00694_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124222
+ep_00695_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00696_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130298
+ep_00697_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137538
+ep_00698_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135019
+ep_00699_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,45.28,1,P2,238.0,auto_arima_forecast,0.125864
+ep_00701_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00702_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00703_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00704_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127819
+ep_00705_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130316
+ep_00706_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129872
+ep_00707_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00708_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00709_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00710_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00711_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130483
+ep_00712_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00713_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128067
+ep_00715_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129229
+ep_00716_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127487
+ep_00717_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00718_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12768
+ep_00719_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,238.0,0,P3,238.0,right_censored,
+ep_00720_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00723_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00724_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00725_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00726_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00727_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130782
+ep_00729_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128595
+ep_00730_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133449
+ep_00731_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00733_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00734_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132838
+ep_00735_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131064
+ep_00736_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00737_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131804
+ep_00738_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00739_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129472
+ep_00740_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134267
+ep_00741_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00742_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00743_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128426
+ep_00744_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00745_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00746_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12889
+ep_00747_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129752
+ep_00748_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00749_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13234
+ep_00751_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13055
+ep_00752_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126337
+ep_00753_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128491
+ep_00754_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00755_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130539
+ep_00757_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,15.09,1,P1,238.0,auto_arima_forecast,0.12555
+ep_00758_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133864
+ep_00759_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00760_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135953
+ep_00761_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.140862
+ep_00762_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00763_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133732
+ep_00764_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00765_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00766_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133029
+ep_00767_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00768_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00769_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00770_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131155
+ep_00771_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00772_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00774_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00775_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,43.91,1,P2,238.0,auto_arima_forecast,0.127594
+ep_00777_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00778_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00779_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00780_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133373
+ep_00781_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132514
+ep_00782_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00783_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125946
+ep_00784_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00785_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125508
+ep_00786_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00787_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127831
+ep_00788_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134355
+ep_00789_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00790_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00791_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130037
+ep_00792_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00793_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00794_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00795_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127715
+ep_00796_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,42.4,1,P2,238.0,auto_arima_forecast,0.136156
+ep_00797_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128423
+ep_00798_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00799_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132653
+ep_00800_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133045
+ep_00801_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.123956
+ep_00802_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,122.3,1,P3,238.0,auto_arima_forecast,
+ep_00803_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00805_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00806_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127745
+ep_00807_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00808_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.123758
+ep_00809_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129437
+ep_00810_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00811_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128942
+ep_00812_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00813_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128918
+ep_00814_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00815_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00816_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00817_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131865
+ep_00818_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00819_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.147748
+ep_00820_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.136331
+ep_00821_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124484
+ep_00822_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00823_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00824_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00825_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139941
+ep_00826_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132585
+ep_00827_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00828_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00829_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00830_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00831_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00832_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.142031
+ep_00833_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130622
+ep_00834_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00835_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130394
+ep_00836_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.164317
+ep_00839_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00840_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00841_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139915
+ep_00843_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.155568
+ep_00844_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135737
+ep_00845_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00846_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00847_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00848_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00849_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139371
+ep_00850_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00851_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00852_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130579
+ep_00853_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.172807
+ep_00854_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,87.34,1,P2,238.0,auto_arima_forecast,0.176571
+ep_00855_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00857_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.140354
+ep_00858_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.146265
+ep_00859_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133646
+ep_00860_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00861_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,141.91,1,P3,238.0,auto_arima_forecast,
+ep_00862_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133688
+ep_00863_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00864_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134768
+ep_00866_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00868_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00870_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.134065
+ep_00871_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.137994
+ep_00872_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139358
+ep_00873_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135564
+ep_00874_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00875_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125029
+ep_00876_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00877_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125841
+ep_00878_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00879_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125509
+ep_00880_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00881_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00882_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,178.64,1,P3,238.0,auto_arima_forecast,
+ep_00883_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00884_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00885_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00886_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00887_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00888_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00889_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132447
+ep_00890_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132964
+ep_00891_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00892_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129978
+ep_00893_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133709
+ep_00894_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00895_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00896_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00897_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,144.29,1,P3,238.0,auto_arima_forecast,
+ep_00898_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00899_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13647
+ep_00900_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00901_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.12808
+ep_00902_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130407
+ep_00903_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,100.42,1,P2,238.0,auto_arima_forecast,0.125119
+ep_00904_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00905_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133999
+ep_00906_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00907_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130916
+ep_00908_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132395
+ep_00909_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00910_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00911_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129592
+ep_00912_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129097
+ep_00913_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00914_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00915_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.1308
+ep_00916_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00917_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132074
+ep_00918_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124094
+ep_00919_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00920_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13396
+ep_00922_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00923_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00924_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,134.33,1,P3,238.0,auto_arima_forecast,
+ep_00925_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00927_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00928_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00929_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00930_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132305
+ep_00931_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127915
+ep_00932_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00934_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.124487
+ep_00935_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133426
+ep_00936_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126074
+ep_00937_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.125709
+ep_00938_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129913
+ep_00939_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00940_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132036
+ep_00941_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132051
+ep_00943_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,136.48,1,P3,238.0,auto_arima_forecast,
+ep_00944_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130499
+ep_00945_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00946_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.157141
+ep_00947_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00948_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,166.77,1,P3,238.0,auto_arima_forecast,
+ep_00949_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131085
+ep_00950_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00951_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00952_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00953_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126636
+ep_00954_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00955_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.13524
+ep_00956_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00957_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00958_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128482
+ep_00959_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00960_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00962_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00963_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00964_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00965_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00966_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00967_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00968_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130166
+ep_00969_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00970_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00971_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127011
+ep_00972_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130173
+ep_00973_LATENCY_SPIKE,LATENCY_SPIKE,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00974_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00975_CACHE_STAMPEDE,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130058
+ep_00976_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129841
+ep_00977_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00978_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.130043
+ep_00979_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,4.32,1,P1,238.0,auto_arima_forecast,0.134244
+ep_00980_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.139365
+ep_00981_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00982_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00983_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.127668
+ep_00984_BAD_DEPLOY,BAD_DEPLOY,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138595
+ep_00985_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00986_MEMORY_LEAK,MEMORY_LEAK,Slow or latent degradation,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+ep_00987_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,67.91,1,P2,238.0,auto_arima_forecast,0.140221
+ep_00988_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.135215
+ep_00989_ERROR_STORM,ERROR_STORM,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00990_DB_SLOWDOWN,DB_SLOWDOWN,Slow or latent degradation,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ep_00991_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.138034
+ep_00992_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00993_QUEUE_BACKUP,QUEUE_BACKUP,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.133022
+ep_00994_DISK_IO_SATURATION,DISK_IO_SATURATION,Progressive resource degradation,P3,238.0,0,P3,238.0,right_censored,
+ep_00995_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+ep_00996_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.129804
+ep_00997_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.126589
+ep_00998_CPU_SATURATION,CPU_SATURATION,Immediate trigger,P3,127.16,1,P3,238.0,auto_arima_forecast,
+ep_00999_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,0.1,1,P1,238.0,auto_arima_forecast,0.131757
+ep_01000_RETRY_STORM,RETRY_STORM,Fast accumulation,P3,0.1,1,P1,238.0,auto_arima_forecast,0.128662
+ep_01001_CASCADING_FAILURE,CASCADING_FAILURE,Immediate trigger,P3,238.0,0,P3,238.0,right_censored,
+DISK_IO_SATURATION,CACHE_STAMPEDE,Immediate trigger,P3,0.1,1,P3,238.0,auto_arima_forecast,
+ERROR_STORM,1785697925.9186292,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored,
+MEMORY_LEAK,1785697930.7744348,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored,
+CASCADING_FAILURE,1785697935.6301222,Healthy / Unassigned,P3,0.1,1,P1,238.0,auto_arima_forecast,0.132242
+BAD_DEPLOY,1785697945.3462532,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored_beyond_window,
+DEPENDENCY_TIMEOUT,1785697950.1983016,Healthy / Unassigned,P3,0.1,1,P3,238.0,auto_arima_forecast,
+RETRY_STORM,1785697959.9075038,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored,
+CPU_SATURATION,1785698032.72846,Healthy / Unassigned,P3,85.84,1,P2,238.0,auto_arima_forecast,0.127653
+DB_SLOWDOWN,1785698052.1317446,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored,
+QUEUE_BACKUP,1785698056.9838676,Healthy / Unassigned,P3,238.0,0,P3,238.0,right_censored,

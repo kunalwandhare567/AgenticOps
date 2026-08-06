@@ -27,10 +27,17 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import io
 import json
 import sys
 import warnings
 from pathlib import Path
+
+# Force UTF-8 stdout encoding on Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 # Suppress statsmodels convergence warnings in batch mode
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -43,13 +50,13 @@ if str(PROJECT_ROOT) not in sys.path:
 import pandas as pd
 from tqdm import tqdm
 
-from app_data_generator.config import (
+from Simulator.app_data_generator_for_offline.config import (
     ENGINEERED_FEAT_CSV,
     FORECASTING_OUTPUT_CSV,
     TUMBLING_WINDOW_CSV,
     DB_PATH,
 )
-from app_data_generator.storage.db_writer import DbWriter
+from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 from nodes.forecasting.buffer import reset_all, clear_episode, append_feature_row
 from nodes.forecasting.router import route_forecast
 
@@ -130,7 +137,7 @@ def main() -> None:
 
     print(f"\n[run_forecasting] Running forecast for {len(episodes)} episodes ...\n")
 
-    for ep_id in tqdm(episodes, desc="Forecasting"):
+    for idx, ep_id in enumerate(tqdm(episodes, desc="Forecasting")):
         ep_feat = feat_df[feat_df["episode_id"] == ep_id].copy()
         if "elapsed_s" in ep_feat.columns:
             ep_feat = ep_feat.sort_values("elapsed_s")
@@ -201,10 +208,10 @@ def main() -> None:
         # ── DB: Write to node_forecasting table ───────────────────────────────
         try:
             pipeline_db.write_forecasting({
-                "cycle":               None,          # offline batch (no cycle counter)
+                "cycle":               idx + 1,
                 "episode_id":          ep_id,
                 "failure_mode":        dominant_state,
-                "timestamp":           None,
+                "timestamp":           last_row.get("timestamp", 0.0),
                 "elapsed_s":           elapsed,
                 "algorithm_used":      fc.get("algorithm_used", ""),
                 "history_steps":       fc.get("history_steps", 0),
@@ -232,9 +239,29 @@ def main() -> None:
     defined = [c for c in _OUTPUT_COLS if c in out_df.columns]
     extra   = [c for c in out_df.columns if c not in defined]
     out_df  = out_df[defined + extra]
+
+    out_dir = FORECASTING_OUTPUT_CSV.parent
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    # Find next version number N
+    import re
+    pattern = re.compile(r"^forecasting_output_(\d+)\.csv$")
+    max_v = 0
+    if out_dir.exists():
+        for f in out_dir.iterdir():
+            m = pattern.match(f.name)
+            if m:
+                max_v = max(max_v, int(m.group(1)))
+    version = max_v + 1
+    versioned_csv = out_dir / f"forecasting_output_{version}.csv"
+
+    out_df.to_csv(versioned_csv, index=False)
     out_df.to_csv(FORECASTING_OUTPUT_CSV, index=False)
 
-    print(f"\n[run_forecasting] Done: {len(out_df):,} rows -> {FORECASTING_OUTPUT_CSV}")
+    print(f"\n[run_forecasting] SUCCESS! Done: {len(out_df):,} rows")
+    print(f"  [CSV Output Version {version}] : {versioned_csv}")
+    print(f"  [CSV Output Latest]    : {FORECASTING_OUTPUT_CSV}")
+    print(f"  [SQLite Table]         : node_forecasting in {DB_PATH.name}")
     print("\n── Summary ──────────────────────────────────────────────────────────")
     print(f"  Episodes processed : {len(episodes):,}")
     print(f"  Forecast rows      : {len(out_df):,}")

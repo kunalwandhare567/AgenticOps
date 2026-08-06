@@ -20,8 +20,8 @@ Rules (from implementation plan, thresholds in config.py):
 """
 from __future__ import annotations
 
-from app_data_generator.state import PipelineState
-from app_data_generator.config import SEVERITY_P1, SEVERITY_P2, SEVERITY_P3
+from Simulator.app_data_generator_for_offline.state import PipelineState
+from Simulator.app_data_generator_for_offline.config import SEVERITY_P1, SEVERITY_P2, SEVERITY_P3
 
 
 def compute_preliminary_severity(state: PipelineState) -> PipelineState:

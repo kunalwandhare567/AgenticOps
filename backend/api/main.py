@@ -17,9 +17,11 @@ if str(_HERE.parent) not in sys.path:
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
-from api.services import AIOpsDashboardService, HumanGateService
+from api.services import AIOpsDashboardService, HumanGateService, LiveFeedService
+from api.sse_broadcaster import SSEBroadcaster
 
 app = FastAPI(
     title="Sentinel AIOps Incident Detection API",
@@ -46,53 +48,115 @@ class StatusUpdate(BaseModel):
 class GateDecision(BaseModel):
     decision: str    # "APPROVED" or "REJECTED"
     operator: str    # Reviewer username / name
-    reason:   str = ""  # Optional comment (required on REJECT is a UI concern)
+    reason:   str = ""
+
 
 @app.get("/api/health")
 def health_check() -> Dict[str, str]:
     return {"status": "healthy", "service": "AIOps Sentinel Core"}
 
+
+# =============================================================================
+# Historical Pipeline Routes (unchanged)
+# =============================================================================
+
 @app.get("/api/live")
 def get_live_incident() -> Dict[str, Any]:
-    """Get the latest cycle's incident state from active pipeline outputs."""
+    """Get the latest cycle's incident state from historical pipeline CSV outputs."""
     data = AIOpsDashboardService.get_live_state()
     if not data:
-        raise HTTPException(status_code=404, detail="No active pipeline run telemetry found. Please start run_pipeline.py first.")
-    
-    # Apply status override if user modified it
+        raise HTTPException(status_code=404, detail="No active pipeline run telemetry found.")
     ep_id = data["episode_id"]
     if ep_id in _status_overrides:
         data["status"] = _status_overrides[ep_id]
-        
     return data
+
 
 @app.get("/api/episodes")
 def list_episodes() -> List[Dict[str, Any]]:
-    """Get list of all processed episodes."""
+    """Get list of all processed historical episodes."""
     return AIOpsDashboardService.get_all_episodes()
+
 
 @app.get("/api/episodes/{episode_id}")
 def get_episode(episode_id: str) -> Dict[str, Any]:
-    """Get details for a specific episode."""
+    """Get details for a specific historical episode."""
     data = AIOpsDashboardService.get_episode_details(episode_id)
     if not data:
         raise HTTPException(status_code=404, detail=f"Episode {episode_id} not found.")
-    
-    # Apply status override if user modified it
     if episode_id in _status_overrides:
         data["status"] = _status_overrides[episode_id]
-        
     return data
+
 
 @app.patch("/api/incident/{episode_id}")
 def update_incident_status(episode_id: str, body: StatusUpdate) -> Dict[str, str]:
-    """Updates the status of an incident (e.g. from OPEN to ACKNOWLEDGED)."""
+    """Updates the status of an incident."""
     status = body.status.upper()
     if status not in ["OPEN", "ACKNOWLEDGED", "IN_PROGRESS", "RESOLVED"]:
-        raise HTTPException(status_code=400, detail="Invalid status value. Choose: OPEN, ACKNOWLEDGED, IN_PROGRESS, RESOLVED")
-    
+        raise HTTPException(status_code=400, detail="Invalid status value.")
     _status_overrides[episode_id] = status
     return {"episode_id": episode_id, "status": status, "message": "Status updated successfully."}
+
+
+@app.get("/api/reliability/summary")
+def get_reliability_summary() -> Dict[str, Any]:
+    """Return 4-group Weibull parameters, KM step points, and Weibull curves."""
+    return AIOpsDashboardService.get_reliability_summary()
+
+
+# =============================================================================
+# Live Feed Routes — SSE + REST
+# =============================================================================
+
+@app.get("/api/live-stream")
+async def live_stream():
+    """
+    Server-Sent Events endpoint — pushes latest pipeline state every 500ms.
+
+    Frontend connects with:
+        const es = new EventSource('http://localhost:8080/api/live-stream');
+        es.onmessage = (e) => setIncident(JSON.parse(e.data));
+
+    Returns text/event-stream (never closes until client disconnects).
+    """
+    return StreamingResponse(
+        SSEBroadcaster.stream(interval_s=0.5),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control":               "no-cache",
+            "X-Accel-Buffering":           "no",
+            "Access-Control-Allow-Origin": "*",
+        },
+    )
+
+
+@app.get("/api/live-feed/state")
+def get_live_feed_state() -> Dict[str, Any]:
+    """
+    REST fallback — latest pipeline_results row from live_feed_db.sqlite.
+    Used when SSE is unavailable (proxied environments).
+    """
+    data = LiveFeedService.get_live_feed_state()
+    if not data:
+        raise HTTPException(
+            status_code=404,
+            detail="No live feed data yet. Start run_live_feed.py and run_langgraph.py --live first."
+        )
+    return data
+
+
+@app.get("/api/live-feed/episodes")
+def get_live_feed_episodes() -> List[Dict[str, Any]]:
+    """List all episodes from the live feed database (newest first)."""
+    return LiveFeedService.get_live_feed_episodes()
+
+
+@app.get("/api/live-feed/status")
+def get_live_feed_status() -> Dict[str, Any]:
+    """Return live feed session metadata: queue depth, episode count, latest mode."""
+    return LiveFeedService.get_live_feed_status()
+
 
 # =============================================================================
 # Human Gate Routes
@@ -100,19 +164,13 @@ def update_incident_status(episode_id: str, body: StatusUpdate) -> Dict[str, str
 
 @app.get("/api/human-gate/pending")
 def get_pending_reviews() -> List[Dict[str, Any]]:
-    """
-    Return all Human Gate reviews currently awaiting operator decision.
-    Frontend polls this every 2 s to show the HumanGatePanel badge.
-    """
+    """Return all Human Gate reviews currently awaiting operator decision."""
     return HumanGateService.get_pending_reviews()
 
 
 @app.get("/api/human-gate/review/{review_id}")
 def get_review(review_id: str) -> Dict[str, Any]:
-    """
-    Return full details of one pending review and mark it as REVIEWING.
-    Called when the operator opens the review panel.
-    """
+    """Return full details of one pending review and mark it as REVIEWING."""
     data = HumanGateService.get_review(review_id)
     if not data:
         raise HTTPException(status_code=404, detail=f"Review {review_id} not found.")
@@ -121,22 +179,10 @@ def get_review(review_id: str) -> Dict[str, Any]:
 
 @app.post("/api/human-gate/decision/{review_id}")
 def submit_gate_decision(review_id: str, body: GateDecision) -> Dict[str, Any]:
-    """
-    Submit an operator's APPROVE or REJECT decision for a pending review.
-    The pipeline runner polling poll_for_decision() will see the status change
-    within its next 0.1-second poll cycle and resume.
-
-    Body:
-        decision : "APPROVED" | "REJECTED"
-        operator : reviewer name/username
-        reason   : optional comment (required on REJECT by UI convention)
-    """
+    """Submit an operator's APPROVE or REJECT decision for a pending review."""
     decision = body.decision.upper().strip()
     if decision not in ("APPROVED", "REJECTED"):
-        raise HTTPException(
-            status_code=400,
-            detail="Invalid decision. Use 'APPROVED' or 'REJECTED'."
-        )
+        raise HTTPException(status_code=400, detail="Invalid decision. Use 'APPROVED' or 'REJECTED'.")
     result = HumanGateService.submit_decision(
         review_id = review_id,
         decision  = decision,
@@ -150,19 +196,13 @@ def submit_gate_decision(review_id: str, body: GateDecision) -> Dict[str, Any]:
 
 @app.get("/api/human-gate/metrics")
 def get_gate_metrics() -> Dict[str, Any]:
-    """
-    Return Human Gate KPI metrics: approval %, rejection %, auto-approval %,
-    avg response time, false escalation count.
-    """
+    """Return Human Gate KPI metrics."""
     return HumanGateService.get_metrics()
 
 
 @app.get("/api/human-gate/history")
 def get_gate_history(limit: int = 50) -> List[Dict[str, Any]]:
-    """
-    Return recent Human Gate audit records (newest first).
-    Used for historical analysis and offline model improvement.
-    """
+    """Return recent Human Gate audit records (newest first)."""
     return HumanGateService.get_history(limit=limit)
 
 

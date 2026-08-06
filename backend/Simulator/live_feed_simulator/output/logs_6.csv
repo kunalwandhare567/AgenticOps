@@ -1,0 +1,585 @@
+episode_id,failure_mode,service,elapsed_s,timestamp,log_level,exception_type,log_message
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,0.0,1785925240.0532446,ERROR,NullPointerException,ERROR err=0.45% http5xx=0.12% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,0.5,1785925240.5537093,ERROR,NullPointerException,ERROR err=0.79% http5xx=0.14% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,1.0,1785925241.0539067,ERROR,NullPointerException,ERROR err=1.29% http5xx=0.58% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,1.5,1785925241.5540376,ERROR,NullPointerException,ERROR err=0.25% http5xx=0.09% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,2.0,1785925242.0541427,ERROR,NullPointerException,ERROR err=1.24% http5xx=0.29% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,2.5,1785925242.5542428,ERROR,NullPointerException,ERROR err=0.63% http5xx=0.26% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,3.0,1785925243.054514,ERROR,NullPointerException,ERROR err=0.18% http5xx=0.20% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,3.5,1785925243.5550807,ERROR,NullPointerException,ERROR err=57.55% http5xx=34.53% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,4.0,1785925244.055562,ERROR,NullPointerException,ERROR err=59.59% http5xx=35.75% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,4.5,1785925244.556054,ERROR,NullPointerException,ERROR err=65.68% http5xx=39.41% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,5.0,1785925245.0563898,ERROR,NullPointerException,ERROR err=64.40% http5xx=38.64% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,5.5,1785925245.5565412,ERROR,NullPointerException,ERROR err=55.96% http5xx=33.58% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,6.0,1785925246.05714,ERROR,NullPointerException,ERROR err=67.48% http5xx=40.49% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,6.5,1785925246.55742,ERROR,NullPointerException,ERROR err=53.38% http5xx=32.03% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,7.0,1785925247.0577815,ERROR,NullPointerException,ERROR err=64.67% http5xx=38.80% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,7.5,1785925247.5580611,ERROR,NullPointerException,ERROR err=68.02% http5xx=40.81% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,8.0,1785925248.0585668,ERROR,NullPointerException,ERROR err=74.55% http5xx=44.73% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,8.5,1785925248.5706265,ERROR,NullPointerException,ERROR err=52.02% http5xx=31.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,9.0,1785925249.0710278,ERROR,NullPointerException,ERROR err=63.81% http5xx=38.28% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,9.5,1785925249.5713956,ERROR,NullPointerException,ERROR err=68.68% http5xx=41.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,10.0,1785925250.0722585,ERROR,NullPointerException,ERROR err=48.95% http5xx=29.37% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,10.5,1785925250.5725079,ERROR,NullPointerException,ERROR err=62.12% http5xx=37.27% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,11.0,1785925251.072575,ERROR,NullPointerException,ERROR err=64.39% http5xx=38.64% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,11.5,1785925251.5730546,ERROR,NullPointerException,ERROR err=65.32% http5xx=39.19% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,12.0,1785925252.0733988,ERROR,NullPointerException,ERROR err=66.33% http5xx=39.80% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,12.5,1785925252.5739625,ERROR,NullPointerException,ERROR err=60.36% http5xx=36.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,13.0,1785925253.0742457,ERROR,NullPointerException,ERROR err=55.98% http5xx=33.59% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,13.5,1785925253.5745993,ERROR,NullPointerException,ERROR err=54.40% http5xx=32.64% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,14.0,1785925254.074677,ERROR,NullPointerException,ERROR err=63.49% http5xx=38.10% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,14.5,1785925254.575187,ERROR,NullPointerException,ERROR err=71.57% http5xx=42.94% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,15.0,1785925255.0758665,ERROR,NullPointerException,ERROR err=42.01% http5xx=25.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,15.5,1785925255.576045,ERROR,NullPointerException,ERROR err=68.67% http5xx=41.20% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,16.0,1785925256.0764227,ERROR,NullPointerException,ERROR err=38.65% http5xx=23.19% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,16.5,1785925256.5766094,ERROR,NullPointerException,ERROR err=73.27% http5xx=43.96% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,17.0,1785925257.0768685,ERROR,NullPointerException,ERROR err=44.15% http5xx=26.49% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,17.5,1785925257.5772626,ERROR,NullPointerException,ERROR err=62.30% http5xx=37.38% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,18.0,1785925258.0778098,ERROR,NullPointerException,ERROR err=76.35% http5xx=45.81% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,18.5,1785925258.5779402,ERROR,NullPointerException,ERROR err=62.40% http5xx=37.44% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,19.0,1785925259.078601,ERROR,NullPointerException,ERROR err=56.55% http5xx=33.93% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,19.5,1785925259.5790396,ERROR,NullPointerException,ERROR err=69.06% http5xx=41.44% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,20.0,1785925260.0795653,ERROR,NullPointerException,ERROR err=69.96% http5xx=41.98% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,20.5,1785925260.5799282,ERROR,NullPointerException,ERROR err=46.89% http5xx=28.13% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,21.0,1785925261.0800638,ERROR,NullPointerException,ERROR err=46.23% http5xx=27.74% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,21.5,1785925261.5812142,ERROR,NullPointerException,ERROR err=74.95% http5xx=44.97% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,22.0,1785925262.0813339,ERROR,NullPointerException,ERROR err=63.57% http5xx=38.14% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,22.5,1785925262.582529,ERROR,NullPointerException,ERROR err=61.19% http5xx=36.71% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,23.0,1785925263.082997,ERROR,NullPointerException,ERROR err=70.50% http5xx=42.30% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,23.5,1785925263.5831115,ERROR,NullPointerException,ERROR err=60.72% http5xx=36.43% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,24.0,1785925264.083353,ERROR,NullPointerException,ERROR err=76.75% http5xx=46.05% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,24.5,1785925264.5834744,ERROR,NullPointerException,ERROR err=68.93% http5xx=41.36% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,25.0,1785925265.0840147,ERROR,NullPointerException,ERROR err=55.91% http5xx=33.55% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,25.5,1785925265.5842066,ERROR,NullPointerException,ERROR err=61.54% http5xx=36.92% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,26.0,1785925266.0846915,ERROR,NullPointerException,ERROR err=54.84% http5xx=32.90% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,26.5,1785925266.5848336,ERROR,NullPointerException,ERROR err=63.89% http5xx=38.33% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,27.0,1785925267.0852628,ERROR,NullPointerException,ERROR err=57.81% http5xx=34.68% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,27.5,1785925267.5865836,ERROR,NullPointerException,ERROR err=65.78% http5xx=39.47% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,28.0,1785925268.0870988,ERROR,NullPointerException,ERROR err=44.14% http5xx=26.49% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,28.5,1785925268.5874429,ERROR,NullPointerException,ERROR err=51.16% http5xx=30.70% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,29.0,1785925269.0879757,ERROR,NullPointerException,ERROR err=80.00% http5xx=48.00% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,29.5,1785925269.5881798,ERROR,NullPointerException,ERROR err=67.01% http5xx=40.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,30.0,1785925270.088705,ERROR,NullPointerException,ERROR err=66.44% http5xx=39.86% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,30.5,1785925270.5892022,ERROR,NullPointerException,ERROR err=59.92% http5xx=35.95% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,31.0,1785925271.0897782,ERROR,NullPointerException,ERROR err=68.41% http5xx=41.05% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,31.5,1785925271.5902598,ERROR,NullPointerException,ERROR err=62.58% http5xx=37.55% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,32.0,1785925272.0906,ERROR,NullPointerException,ERROR err=58.65% http5xx=35.19% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,32.5,1785925272.591174,ERROR,NullPointerException,ERROR err=67.77% http5xx=40.66% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,33.0,1785925273.0916667,ERROR,NullPointerException,ERROR err=53.17% http5xx=31.90% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,33.5,1785925273.5923939,ERROR,NullPointerException,ERROR err=65.09% http5xx=39.05% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,34.0,1785925274.0927932,ERROR,NullPointerException,ERROR err=64.64% http5xx=38.79% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,34.5,1785925274.5931532,ERROR,NullPointerException,ERROR err=73.78% http5xx=44.27% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,35.0,1785925275.0937154,ERROR,NullPointerException,ERROR err=68.91% http5xx=41.35% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,35.5,1785925275.5938604,ERROR,NullPointerException,ERROR err=61.17% http5xx=36.70% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,36.0,1785925276.0940354,ERROR,NullPointerException,ERROR err=64.16% http5xx=38.50% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,36.5,1785925276.5944443,ERROR,NullPointerException,ERROR err=41.93% http5xx=25.16% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,37.0,1785925277.0948513,ERROR,NullPointerException,ERROR err=52.93% http5xx=31.76% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,37.5,1785925277.5953152,ERROR,NullPointerException,ERROR err=60.67% http5xx=36.40% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,38.0,1785925278.0954967,ERROR,NullPointerException,ERROR err=74.78% http5xx=44.87% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,38.5,1785925278.5957053,ERROR,NullPointerException,ERROR err=58.09% http5xx=34.85% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,39.0,1785925279.0959914,ERROR,NullPointerException,ERROR err=72.61% http5xx=43.56% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,39.5,1785925279.5963774,ERROR,NullPointerException,ERROR err=63.73% http5xx=38.24% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,40.0,1785925280.096521,ERROR,NullPointerException,ERROR err=54.84% http5xx=32.90% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,40.5,1785925280.596884,ERROR,NullPointerException,ERROR err=73.37% http5xx=44.02% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,41.0,1785925281.0971758,ERROR,NullPointerException,ERROR err=58.68% http5xx=35.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,41.5,1785925281.597895,ERROR,NullPointerException,ERROR err=46.59% http5xx=27.95% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,42.0,1785925282.098298,ERROR,NullPointerException,ERROR err=80.00% http5xx=48.00% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,42.5,1785925282.598517,ERROR,NullPointerException,ERROR err=66.93% http5xx=40.16% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,43.0,1785925283.098613,ERROR,NullPointerException,ERROR err=71.88% http5xx=43.13% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,43.5,1785925283.5990782,ERROR,NullPointerException,ERROR err=57.18% http5xx=34.31% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,44.0,1785925284.0994177,ERROR,NullPointerException,ERROR err=69.07% http5xx=41.44% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,44.5,1785925284.599493,ERROR,NullPointerException,ERROR err=74.83% http5xx=44.90% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,45.0,1785925285.0996447,ERROR,NullPointerException,ERROR err=37.78% http5xx=22.67% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,45.5,1785925285.599723,ERROR,NullPointerException,ERROR err=43.68% http5xx=26.21% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,46.0,1785925286.100261,ERROR,NullPointerException,ERROR err=72.53% http5xx=43.52% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,46.5,1785925286.6007912,ERROR,NullPointerException,ERROR err=69.73% http5xx=41.84% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,47.0,1785925287.1011205,ERROR,NullPointerException,ERROR err=74.84% http5xx=44.90% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,47.5,1785925287.6012897,ERROR,NullPointerException,ERROR err=49.30% http5xx=29.58% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,48.0,1785925288.103438,ERROR,NullPointerException,ERROR err=66.15% http5xx=39.69% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,48.5,1785925288.6037931,ERROR,NullPointerException,ERROR err=69.48% http5xx=41.69% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,49.0,1785925289.103932,ERROR,NullPointerException,ERROR err=71.87% http5xx=43.12% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,49.5,1785925289.6042275,ERROR,NullPointerException,ERROR err=75.55% http5xx=45.33% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,50.0,1785925290.1043308,ERROR,NullPointerException,ERROR err=55.08% http5xx=33.05% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,50.5,1785925290.606928,ERROR,NullPointerException,ERROR err=56.12% http5xx=33.67% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,51.0,1785925291.1125035,ERROR,NullPointerException,ERROR err=48.48% http5xx=29.09% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,51.5,1785925291.612948,ERROR,NullPointerException,ERROR err=80.00% http5xx=48.00% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,52.0,1785925292.1130934,ERROR,NullPointerException,ERROR err=60.23% http5xx=36.14% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,52.5,1785925292.6135185,ERROR,NullPointerException,ERROR err=39.28% http5xx=23.57% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,53.0,1785925293.1136563,ERROR,NullPointerException,ERROR err=62.40% http5xx=37.44% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,53.5,1785925293.6141937,ERROR,NullPointerException,ERROR err=57.41% http5xx=34.44% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,54.0,1785925294.1144936,ERROR,NullPointerException,ERROR err=59.32% http5xx=35.59% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,54.5,1785925294.614995,ERROR,NullPointerException,ERROR err=60.45% http5xx=36.27% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,55.0,1785925295.1157062,ERROR,NullPointerException,ERROR err=56.58% http5xx=33.95% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,55.5,1785925295.615954,ERROR,NullPointerException,ERROR err=55.87% http5xx=33.52% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,56.0,1785925296.1160672,ERROR,NullPointerException,ERROR err=66.09% http5xx=39.65% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,56.5,1785925296.6187682,ERROR,NullPointerException,ERROR err=59.92% http5xx=35.95% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,57.0,1785925297.1192193,ERROR,NullPointerException,ERROR err=41.43% http5xx=24.86% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,57.5,1785925297.6195881,ERROR,NullPointerException,ERROR err=49.56% http5xx=29.74% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,58.0,1785925298.1202478,ERROR,NullPointerException,ERROR err=67.20% http5xx=40.32% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,58.5,1785925298.6208792,ERROR,NullPointerException,ERROR err=55.66% http5xx=33.40% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,59.0,1785925299.121249,ERROR,NullPointerException,ERROR err=53.56% http5xx=32.14% -- bad canary deploy
+live_ep_000013_BAD_DEPLOY,BAD_DEPLOY,inventory-service,59.5,1785925299.6215613,ERROR,NullPointerException,ERROR err=52.34% http5xx=31.41% -- bad canary deploy
+live_ep_000014_NONE,NONE,inventory-service,0.0,1785925300.1536736,INFO,,OK cpu=35% p99=102ms err=0.41%
+live_ep_000014_NONE,NONE,inventory-service,0.5,1785925300.6549299,INFO,,OK cpu=45% p99=136ms err=1.41%
+live_ep_000014_NONE,NONE,inventory-service,1.0,1785925301.1572096,INFO,,OK cpu=31% p99=126ms err=1.23%
+live_ep_000014_NONE,NONE,inventory-service,1.5,1785925301.6580203,INFO,,OK cpu=33% p99=120ms err=0.71%
+live_ep_000014_NONE,NONE,inventory-service,2.0,1785925302.1581674,INFO,,OK cpu=35% p99=145ms err=3.71%
+live_ep_000014_NONE,NONE,inventory-service,2.5,1785925302.6582825,INFO,,OK cpu=35% p99=115ms err=1.79%
+live_ep_000014_NONE,NONE,inventory-service,3.0,1785925303.158659,INFO,,OK cpu=31% p99=115ms err=1.02%
+live_ep_000014_NONE,NONE,inventory-service,3.5,1785925303.6588676,INFO,,OK cpu=36% p99=112ms err=0.80%
+live_ep_000014_NONE,NONE,inventory-service,4.0,1785925304.1589344,INFO,,OK cpu=25% p99=132ms err=0.70%
+live_ep_000014_NONE,NONE,inventory-service,4.5,1785925304.6593988,INFO,,OK cpu=40% p99=119ms err=0.65%
+live_ep_000014_NONE,NONE,inventory-service,5.0,1785925305.159879,INFO,,OK cpu=35% p99=135ms err=1.13%
+live_ep_000014_NONE,NONE,inventory-service,5.5,1785925305.6603754,INFO,,OK cpu=38% p99=111ms err=1.47%
+live_ep_000014_NONE,NONE,inventory-service,6.0,1785925306.160928,INFO,,OK cpu=28% p99=101ms err=1.59%
+live_ep_000014_NONE,NONE,inventory-service,6.5,1785925306.6612704,INFO,,OK cpu=35% p99=138ms err=0.99%
+live_ep_000014_NONE,NONE,inventory-service,7.0,1785925307.161412,INFO,,OK cpu=40% p99=142ms err=2.34%
+live_ep_000014_NONE,NONE,inventory-service,7.5,1785925307.6614823,INFO,,OK cpu=44% p99=129ms err=1.54%
+live_ep_000014_NONE,NONE,inventory-service,8.0,1785925308.1619048,INFO,,OK cpu=45% p99=131ms err=0.24%
+live_ep_000014_NONE,NONE,inventory-service,8.5,1785925308.6627288,INFO,,OK cpu=32% p99=119ms err=0.77%
+live_ep_000014_NONE,NONE,inventory-service,9.0,1785925309.1631975,INFO,,OK cpu=33% p99=104ms err=1.37%
+live_ep_000014_NONE,NONE,inventory-service,9.5,1785925309.663625,INFO,,OK cpu=40% p99=100ms err=0.60%
+live_ep_000014_NONE,NONE,inventory-service,10.0,1785925310.1644306,INFO,,OK cpu=32% p99=131ms err=0.47%
+live_ep_000014_NONE,NONE,inventory-service,10.5,1785925310.6649182,INFO,,OK cpu=35% p99=140ms err=0.79%
+live_ep_000014_NONE,NONE,inventory-service,11.0,1785925311.165013,INFO,,OK cpu=37% p99=143ms err=0.72%
+live_ep_000014_NONE,NONE,inventory-service,11.5,1785925311.6654208,INFO,,OK cpu=35% p99=107ms err=0.85%
+live_ep_000014_NONE,NONE,inventory-service,12.0,1785925312.1655772,INFO,,OK cpu=28% p99=159ms err=0.38%
+live_ep_000014_NONE,NONE,inventory-service,12.5,1785925312.6659322,INFO,,OK cpu=30% p99=137ms err=0.48%
+live_ep_000014_NONE,NONE,inventory-service,13.0,1785925313.1662157,INFO,,OK cpu=36% p99=103ms err=0.34%
+live_ep_000014_NONE,NONE,inventory-service,13.5,1785925313.6666296,INFO,,OK cpu=31% p99=115ms err=1.40%
+live_ep_000014_NONE,NONE,inventory-service,14.0,1785925314.1670706,INFO,,OK cpu=28% p99=109ms err=1.87%
+live_ep_000014_NONE,NONE,inventory-service,14.5,1785925314.6675692,INFO,,OK cpu=30% p99=133ms err=2.11%
+live_ep_000014_NONE,NONE,inventory-service,15.0,1785925315.1680303,INFO,,OK cpu=32% p99=121ms err=1.26%
+live_ep_000014_NONE,NONE,inventory-service,15.5,1785925315.668274,INFO,,OK cpu=35% p99=142ms err=0.20%
+live_ep_000014_NONE,NONE,inventory-service,16.0,1785925316.1685512,INFO,,OK cpu=32% p99=115ms err=0.82%
+live_ep_000014_NONE,NONE,inventory-service,16.5,1785925316.6688774,INFO,,OK cpu=26% p99=151ms err=0.96%
+live_ep_000014_NONE,NONE,inventory-service,17.0,1785925317.169212,INFO,,OK cpu=29% p99=108ms err=0.52%
+live_ep_000014_NONE,NONE,inventory-service,17.5,1785925317.6695106,INFO,,OK cpu=27% p99=134ms err=0.37%
+live_ep_000014_NONE,NONE,inventory-service,18.0,1785925318.1700613,INFO,,OK cpu=32% p99=122ms err=2.77%
+live_ep_000014_NONE,NONE,inventory-service,18.5,1785925318.6702478,INFO,,OK cpu=31% p99=107ms err=0.87%
+live_ep_000014_NONE,NONE,inventory-service,19.0,1785925319.1708083,INFO,,OK cpu=41% p99=123ms err=0.98%
+live_ep_000014_NONE,NONE,inventory-service,19.5,1785925319.6710749,INFO,,OK cpu=41% p99=110ms err=0.70%
+live_ep_000014_NONE,NONE,inventory-service,20.0,1785925320.1724045,INFO,,OK cpu=38% p99=141ms err=0.57%
+live_ep_000014_NONE,NONE,inventory-service,20.5,1785925320.6729295,INFO,,OK cpu=32% p99=98ms err=0.20%
+live_ep_000014_NONE,NONE,inventory-service,21.0,1785925321.173455,INFO,,OK cpu=34% p99=132ms err=0.93%
+live_ep_000014_NONE,NONE,inventory-service,21.5,1785925321.674083,INFO,,OK cpu=35% p99=144ms err=0.23%
+live_ep_000014_NONE,NONE,inventory-service,22.0,1785925322.1743505,INFO,,OK cpu=20% p99=132ms err=0.69%
+live_ep_000014_NONE,NONE,inventory-service,22.5,1785925322.6745834,INFO,,OK cpu=38% p99=140ms err=0.17%
+live_ep_000014_NONE,NONE,inventory-service,23.0,1785925323.1749563,INFO,,OK cpu=34% p99=100ms err=0.59%
+live_ep_000014_NONE,NONE,inventory-service,23.5,1785925323.67552,INFO,,OK cpu=36% p99=147ms err=2.23%
+live_ep_000014_NONE,NONE,inventory-service,24.0,1785925324.1762445,INFO,,OK cpu=43% p99=113ms err=0.55%
+live_ep_000014_NONE,NONE,inventory-service,24.5,1785925324.6765945,INFO,,OK cpu=36% p99=144ms err=0.68%
+live_ep_000014_NONE,NONE,inventory-service,25.0,1785925325.1801133,INFO,,OK cpu=38% p99=135ms err=3.95%
+live_ep_000014_NONE,NONE,inventory-service,25.5,1785925325.6804016,INFO,,OK cpu=33% p99=117ms err=1.12%
+live_ep_000014_NONE,NONE,inventory-service,26.0,1785925326.180641,INFO,,OK cpu=46% p99=117ms err=1.26%
+live_ep_000014_NONE,NONE,inventory-service,26.5,1785925326.680928,INFO,,OK cpu=40% p99=144ms err=2.19%
+live_ep_000014_NONE,NONE,inventory-service,27.0,1785925327.1813557,INFO,,OK cpu=38% p99=140ms err=0.31%
+live_ep_000014_NONE,NONE,inventory-service,27.5,1785925327.6860416,INFO,,OK cpu=30% p99=107ms err=0.76%
+live_ep_000014_NONE,NONE,inventory-service,28.0,1785925328.1863065,INFO,,OK cpu=19% p99=117ms err=2.79%
+live_ep_000014_NONE,NONE,inventory-service,28.5,1785925328.686592,INFO,,OK cpu=40% p99=127ms err=0.62%
+live_ep_000014_NONE,NONE,inventory-service,29.0,1785925329.186812,INFO,,OK cpu=38% p99=148ms err=0.42%
+live_ep_000014_NONE,NONE,inventory-service,29.5,1785925329.6871123,INFO,,OK cpu=36% p99=124ms err=1.60%
+live_ep_000014_NONE,NONE,inventory-service,30.0,1785925330.1874182,INFO,,OK cpu=35% p99=143ms err=0.78%
+live_ep_000014_NONE,NONE,inventory-service,30.5,1785925330.687887,INFO,,OK cpu=36% p99=102ms err=1.14%
+live_ep_000014_NONE,NONE,inventory-service,31.0,1785925331.1882703,INFO,,OK cpu=43% p99=124ms err=0.74%
+live_ep_000014_NONE,NONE,inventory-service,31.5,1785925331.688783,INFO,,OK cpu=39% p99=132ms err=1.67%
+live_ep_000014_NONE,NONE,inventory-service,32.0,1785925332.1893427,INFO,,OK cpu=26% p99=113ms err=0.48%
+live_ep_000014_NONE,NONE,inventory-service,32.5,1785925332.6897507,INFO,,OK cpu=34% p99=137ms err=1.80%
+live_ep_000014_NONE,NONE,inventory-service,33.0,1785925333.190205,INFO,,OK cpu=34% p99=103ms err=0.49%
+live_ep_000014_NONE,NONE,inventory-service,33.5,1785925333.6906042,INFO,,OK cpu=36% p99=82ms err=1.16%
+live_ep_000014_NONE,NONE,inventory-service,34.0,1785925334.1910748,INFO,,OK cpu=33% p99=128ms err=2.04%
+live_ep_000014_NONE,NONE,inventory-service,34.5,1785925334.6915221,INFO,,OK cpu=33% p99=124ms err=1.52%
+live_ep_000014_NONE,NONE,inventory-service,35.0,1785925335.1918533,INFO,,OK cpu=32% p99=163ms err=0.29%
+live_ep_000014_NONE,NONE,inventory-service,35.5,1785925335.6922338,INFO,,OK cpu=47% p99=106ms err=0.80%
+live_ep_000014_NONE,NONE,inventory-service,36.0,1785925336.1926894,INFO,,OK cpu=27% p99=154ms err=2.21%
+live_ep_000014_NONE,NONE,inventory-service,36.5,1785925336.6931765,INFO,,OK cpu=29% p99=99ms err=0.61%
+live_ep_000014_NONE,NONE,inventory-service,37.0,1785925337.1935692,INFO,,OK cpu=46% p99=112ms err=0.39%
+live_ep_000014_NONE,NONE,inventory-service,37.5,1785925337.69377,INFO,,OK cpu=32% p99=114ms err=1.57%
+live_ep_000014_NONE,NONE,inventory-service,38.0,1785925338.1940026,INFO,,OK cpu=27% p99=124ms err=1.19%
+live_ep_000014_NONE,NONE,inventory-service,38.5,1785925338.6941352,INFO,,OK cpu=38% p99=100ms err=0.54%
+live_ep_000014_NONE,NONE,inventory-service,39.0,1785925339.1943848,INFO,,OK cpu=41% p99=128ms err=1.30%
+live_ep_000014_NONE,NONE,inventory-service,39.5,1785925339.6947682,INFO,,OK cpu=32% p99=136ms err=0.73%
+live_ep_000014_NONE,NONE,inventory-service,40.0,1785925340.1949317,INFO,,OK cpu=27% p99=105ms err=1.53%
+live_ep_000014_NONE,NONE,inventory-service,40.5,1785925340.6953948,INFO,,OK cpu=31% p99=139ms err=1.15%
+live_ep_000014_NONE,NONE,inventory-service,41.0,1785925341.1955466,INFO,,OK cpu=30% p99=126ms err=0.11%
+live_ep_000014_NONE,NONE,inventory-service,41.5,1785925341.6957312,INFO,,OK cpu=37% p99=148ms err=0.57%
+live_ep_000014_NONE,NONE,inventory-service,42.0,1785925342.195797,INFO,,OK cpu=35% p99=126ms err=0.43%
+live_ep_000014_NONE,NONE,inventory-service,42.5,1785925342.696103,INFO,,OK cpu=35% p99=124ms err=0.49%
+live_ep_000014_NONE,NONE,inventory-service,43.0,1785925343.1962543,INFO,,OK cpu=39% p99=129ms err=0.95%
+live_ep_000014_NONE,NONE,inventory-service,43.5,1785925343.696631,INFO,,OK cpu=38% p99=121ms err=0.72%
+live_ep_000014_NONE,NONE,inventory-service,44.0,1785925344.1967022,INFO,,OK cpu=30% p99=130ms err=0.94%
+live_ep_000014_NONE,NONE,inventory-service,44.5,1785925344.6970472,INFO,,OK cpu=27% p99=157ms err=0.21%
+live_ep_000014_NONE,NONE,inventory-service,45.0,1785925345.1971555,INFO,,OK cpu=35% p99=115ms err=0.62%
+live_ep_000014_NONE,NONE,inventory-service,45.5,1785925345.6976707,INFO,,OK cpu=44% p99=130ms err=0.65%
+live_ep_000014_NONE,NONE,inventory-service,46.0,1785925346.1979797,INFO,,OK cpu=38% p99=131ms err=1.39%
+live_ep_000014_NONE,NONE,inventory-service,46.5,1785925346.6983967,INFO,,OK cpu=43% p99=138ms err=0.50%
+live_ep_000014_NONE,NONE,inventory-service,47.0,1785925347.1987314,INFO,,OK cpu=39% p99=120ms err=0.36%
+live_ep_000014_NONE,NONE,inventory-service,47.5,1785925347.6991575,INFO,,OK cpu=44% p99=141ms err=0.24%
+live_ep_000014_NONE,NONE,inventory-service,48.0,1785925348.1997185,INFO,,OK cpu=28% p99=158ms err=0.72%
+live_ep_000014_NONE,NONE,inventory-service,48.5,1785925348.7000926,INFO,,OK cpu=37% p99=134ms err=0.89%
+live_ep_000014_NONE,NONE,inventory-service,49.0,1785925349.2006195,INFO,,OK cpu=43% p99=107ms err=0.99%
+live_ep_000014_NONE,NONE,inventory-service,49.5,1785925349.7008288,INFO,,OK cpu=46% p99=115ms err=0.55%
+live_ep_000014_NONE,NONE,inventory-service,50.0,1785925350.201209,INFO,,OK cpu=44% p99=147ms err=0.49%
+live_ep_000014_NONE,NONE,inventory-service,50.5,1785925350.701459,INFO,,OK cpu=35% p99=101ms err=0.49%
+live_ep_000014_NONE,NONE,inventory-service,51.0,1785925351.2034318,INFO,,OK cpu=31% p99=117ms err=0.97%
+live_ep_000014_NONE,NONE,inventory-service,51.5,1785925351.7037716,INFO,,OK cpu=33% p99=107ms err=0.12%
+live_ep_000014_NONE,NONE,inventory-service,52.0,1785925352.2039576,INFO,,OK cpu=35% p99=105ms err=0.54%
+live_ep_000014_NONE,NONE,inventory-service,52.5,1785925352.7042289,INFO,,OK cpu=29% p99=105ms err=1.03%
+live_ep_000014_NONE,NONE,inventory-service,53.0,1785925353.204405,INFO,,OK cpu=36% p99=115ms err=0.09%
+live_ep_000014_NONE,NONE,inventory-service,53.5,1785925353.7048333,INFO,,OK cpu=29% p99=127ms err=0.43%
+live_ep_000014_NONE,NONE,inventory-service,54.0,1785925354.2050164,INFO,,OK cpu=30% p99=125ms err=0.05%
+live_ep_000014_NONE,NONE,inventory-service,54.5,1785925354.7051015,INFO,,OK cpu=39% p99=128ms err=0.09%
+live_ep_000014_NONE,NONE,inventory-service,55.0,1785925355.2053337,INFO,,OK cpu=41% p99=130ms err=0.51%
+live_ep_000014_NONE,NONE,inventory-service,55.5,1785925355.705879,INFO,,OK cpu=37% p99=120ms err=0.56%
+live_ep_000014_NONE,NONE,inventory-service,56.0,1785925356.2063043,INFO,,OK cpu=46% p99=106ms err=1.17%
+live_ep_000014_NONE,NONE,inventory-service,56.5,1785925356.706655,INFO,,OK cpu=31% p99=123ms err=1.97%
+live_ep_000014_NONE,NONE,inventory-service,57.0,1785925357.207065,INFO,,OK cpu=36% p99=126ms err=0.98%
+live_ep_000014_NONE,NONE,inventory-service,57.5,1785925357.7072213,INFO,,OK cpu=36% p99=119ms err=0.60%
+live_ep_000014_NONE,NONE,inventory-service,58.0,1785925358.20744,INFO,,OK cpu=30% p99=120ms err=0.87%
+live_ep_000014_NONE,NONE,inventory-service,58.5,1785925358.7078907,INFO,,OK cpu=39% p99=132ms err=1.99%
+live_ep_000014_NONE,NONE,inventory-service,59.0,1785925359.2081723,INFO,,OK cpu=28% p99=114ms err=1.16%
+live_ep_000014_NONE,NONE,inventory-service,59.5,1785925359.7085018,INFO,,OK cpu=40% p99=126ms err=2.66%
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,0.0,1785925360.2111487,WARNING,,WARN queue_lag=19ms thread_pool=13 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,0.5,1785925360.711634,WARNING,,WARN queue_lag=15ms thread_pool=3 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,1.0,1785925361.2118957,WARNING,,WARN queue_lag=16ms thread_pool=8 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,1.5,1785925361.7120156,WARNING,,WARN queue_lag=0ms thread_pool=14 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,2.0,1785925362.2126882,WARNING,,WARN queue_lag=11ms thread_pool=13 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,2.5,1785925362.7138247,WARNING,,WARN queue_lag=19ms thread_pool=10 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,3.0,1785925363.2142692,WARNING,,WARN queue_lag=12ms thread_pool=3 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,3.5,1785925363.714522,WARNING,,WARN queue_lag=12ms thread_pool=24 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,4.0,1785925364.2147255,WARNING,,WARN queue_lag=30ms thread_pool=60 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,4.5,1785925364.715261,WARNING,,WARN queue_lag=14ms thread_pool=28 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,5.0,1785925365.2155564,WARNING,,WARN queue_lag=7ms thread_pool=14 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,5.5,1785925365.7160795,WARNING,,WARN queue_lag=27ms thread_pool=54 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,6.0,1785925366.2165995,WARNING,,WARN queue_lag=14ms thread_pool=28 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,6.5,1785925366.7167273,WARNING,,WARN queue_lag=32ms thread_pool=64 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,7.0,1785925367.217014,WARNING,,WARN queue_lag=33ms thread_pool=66 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,7.5,1785925367.7174797,WARNING,,WARN queue_lag=19ms thread_pool=38 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,8.0,1785925368.2178693,WARNING,,WARN queue_lag=25ms thread_pool=50 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,8.5,1785925368.7183032,WARNING,,WARN queue_lag=37ms thread_pool=74 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,9.0,1785925369.218841,WARNING,,WARN queue_lag=38ms thread_pool=76 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,9.5,1785925369.7189798,WARNING,,WARN queue_lag=20ms thread_pool=40 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,10.0,1785925370.2191668,WARNING,,WARN queue_lag=15ms thread_pool=30 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,10.5,1785925370.7194698,WARNING,,WARN queue_lag=25ms thread_pool=50 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,11.0,1785925371.2195795,WARNING,,WARN queue_lag=31ms thread_pool=62 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,11.5,1785925371.7200587,WARNING,,WARN queue_lag=25ms thread_pool=50 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,12.0,1785925372.220295,WARNING,,WARN queue_lag=37ms thread_pool=74 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,12.5,1785925372.7207384,WARNING,,WARN queue_lag=21ms thread_pool=42 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,13.0,1785925373.2210863,WARNING,,WARN queue_lag=17ms thread_pool=34 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,13.5,1785925373.7215471,WARNING,,WARN queue_lag=42ms thread_pool=84 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,14.0,1785925374.2221298,WARNING,,WARN queue_lag=32ms thread_pool=64 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,14.5,1785925374.722668,WARNING,,WARN queue_lag=37ms thread_pool=74 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,15.0,1785925375.2231667,WARNING,,WARN queue_lag=36ms thread_pool=72 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,15.5,1785925375.723326,WARNING,,WARN queue_lag=24ms thread_pool=48 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,16.0,1785925376.223478,WARNING,,WARN queue_lag=36ms thread_pool=72 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,16.5,1785925376.7236297,WARNING,,WARN queue_lag=23ms thread_pool=46 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,17.0,1785925377.2239308,WARNING,,WARN queue_lag=33ms thread_pool=66 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,17.5,1785925377.7243512,WARNING,,WARN queue_lag=44ms thread_pool=88 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,18.0,1785925378.224753,WARNING,,WARN queue_lag=41ms thread_pool=82 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,18.5,1785925378.7252083,WARNING,,WARN queue_lag=56ms thread_pool=112 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,19.0,1785925379.225393,WARNING,,WARN queue_lag=51ms thread_pool=102 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,19.5,1785925379.725778,WARNING,,WARN queue_lag=55ms thread_pool=110 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,20.0,1785925380.2261548,WARNING,,WARN queue_lag=49ms thread_pool=98 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,20.5,1785925380.726577,WARNING,,WARN queue_lag=32ms thread_pool=64 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,21.0,1785925381.2271147,WARNING,,WARN queue_lag=57ms thread_pool=114 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,21.5,1785925381.727692,WARNING,,WARN queue_lag=34ms thread_pool=68 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,22.0,1785925382.2278292,WARNING,,WARN queue_lag=61ms thread_pool=122 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,22.5,1785925382.7284052,WARNING,,WARN queue_lag=60ms thread_pool=120 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,23.0,1785925383.2286956,WARNING,,WARN queue_lag=59ms thread_pool=118 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,23.5,1785925383.7292285,WARNING,,WARN queue_lag=61ms thread_pool=122 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,24.0,1785925384.2296817,WARNING,,WARN queue_lag=56ms thread_pool=112 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,24.5,1785925384.730186,WARNING,,WARN queue_lag=41ms thread_pool=82 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,25.0,1785925385.233258,WARNING,,WARN queue_lag=60ms thread_pool=120 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,25.5,1785925385.7346306,WARNING,,WARN queue_lag=56ms thread_pool=112 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,26.0,1785925386.234879,WARNING,,WARN queue_lag=69ms thread_pool=138 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,26.5,1785925386.7350466,WARNING,,WARN queue_lag=47ms thread_pool=94 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,27.0,1785925387.2354445,WARNING,,WARN queue_lag=45ms thread_pool=90 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,27.5,1785925387.7357082,WARNING,,WARN queue_lag=64ms thread_pool=128 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,28.0,1785925388.2362294,WARNING,,WARN queue_lag=59ms thread_pool=118 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,28.5,1785925388.7368076,WARNING,,WARN queue_lag=64ms thread_pool=128 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,29.0,1785925389.236948,WARNING,,WARN queue_lag=58ms thread_pool=116 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,29.5,1785925389.737116,WARNING,,WARN queue_lag=74ms thread_pool=148 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,30.0,1785925390.2371798,WARNING,,WARN queue_lag=58ms thread_pool=116 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,30.5,1785925390.7376163,WARNING,,WARN queue_lag=69ms thread_pool=138 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,31.0,1785925391.238366,WARNING,,WARN queue_lag=67ms thread_pool=134 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,31.5,1785925391.7388294,WARNING,,WARN queue_lag=56ms thread_pool=112 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,32.0,1785925392.2393658,WARNING,,WARN queue_lag=65ms thread_pool=130 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,32.5,1785925392.740109,WARNING,,WARN queue_lag=63ms thread_pool=126 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,33.0,1785925393.240463,WARNING,,WARN queue_lag=64ms thread_pool=128 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,33.5,1785925393.7407904,WARNING,,WARN queue_lag=69ms thread_pool=138 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,34.0,1785925394.2410169,WARNING,,WARN queue_lag=84ms thread_pool=168 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,34.5,1785925394.7418804,WARNING,,WARN queue_lag=67ms thread_pool=134 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,35.0,1785925395.2423282,WARNING,,WARN queue_lag=57ms thread_pool=114 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,35.5,1785925395.7427704,WARNING,,WARN queue_lag=76ms thread_pool=152 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,36.0,1785925396.2430642,WARNING,,WARN queue_lag=83ms thread_pool=166 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,36.5,1785925396.7435627,WARNING,,WARN queue_lag=84ms thread_pool=168 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,37.0,1785925397.2439373,WARNING,,WARN queue_lag=66ms thread_pool=132 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,37.5,1785925397.7442718,WARNING,,WARN queue_lag=87ms thread_pool=174 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,38.0,1785925398.2444072,WARNING,,WARN queue_lag=87ms thread_pool=174 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,38.5,1785925398.7449868,WARNING,,WARN queue_lag=90ms thread_pool=180 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,39.0,1785925399.2451475,WARNING,,WARN queue_lag=68ms thread_pool=136 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,39.5,1785925399.7471352,WARNING,,WARN queue_lag=85ms thread_pool=170 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,40.0,1785925400.2477376,WARNING,,WARN queue_lag=88ms thread_pool=176 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,40.5,1785925400.7481089,WARNING,,WARN queue_lag=76ms thread_pool=152 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,41.0,1785925401.248189,WARNING,,WARN queue_lag=84ms thread_pool=168 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,41.5,1785925401.7483134,WARNING,,WARN queue_lag=94ms thread_pool=188 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,42.0,1785925402.2488756,WARNING,,WARN queue_lag=78ms thread_pool=156 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,42.5,1785925402.7491553,WARNING,,WARN queue_lag=93ms thread_pool=186 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,43.0,1785925403.2500498,WARNING,,WARN queue_lag=92ms thread_pool=184 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,43.5,1785925403.755856,WARNING,,WARN queue_lag=83ms thread_pool=166 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,44.0,1785925404.2560616,WARNING,,WARN queue_lag=75ms thread_pool=150 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,44.5,1785925404.7565277,WARNING,,WARN queue_lag=86ms thread_pool=172 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,45.0,1785925405.2571309,WARNING,,WARN queue_lag=100ms thread_pool=200 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,45.5,1785925405.7573612,WARNING,,WARN queue_lag=88ms thread_pool=176 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,46.0,1785925406.2578402,WARNING,,WARN queue_lag=83ms thread_pool=166 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,46.5,1785925406.7581956,WARNING,,WARN queue_lag=98ms thread_pool=196 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,47.0,1785925407.2585924,WARNING,,WARN queue_lag=88ms thread_pool=176 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,47.5,1785925407.7590988,WARNING,,WARN queue_lag=84ms thread_pool=168 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,48.0,1785925408.2593467,WARNING,,WARN queue_lag=91ms thread_pool=182 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,48.5,1785925408.7598753,WARNING,,WARN queue_lag=84ms thread_pool=168 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,49.0,1785925409.260271,WARNING,,WARN queue_lag=101ms thread_pool=202 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,49.5,1785925409.7607682,WARNING,,WARN queue_lag=85ms thread_pool=170 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,50.0,1785925410.2613773,WARNING,,WARN queue_lag=86ms thread_pool=172 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,50.5,1785925410.761693,WARNING,,WARN queue_lag=111ms thread_pool=222 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,51.0,1785925411.2619545,WARNING,,WARN queue_lag=95ms thread_pool=190 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,51.5,1785925411.7624085,WARNING,,WARN queue_lag=112ms thread_pool=224 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,52.0,1785925412.2625277,WARNING,,WARN queue_lag=89ms thread_pool=178 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,52.5,1785925412.7654269,WARNING,,WARN queue_lag=90ms thread_pool=180 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,53.0,1785925413.2656436,WARNING,,WARN queue_lag=104ms thread_pool=208 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,53.5,1785925413.7661207,WARNING,,WARN queue_lag=117ms thread_pool=234 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,54.0,1785925414.2677345,WARNING,,WARN queue_lag=93ms thread_pool=186 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,54.5,1785925414.768678,WARNING,,WARN queue_lag=118ms thread_pool=236 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,55.0,1785925415.269694,WARNING,,WARN queue_lag=105ms thread_pool=210 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,55.5,1785925415.7701778,WARNING,,WARN queue_lag=114ms thread_pool=228 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,56.0,1785925416.2706413,WARNING,,WARN queue_lag=124ms thread_pool=248 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,56.5,1785925416.7708285,WARNING,,WARN queue_lag=124ms thread_pool=248 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,57.0,1785925417.2720025,WARNING,,WARN queue_lag=121ms thread_pool=242 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,57.5,1785925417.772085,WARNING,,WARN queue_lag=98ms thread_pool=196 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,58.0,1785925418.2726393,WARNING,,WARN queue_lag=98ms thread_pool=196 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,58.5,1785925418.773118,WARNING,,WARN queue_lag=116ms thread_pool=232 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,59.0,1785925419.2733483,WARNING,,WARN queue_lag=122ms thread_pool=244 -- queue backup
+live_ep_000015_QUEUE_BACKUP,QUEUE_BACKUP,auth-service,59.5,1785925419.773535,WARNING,,WARN queue_lag=121ms thread_pool=242 -- queue backup
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,0.0,1785925420.2760262,WARNING,,WARN retry_cnt=0.00 rps=196 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,0.5,1785925420.776425,WARNING,,WARN retry_cnt=0.01 rps=164 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,1.0,1785925421.2767189,WARNING,,WARN retry_cnt=0.00 rps=193 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,1.5,1785925421.777178,WARNING,,WARN retry_cnt=0.02 rps=178 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,2.0,1785925422.2777412,WARNING,,WARN retry_cnt=0.01 rps=187 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,2.5,1785925422.777924,WARNING,,WARN retry_cnt=0.01 rps=179 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,3.0,1785925423.2784386,WARNING,,WARN retry_cnt=0.00 rps=173 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,3.5,1785925423.7789395,WARNING,,WARN retry_cnt=0.01 rps=212 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,4.0,1785925424.2802231,WARNING,,WARN retry_cnt=0.00 rps=210 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,4.5,1785925424.7803679,WARNING,,WARN retry_cnt=0.10 rps=191 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,5.0,1785925425.2807798,WARNING,,WARN retry_cnt=0.04 rps=206 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,5.5,1785925425.7812846,WARNING,,WARN retry_cnt=0.01 rps=197 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,6.0,1785925426.2821412,WARNING,,WARN retry_cnt=0.01 rps=169 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,6.5,1785925426.7824178,WARNING,,WARN retry_cnt=0.62 rps=573 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,7.0,1785925427.2835288,WARNING,,WARN retry_cnt=0.71 rps=626 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,7.5,1785925427.7838306,WARNING,,WARN retry_cnt=0.66 rps=595 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,8.0,1785925428.284037,WARNING,,WARN retry_cnt=0.66 rps=594 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,8.5,1785925428.7843578,WARNING,,WARN retry_cnt=0.70 rps=619 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,9.0,1785925429.2846105,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,9.5,1785925429.785054,WARNING,,WARN retry_cnt=0.77 rps=662 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,10.0,1785925430.2854924,WARNING,,WARN retry_cnt=0.71 rps=624 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,10.5,1785925430.7860026,WARNING,,WARN retry_cnt=0.46 rps=479 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,11.0,1785925431.2862709,WARNING,,WARN retry_cnt=0.76 rps=655 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,11.5,1785925431.7866256,WARNING,,WARN retry_cnt=0.68 rps=605 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,12.0,1785925432.2870462,WARNING,,WARN retry_cnt=0.62 rps=574 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,12.5,1785925432.787256,WARNING,,WARN retry_cnt=0.58 rps=549 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,13.0,1785925433.2875826,WARNING,,WARN retry_cnt=0.70 rps=623 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,13.5,1785925433.7877162,WARNING,,WARN retry_cnt=0.81 rps=689 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,14.0,1785925434.287797,WARNING,,WARN retry_cnt=0.81 rps=685 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,14.5,1785925434.7882943,WARNING,,WARN retry_cnt=0.59 rps=554 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,15.0,1785925435.2884173,WARNING,,WARN retry_cnt=0.68 rps=607 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,15.5,1785925435.7887459,WARNING,,WARN retry_cnt=0.77 rps=664 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,16.0,1785925436.2888975,WARNING,,WARN retry_cnt=0.79 rps=671 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,16.5,1785925436.7893527,WARNING,,WARN retry_cnt=0.62 rps=574 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,17.0,1785925437.2894533,WARNING,,WARN retry_cnt=0.56 rps=535 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,17.5,1785925437.7900174,WARNING,,WARN retry_cnt=0.84 rps=703 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,18.0,1785925438.2903278,WARNING,,WARN retry_cnt=0.67 rps=604 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,18.5,1785925438.7906363,WARNING,,WARN retry_cnt=0.49 rps=495 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,19.0,1785925439.2910516,WARNING,,WARN retry_cnt=0.81 rps=684 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,19.5,1785925439.7914047,WARNING,,WARN retry_cnt=0.81 rps=685 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,20.0,1785925440.2921765,WARNING,,WARN retry_cnt=0.63 rps=575 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,20.5,1785925440.792776,WARNING,,WARN retry_cnt=0.72 rps=630 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,21.0,1785925441.2929454,WARNING,,WARN retry_cnt=0.70 rps=621 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,21.5,1785925441.7945483,WARNING,,WARN retry_cnt=0.83 rps=698 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,22.0,1785925442.2948136,WARNING,,WARN retry_cnt=0.45 rps=469 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,22.5,1785925442.7951937,WARNING,,WARN retry_cnt=0.49 rps=495 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,23.0,1785925443.2954755,WARNING,,WARN retry_cnt=0.75 rps=649 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,23.5,1785925443.7956913,WARNING,,WARN retry_cnt=0.67 rps=604 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,24.0,1785925444.2959142,WARNING,,WARN retry_cnt=0.45 rps=470 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,24.5,1785925444.7960548,WARNING,,WARN retry_cnt=0.58 rps=547 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,25.0,1785925445.2965565,WARNING,,WARN retry_cnt=0.56 rps=536 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,25.5,1785925445.7970877,WARNING,,WARN retry_cnt=0.65 rps=588 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,26.0,1785925446.2974308,WARNING,,WARN retry_cnt=0.67 rps=604 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,26.5,1785925446.797962,WARNING,,WARN retry_cnt=0.54 rps=524 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,27.0,1785925447.2985754,WARNING,,WARN retry_cnt=0.67 rps=603 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,27.5,1785925447.798851,WARNING,,WARN retry_cnt=0.90 rps=740 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,28.0,1785925448.2993598,WARNING,,WARN retry_cnt=0.61 rps=568 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,28.5,1785925448.7994916,WARNING,,WARN retry_cnt=0.52 rps=513 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,29.0,1785925449.2996008,WARNING,,WARN retry_cnt=0.48 rps=488 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,29.5,1785925449.800124,WARNING,,WARN retry_cnt=0.55 rps=531 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,30.0,1785925450.3002973,WARNING,,WARN retry_cnt=0.68 rps=606 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,30.5,1785925450.8004637,WARNING,,WARN retry_cnt=0.73 rps=636 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,31.0,1785925451.3007693,WARNING,,WARN retry_cnt=0.71 rps=628 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,31.5,1785925451.801067,WARNING,,WARN retry_cnt=0.80 rps=681 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,32.0,1785925452.3014312,WARNING,,WARN retry_cnt=0.65 rps=590 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,32.5,1785925452.8022053,WARNING,,WARN retry_cnt=0.83 rps=701 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,33.0,1785925453.302413,WARNING,,WARN retry_cnt=0.41 rps=448 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,33.5,1785925453.8026848,WARNING,,WARN retry_cnt=0.56 rps=535 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,34.0,1785925454.3032918,WARNING,,WARN retry_cnt=0.77 rps=663 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,34.5,1785925454.803472,WARNING,,WARN retry_cnt=0.80 rps=682 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,35.0,1785925455.3036175,WARNING,,WARN retry_cnt=0.45 rps=472 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,35.5,1785925455.8038943,WARNING,,WARN retry_cnt=0.79 rps=673 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,36.0,1785925456.3044367,WARNING,,WARN retry_cnt=0.73 rps=639 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,36.5,1785925456.8051753,WARNING,,WARN retry_cnt=0.61 rps=565 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,37.0,1785925457.3057086,WARNING,,WARN retry_cnt=0.57 rps=541 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,37.5,1785925457.8062358,WARNING,,WARN retry_cnt=0.77 rps=660 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,38.0,1785925458.3063557,WARNING,,WARN retry_cnt=0.52 rps=515 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,38.5,1785925458.806677,WARNING,,WARN retry_cnt=0.81 rps=683 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,39.0,1785925459.3070405,WARNING,,WARN retry_cnt=0.68 rps=607 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,39.5,1785925459.8073485,WARNING,,WARN retry_cnt=0.73 rps=641 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,40.0,1785925460.3075142,WARNING,,WARN retry_cnt=0.70 rps=622 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,40.5,1785925460.807782,WARNING,,WARN retry_cnt=0.74 rps=641 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,41.0,1785925461.3081386,WARNING,,WARN retry_cnt=0.76 rps=653 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,41.5,1785925461.8085184,WARNING,,WARN retry_cnt=0.70 rps=623 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,42.0,1785925462.308608,WARNING,,WARN retry_cnt=0.65 rps=593 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,42.5,1785925462.808994,WARNING,,WARN retry_cnt=0.78 rps=666 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,43.0,1785925463.3093586,WARNING,,WARN retry_cnt=0.72 rps=629 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,43.5,1785925463.8097355,WARNING,,WARN retry_cnt=0.77 rps=662 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,44.0,1785925464.310156,WARNING,,WARN retry_cnt=0.71 rps=628 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,44.5,1785925464.8103466,WARNING,,WARN retry_cnt=0.76 rps=658 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,45.0,1785925465.310587,WARNING,,WARN retry_cnt=0.61 rps=564 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,45.5,1785925465.8111308,WARNING,,WARN retry_cnt=0.71 rps=628 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,46.0,1785925466.311504,WARNING,,WARN retry_cnt=0.78 rps=669 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,46.5,1785925466.8116684,WARNING,,WARN retry_cnt=0.68 rps=605 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,47.0,1785925467.311838,WARNING,,WARN retry_cnt=0.65 rps=588 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,47.5,1785925467.8122017,WARNING,,WARN retry_cnt=0.71 rps=624 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,48.0,1785925468.3123448,WARNING,,WARN retry_cnt=0.76 rps=654 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,48.5,1785925468.8126094,WARNING,,WARN retry_cnt=0.69 rps=616 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,49.0,1785925469.3129215,WARNING,,WARN retry_cnt=0.76 rps=654 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,49.5,1785925469.8130095,WARNING,,WARN retry_cnt=0.55 rps=530 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,50.0,1785925470.3131864,WARNING,,WARN retry_cnt=0.55 rps=528 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,50.5,1785925470.8137643,WARNING,,WARN retry_cnt=0.57 rps=540 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,51.0,1785925471.314336,WARNING,,WARN retry_cnt=0.80 rps=679 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,51.5,1785925471.8149574,WARNING,,WARN retry_cnt=0.83 rps=695 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,52.0,1785925472.3154242,WARNING,,WARN retry_cnt=0.73 rps=635 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,52.5,1785925472.816099,WARNING,,WARN retry_cnt=0.69 rps=612 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,53.0,1785925473.3164485,WARNING,,WARN retry_cnt=0.77 rps=663 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,53.5,1785925473.8168805,WARNING,,WARN retry_cnt=0.66 rps=597 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,54.0,1785925474.3170605,WARNING,,WARN retry_cnt=0.72 rps=629 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,54.5,1785925474.817408,WARNING,,WARN retry_cnt=0.76 rps=653 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,55.0,1785925475.3177285,WARNING,,WARN retry_cnt=0.74 rps=647 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,55.5,1785925475.8211632,WARNING,,WARN retry_cnt=0.65 rps=593 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,56.0,1785925476.3217077,WARNING,,WARN retry_cnt=0.57 rps=541 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,56.5,1785925476.8220243,WARNING,,WARN retry_cnt=0.52 rps=513 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,57.0,1785925477.3226008,WARNING,,WARN retry_cnt=0.59 rps=555 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,57.5,1785925477.8227262,WARNING,,WARN retry_cnt=0.66 rps=595 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,58.0,1785925478.3229382,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,58.5,1785925478.823082,WARNING,,WARN retry_cnt=0.82 rps=692 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,59.0,1785925479.3235595,WARNING,,WARN retry_cnt=0.59 rps=551 -- retry storm
+live_ep_000016_RETRY_STORM,RETRY_STORM,auth-service,59.5,1785925479.8237402,WARNING,,WARN retry_cnt=0.79 rps=674 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,0.0,1785925480.326102,WARNING,,WARN retry_cnt=0.02 rps=178 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,0.5,1785925480.8263943,WARNING,,WARN retry_cnt=0.03 rps=228 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,1.0,1785925481.3268163,WARNING,,WARN retry_cnt=0.04 rps=188 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,1.5,1785925481.8270605,WARNING,,WARN retry_cnt=0.07 rps=214 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,2.0,1785925482.327604,WARNING,,WARN retry_cnt=0.03 rps=175 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,2.5,1785925482.8276649,WARNING,,WARN retry_cnt=0.08 rps=181 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,3.0,1785925483.3281043,WARNING,,WARN retry_cnt=0.06 rps=197 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,3.5,1785925483.8286352,WARNING,,WARN retry_cnt=0.03 rps=185 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,4.0,1785925484.328875,WARNING,,WARN retry_cnt=0.04 rps=246 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,4.5,1785925484.829418,WARNING,,WARN retry_cnt=0.03 rps=191 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,5.0,1785925485.3295074,WARNING,,WARN retry_cnt=0.08 rps=154 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,5.5,1785925485.8299901,WARNING,,WARN retry_cnt=0.03 rps=220 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,6.0,1785925486.3302095,WARNING,,WARN retry_cnt=0.02 rps=205 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,6.5,1785925486.8303373,WARNING,,WARN retry_cnt=0.01 rps=212 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,7.0,1785925487.3307667,WARNING,,WARN retry_cnt=0.01 rps=169 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,7.5,1785925487.8313162,WARNING,,WARN retry_cnt=0.02 rps=222 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,8.0,1785925488.3317637,WARNING,,WARN retry_cnt=0.05 rps=182 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,8.5,1785925488.8318927,WARNING,,WARN retry_cnt=0.02 rps=202 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,9.0,1785925489.3321295,WARNING,,WARN retry_cnt=0.83 rps=697 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,9.5,1785925489.8323584,WARNING,,WARN retry_cnt=0.56 rps=534 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,10.0,1785925490.3324797,WARNING,,WARN retry_cnt=0.49 rps=496 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,10.5,1785925490.832851,WARNING,,WARN retry_cnt=0.70 rps=617 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,11.0,1785925491.3330462,WARNING,,WARN retry_cnt=0.70 rps=622 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,11.5,1785925491.8334026,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,12.0,1785925492.3335695,WARNING,,WARN retry_cnt=0.79 rps=677 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,12.5,1785925492.834118,WARNING,,WARN retry_cnt=0.84 rps=702 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,13.0,1785925493.3346741,WARNING,,WARN retry_cnt=0.56 rps=538 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,13.5,1785925493.8348231,WARNING,,WARN retry_cnt=0.78 rps=668 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,14.0,1785925494.3353403,WARNING,,WARN retry_cnt=0.75 rps=651 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,14.5,1785925494.83571,WARNING,,WARN retry_cnt=0.68 rps=610 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,15.0,1785925495.3358915,WARNING,,WARN retry_cnt=0.84 rps=702 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,15.5,1785925495.8360584,WARNING,,WARN retry_cnt=0.53 rps=520 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,16.0,1785925496.3364792,WARNING,,WARN retry_cnt=0.63 rps=577 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,16.5,1785925496.8370109,WARNING,,WARN retry_cnt=0.68 rps=609 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,17.0,1785925497.3371081,WARNING,,WARN retry_cnt=0.72 rps=634 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,17.5,1785925497.8375387,WARNING,,WARN retry_cnt=0.75 rps=649 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,18.0,1785925498.3375907,WARNING,,WARN retry_cnt=0.64 rps=586 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,18.5,1785925498.8378778,WARNING,,WARN retry_cnt=0.65 rps=588 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,19.0,1785925499.338203,WARNING,,WARN retry_cnt=0.44 rps=462 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,19.5,1785925499.8384893,WARNING,,WARN retry_cnt=0.69 rps=611 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,20.0,1785925500.3386705,WARNING,,WARN retry_cnt=0.86 rps=718 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,20.5,1785925500.8388443,WARNING,,WARN retry_cnt=0.60 rps=558 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,21.0,1785925501.3390968,WARNING,,WARN retry_cnt=0.68 rps=606 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,21.5,1785925501.8445609,WARNING,,WARN retry_cnt=0.60 rps=563 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,22.0,1785925502.3447037,WARNING,,WARN retry_cnt=0.58 rps=546 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,22.5,1785925502.8451493,WARNING,,WARN retry_cnt=0.70 rps=621 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,23.0,1785925503.3452861,WARNING,,WARN retry_cnt=0.71 rps=627 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,23.5,1785925503.8456903,WARNING,,WARN retry_cnt=0.73 rps=640 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,24.0,1785925504.3458774,WARNING,,WARN retry_cnt=0.51 rps=508 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,24.5,1785925504.8459423,WARNING,,WARN retry_cnt=0.60 rps=563 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,25.0,1785925505.3461807,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,25.5,1785925505.8464355,WARNING,,WARN retry_cnt=0.73 rps=639 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,26.0,1785925506.3465986,WARNING,,WARN retry_cnt=0.44 rps=466 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,26.5,1785925506.8470645,WARNING,,WARN retry_cnt=0.74 rps=642 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,27.0,1785925507.3473911,WARNING,,WARN retry_cnt=0.61 rps=569 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,27.5,1785925507.847445,WARNING,,WARN retry_cnt=0.57 rps=542 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,28.0,1785925508.3477716,WARNING,,WARN retry_cnt=0.83 rps=701 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,28.5,1785925508.847952,WARNING,,WARN retry_cnt=0.57 rps=539 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,29.0,1785925509.348313,WARNING,,WARN retry_cnt=0.79 rps=676 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,29.5,1785925509.8487535,WARNING,,WARN retry_cnt=0.72 rps=635 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,30.0,1785925510.3489153,WARNING,,WARN retry_cnt=0.85 rps=711 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,30.5,1785925510.8490205,WARNING,,WARN retry_cnt=0.45 rps=471 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,31.0,1785925511.3491042,WARNING,,WARN retry_cnt=0.57 rps=540 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,31.5,1785925511.8493419,WARNING,,WARN retry_cnt=0.67 rps=605 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,32.0,1785925512.3498828,WARNING,,WARN retry_cnt=0.45 rps=470 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,32.5,1785925512.8501544,WARNING,,WARN retry_cnt=0.74 rps=643 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,33.0,1785925513.3502915,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,33.5,1785925513.8508039,WARNING,,WARN retry_cnt=0.62 rps=574 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,34.0,1785925514.351169,WARNING,,WARN retry_cnt=0.59 rps=557 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,34.5,1785925514.8516073,WARNING,,WARN retry_cnt=0.68 rps=610 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,35.0,1785925515.351753,WARNING,,WARN retry_cnt=0.89 rps=733 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,35.5,1785925515.8519697,WARNING,,WARN retry_cnt=0.48 rps=485 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,36.0,1785925516.3524783,WARNING,,WARN retry_cnt=0.57 rps=543 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,36.5,1785925516.8528492,WARNING,,WARN retry_cnt=0.45 rps=469 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,37.0,1785925517.3530357,WARNING,,WARN retry_cnt=0.70 rps=621 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,37.5,1785925517.853364,WARNING,,WARN retry_cnt=0.79 rps=673 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,38.0,1785925518.3534768,WARNING,,WARN retry_cnt=0.68 rps=610 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,38.5,1785925518.8539712,WARNING,,WARN retry_cnt=0.65 rps=592 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,39.0,1785925519.3541238,WARNING,,WARN retry_cnt=0.76 rps=655 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,39.5,1785925519.8542197,WARNING,,WARN retry_cnt=0.70 rps=619 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,40.0,1785925520.354528,WARNING,,WARN retry_cnt=0.72 rps=633 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,40.5,1785925520.8547463,WARNING,,WARN retry_cnt=0.60 rps=562 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,41.0,1785925521.354896,WARNING,,WARN retry_cnt=0.84 rps=702 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,41.5,1785925521.855117,WARNING,,WARN retry_cnt=0.55 rps=533 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,42.0,1785925522.3554788,WARNING,,WARN retry_cnt=0.44 rps=466 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,42.5,1785925522.8559873,WARNING,,WARN retry_cnt=0.65 rps=592 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,43.0,1785925523.3560936,WARNING,,WARN retry_cnt=0.78 rps=667 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,43.5,1785925523.8563826,WARNING,,WARN retry_cnt=0.73 rps=641 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,44.0,1785925524.356675,WARNING,,WARN retry_cnt=0.68 rps=606 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,44.5,1785925524.856968,WARNING,,WARN retry_cnt=0.49 rps=493 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,45.0,1785925525.35703,WARNING,,WARN retry_cnt=0.90 rps=740 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,45.5,1785925525.8574502,WARNING,,WARN retry_cnt=0.66 rps=595 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,46.0,1785925526.3579412,WARNING,,WARN retry_cnt=0.76 rps=659 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,46.5,1785925526.8582666,WARNING,,WARN retry_cnt=0.49 rps=494 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,47.0,1785925527.3586037,WARNING,,WARN retry_cnt=0.67 rps=604 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,47.5,1785925527.8587592,WARNING,,WARN retry_cnt=0.54 rps=525 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,48.0,1785925528.359142,WARNING,,WARN retry_cnt=0.84 rps=703 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,48.5,1785925528.8596542,WARNING,,WARN retry_cnt=0.73 rps=639 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,49.0,1785925529.3597317,WARNING,,WARN retry_cnt=0.84 rps=706 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,49.5,1785925529.859827,WARNING,,WARN retry_cnt=0.76 rps=654 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,50.0,1785925530.3600528,WARNING,,WARN retry_cnt=0.62 rps=573 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,50.5,1785925530.8607564,WARNING,,WARN retry_cnt=0.62 rps=573 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,51.0,1785925531.3608856,WARNING,,WARN retry_cnt=0.78 rps=666 -- retry storm
+live_ep_000017_RETRY_STORM,RETRY_STORM,auth-service,51.5,1785925531.861482,WARNING,,WARN retry_cnt=0.61 rps=563 -- retry storm

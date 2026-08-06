@@ -28,18 +28,26 @@ import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from app_data_generator.config import (
+_HERE = Path(__file__).resolve().parent
+_PROJECT_ROOT = _HERE.parent.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+
+from Simulator.app_data_generator_for_offline.config import (
     PIPELINE_OUTPUT_DIR,
     PRELIM_SEVERITY_CSV,
     SEVERITY_THRESHOLDS,
 )
-from app_data_generator.state import PipelineState
+from Simulator.app_data_generator_for_offline.state import PipelineState
 
 if TYPE_CHECKING:
-    from app_data_generator.storage.db_writer import DbWriter
+    from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 
 # Local import of SeverityEngine
-from .severity_engine.severity_engine import SeverityEngine
+try:
+    from .severity_engine.severity_engine import SeverityEngine
+except ImportError:
+    from nodes.preliminary_severity.severity_engine.severity_engine import SeverityEngine
 _SEVERITY_ENGINE_AVAILABLE = True
 
 # ── CSV columns (must match schema.sql severity table) ────────────────────────
@@ -199,3 +207,37 @@ class SeverityNode:
         if self._csv_fh is not None:
             self._csv_fh.close()
             self._csv_fh = None
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Preliminary Severity Node — Standalone Test")
+    parser.add_argument("--all", action="store_true", help="Process ALL telemetry rows in DB")
+    parser.add_argument("--limit", type=int, default=1, help="Number of cycles to run (default: 1)")
+    args = parser.parse_args()
+
+    from Inference_langgraph.nodes import n01_collect, n02_feature_engineering, n03_prelim_severity, n10_db_writer
+    print("=" * 60)
+    print(f"  Preliminary Severity Node — Standalone Test ({'ALL rows' if args.all else f'{args.limit} cycle(s)'})")
+    print("=" * 60)
+
+    count = 0
+    max_cycles = 999999 if args.all else args.limit
+
+    while count < max_cycles:
+        state1 = n01_collect.run({})
+        if state1.get("error") == "no_data":
+            print("No more telemetry data found in DB.")
+            break
+        state2 = n02_feature_engineering.run(state1)
+        state3 = n03_prelim_severity.run({**state1, **state2})
+        n10_db_writer.run({**state1, **state2, **state3})
+        count += 1
+        sev = state3.get("preliminary_severity", "P4")
+        if not args.all or count % 1000 == 0 or count == 1:
+            print(f"[Cycle {count:>6}] Ep: {state1.get('episode_id'):<26} | Mode: {state1.get('failure_mode'):<20} | Severity: {sev}")
+
+    print("-" * 60)
+    print(f"Completed {count:,} cycle(s). Output saved to preliminary_severity.csv AND simulator_db.sqlite!")
+    print("=" * 60)
+

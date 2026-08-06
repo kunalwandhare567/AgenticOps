@@ -1,0 +1,437 @@
+episode_id,failure_mode,service,elapsed_s,timestamp,span_id,parent_span_id,span_name,db_operation_type,span_duration_ms,span_status,peer_service,service_version,trace_id
+live_ep_000040_NONE,NONE,order-service,0.0,1785987769.1526551,62e01fdb6e524cf58c249ec9a3e4198a,,PUT /api/inventory,,133.73,OK,order-service,v1.1.0,8e94bb0e303a4151a6ecc8bdb60a9485
+live_ep_000040_NONE,NONE,order-service,0.0,1785987769.1526551,719a73e9737a4f8f9d410771b1dc84db,62e01fdb6e524cf58c249ec9a3e4198a,db.query.select,WRITE,12.82,OK,user-db,v1.1.0,8e94bb0e303a4151a6ecc8bdb60a9485
+live_ep_000040_NONE,NONE,order-service,0.0,1785987769.1526551,abbe89727fdd46188737a7a62bf011bf,62e01fdb6e524cf58c249ec9a3e4198a,db.query.insert,WRITE,23.89,OK,user-db,v1.1.0,8e94bb0e303a4151a6ecc8bdb60a9485
+live_ep_000040_NONE,NONE,order-service,0.0,1785987769.1526551,cfe1a467f3d94303a13c7a9ebfcdd3dd,62e01fdb6e524cf58c249ec9a3e4198a,cache.delete,,1.84,OK,cache-cluster,v1.1.0,8e94bb0e303a4151a6ecc8bdb60a9485
+live_ep_000040_NONE,NONE,order-service,0.0,1785987769.1526551,719b40b607d64efcb1415e24338c8691,62e01fdb6e524cf58c249ec9a3e4198a,grpc.call,,33.3,OK,cache-cluster,v1.1.0,8e94bb0e303a4151a6ecc8bdb60a9485
+live_ep_000040_NONE,NONE,order-service,0.1,1785987769.2527506,9efa1ccef92a4477964659ad7ec95ec8,,POST /api/payment,,115.83,OK,order-service,v1.1.0,a7cbe562d4d54555862ad7120c4654c0
+live_ep_000040_NONE,NONE,order-service,0.1,1785987769.2527506,8b91c126d0164ec583983fbe29afae7b,9efa1ccef92a4477964659ad7ec95ec8,db.transaction,WRITE,28.93,OK,user-db,v1.1.0,a7cbe562d4d54555862ad7120c4654c0
+live_ep_000040_NONE,NONE,order-service,0.1,1785987769.2527506,8d78a18150db4803b47101c11986cb2c,9efa1ccef92a4477964659ad7ec95ec8,db.query.update,READ,16.02,OK,user-db,v1.1.0,a7cbe562d4d54555862ad7120c4654c0
+live_ep_000040_NONE,NONE,order-service,0.1,1785987769.2527506,240b01d7cd8a437696dd26ea5d0c9f19,9efa1ccef92a4477964659ad7ec95ec8,cache.set,,0.86,OK,cache-cluster,v1.1.0,a7cbe562d4d54555862ad7120c4654c0
+live_ep_000040_NONE,NONE,order-service,0.2,1785987769.3530433,ed149154a2df42ea82e0343bcc564e8a,,GET /api/order,,80.04,OK,order-service,v1.1.0,5761378024ca4815bb32bff2c40a550a
+live_ep_000040_NONE,NONE,order-service,0.2,1785987769.3530433,447cdee8f5d2443cacbbc5cb7390ef7e,ed149154a2df42ea82e0343bcc564e8a,db.query.update,READ,26.48,OK,user-db,v1.1.0,5761378024ca4815bb32bff2c40a550a
+live_ep_000040_NONE,NONE,order-service,0.2,1785987769.3530433,c042630e9a4645c3925011dd69f5a3dc,ed149154a2df42ea82e0343bcc564e8a,cache.get,,0.68,OK,cache-cluster,v1.1.0,5761378024ca4815bb32bff2c40a550a
+live_ep_000040_NONE,NONE,order-service,0.2,1785987769.3530433,c659502dbeb1431993889153b110d072,ed149154a2df42ea82e0343bcc564e8a,http.client.get,,34.45,OK,inventory-api,v1.1.0,5761378024ca4815bb32bff2c40a550a
+live_ep_000040_NONE,NONE,order-service,0.3,1785987769.4533412,685f76deea924871af67c46c64b89c6b,,GET /api/order,,119.21,OK,order-service,v1.1.0,5fb7539347bf40bcae1ed1feba645aca
+live_ep_000040_NONE,NONE,order-service,0.3,1785987769.4533412,3955bfdb3bf1498d95c602888d6d7a76,685f76deea924871af67c46c64b89c6b,db.transaction,READ,14.43,OK,user-db,v1.1.0,5fb7539347bf40bcae1ed1feba645aca
+live_ep_000040_NONE,NONE,order-service,0.3,1785987769.4533412,814f3d698e0a4df7a113879bc92394e7,685f76deea924871af67c46c64b89c6b,cache.set,,2.41,OK,cache-cluster,v1.1.0,5fb7539347bf40bcae1ed1feba645aca
+live_ep_000040_NONE,NONE,order-service,0.3,1785987769.4533412,5f12c0ac58214612b1944ebdda115405,685f76deea924871af67c46c64b89c6b,http.client.post,,34.32,OK,payment-gateway,v1.1.0,5fb7539347bf40bcae1ed1feba645aca
+live_ep_000040_NONE,NONE,order-service,0.4,1785987769.5535483,ed28fa59ee1140508a1778208c2707fd,,GET /api/health,,114.73,OK,order-service,v1.1.0,1f09e23e5fd74b3a92764361d1df741c
+live_ep_000040_NONE,NONE,order-service,0.4,1785987769.5535483,006d0727c42f4586a66a2a928f71175e,ed28fa59ee1140508a1778208c2707fd,db.query.select,READ,12.3,OK,user-db,v1.1.0,1f09e23e5fd74b3a92764361d1df741c
+live_ep_000040_NONE,NONE,order-service,0.4,1785987769.5535483,cdc450d5513f450fbe7814dfced47652,ed28fa59ee1140508a1778208c2707fd,cache.get,,2.65,OK,cache-cluster,v1.1.0,1f09e23e5fd74b3a92764361d1df741c
+live_ep_000040_NONE,NONE,order-service,0.5,1785987769.6537097,36fd8bd8505e415e840c7ec6670d191c,,POST /api/checkout,,118.41,OK,order-service,v1.1.0,d66c8c80f12b48f3b317386410e75437
+live_ep_000040_NONE,NONE,order-service,0.5,1785987769.6537097,c359a2f3e37f4734b363175612a68c41,36fd8bd8505e415e840c7ec6670d191c,db.query.select,WRITE,35.05,OK,user-db,v1.1.0,d66c8c80f12b48f3b317386410e75437
+live_ep_000040_NONE,NONE,order-service,0.5,1785987769.6537097,01ffb25dee164588ac8898189df15687,36fd8bd8505e415e840c7ec6670d191c,cache.set,,3.5,OK,cache-cluster,v1.1.0,d66c8c80f12b48f3b317386410e75437
+live_ep_000040_NONE,NONE,order-service,0.5,1785987769.6537097,4d680b53158e4d59bfc6858d9538eca2,36fd8bd8505e415e840c7ec6670d191c,http.client.post,,36.6,OK,user-db,v1.1.0,d66c8c80f12b48f3b317386410e75437
+live_ep_000040_NONE,NONE,order-service,0.6,1785987769.7540228,0f3e19b6a23f4f4395c6de5e8c93dafe,,GET /api/auth,,115.87,OK,order-service,v1.1.0,fed92a3c7b084061acd7f1fb9cd3fdb2
+live_ep_000040_NONE,NONE,order-service,0.6,1785987769.7540228,6612b3dedd4a47de946f312846a972d8,0f3e19b6a23f4f4395c6de5e8c93dafe,db.transaction,WRITE,16.15,OK,user-db,v1.1.0,fed92a3c7b084061acd7f1fb9cd3fdb2
+live_ep_000040_NONE,NONE,order-service,0.6,1785987769.7540228,100bc63689f4412791eb46e06940db0c,0f3e19b6a23f4f4395c6de5e8c93dafe,cache.set,,59.62,OK,cache-cluster,v1.1.0,fed92a3c7b084061acd7f1fb9cd3fdb2
+live_ep_000040_NONE,NONE,order-service,0.6,1785987769.7540228,1b6ab41af8e1438b802daaf95ee2da57,0f3e19b6a23f4f4395c6de5e8c93dafe,http.client.post,,47.82,OK,payment-gateway,v1.1.0,fed92a3c7b084061acd7f1fb9cd3fdb2
+live_ep_000040_NONE,NONE,order-service,0.7,1785987769.8543556,66ae398f56fa4a7aa2b99873802da966,,GET /api/order,,133.74,OK,order-service,v1.1.0,dadb3d0844054142b4ee76892fd5ba8a
+live_ep_000040_NONE,NONE,order-service,0.7,1785987769.8543556,fe1f4036d4ad491481390c4a49ee5fe7,66ae398f56fa4a7aa2b99873802da966,db.query.delete,WRITE,23.76,OK,user-db,v1.1.0,dadb3d0844054142b4ee76892fd5ba8a
+live_ep_000040_NONE,NONE,order-service,0.7,1785987769.8543556,39dce3a1b6fc49b79b0ecb93f5e0e3f0,66ae398f56fa4a7aa2b99873802da966,cache.get,,1.68,OK,cache-cluster,v1.1.0,dadb3d0844054142b4ee76892fd5ba8a
+live_ep_000040_NONE,NONE,order-service,0.7,1785987769.8543556,6dd3cd28b797479db92b79bb3ffd7c18,66ae398f56fa4a7aa2b99873802da966,http.client.post,,35.01,OK,user-db,v1.1.0,dadb3d0844054142b4ee76892fd5ba8a
+live_ep_000040_NONE,NONE,order-service,0.8,1785987769.9546025,0fea54e659c7475586e897f779f476e4,,PUT /api/inventory,,127.67,OK,order-service,v1.1.0,90ebe6f65c1b4c2f8b44bfbeffc15899
+live_ep_000040_NONE,NONE,order-service,0.8,1785987769.9546025,1ac49da9625a4caf97263b2542af6cce,0fea54e659c7475586e897f779f476e4,db.query.delete,WRITE,2.45,OK,user-db,v1.1.0,90ebe6f65c1b4c2f8b44bfbeffc15899
+live_ep_000040_NONE,NONE,order-service,0.8,1785987769.9546025,92ed396328d04126b0e1c0f2c9143d8b,0fea54e659c7475586e897f779f476e4,cache.get,,1.4,OK,cache-cluster,v1.1.0,90ebe6f65c1b4c2f8b44bfbeffc15899
+live_ep_000040_NONE,NONE,order-service,0.9,1785987770.0549426,306879a149724f87ab74f3525f4c6d9e,,PUT /api/inventory,,139.48,OK,order-service,v1.1.0,f7c979f76a1141b5a756bc22765c02bc
+live_ep_000040_NONE,NONE,order-service,0.9,1785987770.0549426,4fd799a7d58a490181717c130366c226,306879a149724f87ab74f3525f4c6d9e,db.query.insert,READ,14.05,OK,user-db,v1.1.0,f7c979f76a1141b5a756bc22765c02bc
+live_ep_000040_NONE,NONE,order-service,0.9,1785987770.0549426,0716af7db3b840b9888e1334aa01cdaf,306879a149724f87ab74f3525f4c6d9e,db.query.select,WRITE,15.48,OK,user-db,v1.1.0,f7c979f76a1141b5a756bc22765c02bc
+live_ep_000040_NONE,NONE,order-service,0.9,1785987770.0549426,9d76c84142b6468ba100fa0e3239af1d,306879a149724f87ab74f3525f4c6d9e,cache.get,,2.25,OK,cache-cluster,v1.1.0,f7c979f76a1141b5a756bc22765c02bc
+live_ep_000040_NONE,NONE,order-service,0.9,1785987770.0549426,1259e8ffc50e486ba50f73d7cb7dc877,306879a149724f87ab74f3525f4c6d9e,grpc.call,,26.89,OK,inventory-api,v1.1.0,f7c979f76a1141b5a756bc22765c02bc
+live_ep_000040_NONE,NONE,order-service,1.0,1785987770.155212,007f4db6d6434efb99b76d30f161f36d,,GET /api/health,,134.24,OK,order-service,v1.1.0,e8e9afc0a0f54a4daa767831e1a9d0f6
+live_ep_000040_NONE,NONE,order-service,1.0,1785987770.155212,dbce495a896a4330b8b66cf8d9cffa8a,007f4db6d6434efb99b76d30f161f36d,db.transaction,READ,8.99,OK,user-db,v1.1.0,e8e9afc0a0f54a4daa767831e1a9d0f6
+live_ep_000040_NONE,NONE,order-service,1.0,1785987770.155212,628baaa7d1244f7e86aa6cc97da28cfe,007f4db6d6434efb99b76d30f161f36d,cache.delete,,1.05,OK,cache-cluster,v1.1.0,e8e9afc0a0f54a4daa767831e1a9d0f6
+live_ep_000040_NONE,NONE,order-service,1.1,1785987770.2554452,53770b613ea14d599dbc67d898fd1757,,POST /api/checkout,,142.02,OK,order-service,v1.1.0,b196dbbc073944fb9ffaeb6cf2f66ad2
+live_ep_000040_NONE,NONE,order-service,1.1,1785987770.2554452,5164f9de7d224a3b8115a2c093479a58,53770b613ea14d599dbc67d898fd1757,db.query.update,READ,25.27,OK,user-db,v1.1.0,b196dbbc073944fb9ffaeb6cf2f66ad2
+live_ep_000040_NONE,NONE,order-service,1.1,1785987770.2554452,d419244dd9784785a3e990221ca707ff,53770b613ea14d599dbc67d898fd1757,db.query.delete,WRITE,19.24,OK,user-db,v1.1.0,b196dbbc073944fb9ffaeb6cf2f66ad2
+live_ep_000040_NONE,NONE,order-service,1.1,1785987770.2554452,fbf378e3d142465bac76ce4887529e68,53770b613ea14d599dbc67d898fd1757,cache.set,,1.67,OK,cache-cluster,v1.1.0,b196dbbc073944fb9ffaeb6cf2f66ad2
+live_ep_000040_NONE,NONE,order-service,1.1,1785987770.2554452,c03d9744aa1443aca24fa8fce5396c13,53770b613ea14d599dbc67d898fd1757,grpc.call,,14.21,OK,user-db,v1.1.0,b196dbbc073944fb9ffaeb6cf2f66ad2
+live_ep_000040_NONE,NONE,order-service,1.2,1785987770.3559158,90e725de906c4bc3afca0200f4c3e460,,GET /api/order,,140.14,OK,order-service,v1.1.0,aad8beb9638445428d92266939dc1a56
+live_ep_000040_NONE,NONE,order-service,1.2,1785987770.3559158,a6a419f9151848fbabdcec3a39661198,90e725de906c4bc3afca0200f4c3e460,db.query.insert,READ,8.07,OK,user-db,v1.1.0,aad8beb9638445428d92266939dc1a56
+live_ep_000040_NONE,NONE,order-service,1.2,1785987770.3559158,d8641e8b1d7847ecb47f265ebbca6a70,90e725de906c4bc3afca0200f4c3e460,db.query.insert,READ,24.74,OK,user-db,v1.1.0,aad8beb9638445428d92266939dc1a56
+live_ep_000040_NONE,NONE,order-service,1.2,1785987770.3559158,0c90bb3019a04f55b4ce4baa2e7ad533,90e725de906c4bc3afca0200f4c3e460,cache.set,,1.72,OK,cache-cluster,v1.1.0,aad8beb9638445428d92266939dc1a56
+live_ep_000040_NONE,NONE,order-service,1.3,1785987770.4560673,e36f0da1721b4c2eb81b6cb84c6dc51d,,PUT /api/inventory,,110.75,OK,order-service,v1.1.0,0bc897bf6d854a54afef7448a005190e
+live_ep_000040_NONE,NONE,order-service,1.3,1785987770.4560673,29f68e4310a4446dac535fcb5de45a32,e36f0da1721b4c2eb81b6cb84c6dc51d,db.query.delete,READ,13.57,OK,user-db,v1.1.0,0bc897bf6d854a54afef7448a005190e
+live_ep_000040_NONE,NONE,order-service,1.4,1785987770.5564332,1e6d0fc785904eaa8abc8c83f6974708,,PUT /api/inventory,,102.89,OK,order-service,v1.1.0,06cb0b417bd5480e90fa5e7c07c6d8e9
+live_ep_000040_NONE,NONE,order-service,1.4,1785987770.5564332,77cbd96dcc604b118bc05235f573cc99,1e6d0fc785904eaa8abc8c83f6974708,db.transaction,READ,29.96,OK,user-db,v1.1.0,06cb0b417bd5480e90fa5e7c07c6d8e9
+live_ep_000040_NONE,NONE,order-service,1.4,1785987770.5564332,9eead22ae0884d80a381cce67a460fcc,1e6d0fc785904eaa8abc8c83f6974708,cache.delete,,3.71,OK,cache-cluster,v1.1.0,06cb0b417bd5480e90fa5e7c07c6d8e9
+live_ep_000040_NONE,NONE,order-service,1.4,1785987770.5564332,e6347316cdc04d48acefe50f5b1ec4c5,1e6d0fc785904eaa8abc8c83f6974708,grpc.call,,5.01,OK,inventory-api,v1.1.0,06cb0b417bd5480e90fa5e7c07c6d8e9
+live_ep_000040_NONE,NONE,order-service,1.5,1785987770.6570158,0f9d7b8386e34bd7bc340297f36e0cb9,,GET /api/order,,136.95,OK,order-service,v1.1.0,406ace0b32ef431ba3e67e392039f9c5
+live_ep_000040_NONE,NONE,order-service,1.5,1785987770.6570158,89d79bae2da34813b7d854d9433ae5ad,0f9d7b8386e34bd7bc340297f36e0cb9,db.query.insert,READ,32.55,OK,user-db,v1.1.0,406ace0b32ef431ba3e67e392039f9c5
+live_ep_000040_NONE,NONE,order-service,1.6,1785987770.757176,04b1a8143ba04a5f94aa4ed7d8c7fffd,,GET /api/order,,169.24,OK,order-service,v1.1.0,fb5e1481b86244679d1f8bbe5e5b013f
+live_ep_000040_NONE,NONE,order-service,1.6,1785987770.757176,0059f923d49d453eaaf2de4df2cf861c,04b1a8143ba04a5f94aa4ed7d8c7fffd,db.query.insert,READ,13.48,OK,user-db,v1.1.0,fb5e1481b86244679d1f8bbe5e5b013f
+live_ep_000040_NONE,NONE,order-service,1.6,1785987770.757176,2d15f07a77bd4a57a77a6e4681dcb1ad,04b1a8143ba04a5f94aa4ed7d8c7fffd,cache.set,,0.5,OK,cache-cluster,v1.1.0,fb5e1481b86244679d1f8bbe5e5b013f
+live_ep_000040_NONE,NONE,order-service,1.7,1785987770.857567,5f47d926d2084496aa0aa6310ff2edfe,,POST /api/payment,,112.07,OK,order-service,v1.1.0,2f0d107c2cd34e16be04743da9cb56e1
+live_ep_000040_NONE,NONE,order-service,1.7,1785987770.857567,8a36984678744b3c8c17b1e60ffc35c0,5f47d926d2084496aa0aa6310ff2edfe,db.query.update,READ,32.94,OK,user-db,v1.1.0,2f0d107c2cd34e16be04743da9cb56e1
+live_ep_000040_NONE,NONE,order-service,1.7,1785987770.857567,61c5c845811343be98b2123cb29aa620,5f47d926d2084496aa0aa6310ff2edfe,cache.get,,1.47,OK,cache-cluster,v1.1.0,2f0d107c2cd34e16be04743da9cb56e1
+live_ep_000040_NONE,NONE,order-service,1.7,1785987770.857567,1e2dc46faa6048c3a22f3837a801530e,5f47d926d2084496aa0aa6310ff2edfe,http.client.get,,26.49,OK,cache-cluster,v1.1.0,2f0d107c2cd34e16be04743da9cb56e1
+live_ep_000040_NONE,NONE,order-service,1.8,1785987770.957613,3f2fae466f0a4572ab1f4d8b9be4cdb1,,POST /api/checkout,,97.63,OK,order-service,v1.1.0,791fee296c474bddb55411de80569995
+live_ep_000040_NONE,NONE,order-service,1.8,1785987770.957613,69b72429c5674eff922dbd8d0793b4cc,3f2fae466f0a4572ab1f4d8b9be4cdb1,db.query.insert,READ,24.78,OK,user-db,v1.1.0,791fee296c474bddb55411de80569995
+live_ep_000040_NONE,NONE,order-service,1.8,1785987770.957613,aeba17e62fa34215aa83c22343aff4fd,3f2fae466f0a4572ab1f4d8b9be4cdb1,db.query.select,WRITE,23.71,OK,user-db,v1.1.0,791fee296c474bddb55411de80569995
+live_ep_000040_NONE,NONE,order-service,1.9,1785987771.057805,54a90b98652d4f5e8297a38c02eda2f4,,POST /api/payment,,125.66,OK,order-service,v1.1.0,b5af9ad4f7cc48b09148c3f7ca6b9b53
+live_ep_000040_NONE,NONE,order-service,1.9,1785987771.057805,7208f069048b43e891762ae901a327f8,54a90b98652d4f5e8297a38c02eda2f4,db.query.insert,READ,37.86,OK,user-db,v1.1.0,b5af9ad4f7cc48b09148c3f7ca6b9b53
+live_ep_000040_NONE,NONE,order-service,1.9,1785987771.057805,c39ac160216248fa907503a10270ef92,54a90b98652d4f5e8297a38c02eda2f4,db.query.delete,WRITE,45.2,OK,user-db,v1.1.0,b5af9ad4f7cc48b09148c3f7ca6b9b53
+live_ep_000040_NONE,NONE,order-service,2.0,1785987771.1580257,6e3955656dd24eb28bc5c6006397148a,,GET /api/health,,142.0,OK,order-service,v1.1.0,a00ccfb2f322474d849f19ff724f51eb
+live_ep_000040_NONE,NONE,order-service,2.0,1785987771.1580257,6a5f0f123b0443bd881ca9c8857946dc,6e3955656dd24eb28bc5c6006397148a,db.query.select,READ,26.25,OK,user-db,v1.1.0,a00ccfb2f322474d849f19ff724f51eb
+live_ep_000040_NONE,NONE,order-service,2.0,1785987771.1580257,255940b5c612487f9f263fb03cf1b017,6e3955656dd24eb28bc5c6006397148a,db.query.insert,WRITE,23.62,OK,user-db,v1.1.0,a00ccfb2f322474d849f19ff724f51eb
+live_ep_000040_NONE,NONE,order-service,2.0,1785987771.1580257,5c19ee2ed87445f6a9d170cbc353647a,6e3955656dd24eb28bc5c6006397148a,cache.set,,2.28,OK,cache-cluster,v1.1.0,a00ccfb2f322474d849f19ff724f51eb
+live_ep_000040_NONE,NONE,order-service,2.0,1785987771.1580257,379f92ba516b41d1a07aa457980274d7,6e3955656dd24eb28bc5c6006397148a,http.client.get,,36.37,OK,inventory-api,v1.1.0,a00ccfb2f322474d849f19ff724f51eb
+live_ep_000040_NONE,NONE,order-service,2.1,1785987771.2582917,2dc719d63d944de6b7ace91d0dbde8b2,,POST /api/checkout,,107.55,OK,order-service,v1.1.0,030bc5866e2544208d8346451251c290
+live_ep_000040_NONE,NONE,order-service,2.1,1785987771.2582917,79cc58e180934c8889fad05bf9650fbb,2dc719d63d944de6b7ace91d0dbde8b2,db.query.update,READ,8.17,OK,user-db,v1.1.0,030bc5866e2544208d8346451251c290
+live_ep_000040_NONE,NONE,order-service,2.1,1785987771.2582917,b420c0eed5d34055bcaf62327d00ee49,2dc719d63d944de6b7ace91d0dbde8b2,cache.get,,1.43,OK,cache-cluster,v1.1.0,030bc5866e2544208d8346451251c290
+live_ep_000040_NONE,NONE,order-service,2.1,1785987771.2582917,ebefdaf490d54123bf2acc0610839b56,2dc719d63d944de6b7ace91d0dbde8b2,http.client.post,,45.99,OK,user-db,v1.1.0,030bc5866e2544208d8346451251c290
+live_ep_000040_NONE,NONE,order-service,2.2,1785987771.3584423,a4688ac5ebf64e1ea85f36bf0c8254d8,,GET /api/auth,,82.87,OK,order-service,v1.1.0,00915aae94bd48ce87e0488d587bd6b4
+live_ep_000040_NONE,NONE,order-service,2.2,1785987771.3584423,6d5cd1547ab944d7b13d8f7f97c04570,a4688ac5ebf64e1ea85f36bf0c8254d8,db.query.insert,READ,18.15,OK,user-db,v1.1.0,00915aae94bd48ce87e0488d587bd6b4
+live_ep_000040_NONE,NONE,order-service,2.2,1785987771.3584423,e86f5a056cc54090a7bf517173221f29,a4688ac5ebf64e1ea85f36bf0c8254d8,cache.delete,,67.47,OK,cache-cluster,v1.1.0,00915aae94bd48ce87e0488d587bd6b4
+live_ep_000040_NONE,NONE,order-service,2.2,1785987771.3584423,143b15fda2ff4a5aa1c1c01543969484,a4688ac5ebf64e1ea85f36bf0c8254d8,grpc.call,,17.12,OK,cache-cluster,v1.1.0,00915aae94bd48ce87e0488d587bd6b4
+live_ep_000040_NONE,NONE,order-service,2.3,1785987771.4590378,1e0f978c59a3404db4ff9313fd1a1df3,,PUT /api/inventory,,130.04,OK,order-service,v1.1.0,1c7a9703a58f486490bf9606079fe505
+live_ep_000040_NONE,NONE,order-service,2.3,1785987771.4590378,0a31a5a31c3847f69042edb68d945625,1e0f978c59a3404db4ff9313fd1a1df3,db.query.delete,WRITE,25.31,OK,user-db,v1.1.0,1c7a9703a58f486490bf9606079fe505
+live_ep_000040_NONE,NONE,order-service,2.3,1785987771.4590378,f0ac86566c8b4c0fb53575dad2c5c28e,1e0f978c59a3404db4ff9313fd1a1df3,cache.get,,2.22,OK,cache-cluster,v1.1.0,1c7a9703a58f486490bf9606079fe505
+live_ep_000040_NONE,NONE,order-service,2.4,1785987771.5595362,a47db9f483784ce3a2df268201b9fb9c,,POST /api/payment,,153.45,OK,order-service,v1.1.0,1fa4ff3355e64ed38074187d81b2494f
+live_ep_000040_NONE,NONE,order-service,2.4,1785987771.5595362,00eb7fd6533642eb8dd6abfe76c6de35,a47db9f483784ce3a2df268201b9fb9c,db.query.insert,WRITE,15.25,OK,user-db,v1.1.0,1fa4ff3355e64ed38074187d81b2494f
+live_ep_000040_NONE,NONE,order-service,2.4,1785987771.5595362,c674674a8b354adc927b707a02e81ebc,a47db9f483784ce3a2df268201b9fb9c,db.transaction,WRITE,21.14,OK,user-db,v1.1.0,1fa4ff3355e64ed38074187d81b2494f
+live_ep_000040_NONE,NONE,order-service,2.4,1785987771.5595362,de88350937484a388e3d32762f5128e2,a47db9f483784ce3a2df268201b9fb9c,cache.get,,1.23,OK,cache-cluster,v1.1.0,1fa4ff3355e64ed38074187d81b2494f
+live_ep_000040_NONE,NONE,order-service,2.4,1785987771.5595362,6111a49d86cd47c38b44b6cd4aa29e5b,a47db9f483784ce3a2df268201b9fb9c,grpc.call,,20.63,OK,cache-cluster,v1.1.0,1fa4ff3355e64ed38074187d81b2494f
+live_ep_000040_NONE,NONE,order-service,2.5,1785987771.659691,2719c3d5e4f641398ba53d23b4a5b21e,,POST /api/payment,,97.86,OK,order-service,v1.1.0,279793be6a194f1090079f35f4977206
+live_ep_000040_NONE,NONE,order-service,2.5,1785987771.659691,4126132e9ebd4f66a4cac1978bbea3a9,2719c3d5e4f641398ba53d23b4a5b21e,db.query.insert,READ,16.06,OK,user-db,v1.1.0,279793be6a194f1090079f35f4977206
+live_ep_000040_NONE,NONE,order-service,2.5,1785987771.659691,244bfdb122aa4bee84140e5261edaa72,2719c3d5e4f641398ba53d23b4a5b21e,db.query.select,READ,10.94,OK,user-db,v1.1.0,279793be6a194f1090079f35f4977206
+live_ep_000040_NONE,NONE,order-service,2.5,1785987771.659691,38e52645e03e435c9a691f77e736f229,2719c3d5e4f641398ba53d23b4a5b21e,http.client.get,,25.84,OK,inventory-api,v1.1.0,279793be6a194f1090079f35f4977206
+live_ep_000040_NONE,NONE,order-service,2.6,1785987771.7599263,a64f3b3620cb4d52ab886dd9d69c8067,,GET /api/order,,93.16,OK,order-service,v1.1.0,85047c76b21a4be7859dfd452c4bbc8f
+live_ep_000040_NONE,NONE,order-service,2.6,1785987771.7599263,32596ef8670748b68d07f8022e0e5421,a64f3b3620cb4d52ab886dd9d69c8067,db.transaction,WRITE,2.44,OK,user-db,v1.1.0,85047c76b21a4be7859dfd452c4bbc8f
+live_ep_000040_NONE,NONE,order-service,2.6,1785987771.7599263,e28a402bafa843d88f3518e373f0e240,a64f3b3620cb4d52ab886dd9d69c8067,db.query.insert,WRITE,14.86,OK,user-db,v1.1.0,85047c76b21a4be7859dfd452c4bbc8f
+live_ep_000040_NONE,NONE,order-service,2.6,1785987771.7599263,7ae51031481f4b1eb5226604477d7853,a64f3b3620cb4d52ab886dd9d69c8067,cache.set,,1.88,OK,cache-cluster,v1.1.0,85047c76b21a4be7859dfd452c4bbc8f
+live_ep_000040_NONE,NONE,order-service,2.7,1785987771.8602211,3a7ccaa284d74f4fa40188ad81bdf752,,PUT /api/inventory,,130.3,OK,order-service,v1.1.0,6cc69d78c0de47ab8ffc98ff7e3fb912
+live_ep_000040_NONE,NONE,order-service,2.7,1785987771.8602211,996db817de8b444aa29f8034edfc7843,3a7ccaa284d74f4fa40188ad81bdf752,db.transaction,READ,31.59,OK,user-db,v1.1.0,6cc69d78c0de47ab8ffc98ff7e3fb912
+live_ep_000040_NONE,NONE,order-service,2.7,1785987771.8602211,6ba7719fdd15493aa20c398202d88862,3a7ccaa284d74f4fa40188ad81bdf752,db.query.delete,WRITE,31.62,OK,user-db,v1.1.0,6cc69d78c0de47ab8ffc98ff7e3fb912
+live_ep_000040_NONE,NONE,order-service,2.7,1785987771.8602211,34a0385e87344ba0a1214981a107141c,3a7ccaa284d74f4fa40188ad81bdf752,cache.delete,,0.69,OK,cache-cluster,v1.1.0,6cc69d78c0de47ab8ffc98ff7e3fb912
+live_ep_000040_NONE,NONE,order-service,2.8,1785987771.9605343,fc256100156c441eb9401a5b201fcbc9,,GET /api/health,,148.82,OK,order-service,v1.1.0,4d0b781d24c745fd8f5c3ee7ce24e0ed
+live_ep_000040_NONE,NONE,order-service,2.8,1785987771.9605343,6a13c51fe92c4bafad608109f45fc56e,fc256100156c441eb9401a5b201fcbc9,db.transaction,WRITE,32.64,OK,user-db,v1.1.0,4d0b781d24c745fd8f5c3ee7ce24e0ed
+live_ep_000040_NONE,NONE,order-service,2.8,1785987771.9605343,736a11c9c66c4f3ab65fde9be5566cd9,fc256100156c441eb9401a5b201fcbc9,db.transaction,WRITE,17.38,OK,user-db,v1.1.0,4d0b781d24c745fd8f5c3ee7ce24e0ed
+live_ep_000040_NONE,NONE,order-service,2.8,1785987771.9605343,d671e764e28941bba1a92315ae737a7b,fc256100156c441eb9401a5b201fcbc9,cache.delete,,1.76,OK,cache-cluster,v1.1.0,4d0b781d24c745fd8f5c3ee7ce24e0ed
+live_ep_000040_NONE,NONE,order-service,2.9,1785987772.0612085,c62117ec113642dc90a4b5a44e75d083,,PUT /api/inventory,,132.28,OK,order-service,v1.1.0,e57c8482992a4a01a582e5b3f1e45d47
+live_ep_000040_NONE,NONE,order-service,2.9,1785987772.0612085,023d3e01289043b29f795fa96fc356ac,c62117ec113642dc90a4b5a44e75d083,db.query.select,READ,11.68,OK,user-db,v1.1.0,e57c8482992a4a01a582e5b3f1e45d47
+live_ep_000040_NONE,NONE,order-service,2.9,1785987772.0612085,8ab84560f37a422892d55737eeaf3708,c62117ec113642dc90a4b5a44e75d083,cache.get,,1.13,OK,cache-cluster,v1.1.0,e57c8482992a4a01a582e5b3f1e45d47
+live_ep_000040_NONE,NONE,order-service,3.0,1785987772.1613998,f9835756698d4b429574f844d6451d47,,POST /api/checkout,,98.56,OK,order-service,v1.1.0,6ed6a1940df542beb4681cbc21aa45b3
+live_ep_000040_NONE,NONE,order-service,3.0,1785987772.1613998,bf32686d0b7142d7b9a402429d4065ab,f9835756698d4b429574f844d6451d47,db.query.delete,WRITE,31.58,OK,user-db,v1.1.0,6ed6a1940df542beb4681cbc21aa45b3
+live_ep_000040_NONE,NONE,order-service,3.0,1785987772.1613998,bedd6419386d401ba0a1625859723fc8,f9835756698d4b429574f844d6451d47,db.transaction,WRITE,30.09,OK,user-db,v1.1.0,6ed6a1940df542beb4681cbc21aa45b3
+live_ep_000040_NONE,NONE,order-service,3.0,1785987772.1613998,0e55ebfc416249c486aeb47ebe19670f,f9835756698d4b429574f844d6451d47,cache.delete,,3.15,OK,cache-cluster,v1.1.0,6ed6a1940df542beb4681cbc21aa45b3
+live_ep_000040_NONE,NONE,order-service,3.1,1785987772.2615483,74436c22ba1e4353903b94c053910dee,,POST /api/checkout,,100.84,OK,order-service,v1.1.0,ad52f2fc720f45f8b03549cfe6827b30
+live_ep_000040_NONE,NONE,order-service,3.1,1785987772.2615483,8ae0bc97bb9440d7a71c974d7c3b8874,74436c22ba1e4353903b94c053910dee,db.query.delete,READ,32.61,OK,user-db,v1.1.0,ad52f2fc720f45f8b03549cfe6827b30
+live_ep_000040_NONE,NONE,order-service,3.1,1785987772.2615483,0e38a5578fd84e3c9971f0db7cc6e420,74436c22ba1e4353903b94c053910dee,cache.set,,1.39,OK,cache-cluster,v1.1.0,ad52f2fc720f45f8b03549cfe6827b30
+live_ep_000040_NONE,NONE,order-service,3.1,1785987772.2615483,59d28a7b21004e48b70a82f3d0eb9b69,74436c22ba1e4353903b94c053910dee,http.client.get,,30.61,OK,inventory-api,v1.1.0,ad52f2fc720f45f8b03549cfe6827b30
+live_ep_000040_NONE,NONE,order-service,3.2,1785987772.361812,5581fe01c2464f69b2b6f3174fd11ef0,,POST /api/payment,,127.75,OK,order-service,v1.1.0,b38edcb7cbae4462ba24cbe7b4cd1f48
+live_ep_000040_NONE,NONE,order-service,3.2,1785987772.361812,00118707bf9e4d24a8631619629b5177,5581fe01c2464f69b2b6f3174fd11ef0,db.query.insert,READ,19.47,OK,user-db,v1.1.0,b38edcb7cbae4462ba24cbe7b4cd1f48
+live_ep_000040_NONE,NONE,order-service,3.2,1785987772.361812,0cebcb482620428cabb6dc41abd8ad07,5581fe01c2464f69b2b6f3174fd11ef0,db.query.insert,WRITE,20.32,OK,user-db,v1.1.0,b38edcb7cbae4462ba24cbe7b4cd1f48
+live_ep_000040_NONE,NONE,order-service,3.2,1785987772.361812,654979252d4143dbbe132476ff622a02,5581fe01c2464f69b2b6f3174fd11ef0,cache.set,,2.58,OK,cache-cluster,v1.1.0,b38edcb7cbae4462ba24cbe7b4cd1f48
+live_ep_000040_NONE,NONE,order-service,3.2,1785987772.361812,3dba59c627fc4215bb02c8c0734986b9,5581fe01c2464f69b2b6f3174fd11ef0,http.client.get,,33.97,OK,inventory-api,v1.1.0,b38edcb7cbae4462ba24cbe7b4cd1f48
+live_ep_000040_NONE,NONE,order-service,3.3,1785987772.4623494,2205a69d239d4b98b74f184a45085857,,GET /api/health,,105.65,OK,order-service,v1.1.0,35e269e3790b4d3bb81c3fb65b1988eb
+live_ep_000040_NONE,NONE,order-service,3.3,1785987772.4623494,2b9fd5a034114d429a6641954100fb3a,2205a69d239d4b98b74f184a45085857,db.query.insert,READ,6.53,OK,user-db,v1.1.0,35e269e3790b4d3bb81c3fb65b1988eb
+live_ep_000040_NONE,NONE,order-service,3.3,1785987772.4623494,a38924138431403f8ea952cce17da06f,2205a69d239d4b98b74f184a45085857,db.query.update,WRITE,24.22,OK,user-db,v1.1.0,35e269e3790b4d3bb81c3fb65b1988eb
+live_ep_000040_NONE,NONE,order-service,3.3,1785987772.4623494,64d05384a11d422182808ac0aa5c6488,2205a69d239d4b98b74f184a45085857,cache.delete,,3.0,OK,cache-cluster,v1.1.0,35e269e3790b4d3bb81c3fb65b1988eb
+live_ep_000040_NONE,NONE,order-service,3.3,1785987772.4623494,4ad49ee41bff409b8dbbde963b09ade0,2205a69d239d4b98b74f184a45085857,http.client.get,,27.31,OK,user-db,v1.1.0,35e269e3790b4d3bb81c3fb65b1988eb
+live_ep_000040_NONE,NONE,order-service,3.4,1785987772.562836,16b821982a31441984a65de5b33bab4b,,GET /api/order,,128.83,OK,order-service,v1.1.0,f0a9d75e60914676aefb57ba15c9f497
+live_ep_000040_NONE,NONE,order-service,3.4,1785987772.562836,c1691d5b81b449919976ce4baa444504,16b821982a31441984a65de5b33bab4b,db.query.update,READ,13.11,OK,user-db,v1.1.0,f0a9d75e60914676aefb57ba15c9f497
+live_ep_000040_NONE,NONE,order-service,3.4,1785987772.562836,49f21acad9ae4c1898776764207522dd,16b821982a31441984a65de5b33bab4b,db.query.delete,WRITE,29.36,OK,user-db,v1.1.0,f0a9d75e60914676aefb57ba15c9f497
+live_ep_000040_NONE,NONE,order-service,3.4,1785987772.562836,3be5dce234e647a1926b41ce9d3bc763,16b821982a31441984a65de5b33bab4b,cache.delete,,1.79,OK,cache-cluster,v1.1.0,f0a9d75e60914676aefb57ba15c9f497
+live_ep_000040_NONE,NONE,order-service,3.5,1785987772.6631427,1566927e27b643d4b0a5e3285a89307c,,GET /api/health,,141.27,OK,order-service,v1.1.0,915f45f26b0a40b3895019bef0458f56
+live_ep_000040_NONE,NONE,order-service,3.5,1785987772.6631427,79937cd244cf4f50a4903571a565e779,1566927e27b643d4b0a5e3285a89307c,db.query.select,READ,8.34,OK,user-db,v1.1.0,915f45f26b0a40b3895019bef0458f56
+live_ep_000040_NONE,NONE,order-service,3.5,1785987772.6631427,4138d54b13b443bea7b5b8725d558cc9,1566927e27b643d4b0a5e3285a89307c,cache.get,,1.83,OK,cache-cluster,v1.1.0,915f45f26b0a40b3895019bef0458f56
+live_ep_000040_NONE,NONE,order-service,3.5,1785987772.6631427,8dd8c6bbe453498fb6b92ef6ec926185,1566927e27b643d4b0a5e3285a89307c,grpc.call,,38.35,OK,payment-gateway,v1.1.0,915f45f26b0a40b3895019bef0458f56
+live_ep_000040_NONE,NONE,order-service,3.6,1785987772.7636762,c28ffc2490de48e8bdd2f640a2cd7884,,POST /api/payment,,135.24,OK,order-service,v1.1.0,6c2007393f1f45f7a70de7c90c1b264e
+live_ep_000040_NONE,NONE,order-service,3.6,1785987772.7636762,f842f8a990f94c6b938bf021d13eba8f,c28ffc2490de48e8bdd2f640a2cd7884,db.query.insert,WRITE,23.28,OK,user-db,v1.1.0,6c2007393f1f45f7a70de7c90c1b264e
+live_ep_000040_NONE,NONE,order-service,3.6,1785987772.7636762,736476c504054ef7bde53bece9352054,c28ffc2490de48e8bdd2f640a2cd7884,cache.get,,0.58,OK,cache-cluster,v1.1.0,6c2007393f1f45f7a70de7c90c1b264e
+live_ep_000040_NONE,NONE,order-service,3.7,1785987772.8642302,c6cf35778de34d2e91ffff818d57735e,,POST /api/checkout,,140.76,OK,order-service,v1.1.0,d1e567ad10df431ab91ecf3073b98e47
+live_ep_000040_NONE,NONE,order-service,3.7,1785987772.8642302,e10bc563ebc6419b9711b23d5882d218,c6cf35778de34d2e91ffff818d57735e,db.query.insert,READ,24.3,OK,user-db,v1.1.0,d1e567ad10df431ab91ecf3073b98e47
+live_ep_000040_NONE,NONE,order-service,3.7,1785987772.8642302,924e7552cc4c41c794797135d87a5c50,c6cf35778de34d2e91ffff818d57735e,grpc.call,,50.92,OK,cache-cluster,v1.1.0,d1e567ad10df431ab91ecf3073b98e47
+live_ep_000040_NONE,NONE,order-service,3.8,1785987772.964818,76123d1e1a4f43e298e65790fb9d2691,,GET /api/auth,,162.74,OK,order-service,v1.1.0,95202ef7afa24c79940b5704e619f01a
+live_ep_000040_NONE,NONE,order-service,3.8,1785987772.964818,22b4cab3e1f540879b6ade9027ba86c5,76123d1e1a4f43e298e65790fb9d2691,db.query.delete,READ,19.59,OK,user-db,v1.1.0,95202ef7afa24c79940b5704e619f01a
+live_ep_000040_NONE,NONE,order-service,3.8,1785987772.964818,2ba8cfb2524243308fadbb7001962361,76123d1e1a4f43e298e65790fb9d2691,cache.set,,2.74,OK,cache-cluster,v1.1.0,95202ef7afa24c79940b5704e619f01a
+live_ep_000040_NONE,NONE,order-service,3.9,1785987773.065115,3149c3c9a5a34b3fa97947a8890ab5e7,,GET /api/health,,106.55,OK,order-service,v1.1.0,e10a069d3145462fa74c659e111216cc
+live_ep_000040_NONE,NONE,order-service,3.9,1785987773.065115,d96dc4c4125e4c8a841b91c6d0e85fef,3149c3c9a5a34b3fa97947a8890ab5e7,db.query.insert,WRITE,27.24,OK,user-db,v1.1.0,e10a069d3145462fa74c659e111216cc
+live_ep_000040_NONE,NONE,order-service,4.0,1785987773.1655757,08b5f60052e84bda9a505053ebfaa6a4,,POST /api/payment,,125.84,OK,order-service,v1.1.0,2bb5a9a566f44900ae37cef0be8e83df
+live_ep_000040_NONE,NONE,order-service,4.0,1785987773.1655757,26aecd57d45c4039bb435874c00bc9df,08b5f60052e84bda9a505053ebfaa6a4,db.query.delete,WRITE,6.97,OK,user-db,v1.1.0,2bb5a9a566f44900ae37cef0be8e83df
+live_ep_000040_NONE,NONE,order-service,4.0,1785987773.1655757,4cf817f4e02e417690ce7439c9af09ec,08b5f60052e84bda9a505053ebfaa6a4,db.transaction,READ,5.14,OK,user-db,v1.1.0,2bb5a9a566f44900ae37cef0be8e83df
+live_ep_000040_NONE,NONE,order-service,4.0,1785987773.1655757,f0bec04bb4bf46a595dc12c7030b1178,08b5f60052e84bda9a505053ebfaa6a4,cache.delete,,1.43,OK,cache-cluster,v1.1.0,2bb5a9a566f44900ae37cef0be8e83df
+live_ep_000040_NONE,NONE,order-service,4.1,1785987773.2662132,1e7858c3222148a8829077682270a103,,GET /api/health,,170.96,OK,order-service,v1.1.0,a6bc735007f047bbbeb735763c7dc5b6
+live_ep_000040_NONE,NONE,order-service,4.1,1785987773.2662132,7741529611b24189ba4a14aa435c8402,1e7858c3222148a8829077682270a103,db.query.select,WRITE,39.16,OK,user-db,v1.1.0,a6bc735007f047bbbeb735763c7dc5b6
+live_ep_000040_NONE,NONE,order-service,4.2,1785987773.366282,f49ac439b5e6498b9ddacc7570b4a2d8,,GET /api/order,,116.97,OK,order-service,v1.1.0,945a5f1db5fa47ebb470bd0402266da7
+live_ep_000040_NONE,NONE,order-service,4.2,1785987773.366282,6da07250a4f046acaf40a1a54e1094f7,f49ac439b5e6498b9ddacc7570b4a2d8,db.query.select,WRITE,20.92,ERROR,user-db,v1.1.0,945a5f1db5fa47ebb470bd0402266da7
+live_ep_000040_NONE,NONE,order-service,4.2,1785987773.366282,30fe0d8dc08e44b5962ab575b0296507,f49ac439b5e6498b9ddacc7570b4a2d8,cache.get,,49.52,OK,cache-cluster,v1.1.0,945a5f1db5fa47ebb470bd0402266da7
+live_ep_000040_NONE,NONE,order-service,4.3,1785987773.4666703,fc5dd734b0de4ba287442487f1542117,,GET /api/health,,120.25,OK,order-service,v1.1.0,09d49c6736084c559b6c4f867ac2ff65
+live_ep_000040_NONE,NONE,order-service,4.3,1785987773.4666703,a3bd7faf908343cb8aa366682029277b,fc5dd734b0de4ba287442487f1542117,db.query.insert,WRITE,24.79,OK,user-db,v1.1.0,09d49c6736084c559b6c4f867ac2ff65
+live_ep_000040_NONE,NONE,order-service,4.3,1785987773.4666703,84cbf27812744d64b25cb2e89f3edb8f,fc5dd734b0de4ba287442487f1542117,db.query.select,READ,38.04,OK,user-db,v1.1.0,09d49c6736084c559b6c4f867ac2ff65
+live_ep_000040_NONE,NONE,order-service,4.4,1785987773.5670063,e14ace4da5e445729b9b9cb9625ef906,,GET /api/auth,,103.6,OK,order-service,v1.1.0,ae4b64be3ab1404e8ebad3ab86ec05c4
+live_ep_000040_NONE,NONE,order-service,4.4,1785987773.5670063,a860b5c8d7eb42239ce320a94f0e1fdb,e14ace4da5e445729b9b9cb9625ef906,db.query.update,READ,31.96,OK,user-db,v1.1.0,ae4b64be3ab1404e8ebad3ab86ec05c4
+live_ep_000040_NONE,NONE,order-service,4.4,1785987773.5670063,8d2c6f412f864f589bc1417e6f0f67e4,e14ace4da5e445729b9b9cb9625ef906,db.query.select,READ,23.68,OK,user-db,v1.1.0,ae4b64be3ab1404e8ebad3ab86ec05c4
+live_ep_000040_NONE,NONE,order-service,4.4,1785987773.5670063,a0ab2cd0073f4b71883a05828f40ec99,e14ace4da5e445729b9b9cb9625ef906,cache.get,,3.11,OK,cache-cluster,v1.1.0,ae4b64be3ab1404e8ebad3ab86ec05c4
+live_ep_000040_NONE,NONE,order-service,4.4,1785987773.5670063,2d35019a49a049fd8abd6828637489d6,e14ace4da5e445729b9b9cb9625ef906,http.client.post,,24.9,OK,user-db,v1.1.0,ae4b64be3ab1404e8ebad3ab86ec05c4
+live_ep_000040_NONE,NONE,order-service,4.5,1785987773.6675096,80de405cccd1492c8ca2847595c0e591,,GET /api/order,,109.52,ERROR,order-service,v1.1.0,624a116e33b64feea2dbcee98cfafc2b
+live_ep_000040_NONE,NONE,order-service,4.5,1785987773.6675096,8f335f66c20a4414bebb8ea1f77b9d10,80de405cccd1492c8ca2847595c0e591,db.query.update,READ,23.28,OK,user-db,v1.1.0,624a116e33b64feea2dbcee98cfafc2b
+live_ep_000040_NONE,NONE,order-service,4.5,1785987773.6675096,01e410a2d59848bd8321cbb171be101a,80de405cccd1492c8ca2847595c0e591,cache.delete,,2.81,OK,cache-cluster,v1.1.0,624a116e33b64feea2dbcee98cfafc2b
+live_ep_000040_NONE,NONE,order-service,4.6,1785987773.7676752,6dbe451c6c2448c88729806ccc715dd9,,GET /api/health,,127.07,OK,order-service,v1.1.0,daf99c01416a4b8382257d023ebfb4bc
+live_ep_000040_NONE,NONE,order-service,4.6,1785987773.7676752,533e99ad5dcc4655b841a0c3ba993382,6dbe451c6c2448c88729806ccc715dd9,db.query.update,READ,26.21,OK,user-db,v1.1.0,daf99c01416a4b8382257d023ebfb4bc
+live_ep_000040_NONE,NONE,order-service,4.6,1785987773.7676752,f7824a9dc56d404b9c740e2fab1a4bd5,6dbe451c6c2448c88729806ccc715dd9,cache.get,,0.5,OK,cache-cluster,v1.1.0,daf99c01416a4b8382257d023ebfb4bc
+live_ep_000040_NONE,NONE,order-service,4.6,1785987773.7676752,b016caf317e64a6e96ea4030621c2f3b,6dbe451c6c2448c88729806ccc715dd9,http.client.get,,35.1,OK,cache-cluster,v1.1.0,daf99c01416a4b8382257d023ebfb4bc
+live_ep_000040_NONE,NONE,order-service,4.7,1785987773.8681428,8ae21bdab5d54287bf6104ce54a27aff,,POST /api/checkout,,156.5,OK,order-service,v1.1.0,ad900dcc5e3c456bb9917a90df433822
+live_ep_000040_NONE,NONE,order-service,4.7,1785987773.8681428,84d05a35c4ab4c36a272734b6877a02d,8ae21bdab5d54287bf6104ce54a27aff,db.query.insert,READ,6.85,OK,user-db,v1.1.0,ad900dcc5e3c456bb9917a90df433822
+live_ep_000040_NONE,NONE,order-service,4.7,1785987773.8681428,5c615f95847c4646a1846bb58d7c4c5e,8ae21bdab5d54287bf6104ce54a27aff,db.query.delete,READ,4.79,OK,user-db,v1.1.0,ad900dcc5e3c456bb9917a90df433822
+live_ep_000040_NONE,NONE,order-service,4.7,1785987773.8681428,161ba02062494c4db09ef68f3768517b,8ae21bdab5d54287bf6104ce54a27aff,cache.set,,1.87,OK,cache-cluster,v1.1.0,ad900dcc5e3c456bb9917a90df433822
+live_ep_000040_NONE,NONE,order-service,4.8,1785987773.9682286,b03129aacd3643cbbecf760e58f05a43,,POST /api/payment,,112.54,OK,order-service,v1.1.0,c9dcb8b7a9dd4c4795edd9d432a3d20b
+live_ep_000040_NONE,NONE,order-service,4.8,1785987773.9682286,51d1034ccf2e4f0fbf81add3844f3571,b03129aacd3643cbbecf760e58f05a43,db.query.delete,READ,7.5,OK,user-db,v1.1.0,c9dcb8b7a9dd4c4795edd9d432a3d20b
+live_ep_000040_NONE,NONE,order-service,4.8,1785987773.9682286,ae68dfcf91fc4103978f7ceb9bdf424b,b03129aacd3643cbbecf760e58f05a43,db.query.update,WRITE,4.51,OK,user-db,v1.1.0,c9dcb8b7a9dd4c4795edd9d432a3d20b
+live_ep_000040_NONE,NONE,order-service,4.8,1785987773.9682286,c0d02c5febe64f60854817c61a3eaa7b,b03129aacd3643cbbecf760e58f05a43,cache.get,,52.35,OK,cache-cluster,v1.1.0,c9dcb8b7a9dd4c4795edd9d432a3d20b
+live_ep_000040_NONE,NONE,order-service,4.9,1785987774.068729,9c0fc179b54d447fab49bb6b62b13321,,GET /api/auth,,93.63,OK,order-service,v1.1.0,a48a496e202d462fb0d1fabcdd8bce0f
+live_ep_000040_NONE,NONE,order-service,4.9,1785987774.068729,c711577574314c54b2a8930651902ffe,9c0fc179b54d447fab49bb6b62b13321,db.query.select,READ,13.02,OK,user-db,v1.1.0,a48a496e202d462fb0d1fabcdd8bce0f
+live_ep_000040_NONE,NONE,order-service,5.0,1785987774.169053,ac86bddb6060485abf794f0eb70f6e5f,,GET /api/health,,129.82,OK,order-service,v1.1.0,8e7bd34bc4b048699248b4a434dbc0bf
+live_ep_000040_NONE,NONE,order-service,5.0,1785987774.169053,97e0228a157541c897cf652a13c9e9c3,ac86bddb6060485abf794f0eb70f6e5f,db.transaction,READ,12.51,OK,user-db,v1.1.0,8e7bd34bc4b048699248b4a434dbc0bf
+live_ep_000040_NONE,NONE,order-service,5.0,1785987774.169053,e0a0fdbc85f946bcb2fcf8fafe0c4627,ac86bddb6060485abf794f0eb70f6e5f,db.query.insert,READ,1.29,OK,user-db,v1.1.0,8e7bd34bc4b048699248b4a434dbc0bf
+live_ep_000040_NONE,NONE,order-service,5.0,1785987774.169053,62ddb75f920a4d36a8a63ceea11f1c03,ac86bddb6060485abf794f0eb70f6e5f,cache.get,,1.12,OK,cache-cluster,v1.1.0,8e7bd34bc4b048699248b4a434dbc0bf
+live_ep_000040_NONE,NONE,order-service,5.1,1785987774.2693074,611598e3afec47f491bb949a32f93cc9,,GET /api/order,,144.61,OK,order-service,v1.1.0,d6e183cff3204b208737b4d7c9f2218c
+live_ep_000040_NONE,NONE,order-service,5.1,1785987774.2693074,16cea13b78fa4a43bcb866934e23411c,611598e3afec47f491bb949a32f93cc9,db.query.update,WRITE,2.96,OK,user-db,v1.1.0,d6e183cff3204b208737b4d7c9f2218c
+live_ep_000040_NONE,NONE,order-service,5.1,1785987774.2693074,0189a2e5237a4ed58f6147deb279c5d8,611598e3afec47f491bb949a32f93cc9,db.query.insert,READ,15.07,OK,user-db,v1.1.0,d6e183cff3204b208737b4d7c9f2218c
+live_ep_000040_NONE,NONE,order-service,5.2,1785987774.3696733,32155bb457e14216ab6e905be63159f0,,GET /api/order,,92.99,OK,order-service,v1.1.0,201bcb81454645bcb14453bfb230288e
+live_ep_000040_NONE,NONE,order-service,5.2,1785987774.3696733,199f858d29ea4ad4a557fcebe4c153fc,32155bb457e14216ab6e905be63159f0,db.query.delete,WRITE,28.53,OK,user-db,v1.1.0,201bcb81454645bcb14453bfb230288e
+live_ep_000040_NONE,NONE,order-service,5.3,1785987774.4698443,6bfd19ca640a43079ddd2e353de14b52,,POST /api/checkout,,142.16,OK,order-service,v1.1.0,e41b97ace93c4cce8a96c47a57418509
+live_ep_000040_NONE,NONE,order-service,5.3,1785987774.4698443,8dfc6d6a65d44030bd8456afa10cbbac,6bfd19ca640a43079ddd2e353de14b52,db.query.update,READ,27.19,OK,user-db,v1.1.0,e41b97ace93c4cce8a96c47a57418509
+live_ep_000040_NONE,NONE,order-service,5.3,1785987774.4698443,fa59a71f44754600ad3175dde65fdf44,6bfd19ca640a43079ddd2e353de14b52,cache.get,,1.95,OK,cache-cluster,v1.1.0,e41b97ace93c4cce8a96c47a57418509
+live_ep_000040_NONE,NONE,order-service,5.3,1785987774.4698443,646912605cd84b5ca57828e0fa348384,6bfd19ca640a43079ddd2e353de14b52,http.client.get,,33.66,OK,user-db,v1.1.0,e41b97ace93c4cce8a96c47a57418509
+live_ep_000040_NONE,NONE,order-service,5.4,1785987774.5701184,bd88415315ed4f419e8f4cec2cddd944,,PUT /api/inventory,,112.97,OK,order-service,v1.1.0,2e9faf0e2dc349f5b1538616bd864ef0
+live_ep_000040_NONE,NONE,order-service,5.4,1785987774.5701184,568065d8f7cc4c39aae63b525b4d92d7,bd88415315ed4f419e8f4cec2cddd944,db.query.select,WRITE,21.16,OK,user-db,v1.1.0,2e9faf0e2dc349f5b1538616bd864ef0
+live_ep_000040_NONE,NONE,order-service,5.4,1785987774.5701184,95a31a8fce1847fc9de268179cc81e20,bd88415315ed4f419e8f4cec2cddd944,cache.delete,,3.29,OK,cache-cluster,v1.1.0,2e9faf0e2dc349f5b1538616bd864ef0
+live_ep_000040_NONE,NONE,order-service,5.4,1785987774.5701184,a1315204aaf342f096bf83ee8e0bacc3,bd88415315ed4f419e8f4cec2cddd944,http.client.post,,38.71,OK,payment-gateway,v1.1.0,2e9faf0e2dc349f5b1538616bd864ef0
+live_ep_000040_NONE,NONE,order-service,5.5,1785987774.6703882,a573723051de47678fef6dab51ce5cb4,,GET /api/order,,131.15,OK,order-service,v1.1.0,9ea50e74549146bc9b87ce071cd189fb
+live_ep_000040_NONE,NONE,order-service,5.5,1785987774.6703882,cdac01bbb380484598d53e8edba011ea,a573723051de47678fef6dab51ce5cb4,db.transaction,WRITE,47.66,OK,user-db,v1.1.0,9ea50e74549146bc9b87ce071cd189fb
+live_ep_000040_NONE,NONE,order-service,5.5,1785987774.6703882,c7a966d3b15f482dae070c1413cc269b,a573723051de47678fef6dab51ce5cb4,db.query.delete,WRITE,44.66,OK,user-db,v1.1.0,9ea50e74549146bc9b87ce071cd189fb
+live_ep_000040_NONE,NONE,order-service,5.5,1785987774.6703882,5f94b7c3793e46068f4e48785ba859ef,a573723051de47678fef6dab51ce5cb4,cache.get,,2.05,OK,cache-cluster,v1.1.0,9ea50e74549146bc9b87ce071cd189fb
+live_ep_000040_NONE,NONE,order-service,5.6,1785987774.7706048,f2673efe6fcf4c0ebfdf1dea207b9f07,,GET /api/health,,98.51,OK,order-service,v1.1.0,ab93c9d0c87a4c2fa44b4beea156d342
+live_ep_000040_NONE,NONE,order-service,5.6,1785987774.7706048,97a8e5f72ef1438fa8740da5b1be02bc,f2673efe6fcf4c0ebfdf1dea207b9f07,db.query.insert,READ,15.04,OK,user-db,v1.1.0,ab93c9d0c87a4c2fa44b4beea156d342
+live_ep_000040_NONE,NONE,order-service,5.6,1785987774.7706048,b230e2819f2c4775a192918d705d62c3,f2673efe6fcf4c0ebfdf1dea207b9f07,db.query.select,READ,15.82,OK,user-db,v1.1.0,ab93c9d0c87a4c2fa44b4beea156d342
+live_ep_000040_NONE,NONE,order-service,5.6,1785987774.7706048,7a926ce5b2704550930333c7d9e66a09,f2673efe6fcf4c0ebfdf1dea207b9f07,cache.get,,2.67,OK,cache-cluster,v1.1.0,ab93c9d0c87a4c2fa44b4beea156d342
+live_ep_000040_NONE,NONE,order-service,5.7,1785987774.870934,3ced92efef7a443db579ecbd3bbed357,,GET /api/order,,110.55,OK,order-service,v1.1.0,de23985cdb2c48aebd0c63bab4da069d
+live_ep_000040_NONE,NONE,order-service,5.7,1785987774.870934,adee6ecdbee54f27bb16ec133f497b27,3ced92efef7a443db579ecbd3bbed357,db.query.insert,READ,27.19,OK,user-db,v1.1.0,de23985cdb2c48aebd0c63bab4da069d
+live_ep_000040_NONE,NONE,order-service,5.8,1785987774.97112,52a9adaeb35a46748113b2a01c980325,,PUT /api/inventory,,125.87,OK,order-service,v1.1.0,041069dea4bb464cb27f602e77c28129
+live_ep_000040_NONE,NONE,order-service,5.8,1785987774.97112,51ce069f732c46b684b5551b918a5409,52a9adaeb35a46748113b2a01c980325,db.query.delete,READ,26.11,OK,user-db,v1.1.0,041069dea4bb464cb27f602e77c28129
+live_ep_000040_NONE,NONE,order-service,5.8,1785987774.97112,b0057d3b9219444ca2f340330a4f8d52,52a9adaeb35a46748113b2a01c980325,db.query.update,WRITE,18.22,OK,user-db,v1.1.0,041069dea4bb464cb27f602e77c28129
+live_ep_000040_NONE,NONE,order-service,5.8,1785987774.97112,eda699f0371448ff931336339d754006,52a9adaeb35a46748113b2a01c980325,cache.get,,2.06,OK,cache-cluster,v1.1.0,041069dea4bb464cb27f602e77c28129
+live_ep_000040_NONE,NONE,order-service,5.9,1785987775.0714767,5d6540dd341b4668bd37eacc9d6821e2,,GET /api/order,,121.71,OK,order-service,v1.1.0,2134066278c74bdd9bdcb19036bbed1c
+live_ep_000040_NONE,NONE,order-service,5.9,1785987775.0714767,7d5e063d3db74bc6877a01a70572fd2d,5d6540dd341b4668bd37eacc9d6821e2,db.query.select,WRITE,15.73,OK,user-db,v1.1.0,2134066278c74bdd9bdcb19036bbed1c
+live_ep_000040_NONE,NONE,order-service,5.9,1785987775.0714767,0a918d35cc45466aade5491225244b78,5d6540dd341b4668bd37eacc9d6821e2,db.query.insert,READ,23.5,OK,user-db,v1.1.0,2134066278c74bdd9bdcb19036bbed1c
+live_ep_000040_NONE,NONE,order-service,5.9,1785987775.0714767,7ee1318878154dc08e1e8c48ee81017d,5d6540dd341b4668bd37eacc9d6821e2,cache.delete,,2.54,OK,cache-cluster,v1.1.0,2134066278c74bdd9bdcb19036bbed1c
+live_ep_000040_NONE,NONE,order-service,5.9,1785987775.0714767,97a9fcfa1e224bd78491bcbbb44750ce,5d6540dd341b4668bd37eacc9d6821e2,http.client.get,,27.99,OK,payment-gateway,v1.1.0,2134066278c74bdd9bdcb19036bbed1c
+live_ep_000040_NONE,NONE,order-service,6.0,1785987775.1718614,8201a639b308445dba09c07c7dd3fec1,,GET /api/auth,,137.74,OK,order-service,v1.1.0,b6f3479f2eab417e965c1c86666a4fb0
+live_ep_000040_NONE,NONE,order-service,6.0,1785987775.1718614,57a7c9d8c1cd4f488917ed6a573b27bf,8201a639b308445dba09c07c7dd3fec1,db.query.select,READ,28.74,OK,user-db,v1.1.0,b6f3479f2eab417e965c1c86666a4fb0
+live_ep_000040_NONE,NONE,order-service,6.0,1785987775.1718614,20ee9d768ab54df9ab0e57519a1c29c1,8201a639b308445dba09c07c7dd3fec1,cache.delete,,1.37,OK,cache-cluster,v1.1.0,b6f3479f2eab417e965c1c86666a4fb0
+live_ep_000040_NONE,NONE,order-service,6.0,1785987775.1718614,fddf1f11b0134f8ab9823517ac91e4b8,8201a639b308445dba09c07c7dd3fec1,http.client.post,,37.73,OK,payment-gateway,v1.1.0,b6f3479f2eab417e965c1c86666a4fb0
+live_ep_000040_NONE,NONE,order-service,6.1,1785987775.2721925,8c6acfc6962e42918a09d44a4642a4ab,,PUT /api/inventory,,127.71,OK,order-service,v1.1.0,1363a1aa85ca485faa196017bb7baaeb
+live_ep_000040_NONE,NONE,order-service,6.1,1785987775.2721925,bb88be8a8fd2433c872c8d30b39c9694,8c6acfc6962e42918a09d44a4642a4ab,db.transaction,READ,46.9,OK,user-db,v1.1.0,1363a1aa85ca485faa196017bb7baaeb
+live_ep_000040_NONE,NONE,order-service,6.1,1785987775.2721925,d031dba91c2a47289f3bb6ee67de4e03,8c6acfc6962e42918a09d44a4642a4ab,cache.get,,0.7,OK,cache-cluster,v1.1.0,1363a1aa85ca485faa196017bb7baaeb
+live_ep_000040_NONE,NONE,order-service,6.1,1785987775.2721925,fca5b138596b4eadbb1b8c697e38ed5d,8c6acfc6962e42918a09d44a4642a4ab,grpc.call,,38.64,OK,cache-cluster,v1.1.0,1363a1aa85ca485faa196017bb7baaeb
+live_ep_000040_NONE,NONE,order-service,6.2,1785987775.3723934,5d90d21ec8ca4908a98d964c2d0850a1,,GET /api/order,,113.57,OK,order-service,v1.1.0,108a8589847a458a98295001c2e6ba6d
+live_ep_000040_NONE,NONE,order-service,6.2,1785987775.3723934,ae0dd5b419c74021bec398759a81296c,5d90d21ec8ca4908a98d964c2d0850a1,db.query.select,READ,23.88,OK,user-db,v1.1.0,108a8589847a458a98295001c2e6ba6d
+live_ep_000040_NONE,NONE,order-service,6.2,1785987775.3723934,de979f1f184945568f37f1b68eb1d3eb,5d90d21ec8ca4908a98d964c2d0850a1,db.query.update,WRITE,36.93,OK,user-db,v1.1.0,108a8589847a458a98295001c2e6ba6d
+live_ep_000040_NONE,NONE,order-service,6.2,1785987775.3723934,246f0a93613b42929803175d58d5741f,5d90d21ec8ca4908a98d964c2d0850a1,cache.get,,2.32,OK,cache-cluster,v1.1.0,108a8589847a458a98295001c2e6ba6d
+live_ep_000040_NONE,NONE,order-service,6.3,1785987775.4724493,b9d7ed387abd48c6930695c4c17f96bb,,GET /api/auth,,115.91,OK,order-service,v1.1.0,59099d15257446afb04f0386a5e3cf6e
+live_ep_000040_NONE,NONE,order-service,6.3,1785987775.4724493,e30d96bfd5634e75b8e7c412812bb489,b9d7ed387abd48c6930695c4c17f96bb,db.query.update,READ,21.49,OK,user-db,v1.1.0,59099d15257446afb04f0386a5e3cf6e
+live_ep_000040_NONE,NONE,order-service,6.3,1785987775.4724493,6abb6526c1354c239a4708402717da35,b9d7ed387abd48c6930695c4c17f96bb,db.query.delete,READ,21.01,OK,user-db,v1.1.0,59099d15257446afb04f0386a5e3cf6e
+live_ep_000040_NONE,NONE,order-service,6.3,1785987775.4724493,29697c5dc71f4868a2f6fe5a7989b84f,b9d7ed387abd48c6930695c4c17f96bb,cache.get,,0.5,OK,cache-cluster,v1.1.0,59099d15257446afb04f0386a5e3cf6e
+live_ep_000040_NONE,NONE,order-service,6.4,1785987775.5729258,ed893574252c4098b2b4b656f55e0432,,GET /api/order,,140.19,OK,order-service,v1.1.0,3ecdc461e434479094e514bb4a78c690
+live_ep_000040_NONE,NONE,order-service,6.4,1785987775.5729258,d73fda36d8d9436a8e2fc12d68fa7c10,ed893574252c4098b2b4b656f55e0432,db.query.select,READ,9.34,OK,user-db,v1.1.0,3ecdc461e434479094e514bb4a78c690
+live_ep_000040_NONE,NONE,order-service,6.5,1785987775.6734133,97036767a16140f28db2de72fbc91b9b,,POST /api/checkout,,146.83,OK,order-service,v1.1.0,cb7477b38d024d6eaf065e3f8d6e6182
+live_ep_000040_NONE,NONE,order-service,6.5,1785987775.6734133,6931abd4ba944b61abf98caaa7c6729a,97036767a16140f28db2de72fbc91b9b,db.query.delete,READ,26.84,OK,user-db,v1.1.0,cb7477b38d024d6eaf065e3f8d6e6182
+live_ep_000040_NONE,NONE,order-service,6.5,1785987775.6734133,c167385981544d41bbf99786a67b439a,97036767a16140f28db2de72fbc91b9b,db.query.select,READ,24.04,OK,user-db,v1.1.0,cb7477b38d024d6eaf065e3f8d6e6182
+live_ep_000040_NONE,NONE,order-service,6.5,1785987775.6734133,c55a8892386343e099be96c923dd68db,97036767a16140f28db2de72fbc91b9b,cache.set,,2.83,OK,cache-cluster,v1.1.0,cb7477b38d024d6eaf065e3f8d6e6182
+live_ep_000040_NONE,NONE,order-service,6.6,1785987775.7735605,32760c7b92de475f8a5b88a9cfefcda6,,PUT /api/inventory,,107.0,OK,order-service,v1.1.0,fd72d379c55745189d69f12c0e17e2f5
+live_ep_000040_NONE,NONE,order-service,6.6,1785987775.7735605,b99f46e55f874109913b2a93d7674602,32760c7b92de475f8a5b88a9cfefcda6,db.query.insert,READ,14.89,OK,user-db,v1.1.0,fd72d379c55745189d69f12c0e17e2f5
+live_ep_000040_NONE,NONE,order-service,6.6,1785987775.7735605,ffcf44b3106c4f36ae472812366fc75b,32760c7b92de475f8a5b88a9cfefcda6,grpc.call,,36.73,OK,inventory-api,v1.1.0,fd72d379c55745189d69f12c0e17e2f5
+live_ep_000040_NONE,NONE,order-service,6.7,1785987775.874099,8a3dacf99cc94313a959965be8911b9d,,PUT /api/inventory,,139.32,OK,order-service,v1.1.0,b684fabe50454e79a31c25599657e890
+live_ep_000040_NONE,NONE,order-service,6.7,1785987775.874099,bb2aafe7ca8c42bb9addb0b60bdb14ee,8a3dacf99cc94313a959965be8911b9d,db.query.delete,WRITE,22.43,OK,user-db,v1.1.0,b684fabe50454e79a31c25599657e890
+live_ep_000040_NONE,NONE,order-service,6.7,1785987775.874099,422bcc8ce808425c9172993c738f16aa,8a3dacf99cc94313a959965be8911b9d,db.query.insert,READ,24.92,OK,user-db,v1.1.0,b684fabe50454e79a31c25599657e890
+live_ep_000040_NONE,NONE,order-service,6.7,1785987775.874099,82ad2b10f0ef439f9dbbd902e0320d0f,8a3dacf99cc94313a959965be8911b9d,cache.set,,2.31,OK,cache-cluster,v1.1.0,b684fabe50454e79a31c25599657e890
+live_ep_000040_NONE,NONE,order-service,6.8,1785987775.9744506,ba34b59cd54f487f832be0ac7975891e,,GET /api/health,,120.12,OK,order-service,v1.1.0,5af1ef412b6a4915b5b8d472a6284563
+live_ep_000040_NONE,NONE,order-service,6.8,1785987775.9744506,008bf08d71594c89adba96131444c6f6,ba34b59cd54f487f832be0ac7975891e,db.transaction,READ,39.7,OK,user-db,v1.1.0,5af1ef412b6a4915b5b8d472a6284563
+live_ep_000040_NONE,NONE,order-service,6.8,1785987775.9744506,cd70e5359fab4abb816e855f496bba5e,ba34b59cd54f487f832be0ac7975891e,db.query.select,WRITE,25.13,OK,user-db,v1.1.0,5af1ef412b6a4915b5b8d472a6284563
+live_ep_000040_NONE,NONE,order-service,6.8,1785987775.9744506,f8c7f5904997471caed2c9a2fdf6eca9,ba34b59cd54f487f832be0ac7975891e,cache.get,,0.77,OK,cache-cluster,v1.1.0,5af1ef412b6a4915b5b8d472a6284563
+live_ep_000040_NONE,NONE,order-service,6.9,1785987776.0749838,b4c2993ff00a41f7ad4e8b93f769fdd6,,POST /api/checkout,,81.77,OK,order-service,v1.1.0,625cac9f9a234befaa8cf688a3f5f60c
+live_ep_000040_NONE,NONE,order-service,6.9,1785987776.0749838,ff798f3ef01049f084c8ec063b7dd792,b4c2993ff00a41f7ad4e8b93f769fdd6,db.query.insert,READ,19.01,OK,user-db,v1.1.0,625cac9f9a234befaa8cf688a3f5f60c
+live_ep_000040_NONE,NONE,order-service,6.9,1785987776.0749838,7161759cc4a04c5a8821d11f04e17482,b4c2993ff00a41f7ad4e8b93f769fdd6,cache.set,,2.2,OK,cache-cluster,v1.1.0,625cac9f9a234befaa8cf688a3f5f60c
+live_ep_000040_NONE,NONE,order-service,6.9,1785987776.0749838,c05f5088f87d468cb522945a120b23fa,b4c2993ff00a41f7ad4e8b93f769fdd6,grpc.call,,26.2,OK,cache-cluster,v1.1.0,625cac9f9a234befaa8cf688a3f5f60c
+live_ep_000040_NONE,NONE,order-service,7.0,1785987776.1753738,0032f96e56cc4cf798ae56c52c6c10c5,,PUT /api/inventory,,104.22,OK,order-service,v1.1.0,1ba8513b34554809acaca3bf5018887e
+live_ep_000040_NONE,NONE,order-service,7.0,1785987776.1753738,f0d561b86d774f06b1133b2276d5dfae,0032f96e56cc4cf798ae56c52c6c10c5,db.transaction,WRITE,16.29,OK,user-db,v1.1.0,1ba8513b34554809acaca3bf5018887e
+live_ep_000040_NONE,NONE,order-service,7.0,1785987776.1753738,de70b1fd45794674b61708fec7f278b5,0032f96e56cc4cf798ae56c52c6c10c5,db.query.update,WRITE,21.9,OK,user-db,v1.1.0,1ba8513b34554809acaca3bf5018887e
+live_ep_000040_NONE,NONE,order-service,7.0,1785987776.1753738,9fb285f5e8034c5fb4458ab220b7994a,0032f96e56cc4cf798ae56c52c6c10c5,cache.get,,0.73,OK,cache-cluster,v1.1.0,1ba8513b34554809acaca3bf5018887e
+live_ep_000040_NONE,NONE,order-service,7.1,1785987776.2758899,e9019e0a6b644a87aed61d8c7d5cf75e,,POST /api/checkout,,95.5,OK,order-service,v1.1.0,12aa5d50cd654d8e894aea13ad6808b8
+live_ep_000040_NONE,NONE,order-service,7.1,1785987776.2758899,d4c1b70d43184d7ba7651551fba0eb0a,e9019e0a6b644a87aed61d8c7d5cf75e,db.transaction,READ,8.82,OK,user-db,v1.1.0,12aa5d50cd654d8e894aea13ad6808b8
+live_ep_000040_NONE,NONE,order-service,7.1,1785987776.2758899,ec26b59d0e874c12a366832d43a15688,e9019e0a6b644a87aed61d8c7d5cf75e,db.query.select,READ,8.47,OK,user-db,v1.1.0,12aa5d50cd654d8e894aea13ad6808b8
+live_ep_000040_NONE,NONE,order-service,7.1,1785987776.2758899,9e169792f920448e9148805d42753ad4,e9019e0a6b644a87aed61d8c7d5cf75e,cache.get,,1.54,OK,cache-cluster,v1.1.0,12aa5d50cd654d8e894aea13ad6808b8
+live_ep_000040_NONE,NONE,order-service,7.2,1785987776.3764343,96a89c62427b4745b67b2dd6d5d9158c,,GET /api/health,,111.35,OK,order-service,v1.1.0,b80e2489289a44ddb814e0b8f14567a2
+live_ep_000040_NONE,NONE,order-service,7.2,1785987776.3764343,f111aba468d848159833721ce2fa48ea,96a89c62427b4745b67b2dd6d5d9158c,db.query.update,READ,18.67,OK,user-db,v1.1.0,b80e2489289a44ddb814e0b8f14567a2
+live_ep_000040_NONE,NONE,order-service,7.2,1785987776.3764343,88221707d12f4863b42aea955f5d6465,96a89c62427b4745b67b2dd6d5d9158c,db.query.select,WRITE,28.51,OK,user-db,v1.1.0,b80e2489289a44ddb814e0b8f14567a2
+live_ep_000040_NONE,NONE,order-service,7.2,1785987776.3764343,bc2140d183964ef19220a11cf13194ca,96a89c62427b4745b67b2dd6d5d9158c,cache.set,,1.0,OK,cache-cluster,v1.1.0,b80e2489289a44ddb814e0b8f14567a2
+live_ep_000040_NONE,NONE,order-service,7.3,1785987776.477252,e1f3edf3b45440279b9fcbdfb154283d,,POST /api/checkout,,139.72,OK,order-service,v1.1.0,48c44a2189f14a979fa8351cf8a65772
+live_ep_000040_NONE,NONE,order-service,7.3,1785987776.477252,da25a62558f64efa878278517726c72c,e1f3edf3b45440279b9fcbdfb154283d,db.query.delete,WRITE,9.53,OK,user-db,v1.1.0,48c44a2189f14a979fa8351cf8a65772
+live_ep_000040_NONE,NONE,order-service,7.3,1785987776.477252,f13f657215b14e43a9514f84e8cdc856,e1f3edf3b45440279b9fcbdfb154283d,cache.get,,2.77,OK,cache-cluster,v1.1.0,48c44a2189f14a979fa8351cf8a65772
+live_ep_000040_NONE,NONE,order-service,7.3,1785987776.477252,e3b4555805344499bd6d536f7b902ed7,e1f3edf3b45440279b9fcbdfb154283d,http.client.post,,30.21,OK,user-db,v1.1.0,48c44a2189f14a979fa8351cf8a65772
+live_ep_000040_NONE,NONE,order-service,7.4,1785987776.5779428,090c7d142f6c4e8bb65edd6d88ebfb4b,,GET /api/auth,,118.95,OK,order-service,v1.1.0,8edf7e7accf84edd917bade5ff10a40f
+live_ep_000040_NONE,NONE,order-service,7.4,1785987776.5779428,3b65b9975c334ec88df06f5b4cbc7f15,090c7d142f6c4e8bb65edd6d88ebfb4b,db.query.update,READ,28.39,OK,user-db,v1.1.0,8edf7e7accf84edd917bade5ff10a40f
+live_ep_000040_NONE,NONE,order-service,7.4,1785987776.5779428,ff513241a0b24edaaca049b64f9e85a0,090c7d142f6c4e8bb65edd6d88ebfb4b,db.query.select,READ,42.35,OK,user-db,v1.1.0,8edf7e7accf84edd917bade5ff10a40f
+live_ep_000040_NONE,NONE,order-service,7.5,1785987776.6785147,2901af90b8a04b4cb3e85fb1f848ca25,,POST /api/payment,,100.23,OK,order-service,v1.1.0,80d81567acea425eb86ab8a33ae6a5de
+live_ep_000040_NONE,NONE,order-service,7.5,1785987776.6785147,8e7d3f434faa4dd5b354cd591e4489d1,2901af90b8a04b4cb3e85fb1f848ca25,db.transaction,READ,24.41,OK,user-db,v1.1.0,80d81567acea425eb86ab8a33ae6a5de
+live_ep_000040_NONE,NONE,order-service,7.5,1785987776.6785147,807b02f0694b466f9a27c4d55efdfce8,2901af90b8a04b4cb3e85fb1f848ca25,cache.get,,1.97,OK,cache-cluster,v1.1.0,80d81567acea425eb86ab8a33ae6a5de
+live_ep_000040_NONE,NONE,order-service,7.5,1785987776.6785147,0d30245cf5c7484990e3cda4b97021bc,2901af90b8a04b4cb3e85fb1f848ca25,http.client.get,,44.45,OK,cache-cluster,v1.1.0,80d81567acea425eb86ab8a33ae6a5de
+live_ep_000040_NONE,NONE,order-service,7.6,1785987776.7793076,5f1424f33e3a492f8ba6a978980789fe,,POST /api/checkout,,104.67,OK,order-service,v1.1.0,8ad8107f49f34eb4ba45604dbc476930
+live_ep_000040_NONE,NONE,order-service,7.6,1785987776.7793076,914a1a80fac14d8bb8148c25594dfd8f,5f1424f33e3a492f8ba6a978980789fe,db.query.select,WRITE,18.69,OK,user-db,v1.1.0,8ad8107f49f34eb4ba45604dbc476930
+live_ep_000040_NONE,NONE,order-service,7.6,1785987776.7793076,a171dd19e17e408e9e2551bd797d86ee,5f1424f33e3a492f8ba6a978980789fe,cache.get,,1.63,OK,cache-cluster,v1.1.0,8ad8107f49f34eb4ba45604dbc476930
+live_ep_000040_NONE,NONE,order-service,7.7,1785987776.8795552,6350c04897fc4a388232f6db64ad1852,,POST /api/payment,,117.51,OK,order-service,v1.1.0,c9f1a47157734ce383f3541c7e53017e
+live_ep_000040_NONE,NONE,order-service,7.7,1785987776.8795552,244935ad8d294d1980a06379b3215371,6350c04897fc4a388232f6db64ad1852,db.query.update,READ,41.66,OK,user-db,v1.1.0,c9f1a47157734ce383f3541c7e53017e
+live_ep_000040_NONE,NONE,order-service,7.7,1785987776.8795552,e269a6555b1b467da862627dc8fbd40d,6350c04897fc4a388232f6db64ad1852,db.query.insert,READ,24.84,OK,user-db,v1.1.0,c9f1a47157734ce383f3541c7e53017e
+live_ep_000040_NONE,NONE,order-service,7.7,1785987776.8795552,ff6507d0cd524544a3c4c37c8085fa29,6350c04897fc4a388232f6db64ad1852,grpc.call,,39.2,OK,user-db,v1.1.0,c9f1a47157734ce383f3541c7e53017e
+live_ep_000040_NONE,NONE,order-service,7.8,1785987776.980082,e367faf8e6444c3987d71a45f7901c39,,PUT /api/inventory,,139.49,OK,order-service,v1.1.0,7a81b081318c4c899ae4fba1c5b956b8
+live_ep_000040_NONE,NONE,order-service,7.8,1785987776.980082,b0e698cde9024908bd4db6796202ee09,e367faf8e6444c3987d71a45f7901c39,db.transaction,READ,26.55,OK,user-db,v1.1.0,7a81b081318c4c899ae4fba1c5b956b8
+live_ep_000040_NONE,NONE,order-service,7.8,1785987776.980082,d3e2c5206f0349fab8272962088219d9,e367faf8e6444c3987d71a45f7901c39,db.query.insert,WRITE,35.42,OK,user-db,v1.1.0,7a81b081318c4c899ae4fba1c5b956b8
+live_ep_000040_NONE,NONE,order-service,7.9,1785987777.0804493,727b1e8cffb843a68530dbaa0213c0b6,,GET /api/order,,113.51,OK,order-service,v1.1.0,465cfa602b14462dbbb43ebac1d9ca52
+live_ep_000040_NONE,NONE,order-service,7.9,1785987777.0804493,864fb4ce0cce4e2d83ea43031c856f08,727b1e8cffb843a68530dbaa0213c0b6,db.query.delete,WRITE,11.75,OK,user-db,v1.1.0,465cfa602b14462dbbb43ebac1d9ca52
+live_ep_000040_NONE,NONE,order-service,8.0,1785987777.180923,a7f9f26cf68e4979b70471989882fd6f,,GET /api/auth,,112.06,OK,order-service,v1.1.0,9c1eb43334c4440a9a3445d2f1a8aea8
+live_ep_000040_NONE,NONE,order-service,8.0,1785987777.180923,2d676e4a78414d17bd12e93ffc6d13cc,a7f9f26cf68e4979b70471989882fd6f,db.query.delete,WRITE,20.1,OK,user-db,v1.1.0,9c1eb43334c4440a9a3445d2f1a8aea8
+live_ep_000040_NONE,NONE,order-service,8.0,1785987777.180923,f35e3904de864dab8b15e58e750f98f5,a7f9f26cf68e4979b70471989882fd6f,cache.get,,1.81,OK,cache-cluster,v1.1.0,9c1eb43334c4440a9a3445d2f1a8aea8
+live_ep_000040_NONE,NONE,order-service,8.0,1785987777.180923,1e206da1dd334adf8d472a6979391356,a7f9f26cf68e4979b70471989882fd6f,http.client.get,,35.59,OK,user-db,v1.1.0,9c1eb43334c4440a9a3445d2f1a8aea8
+live_ep_000040_NONE,NONE,order-service,8.1,1785987777.281318,3b3e8e698e554bc887e26c7b83b8bdfe,,POST /api/payment,,137.99,OK,order-service,v1.1.0,98470f6f3cf54420a287c4c6163e2aa7
+live_ep_000040_NONE,NONE,order-service,8.1,1785987777.281318,f644e59d49c34ca488b1e23827ee53f3,3b3e8e698e554bc887e26c7b83b8bdfe,db.transaction,READ,11.92,OK,user-db,v1.1.0,98470f6f3cf54420a287c4c6163e2aa7
+live_ep_000040_NONE,NONE,order-service,8.1,1785987777.281318,9e3f3fd19c8f401cbe5580f1d6c36175,3b3e8e698e554bc887e26c7b83b8bdfe,db.query.select,WRITE,25.14,OK,user-db,v1.1.0,98470f6f3cf54420a287c4c6163e2aa7
+live_ep_000040_NONE,NONE,order-service,8.1,1785987777.281318,bba48f10f61643cbb71cee040a9447e2,3b3e8e698e554bc887e26c7b83b8bdfe,http.client.get,,33.04,OK,payment-gateway,v1.1.0,98470f6f3cf54420a287c4c6163e2aa7
+live_ep_000040_NONE,NONE,order-service,8.2,1785987777.3820047,cc578cc351a64b1b90cc63254cca20c3,,PUT /api/inventory,,98.18,OK,order-service,v1.1.0,d4c3b389ce844fe88c14b95c0b9d9725
+live_ep_000040_NONE,NONE,order-service,8.2,1785987777.3820047,50d6d87d888340f1b1dbef88d7208ab8,cc578cc351a64b1b90cc63254cca20c3,db.transaction,WRITE,10.04,OK,user-db,v1.1.0,d4c3b389ce844fe88c14b95c0b9d9725
+live_ep_000040_NONE,NONE,order-service,8.2,1785987777.3820047,162f3672163b4f1087297e04608e6046,cc578cc351a64b1b90cc63254cca20c3,db.query.insert,WRITE,11.17,OK,user-db,v1.1.0,d4c3b389ce844fe88c14b95c0b9d9725
+live_ep_000040_NONE,NONE,order-service,8.2,1785987777.3820047,2e37f2ea89fc45a798e93cb37c587e21,cc578cc351a64b1b90cc63254cca20c3,http.client.post,,32.34,OK,inventory-api,v1.1.0,d4c3b389ce844fe88c14b95c0b9d9725
+live_ep_000040_NONE,NONE,order-service,8.3,1785987777.4824488,1039c9f32bfe409ab7ae8a0d4f18a920,,PUT /api/inventory,,130.49,OK,order-service,v1.1.0,6db7f6205cf943db9e848998a9298e9a
+live_ep_000040_NONE,NONE,order-service,8.3,1785987777.4824488,1f744c9db7c1433fa1c5194b169b3d78,1039c9f32bfe409ab7ae8a0d4f18a920,db.query.update,WRITE,39.66,OK,user-db,v1.1.0,6db7f6205cf943db9e848998a9298e9a
+live_ep_000040_NONE,NONE,order-service,8.3,1785987777.4824488,8177853357124a9c92b8ba6a50c680ca,1039c9f32bfe409ab7ae8a0d4f18a920,cache.set,,1.68,OK,cache-cluster,v1.1.0,6db7f6205cf943db9e848998a9298e9a
+live_ep_000040_NONE,NONE,order-service,8.4,1785987777.582794,ca6548c1b9924ca98720c58e45974c28,,POST /api/payment,,134.95,OK,order-service,v1.1.0,39befe281ab1468e8a77506633b8a544
+live_ep_000040_NONE,NONE,order-service,8.4,1785987777.582794,48c07833a4af4fc58db4245b8f83bd93,ca6548c1b9924ca98720c58e45974c28,db.query.insert,WRITE,28.54,OK,user-db,v1.1.0,39befe281ab1468e8a77506633b8a544
+live_ep_000040_NONE,NONE,order-service,8.4,1785987777.582794,e6facf01a5bc467a849ebd04f6792887,ca6548c1b9924ca98720c58e45974c28,db.query.delete,READ,21.8,OK,user-db,v1.1.0,39befe281ab1468e8a77506633b8a544
+live_ep_000040_NONE,NONE,order-service,8.4,1785987777.582794,a6c831c4bb0349fc99868e96bb7e789a,ca6548c1b9924ca98720c58e45974c28,cache.set,,2.07,OK,cache-cluster,v1.1.0,39befe281ab1468e8a77506633b8a544
+live_ep_000040_NONE,NONE,order-service,8.4,1785987777.582794,bbfea977387f4c24a56ecb70a29c587d,ca6548c1b9924ca98720c58e45974c28,http.client.get,,29.21,OK,payment-gateway,v1.1.0,39befe281ab1468e8a77506633b8a544
+live_ep_000040_NONE,NONE,order-service,8.5,1785987777.6831691,aba219daf51944c9b97d07010016e0fc,,PUT /api/inventory,,117.83,OK,order-service,v1.1.0,24fe946b5643416785521408d5a80404
+live_ep_000040_NONE,NONE,order-service,8.5,1785987777.6831691,758c2d51ef7f456cb85619fc013a494e,aba219daf51944c9b97d07010016e0fc,db.transaction,READ,33.08,OK,user-db,v1.1.0,24fe946b5643416785521408d5a80404
+live_ep_000040_NONE,NONE,order-service,8.5,1785987777.6831691,416d7124faa448b4b77b7e818d8943b8,aba219daf51944c9b97d07010016e0fc,db.query.select,READ,43.96,OK,user-db,v1.1.0,24fe946b5643416785521408d5a80404
+live_ep_000040_NONE,NONE,order-service,8.6,1785987777.7836392,a4b84214d43b4c69884cb35ea908b392,,POST /api/checkout,,134.6,OK,order-service,v1.1.0,c64929abf7b64bb4897c6ef8dd36e0d9
+live_ep_000040_NONE,NONE,order-service,8.6,1785987777.7836392,40ebc83334ed414193d2dc2cc4817f82,a4b84214d43b4c69884cb35ea908b392,db.query.insert,READ,25.96,OK,user-db,v1.1.0,c64929abf7b64bb4897c6ef8dd36e0d9
+live_ep_000040_NONE,NONE,order-service,8.6,1785987777.7836392,042d587ed9bb43d1b78b38fac479472a,a4b84214d43b4c69884cb35ea908b392,db.query.select,WRITE,27.08,OK,user-db,v1.1.0,c64929abf7b64bb4897c6ef8dd36e0d9
+live_ep_000040_NONE,NONE,order-service,8.6,1785987777.7836392,30f6b2e0b1c346a0ae208d376941c347,a4b84214d43b4c69884cb35ea908b392,http.client.post,,40.63,OK,cache-cluster,v1.1.0,c64929abf7b64bb4897c6ef8dd36e0d9
+live_ep_000040_NONE,NONE,order-service,8.7,1785987777.883869,722ec2cef6184beba1779053c11e898e,,PUT /api/inventory,,119.2,OK,order-service,v1.1.0,0011bd479ce54787b0bd6a6eff9ca03f
+live_ep_000040_NONE,NONE,order-service,8.7,1785987777.883869,e63c1a6a771b466d837549c4f0760942,722ec2cef6184beba1779053c11e898e,db.query.delete,READ,22.71,OK,user-db,v1.1.0,0011bd479ce54787b0bd6a6eff9ca03f
+live_ep_000040_NONE,NONE,order-service,8.7,1785987777.883869,21f58038c7fc4fafa04f1d66bb405677,722ec2cef6184beba1779053c11e898e,db.query.select,WRITE,27.3,OK,user-db,v1.1.0,0011bd479ce54787b0bd6a6eff9ca03f
+live_ep_000040_NONE,NONE,order-service,8.7,1785987777.883869,bd9e0bcf4b194515aed52d01de51c15b,722ec2cef6184beba1779053c11e898e,grpc.call,,38.22,OK,inventory-api,v1.1.0,0011bd479ce54787b0bd6a6eff9ca03f
+live_ep_000040_NONE,NONE,order-service,8.8,1785987777.984093,20260b4445314d8da34ef278fc07ede8,,GET /api/auth,,118.86,OK,order-service,v1.1.0,1d3541cf128742b4b31fc45d3212317d
+live_ep_000040_NONE,NONE,order-service,8.8,1785987777.984093,69169c5ac08440a79657eec12207b0f2,20260b4445314d8da34ef278fc07ede8,db.query.select,READ,11.61,OK,user-db,v1.1.0,1d3541cf128742b4b31fc45d3212317d
+live_ep_000040_NONE,NONE,order-service,8.8,1785987777.984093,db48cb37e48d49d2bc2b98a6de59851f,20260b4445314d8da34ef278fc07ede8,cache.get,,2.02,OK,cache-cluster,v1.1.0,1d3541cf128742b4b31fc45d3212317d
+live_ep_000040_NONE,NONE,order-service,8.9,1785987778.084459,0e19de26cf044fa1ab1004ff52faa2d1,,PUT /api/inventory,,147.5,OK,order-service,v1.1.0,fbd668239ea641a2a709a0025c04f95d
+live_ep_000040_NONE,NONE,order-service,8.9,1785987778.084459,47662e1efbfe4f7fb6e26214b245550e,0e19de26cf044fa1ab1004ff52faa2d1,db.query.delete,WRITE,2.44,OK,user-db,v1.1.0,fbd668239ea641a2a709a0025c04f95d
+live_ep_000040_NONE,NONE,order-service,8.9,1785987778.084459,f986959dd73546adb89a80ffd99bf6d1,0e19de26cf044fa1ab1004ff52faa2d1,db.transaction,READ,23.61,OK,user-db,v1.1.0,fbd668239ea641a2a709a0025c04f95d
+live_ep_000040_NONE,NONE,order-service,8.9,1785987778.084459,4b4cd4352c5a436ca6e37a494d31b84a,0e19de26cf044fa1ab1004ff52faa2d1,cache.delete,,75.96,OK,cache-cluster,v1.1.0,fbd668239ea641a2a709a0025c04f95d
+live_ep_000040_NONE,NONE,order-service,8.9,1785987778.084459,a5a95d3764514bf08a03179f4845e1b3,0e19de26cf044fa1ab1004ff52faa2d1,http.client.post,,37.5,OK,payment-gateway,v1.1.0,fbd668239ea641a2a709a0025c04f95d
+live_ep_000040_NONE,NONE,order-service,9.0,1785987778.1846082,6b6f8efa9223487fb191e19e3c4c721b,,GET /api/auth,,96.45,OK,order-service,v1.1.0,2bc308bcc8764a40b6c1b8955e68da03
+live_ep_000040_NONE,NONE,order-service,9.0,1785987778.1846082,300e73f8641f4d6ab769185f747ca7f6,6b6f8efa9223487fb191e19e3c4c721b,db.query.update,READ,24.15,OK,user-db,v1.1.0,2bc308bcc8764a40b6c1b8955e68da03
+live_ep_000040_NONE,NONE,order-service,9.1,1785987778.2847884,c75ac52c84014cba8a469022069c5d71,,POST /api/payment,,102.3,OK,order-service,v1.1.0,7953f5f2aec344e8900cf5d718bcd33a
+live_ep_000040_NONE,NONE,order-service,9.1,1785987778.2847884,7ef0d86890ae4bd097b265805e34a1d2,c75ac52c84014cba8a469022069c5d71,db.query.select,READ,24.25,OK,user-db,v1.1.0,7953f5f2aec344e8900cf5d718bcd33a
+live_ep_000040_NONE,NONE,order-service,9.1,1785987778.2847884,6d788c923cc641d08c65433f156473d8,c75ac52c84014cba8a469022069c5d71,db.query.update,READ,21.0,OK,user-db,v1.1.0,7953f5f2aec344e8900cf5d718bcd33a
+live_ep_000040_NONE,NONE,order-service,9.1,1785987778.2847884,fbd219c084044f3b9dedbe226b136c2e,c75ac52c84014cba8a469022069c5d71,cache.get,,1.44,OK,cache-cluster,v1.1.0,7953f5f2aec344e8900cf5d718bcd33a
+live_ep_000040_NONE,NONE,order-service,9.1,1785987778.2847884,5454a5bb02c245e89a3a7d42de2281c4,c75ac52c84014cba8a469022069c5d71,grpc.call,,31.73,OK,cache-cluster,v1.1.0,7953f5f2aec344e8900cf5d718bcd33a
+live_ep_000040_NONE,NONE,order-service,9.2,1785987778.3853478,f6b2660d06214b058e3470cd0315b2b5,,GET /api/auth,,107.63,OK,order-service,v1.1.0,70c1158ed6dd48d08b12c8005ce5318a
+live_ep_000040_NONE,NONE,order-service,9.2,1785987778.3853478,e538f2011b4c47d69042385f3a35782c,f6b2660d06214b058e3470cd0315b2b5,db.transaction,READ,18.79,OK,user-db,v1.1.0,70c1158ed6dd48d08b12c8005ce5318a
+live_ep_000040_NONE,NONE,order-service,9.2,1785987778.3853478,27d81fb54abb46d58cd07b6c0e362b68,f6b2660d06214b058e3470cd0315b2b5,db.transaction,READ,23.4,OK,user-db,v1.1.0,70c1158ed6dd48d08b12c8005ce5318a
+live_ep_000040_NONE,NONE,order-service,9.3,1785987778.4854624,05c53de88c2b4ecba51e6c259da205ce,,POST /api/checkout,,131.6,OK,order-service,v1.1.0,859880b217574abd98d808dad900ddeb
+live_ep_000040_NONE,NONE,order-service,9.3,1785987778.4854624,8d2d27617e6a491ab121c18a8d328dbc,05c53de88c2b4ecba51e6c259da205ce,db.query.select,WRITE,43.41,OK,user-db,v1.1.0,859880b217574abd98d808dad900ddeb
+live_ep_000040_NONE,NONE,order-service,9.3,1785987778.4854624,6f1b8d4b3e554757ad1ffb160bf9e647,05c53de88c2b4ecba51e6c259da205ce,http.client.get,,32.91,OK,cache-cluster,v1.1.0,859880b217574abd98d808dad900ddeb
+live_ep_000040_NONE,NONE,order-service,9.4,1785987778.585629,a361d8ce4f6f43ceacf5877f870d909c,,PUT /api/inventory,,147.07,OK,order-service,v1.1.0,a7c5a2a6ced74b93868a24ff9309513b
+live_ep_000040_NONE,NONE,order-service,9.4,1785987778.585629,5b3e4595b6a5466d984845995d23ad5a,a361d8ce4f6f43ceacf5877f870d909c,db.query.select,WRITE,10.63,OK,user-db,v1.1.0,a7c5a2a6ced74b93868a24ff9309513b
+live_ep_000040_NONE,NONE,order-service,9.4,1785987778.585629,1a19d30980e24568aef95af1946214d6,a361d8ce4f6f43ceacf5877f870d909c,cache.get,,3.13,OK,cache-cluster,v1.1.0,a7c5a2a6ced74b93868a24ff9309513b
+live_ep_000040_NONE,NONE,order-service,9.5,1785987778.6860108,704c72a36d0c4dda9ea94ef73876a118,,POST /api/payment,,78.71,OK,order-service,v1.1.0,c801cf63d7e0455dbad65d5000c3dec9
+live_ep_000040_NONE,NONE,order-service,9.5,1785987778.6860108,2abc1ff4962f4382a1d2a84fb3f9569f,704c72a36d0c4dda9ea94ef73876a118,db.query.delete,READ,15.44,OK,user-db,v1.1.0,c801cf63d7e0455dbad65d5000c3dec9
+live_ep_000040_NONE,NONE,order-service,9.5,1785987778.6860108,20633ab74d2148bc824b993a61ff5e86,704c72a36d0c4dda9ea94ef73876a118,db.query.update,READ,5.75,OK,user-db,v1.1.0,c801cf63d7e0455dbad65d5000c3dec9
+live_ep_000040_NONE,NONE,order-service,9.5,1785987778.6860108,2b3052a25f94434096551fbed0f24ba2,704c72a36d0c4dda9ea94ef73876a118,cache.set,,2.28,OK,cache-cluster,v1.1.0,c801cf63d7e0455dbad65d5000c3dec9
+live_ep_000040_NONE,NONE,order-service,9.6,1785987778.7862132,cc2b31f84293457183a96d2cf3df8c54,,GET /api/health,,116.62,OK,order-service,v1.1.0,5b2a495c4d914cacb7295d5534c51589
+live_ep_000040_NONE,NONE,order-service,9.6,1785987778.7862132,ef72399669414db8840fc158c9ebd180,cc2b31f84293457183a96d2cf3df8c54,db.query.delete,WRITE,23.43,OK,user-db,v1.1.0,5b2a495c4d914cacb7295d5534c51589
+live_ep_000040_NONE,NONE,order-service,9.7,1785987778.886496,3ef3daf653c04fabb85166873eb7eeb5,,GET /api/health,,113.58,OK,order-service,v1.1.0,75e2eb60b1204ee097d48ff8a47dfa13
+live_ep_000040_NONE,NONE,order-service,9.7,1785987778.886496,d1c10429fbd44bf2898dc546ae1aebb4,3ef3daf653c04fabb85166873eb7eeb5,db.query.insert,WRITE,21.26,OK,user-db,v1.1.0,75e2eb60b1204ee097d48ff8a47dfa13
+live_ep_000040_NONE,NONE,order-service,9.8,1785987778.987014,12faa69a56b9432cacdccfecd73f20ea,,GET /api/auth,,131.89,OK,order-service,v1.1.0,3653ba9e28b84236aca95f40cd7c0c00
+live_ep_000040_NONE,NONE,order-service,9.8,1785987778.987014,d12182a1a3174ad591f3d8570a570c2d,12faa69a56b9432cacdccfecd73f20ea,db.query.update,READ,13.25,OK,user-db,v1.1.0,3653ba9e28b84236aca95f40cd7c0c00
+live_ep_000040_NONE,NONE,order-service,9.8,1785987778.987014,40c40dc5259947668466da3ca546f5c4,12faa69a56b9432cacdccfecd73f20ea,cache.delete,,2.99,OK,cache-cluster,v1.1.0,3653ba9e28b84236aca95f40cd7c0c00
+live_ep_000040_NONE,NONE,order-service,9.9,1785987779.0873075,72e6753af14142299413a8e8b508aa06,,GET /api/order,,117.57,OK,order-service,v1.1.0,688d426ef6fa42c18005135c397a2fa9
+live_ep_000040_NONE,NONE,order-service,9.9,1785987779.0873075,cbb71576e42b4175a89acab052031661,72e6753af14142299413a8e8b508aa06,db.query.update,WRITE,20.65,OK,user-db,v1.1.0,688d426ef6fa42c18005135c397a2fa9
+live_ep_000040_NONE,NONE,order-service,9.9,1785987779.0873075,155e68fd45634abd96cb41d74a0e6257,72e6753af14142299413a8e8b508aa06,db.query.update,WRITE,15.16,OK,user-db,v1.1.0,688d426ef6fa42c18005135c397a2fa9
+live_ep_000040_NONE,NONE,order-service,9.9,1785987779.0873075,b07cb81d443e48b99ccff4d8b93a96dc,72e6753af14142299413a8e8b508aa06,cache.delete,,2.25,OK,cache-cluster,v1.1.0,688d426ef6fa42c18005135c397a2fa9
+live_ep_000040_NONE,NONE,order-service,10.0,1785987779.1876,e2a7cd868cfd4a08be4a6c4a4771a445,,PUT /api/inventory,,131.65,OK,order-service,v1.1.0,978518aaee694ff18a47f3b5fd88c539
+live_ep_000040_NONE,NONE,order-service,10.0,1785987779.1876,4e0cc26dfffe49a0935f4df4abaadc5c,e2a7cd868cfd4a08be4a6c4a4771a445,db.query.update,READ,34.69,OK,user-db,v1.1.0,978518aaee694ff18a47f3b5fd88c539
+live_ep_000040_NONE,NONE,order-service,10.1,1785987779.2881029,0e81158e9def43a98a8a2e58b7f526f0,,GET /api/auth,,106.5,OK,order-service,v1.1.0,cecb609b0bcc4ad3b3222976ff2b98d8
+live_ep_000040_NONE,NONE,order-service,10.1,1785987779.2881029,fd26e21c07d74f5c8a3b0368ee5938e0,0e81158e9def43a98a8a2e58b7f526f0,db.query.select,WRITE,28.96,OK,user-db,v1.1.0,cecb609b0bcc4ad3b3222976ff2b98d8
+live_ep_000040_NONE,NONE,order-service,10.1,1785987779.2881029,b70c211681ca485999b73ae8eb57ed0f,0e81158e9def43a98a8a2e58b7f526f0,db.query.update,WRITE,23.78,OK,user-db,v1.1.0,cecb609b0bcc4ad3b3222976ff2b98d8
+live_ep_000040_NONE,NONE,order-service,10.2,1785987779.388225,be9b0dc1dd314a4dbf23b68a07d1b1d4,,PUT /api/inventory,,113.01,OK,order-service,v1.1.0,1b8630cf35ac42c4a6f1ab185cbe4db2
+live_ep_000040_NONE,NONE,order-service,10.2,1785987779.388225,1406ee08b40743e1ba4c8414487fd1ca,be9b0dc1dd314a4dbf23b68a07d1b1d4,db.query.delete,READ,37.96,OK,user-db,v1.1.0,1b8630cf35ac42c4a6f1ab185cbe4db2
+live_ep_000040_NONE,NONE,order-service,10.2,1785987779.388225,12bf282497d4444bb4551fe79669d3c9,be9b0dc1dd314a4dbf23b68a07d1b1d4,db.query.update,WRITE,21.68,OK,user-db,v1.1.0,1b8630cf35ac42c4a6f1ab185cbe4db2
+live_ep_000040_NONE,NONE,order-service,10.2,1785987779.388225,c812239862b2410baa01fce73682625d,be9b0dc1dd314a4dbf23b68a07d1b1d4,http.client.post,,40.92,OK,cache-cluster,v1.1.0,1b8630cf35ac42c4a6f1ab185cbe4db2
+live_ep_000040_NONE,NONE,order-service,10.3,1785987779.4887464,5fc08d63609d4799a55299fe31b2bff0,,PUT /api/inventory,,125.0,OK,order-service,v1.1.0,b5aa1adaba024f47873726156c1a8531
+live_ep_000040_NONE,NONE,order-service,10.3,1785987779.4887464,da41f4fd3e8f48c389dccf55a49ecf10,5fc08d63609d4799a55299fe31b2bff0,db.transaction,READ,27.6,OK,user-db,v1.1.0,b5aa1adaba024f47873726156c1a8531
+live_ep_000040_NONE,NONE,order-service,10.3,1785987779.4887464,617b110ddf514d47bc45104321ff9eee,5fc08d63609d4799a55299fe31b2bff0,db.query.insert,READ,23.39,OK,user-db,v1.1.0,b5aa1adaba024f47873726156c1a8531
+live_ep_000040_NONE,NONE,order-service,10.3,1785987779.4887464,ffc42720307749bdbadaa47e8ff4da37,5fc08d63609d4799a55299fe31b2bff0,http.client.post,,33.03,OK,cache-cluster,v1.1.0,b5aa1adaba024f47873726156c1a8531
+live_ep_000040_NONE,NONE,order-service,10.4,1785987779.5893419,e372d24422e84d95943a34c11db64657,,POST /api/payment,,95.77,OK,order-service,v1.1.0,ce65f552bd9d48c891c4affecdff81ca
+live_ep_000040_NONE,NONE,order-service,10.4,1785987779.5893419,fc4cba55efe54246adf61d33f5711be7,e372d24422e84d95943a34c11db64657,db.query.insert,WRITE,19.13,OK,user-db,v1.1.0,ce65f552bd9d48c891c4affecdff81ca
+live_ep_000040_NONE,NONE,order-service,10.4,1785987779.5893419,5a9008bf221f4aaf84bd2ff97b331884,e372d24422e84d95943a34c11db64657,cache.delete,,1.8,OK,cache-cluster,v1.1.0,ce65f552bd9d48c891c4affecdff81ca
+live_ep_000040_NONE,NONE,order-service,10.5,1785987779.6900096,311d98c094574dc6bbe72ef0dd8f7e31,,POST /api/payment,,110.97,OK,order-service,v1.1.0,ce796a700a884a2caf31db2424ddbf18
+live_ep_000040_NONE,NONE,order-service,10.5,1785987779.6900096,e543268db8c040019e4655720d6d0784,311d98c094574dc6bbe72ef0dd8f7e31,db.query.select,READ,28.4,OK,user-db,v1.1.0,ce796a700a884a2caf31db2424ddbf18
+live_ep_000040_NONE,NONE,order-service,10.5,1785987779.6900096,f7653468026f42ad9b6ba8ce299f9350,311d98c094574dc6bbe72ef0dd8f7e31,db.query.insert,READ,17.23,OK,user-db,v1.1.0,ce796a700a884a2caf31db2424ddbf18
+live_ep_000040_NONE,NONE,order-service,10.5,1785987779.6900096,9263085c7e99429599f9c33aff4bb44c,311d98c094574dc6bbe72ef0dd8f7e31,cache.set,,2.89,OK,cache-cluster,v1.1.0,ce796a700a884a2caf31db2424ddbf18
+live_ep_000040_NONE,NONE,order-service,10.6,1785987779.7903671,1e6c54c63dd245b085c3585d5808cafb,,GET /api/health,,122.81,OK,order-service,v1.1.0,335f1c6f133f4be787ea6770aef778a0
+live_ep_000040_NONE,NONE,order-service,10.6,1785987779.7903671,502587da38994f1abb9e45d3b6a9104d,1e6c54c63dd245b085c3585d5808cafb,db.query.delete,READ,23.27,OK,user-db,v1.1.0,335f1c6f133f4be787ea6770aef778a0
+live_ep_000040_NONE,NONE,order-service,10.6,1785987779.7903671,ab3cbe50838c47ea8b25dbf2ea07d9fb,1e6c54c63dd245b085c3585d5808cafb,cache.set,,2.94,OK,cache-cluster,v1.1.0,335f1c6f133f4be787ea6770aef778a0
+live_ep_000040_NONE,NONE,order-service,10.6,1785987779.7903671,f7a11e3336834ab89c01361f3d9af2a9,1e6c54c63dd245b085c3585d5808cafb,grpc.call,,30.12,OK,payment-gateway,v1.1.0,335f1c6f133f4be787ea6770aef778a0
+live_ep_000040_NONE,NONE,order-service,10.7,1785987779.8912632,a5001009fd544fb5b852f4d2c3af4b5d,,POST /api/checkout,,120.77,OK,order-service,v1.1.0,88b1a6d77ae2438888f62a3bf2a6c470
+live_ep_000040_NONE,NONE,order-service,10.7,1785987779.8912632,4b65ad91c76043a38538886137d408f6,a5001009fd544fb5b852f4d2c3af4b5d,db.query.insert,READ,30.82,OK,user-db,v1.1.0,88b1a6d77ae2438888f62a3bf2a6c470
+live_ep_000040_NONE,NONE,order-service,10.8,1785987779.992128,b5e354d6462f493fb6e0a3da4b68716b,,POST /api/payment,,135.64,OK,order-service,v1.1.0,c0d3772b93464a2aa99815c14bb8d96f
+live_ep_000040_NONE,NONE,order-service,10.8,1785987779.992128,85fa1ea015414b6790d79a08731193c5,b5e354d6462f493fb6e0a3da4b68716b,db.query.select,WRITE,19.14,OK,user-db,v1.1.0,c0d3772b93464a2aa99815c14bb8d96f
+live_ep_000040_NONE,NONE,order-service,10.8,1785987779.992128,8d694370d46f479bbd4c65b6c33cc760,b5e354d6462f493fb6e0a3da4b68716b,db.query.delete,READ,26.14,OK,user-db,v1.1.0,c0d3772b93464a2aa99815c14bb8d96f
+live_ep_000040_NONE,NONE,order-service,10.8,1785987779.992128,5250e25d24d1443ba444e36ac2dd436b,b5e354d6462f493fb6e0a3da4b68716b,cache.get,,1.68,OK,cache-cluster,v1.1.0,c0d3772b93464a2aa99815c14bb8d96f
+live_ep_000040_NONE,NONE,order-service,10.8,1785987779.992128,1c504cace3864781ace0fae183ee14f6,b5e354d6462f493fb6e0a3da4b68716b,http.client.get,,30.05,OK,cache-cluster,v1.1.0,c0d3772b93464a2aa99815c14bb8d96f
+live_ep_000040_NONE,NONE,order-service,10.9,1785987780.0922215,60d766f47434425b8657cf4502b2e09b,,PUT /api/inventory,,134.07,OK,order-service,v1.1.0,1ae358c4f4c04ec7b1016504d6022e37
+live_ep_000040_NONE,NONE,order-service,10.9,1785987780.0922215,4c47f417fae249d7a9c410e529ed1bd8,60d766f47434425b8657cf4502b2e09b,db.transaction,READ,21.02,OK,user-db,v1.1.0,1ae358c4f4c04ec7b1016504d6022e37
+live_ep_000040_NONE,NONE,order-service,10.9,1785987780.0922215,2bf7cd86ccea4f33bc31a404a9e9d2e8,60d766f47434425b8657cf4502b2e09b,cache.set,,1.18,OK,cache-cluster,v1.1.0,1ae358c4f4c04ec7b1016504d6022e37
+live_ep_000040_NONE,NONE,order-service,11.0,1785987780.1925564,3802bbbb7197434b8f55379073cddbde,,POST /api/payment,,104.49,OK,order-service,v1.1.0,f52d10686b77466b9594c3c03d605c0c
+live_ep_000040_NONE,NONE,order-service,11.0,1785987780.1925564,9ec3738f9dd74a89ba2007d93db27509,3802bbbb7197434b8f55379073cddbde,db.transaction,WRITE,5.6,OK,user-db,v1.1.0,f52d10686b77466b9594c3c03d605c0c
+live_ep_000040_NONE,NONE,order-service,11.0,1785987780.1925564,2a6127918fe54bdb89b366f1502fc5b0,3802bbbb7197434b8f55379073cddbde,db.query.select,READ,8.93,OK,user-db,v1.1.0,f52d10686b77466b9594c3c03d605c0c
+live_ep_000040_NONE,NONE,order-service,11.0,1785987780.1925564,b11b20ebbebb4cd4952199405a752723,3802bbbb7197434b8f55379073cddbde,cache.set,,0.68,OK,cache-cluster,v1.1.0,f52d10686b77466b9594c3c03d605c0c
+live_ep_000040_NONE,NONE,order-service,11.1,1785987780.293015,dca57c3fd691413ba37ab2c66112b801,,GET /api/health,,114.37,OK,order-service,v1.1.0,f0428a62bf1e482399dd5aa103e9eef6
+live_ep_000040_NONE,NONE,order-service,11.1,1785987780.293015,b355e25d982841df801ca63b708359b1,dca57c3fd691413ba37ab2c66112b801,db.query.select,READ,14.33,OK,user-db,v1.1.0,f0428a62bf1e482399dd5aa103e9eef6
+live_ep_000040_NONE,NONE,order-service,11.1,1785987780.293015,5b5774cf80e64352ab2f91b5936521ad,dca57c3fd691413ba37ab2c66112b801,cache.set,,49.69,OK,cache-cluster,v1.1.0,f0428a62bf1e482399dd5aa103e9eef6
+live_ep_000040_NONE,NONE,order-service,11.1,1785987780.293015,e57cfee2c6764ec7b23ca4dac9f5d67d,dca57c3fd691413ba37ab2c66112b801,http.client.post,,47.03,OK,inventory-api,v1.1.0,f0428a62bf1e482399dd5aa103e9eef6
+live_ep_000040_NONE,NONE,order-service,11.2,1785987780.393827,4be70a6926804a06a082d1e9b564bb94,,GET /api/order,,116.92,OK,order-service,v1.1.0,8f1848b393de471cbe34522f9c37f483
+live_ep_000040_NONE,NONE,order-service,11.2,1785987780.393827,ae1b7456d8504d0dab0150e09c07f4f8,4be70a6926804a06a082d1e9b564bb94,db.query.update,WRITE,20.93,OK,user-db,v1.1.0,8f1848b393de471cbe34522f9c37f483
+live_ep_000040_NONE,NONE,order-service,11.2,1785987780.393827,dcb010e2125a42cc9cef8d669cfaec4c,4be70a6926804a06a082d1e9b564bb94,db.query.insert,READ,20.52,OK,user-db,v1.1.0,8f1848b393de471cbe34522f9c37f483
+live_ep_000040_NONE,NONE,order-service,11.2,1785987780.393827,766ea7b9f4c149bc9e3ac7186b5215b5,4be70a6926804a06a082d1e9b564bb94,cache.set,,3.06,OK,cache-cluster,v1.1.0,8f1848b393de471cbe34522f9c37f483
+live_ep_000040_NONE,NONE,order-service,11.3,1785987780.4945226,d6964bc2765a412ebe368d6d20ca0431,,GET /api/order,,142.09,OK,order-service,v1.1.0,ae23ceefcf0a44f89cad404472f8c89f
+live_ep_000040_NONE,NONE,order-service,11.3,1785987780.4945226,a0107e8d959548939854fbd8ad717ecd,d6964bc2765a412ebe368d6d20ca0431,db.query.update,READ,25.03,OK,user-db,v1.1.0,ae23ceefcf0a44f89cad404472f8c89f
+live_ep_000040_NONE,NONE,order-service,11.3,1785987780.4945226,4c9ef5af787949dd9afef32c037350d9,d6964bc2765a412ebe368d6d20ca0431,db.transaction,READ,21.48,OK,user-db,v1.1.0,ae23ceefcf0a44f89cad404472f8c89f
+live_ep_000040_NONE,NONE,order-service,11.3,1785987780.4945226,25c2a81ef88f4d09981fb5307b4e52f3,d6964bc2765a412ebe368d6d20ca0431,cache.get,,4.22,OK,cache-cluster,v1.1.0,ae23ceefcf0a44f89cad404472f8c89f
+live_ep_000040_NONE,NONE,order-service,11.3,1785987780.4945226,90fe10e154a34213aab01ac2159171b7,d6964bc2765a412ebe368d6d20ca0431,grpc.call,,32.04,OK,payment-gateway,v1.1.0,ae23ceefcf0a44f89cad404472f8c89f
+live_ep_000040_NONE,NONE,order-service,11.4,1785987780.5954216,307c726d851f40bcbf542367cb64a62c,,POST /api/checkout,,122.01,OK,order-service,v1.1.0,17392a80326545f7a07586d588a9dc80
+live_ep_000040_NONE,NONE,order-service,11.4,1785987780.5954216,4abc3726e58c4f94a8090a5a9183092a,307c726d851f40bcbf542367cb64a62c,db.query.select,READ,17.82,OK,user-db,v1.1.0,17392a80326545f7a07586d588a9dc80
+live_ep_000040_NONE,NONE,order-service,11.4,1785987780.5954216,4b10c875c6324c90abf43f26840ad4e4,307c726d851f40bcbf542367cb64a62c,db.query.insert,WRITE,22.42,OK,user-db,v1.1.0,17392a80326545f7a07586d588a9dc80
+live_ep_000040_NONE,NONE,order-service,11.4,1785987780.5954216,49f244eb5cc94bd885f80e41b71b0828,307c726d851f40bcbf542367cb64a62c,cache.get,,2.13,OK,cache-cluster,v1.1.0,17392a80326545f7a07586d588a9dc80
+live_ep_000040_NONE,NONE,order-service,11.5,1785987780.695994,2fc58308ad9a47ada1d7a3a2fc6835d5,,POST /api/payment,,101.56,OK,order-service,v1.1.0,3ab2961302b544d0a8db2da6b03be119
+live_ep_000040_NONE,NONE,order-service,11.5,1785987780.695994,540dfe0952394d42870df9b8bce44a4d,2fc58308ad9a47ada1d7a3a2fc6835d5,db.transaction,WRITE,28.02,OK,user-db,v1.1.0,3ab2961302b544d0a8db2da6b03be119
+live_ep_000040_NONE,NONE,order-service,11.6,1785987780.7966912,3eab211174144a88bffc52facf5b3118,,GET /api/order,,150.7,OK,order-service,v1.1.0,396c8803917b4c6eac35ae6214478602
+live_ep_000040_NONE,NONE,order-service,11.6,1785987780.7966912,9d1eaf6c80d94be7960b201c00b4e84f,3eab211174144a88bffc52facf5b3118,db.query.insert,WRITE,29.11,OK,user-db,v1.1.0,396c8803917b4c6eac35ae6214478602
+live_ep_000040_NONE,NONE,order-service,11.6,1785987780.7966912,481b7822550d42a08d1ee7be17209234,3eab211174144a88bffc52facf5b3118,db.transaction,WRITE,30.17,OK,user-db,v1.1.0,396c8803917b4c6eac35ae6214478602
+live_ep_000040_NONE,NONE,order-service,11.6,1785987780.7966912,294f68dc42e64467979c11ec4bd772bc,3eab211174144a88bffc52facf5b3118,cache.get,,2.65,OK,cache-cluster,v1.1.0,396c8803917b4c6eac35ae6214478602
+live_ep_000040_NONE,NONE,order-service,11.6,1785987780.7966912,0e762aa71fad4a05bf23b4a15a0490f1,3eab211174144a88bffc52facf5b3118,grpc.call,,27.91,OK,payment-gateway,v1.1.0,396c8803917b4c6eac35ae6214478602
+live_ep_000040_NONE,NONE,order-service,11.7,1785987780.8978148,a8b537445ac845588de346bb22c3384f,,GET /api/auth,,105.82,OK,order-service,v1.1.0,ef5186542faf44c0818cca7feff1d4c3
+live_ep_000040_NONE,NONE,order-service,11.7,1785987780.8978148,a767a2b7513a485694947a9bf142f829,a8b537445ac845588de346bb22c3384f,db.query.select,READ,21.49,OK,user-db,v1.1.0,ef5186542faf44c0818cca7feff1d4c3
+live_ep_000040_NONE,NONE,order-service,11.7,1785987780.8978148,e13cdc19b418412393c1c9ed995de7c0,a8b537445ac845588de346bb22c3384f,cache.get,,0.5,OK,cache-cluster,v1.1.0,ef5186542faf44c0818cca7feff1d4c3
+live_ep_000040_NONE,NONE,order-service,11.7,1785987780.8978148,41a96df902ce42e6aadfc882090d93b6,a8b537445ac845588de346bb22c3384f,grpc.call,,41.89,OK,inventory-api,v1.1.0,ef5186542faf44c0818cca7feff1d4c3
+live_ep_000040_NONE,NONE,order-service,11.8,1785987780.9979563,930726e3a5eb4758b76f9af1e68fbd08,,POST /api/checkout,,130.24,OK,order-service,v1.1.0,e364e6dd964b404dbc79df364d1a7b91
+live_ep_000040_NONE,NONE,order-service,11.8,1785987780.9979563,b61203ea5e7f4275bf73c09b80322bbe,930726e3a5eb4758b76f9af1e68fbd08,db.transaction,WRITE,12.73,OK,user-db,v1.1.0,e364e6dd964b404dbc79df364d1a7b91
+live_ep_000040_NONE,NONE,order-service,11.8,1785987780.9979563,a269ddcfe5044ad7a9e886ae5d9ed3c0,930726e3a5eb4758b76f9af1e68fbd08,db.query.delete,READ,9.53,OK,user-db,v1.1.0,e364e6dd964b404dbc79df364d1a7b91
+live_ep_000040_NONE,NONE,order-service,11.8,1785987780.9979563,0587e3c5339d4662b26e98592d6fed1e,930726e3a5eb4758b76f9af1e68fbd08,cache.set,,3.72,OK,cache-cluster,v1.1.0,e364e6dd964b404dbc79df364d1a7b91
+live_ep_000040_NONE,NONE,order-service,11.9,1785987781.0984468,3cc56cc070e14739ab948535bf6ab3f2,,PUT /api/inventory,,104.26,OK,order-service,v1.1.0,83fa63578fdd4e89bb49827b26ee184b
+live_ep_000040_NONE,NONE,order-service,11.9,1785987781.0984468,3d88c9a4e9f54ff78677c9061bb86bb6,3cc56cc070e14739ab948535bf6ab3f2,db.query.select,READ,4.95,OK,user-db,v1.1.0,83fa63578fdd4e89bb49827b26ee184b
+live_ep_000040_NONE,NONE,order-service,11.9,1785987781.0984468,0a305a57db8a4e4f8351ba37221d81e4,3cc56cc070e14739ab948535bf6ab3f2,cache.get,,2.53,OK,cache-cluster,v1.1.0,83fa63578fdd4e89bb49827b26ee184b
+live_ep_000040_NONE,NONE,order-service,11.9,1785987781.0984468,f3d292f4cd1c4ee09cec6539a9b6fcdd,3cc56cc070e14739ab948535bf6ab3f2,http.client.post,,26.68,OK,user-db,v1.1.0,83fa63578fdd4e89bb49827b26ee184b

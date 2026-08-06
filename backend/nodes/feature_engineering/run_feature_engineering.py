@@ -24,7 +24,7 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(_HERE.parent.parent))
 
-from app_data_generator.config import (
+from Simulator.app_data_generator_for_offline.config import (
     DB_PATH,
     DRAIN_INI,
     DRAIN_STATE,

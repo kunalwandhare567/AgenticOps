@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-08-05T03:24:47.688820+00:00",
+  "groups": {
+    "Immediate trigger": {
+      "beta": 0.202,
+      "eta": 84.1678,
+      "mttf_s": 9299.17,
+      "n": 463,
+      "events": 305
+    },
+    "Fast accumulation": {
+      "beta": 0.348,
+      "eta": 0.4541,
+      "mttf_s": 2.33,
+      "n": 154,
+      "events": 149
+    },
+    "Progressive resource degradation": {
+      "beta": 2.9063,
+      "eta": 831.5308,
+      "mttf_s": 741.53,
+      "n": 77,
+      "events": 2
+    },
+    "Slow or latent degradation": {
+      "beta": 0.1716,
+      "eta": 10000.0,
+      "mttf_s": 5230040.59,
+      "n": 231,
+      "events": 76
+    }
+  }
+}

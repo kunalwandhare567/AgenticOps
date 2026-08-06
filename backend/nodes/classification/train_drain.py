@@ -32,7 +32,7 @@ from sklearn.model_selection import train_test_split
 _HERE = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_HERE))
 
-from app_data_generator.config import (
+from Simulator.app_data_generator_for_offline.config import (
     DRAIN_INI, DRAIN_STATE, KNOWN_TEMPLATES_JSON, OUTPUT_DIR, MODELS_DIR,
 )
 

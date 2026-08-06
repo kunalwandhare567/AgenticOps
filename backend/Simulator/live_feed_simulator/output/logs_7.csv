@@ -1,0 +1,801 @@
+episode_id,failure_mode,service,elapsed_s,timestamp,log_level,exception_type,log_message
+live_ep_000018_NONE,NONE,auth-service,0.0,1785949724.7593718,INFO,,OK cpu=20% p99=133ms err=1.25%
+live_ep_000018_NONE,NONE,auth-service,0.5,1785949725.259624,INFO,,OK cpu=32% p99=134ms err=1.18%
+live_ep_000018_NONE,NONE,auth-service,1.0,1785949725.7598822,INFO,,OK cpu=34% p99=104ms err=0.48%
+live_ep_000018_NONE,NONE,auth-service,1.5,1785949726.2602844,INFO,,OK cpu=26% p99=115ms err=1.53%
+live_ep_000018_NONE,NONE,auth-service,2.0,1785949726.7605596,INFO,,OK cpu=37% p99=107ms err=1.21%
+live_ep_000018_NONE,NONE,auth-service,2.5,1785949727.2607672,INFO,,OK cpu=27% p99=111ms err=0.51%
+live_ep_000018_NONE,NONE,auth-service,3.0,1785949727.7615976,INFO,,OK cpu=29% p99=131ms err=0.84%
+live_ep_000018_NONE,NONE,auth-service,3.5,1785949728.2621102,INFO,,OK cpu=36% p99=105ms err=3.01%
+live_ep_000018_NONE,NONE,auth-service,4.0,1785949728.7623436,INFO,,OK cpu=39% p99=127ms err=1.40%
+live_ep_000018_NONE,NONE,auth-service,4.5,1785949729.2626483,INFO,,OK cpu=41% p99=135ms err=0.44%
+live_ep_000018_NONE,NONE,auth-service,5.0,1785949729.7631512,INFO,,OK cpu=37% p99=140ms err=0.68%
+live_ep_000018_NONE,NONE,auth-service,5.5,1785949730.26337,INFO,,OK cpu=39% p99=125ms err=0.71%
+live_ep_000018_NONE,NONE,auth-service,6.0,1785949730.7637134,INFO,,OK cpu=42% p99=124ms err=0.69%
+live_ep_000018_NONE,NONE,auth-service,6.5,1785949731.2640245,INFO,,OK cpu=38% p99=100ms err=0.25%
+live_ep_000018_NONE,NONE,auth-service,7.0,1785949731.7641375,INFO,,OK cpu=30% p99=129ms err=0.69%
+live_ep_000018_NONE,NONE,auth-service,7.5,1785949732.26426,INFO,,OK cpu=27% p99=119ms err=1.59%
+live_ep_000018_NONE,NONE,auth-service,8.0,1785949732.7644832,INFO,,OK cpu=24% p99=115ms err=0.26%
+live_ep_000018_NONE,NONE,auth-service,8.5,1785949733.2646003,INFO,,OK cpu=29% p99=98ms err=4.28%
+live_ep_000018_NONE,NONE,auth-service,9.0,1785949733.7650607,INFO,,OK cpu=40% p99=117ms err=0.68%
+live_ep_000018_NONE,NONE,auth-service,9.5,1785949734.2652555,INFO,,OK cpu=33% p99=137ms err=1.23%
+live_ep_000018_NONE,NONE,auth-service,10.0,1785949734.7655795,INFO,,OK cpu=31% p99=109ms err=1.24%
+live_ep_000018_NONE,NONE,auth-service,10.5,1785949735.265704,INFO,,OK cpu=29% p99=121ms err=0.99%
+live_ep_000018_NONE,NONE,auth-service,11.0,1785949735.7661674,INFO,,OK cpu=33% p99=118ms err=0.28%
+live_ep_000018_NONE,NONE,auth-service,11.5,1785949736.2666752,INFO,,OK cpu=37% p99=135ms err=0.39%
+live_ep_000018_NONE,NONE,auth-service,12.0,1785949736.7670753,INFO,,OK cpu=41% p99=121ms err=0.38%
+live_ep_000018_NONE,NONE,auth-service,12.5,1785949737.267356,INFO,,OK cpu=30% p99=123ms err=0.20%
+live_ep_000018_NONE,NONE,auth-service,13.0,1785949737.7674549,INFO,,OK cpu=38% p99=98ms err=1.97%
+live_ep_000018_NONE,NONE,auth-service,13.5,1785949738.2678306,INFO,,OK cpu=40% p99=116ms err=1.55%
+live_ep_000018_NONE,NONE,auth-service,14.0,1785949738.7679124,INFO,,OK cpu=39% p99=120ms err=0.76%
+live_ep_000018_NONE,NONE,auth-service,14.5,1785949739.2684436,INFO,,OK cpu=36% p99=120ms err=0.85%
+live_ep_000018_NONE,NONE,auth-service,15.0,1785949739.7688735,INFO,,OK cpu=41% p99=129ms err=0.71%
+live_ep_000018_NONE,NONE,auth-service,15.5,1785949740.2691102,INFO,,OK cpu=31% p99=90ms err=0.14%
+live_ep_000018_NONE,NONE,auth-service,16.0,1785949740.7694552,INFO,,OK cpu=27% p99=117ms err=1.30%
+live_ep_000018_NONE,NONE,auth-service,16.5,1785949741.2697043,INFO,,OK cpu=31% p99=108ms err=1.11%
+live_ep_000018_NONE,NONE,auth-service,17.0,1785949741.7698832,INFO,,OK cpu=33% p99=97ms err=0.98%
+live_ep_000018_NONE,NONE,auth-service,17.5,1785949742.2701788,INFO,,OK cpu=40% p99=132ms err=0.66%
+live_ep_000018_NONE,NONE,auth-service,18.0,1785949742.7707071,INFO,,OK cpu=31% p99=114ms err=0.38%
+live_ep_000018_NONE,NONE,auth-service,18.5,1785949743.2709963,INFO,,OK cpu=40% p99=152ms err=0.17%
+live_ep_000018_NONE,NONE,auth-service,19.0,1785949743.7711873,INFO,,OK cpu=41% p99=122ms err=0.43%
+live_ep_000018_NONE,NONE,auth-service,19.5,1785949744.2715807,INFO,,OK cpu=33% p99=120ms err=1.63%
+live_ep_000018_NONE,NONE,auth-service,20.0,1785949744.7717218,INFO,,OK cpu=41% p99=111ms err=0.94%
+live_ep_000018_NONE,NONE,auth-service,20.5,1785949745.2720764,INFO,,OK cpu=34% p99=93ms err=1.53%
+live_ep_000018_NONE,NONE,auth-service,21.0,1785949745.7723067,INFO,,OK cpu=37% p99=128ms err=1.01%
+live_ep_000018_NONE,NONE,auth-service,21.5,1785949746.2724526,INFO,,OK cpu=39% p99=135ms err=1.30%
+live_ep_000018_NONE,NONE,auth-service,22.0,1785949746.7730193,INFO,,OK cpu=40% p99=127ms err=1.93%
+live_ep_000018_NONE,NONE,auth-service,22.5,1785949747.273146,INFO,,OK cpu=37% p99=99ms err=0.71%
+live_ep_000018_NONE,NONE,auth-service,23.0,1785949747.7735288,INFO,,OK cpu=27% p99=117ms err=0.82%
+live_ep_000018_NONE,NONE,auth-service,23.5,1785949748.2738988,INFO,,OK cpu=37% p99=117ms err=0.86%
+live_ep_000018_NONE,NONE,auth-service,24.0,1785949748.7744055,INFO,,OK cpu=37% p99=89ms err=1.79%
+live_ep_000018_NONE,NONE,auth-service,24.5,1785949749.2747645,INFO,,OK cpu=41% p99=110ms err=1.21%
+live_ep_000018_NONE,NONE,auth-service,25.0,1785949749.775033,INFO,,OK cpu=33% p99=128ms err=0.41%
+live_ep_000018_NONE,NONE,auth-service,25.5,1785949750.2753365,INFO,,OK cpu=33% p99=119ms err=0.79%
+live_ep_000018_NONE,NONE,auth-service,26.0,1785949750.7753859,INFO,,OK cpu=30% p99=120ms err=0.63%
+live_ep_000018_NONE,NONE,auth-service,26.5,1785949751.2754512,INFO,,OK cpu=38% p99=95ms err=0.87%
+live_ep_000018_NONE,NONE,auth-service,27.0,1785949751.7755926,INFO,,OK cpu=35% p99=113ms err=0.65%
+live_ep_000018_NONE,NONE,auth-service,27.5,1785949752.2758555,INFO,,OK cpu=39% p99=118ms err=0.65%
+live_ep_000018_NONE,NONE,auth-service,28.0,1785949752.7763255,INFO,,OK cpu=38% p99=129ms err=0.29%
+live_ep_000018_NONE,NONE,auth-service,28.5,1785949753.276469,INFO,,OK cpu=38% p99=142ms err=0.75%
+live_ep_000018_NONE,NONE,auth-service,29.0,1785949753.7769997,INFO,,OK cpu=39% p99=116ms err=1.07%
+live_ep_000018_NONE,NONE,auth-service,29.5,1785949754.2774549,INFO,,OK cpu=34% p99=123ms err=0.98%
+live_ep_000018_NONE,NONE,auth-service,30.0,1785949754.7779086,INFO,,OK cpu=34% p99=96ms err=0.56%
+live_ep_000018_NONE,NONE,auth-service,30.5,1785949755.2783818,INFO,,OK cpu=37% p99=111ms err=0.55%
+live_ep_000018_NONE,NONE,auth-service,31.0,1785949755.7787876,INFO,,OK cpu=33% p99=115ms err=0.42%
+live_ep_000018_NONE,NONE,auth-service,31.5,1785949756.2788393,INFO,,OK cpu=29% p99=132ms err=2.73%
+live_ep_000018_NONE,NONE,auth-service,32.0,1785949756.778892,INFO,,OK cpu=32% p99=132ms err=0.65%
+live_ep_000018_NONE,NONE,auth-service,32.5,1785949757.2791767,INFO,,OK cpu=41% p99=100ms err=0.39%
+live_ep_000018_NONE,NONE,auth-service,33.0,1785949757.7794373,INFO,,OK cpu=31% p99=116ms err=0.30%
+live_ep_000018_NONE,NONE,auth-service,33.5,1785949758.2797873,INFO,,OK cpu=32% p99=117ms err=0.82%
+live_ep_000018_NONE,NONE,auth-service,34.0,1785949758.7802505,INFO,,OK cpu=43% p99=87ms err=0.76%
+live_ep_000018_NONE,NONE,auth-service,34.5,1785949759.28097,INFO,,OK cpu=36% p99=144ms err=0.22%
+live_ep_000018_NONE,NONE,auth-service,35.0,1785949759.7814016,INFO,,OK cpu=38% p99=124ms err=0.62%
+live_ep_000018_NONE,NONE,auth-service,35.5,1785949760.2819607,INFO,,OK cpu=31% p99=147ms err=1.54%
+live_ep_000018_NONE,NONE,auth-service,36.0,1785949760.782232,INFO,,OK cpu=35% p99=129ms err=1.00%
+live_ep_000018_NONE,NONE,auth-service,36.5,1785949761.2823489,INFO,,OK cpu=38% p99=102ms err=0.90%
+live_ep_000018_NONE,NONE,auth-service,37.0,1785949761.7824252,INFO,,OK cpu=40% p99=121ms err=1.65%
+live_ep_000018_NONE,NONE,auth-service,37.5,1785949762.2827096,INFO,,OK cpu=40% p99=124ms err=0.56%
+live_ep_000018_NONE,NONE,auth-service,38.0,1785949762.7832153,INFO,,OK cpu=41% p99=123ms err=1.29%
+live_ep_000018_NONE,NONE,auth-service,38.5,1785949763.283444,INFO,,OK cpu=27% p99=109ms err=0.70%
+live_ep_000018_NONE,NONE,auth-service,39.0,1785949763.783736,INFO,,OK cpu=41% p99=121ms err=1.24%
+live_ep_000018_NONE,NONE,auth-service,39.5,1785949764.2841663,INFO,,OK cpu=37% p99=144ms err=0.68%
+live_ep_000018_NONE,NONE,auth-service,40.0,1785949764.784397,INFO,,OK cpu=40% p99=114ms err=0.37%
+live_ep_000018_NONE,NONE,auth-service,40.5,1785949765.2847874,INFO,,OK cpu=36% p99=119ms err=1.38%
+live_ep_000018_NONE,NONE,auth-service,41.0,1785949765.7849574,INFO,,OK cpu=27% p99=117ms err=0.56%
+live_ep_000018_NONE,NONE,auth-service,41.5,1785949766.2852793,INFO,,OK cpu=37% p99=125ms err=0.32%
+live_ep_000018_NONE,NONE,auth-service,42.0,1785949766.7857041,INFO,,OK cpu=30% p99=107ms err=1.46%
+live_ep_000018_NONE,NONE,auth-service,42.5,1785949767.2857554,INFO,,OK cpu=39% p99=118ms err=0.14%
+live_ep_000018_NONE,NONE,auth-service,43.0,1785949767.7858496,INFO,,OK cpu=44% p99=149ms err=1.31%
+live_ep_000018_NONE,NONE,auth-service,43.5,1785949768.2863789,INFO,,OK cpu=30% p99=129ms err=1.17%
+live_ep_000018_NONE,NONE,auth-service,44.0,1785949768.7866833,INFO,,OK cpu=25% p99=132ms err=0.29%
+live_ep_000018_NONE,NONE,auth-service,44.5,1785949769.286769,INFO,,OK cpu=37% p99=105ms err=0.88%
+live_ep_000018_NONE,NONE,auth-service,45.0,1785949769.786965,INFO,,OK cpu=38% p99=101ms err=1.03%
+live_ep_000018_NONE,NONE,auth-service,45.5,1785949770.2873175,INFO,,OK cpu=23% p99=101ms err=1.83%
+live_ep_000018_NONE,NONE,auth-service,46.0,1785949770.7873902,INFO,,OK cpu=33% p99=113ms err=0.56%
+live_ep_000018_NONE,NONE,auth-service,46.5,1785949771.287442,INFO,,OK cpu=43% p99=125ms err=0.92%
+live_ep_000018_NONE,NONE,auth-service,47.0,1785949771.7877138,INFO,,OK cpu=31% p99=115ms err=0.31%
+live_ep_000018_NONE,NONE,auth-service,47.5,1785949772.288175,INFO,,OK cpu=34% p99=111ms err=0.14%
+live_ep_000018_NONE,NONE,auth-service,48.0,1785949772.7884638,INFO,,OK cpu=38% p99=120ms err=1.28%
+live_ep_000018_NONE,NONE,auth-service,48.5,1785949773.288621,INFO,,OK cpu=38% p99=125ms err=1.20%
+live_ep_000018_NONE,NONE,auth-service,49.0,1785949773.788978,INFO,,OK cpu=36% p99=97ms err=0.81%
+live_ep_000018_NONE,NONE,auth-service,49.5,1785949774.2890646,INFO,,OK cpu=34% p99=108ms err=1.44%
+live_ep_000018_NONE,NONE,auth-service,50.0,1785949774.7892106,INFO,,OK cpu=45% p99=116ms err=1.13%
+live_ep_000018_NONE,NONE,auth-service,50.5,1785949775.2897058,INFO,,OK cpu=33% p99=113ms err=1.42%
+live_ep_000018_NONE,NONE,auth-service,51.0,1785949775.7902412,INFO,,OK cpu=28% p99=117ms err=0.41%
+live_ep_000018_NONE,NONE,auth-service,51.5,1785949776.2905493,INFO,,OK cpu=35% p99=109ms err=1.01%
+live_ep_000018_NONE,NONE,auth-service,52.0,1785949776.7906013,INFO,,OK cpu=39% p99=107ms err=0.30%
+live_ep_000018_NONE,NONE,auth-service,52.5,1785949777.2909393,INFO,,OK cpu=24% p99=120ms err=1.73%
+live_ep_000018_NONE,NONE,auth-service,53.0,1785949777.7912645,INFO,,OK cpu=31% p99=107ms err=1.10%
+live_ep_000018_NONE,NONE,auth-service,53.5,1785949778.2917798,INFO,,OK cpu=39% p99=104ms err=0.21%
+live_ep_000018_NONE,NONE,auth-service,54.0,1785949778.7919526,INFO,,OK cpu=39% p99=96ms err=0.74%
+live_ep_000018_NONE,NONE,auth-service,54.5,1785949779.292098,INFO,,OK cpu=32% p99=145ms err=0.33%
+live_ep_000018_NONE,NONE,auth-service,55.0,1785949779.7928128,INFO,,OK cpu=37% p99=142ms err=0.18%
+live_ep_000018_NONE,NONE,auth-service,55.5,1785949780.2929525,INFO,,OK cpu=25% p99=96ms err=1.69%
+live_ep_000018_NONE,NONE,auth-service,56.0,1785949780.793243,INFO,,OK cpu=39% p99=103ms err=0.95%
+live_ep_000018_NONE,NONE,auth-service,56.5,1785949781.2934713,INFO,,OK cpu=22% p99=116ms err=1.60%
+live_ep_000018_NONE,NONE,auth-service,57.0,1785949781.7939277,INFO,,OK cpu=38% p99=123ms err=0.41%
+live_ep_000018_NONE,NONE,auth-service,57.5,1785949782.2945135,INFO,,OK cpu=30% p99=115ms err=0.56%
+live_ep_000018_NONE,NONE,auth-service,58.0,1785949782.79493,INFO,,OK cpu=42% p99=144ms err=2.72%
+live_ep_000018_NONE,NONE,auth-service,58.5,1785949783.2954247,INFO,,OK cpu=38% p99=106ms err=0.68%
+live_ep_000018_NONE,NONE,auth-service,59.0,1785949783.7958405,INFO,,OK cpu=31% p99=99ms err=0.53%
+live_ep_000018_NONE,NONE,auth-service,59.5,1785949784.2959366,INFO,,OK cpu=38% p99=128ms err=0.88%
+live_ep_000019_NONE,NONE,payment-service,0.0,1785949784.7969568,INFO,,OK cpu=39% p99=100ms err=1.20%
+live_ep_000019_NONE,NONE,payment-service,0.5,1785949785.2974484,INFO,,OK cpu=29% p99=118ms err=1.02%
+live_ep_000019_NONE,NONE,payment-service,1.0,1785949785.79777,INFO,,OK cpu=39% p99=96ms err=1.57%
+live_ep_000019_NONE,NONE,payment-service,1.5,1785949786.2982233,INFO,,OK cpu=34% p99=126ms err=0.90%
+live_ep_000019_NONE,NONE,payment-service,2.0,1785949786.7987356,INFO,,OK cpu=40% p99=119ms err=0.87%
+live_ep_000019_NONE,NONE,payment-service,2.5,1785949787.299111,INFO,,OK cpu=26% p99=106ms err=0.65%
+live_ep_000019_NONE,NONE,payment-service,3.0,1785949787.7994552,INFO,,OK cpu=44% p99=112ms err=1.25%
+live_ep_000019_NONE,NONE,payment-service,3.5,1785949788.299615,INFO,,OK cpu=44% p99=124ms err=2.13%
+live_ep_000019_NONE,NONE,payment-service,4.0,1785949788.7998223,INFO,,OK cpu=37% p99=122ms err=0.40%
+live_ep_000019_NONE,NONE,payment-service,4.5,1785949789.3002841,INFO,,OK cpu=39% p99=126ms err=0.48%
+live_ep_000019_NONE,NONE,payment-service,5.0,1785949789.8005176,INFO,,OK cpu=35% p99=115ms err=0.64%
+live_ep_000019_NONE,NONE,payment-service,5.5,1785949790.3009717,INFO,,OK cpu=32% p99=133ms err=1.36%
+live_ep_000019_NONE,NONE,payment-service,6.0,1785949790.8014846,INFO,,OK cpu=40% p99=86ms err=2.55%
+live_ep_000019_NONE,NONE,payment-service,6.5,1785949791.301831,INFO,,OK cpu=32% p99=128ms err=0.53%
+live_ep_000019_NONE,NONE,payment-service,7.0,1785949791.8020024,INFO,,OK cpu=39% p99=140ms err=1.47%
+live_ep_000019_NONE,NONE,payment-service,7.5,1785949792.302538,INFO,,OK cpu=38% p99=107ms err=0.74%
+live_ep_000019_NONE,NONE,payment-service,8.0,1785949792.8026571,INFO,,OK cpu=39% p99=130ms err=1.53%
+live_ep_000019_NONE,NONE,payment-service,8.5,1785949793.3029096,INFO,,OK cpu=34% p99=117ms err=0.44%
+live_ep_000019_NONE,NONE,payment-service,9.0,1785949793.803336,INFO,,OK cpu=34% p99=112ms err=0.57%
+live_ep_000019_NONE,NONE,payment-service,9.5,1785949794.3037274,INFO,,OK cpu=43% p99=124ms err=0.46%
+live_ep_000019_NONE,NONE,payment-service,10.0,1785949794.8037965,INFO,,OK cpu=38% p99=111ms err=1.86%
+live_ep_000019_NONE,NONE,payment-service,10.5,1785949795.3043175,INFO,,OK cpu=42% p99=145ms err=0.26%
+live_ep_000019_NONE,NONE,payment-service,11.0,1785949795.8044577,INFO,,OK cpu=46% p99=140ms err=0.72%
+live_ep_000019_NONE,NONE,payment-service,11.5,1785949796.3046277,INFO,,OK cpu=41% p99=123ms err=0.90%
+live_ep_000019_NONE,NONE,payment-service,12.0,1785949796.8048332,INFO,,OK cpu=32% p99=140ms err=0.74%
+live_ep_000019_NONE,NONE,payment-service,12.5,1785949797.3053293,INFO,,OK cpu=34% p99=115ms err=0.53%
+live_ep_000019_NONE,NONE,payment-service,13.0,1785949797.8058443,INFO,,OK cpu=44% p99=117ms err=1.09%
+live_ep_000019_NONE,NONE,payment-service,13.5,1785949798.3062003,INFO,,OK cpu=40% p99=112ms err=0.34%
+live_ep_000019_NONE,NONE,payment-service,14.0,1785949798.8063695,INFO,,OK cpu=33% p99=129ms err=1.42%
+live_ep_000019_NONE,NONE,payment-service,14.5,1785949799.3068082,INFO,,OK cpu=32% p99=100ms err=0.92%
+live_ep_000019_NONE,NONE,payment-service,15.0,1785949799.806996,INFO,,OK cpu=41% p99=132ms err=0.13%
+live_ep_000019_NONE,NONE,payment-service,15.5,1785949800.3071873,INFO,,OK cpu=29% p99=99ms err=0.38%
+live_ep_000019_NONE,NONE,payment-service,16.0,1785949800.8078103,INFO,,OK cpu=30% p99=108ms err=0.30%
+live_ep_000019_NONE,NONE,payment-service,16.5,1785949801.3079677,INFO,,OK cpu=29% p99=109ms err=0.29%
+live_ep_000019_NONE,NONE,payment-service,17.0,1785949801.8082845,INFO,,OK cpu=36% p99=117ms err=0.87%
+live_ep_000019_NONE,NONE,payment-service,17.5,1785949802.3085847,INFO,,OK cpu=26% p99=122ms err=1.70%
+live_ep_000019_NONE,NONE,payment-service,18.0,1785949802.8138459,INFO,,OK cpu=44% p99=141ms err=0.90%
+live_ep_000019_NONE,NONE,payment-service,18.5,1785949803.314888,INFO,,OK cpu=37% p99=105ms err=0.43%
+live_ep_000019_NONE,NONE,payment-service,19.0,1785949803.8157322,INFO,,OK cpu=33% p99=121ms err=1.18%
+live_ep_000019_NONE,NONE,payment-service,19.5,1785949804.316289,INFO,,OK cpu=39% p99=115ms err=0.59%
+live_ep_000019_NONE,NONE,payment-service,20.0,1785949804.8179262,INFO,,OK cpu=35% p99=136ms err=0.16%
+live_ep_000019_NONE,NONE,payment-service,20.5,1785949805.3294902,INFO,,OK cpu=36% p99=95ms err=0.75%
+live_ep_000019_NONE,NONE,payment-service,21.0,1785949805.8317723,INFO,,OK cpu=27% p99=128ms err=0.46%
+live_ep_000019_NONE,NONE,payment-service,21.5,1785949806.3354084,INFO,,OK cpu=33% p99=86ms err=0.84%
+live_ep_000019_NONE,NONE,payment-service,22.0,1785949806.8361673,INFO,,OK cpu=38% p99=120ms err=0.79%
+live_ep_000019_NONE,NONE,payment-service,22.5,1785949807.3382208,INFO,,OK cpu=38% p99=102ms err=0.17%
+live_ep_000019_NONE,NONE,payment-service,23.0,1785949807.842185,INFO,,OK cpu=33% p99=154ms err=0.97%
+live_ep_000019_NONE,NONE,payment-service,23.5,1785949808.3477643,INFO,,OK cpu=34% p99=115ms err=0.19%
+live_ep_000019_NONE,NONE,payment-service,24.0,1785949808.8482862,INFO,,OK cpu=33% p99=104ms err=0.54%
+live_ep_000019_NONE,NONE,payment-service,24.5,1785949809.3510091,INFO,,OK cpu=32% p99=109ms err=1.30%
+live_ep_000019_NONE,NONE,payment-service,25.0,1785949809.8532443,INFO,,OK cpu=37% p99=137ms err=2.42%
+live_ep_000019_NONE,NONE,payment-service,25.5,1785949810.353421,INFO,,OK cpu=47% p99=116ms err=1.45%
+live_ep_000019_NONE,NONE,payment-service,26.0,1785949810.855677,INFO,,OK cpu=33% p99=105ms err=0.17%
+live_ep_000019_NONE,NONE,payment-service,26.5,1785949811.365732,INFO,,OK cpu=36% p99=104ms err=0.61%
+live_ep_000019_NONE,NONE,payment-service,27.0,1785949811.8671048,INFO,,OK cpu=30% p99=138ms err=0.20%
+live_ep_000019_NONE,NONE,payment-service,27.5,1785949812.3678696,INFO,,OK cpu=34% p99=137ms err=0.98%
+live_ep_000019_NONE,NONE,payment-service,28.0,1785949812.8683224,INFO,,OK cpu=30% p99=125ms err=0.76%
+live_ep_000019_NONE,NONE,payment-service,28.5,1785949813.3760188,INFO,,OK cpu=34% p99=109ms err=0.57%
+live_ep_000019_NONE,NONE,payment-service,29.0,1785949813.8717973,INFO,,OK cpu=41% p99=87ms err=0.58%
+live_ep_000019_NONE,NONE,payment-service,29.5,1785949814.3723052,INFO,,OK cpu=35% p99=123ms err=1.02%
+live_ep_000019_NONE,NONE,payment-service,30.0,1785949814.8726757,INFO,,OK cpu=36% p99=126ms err=0.78%
+live_ep_000019_NONE,NONE,payment-service,30.5,1785949815.3730595,INFO,,OK cpu=35% p99=132ms err=1.54%
+live_ep_000019_NONE,NONE,payment-service,31.0,1785949815.874812,INFO,,OK cpu=37% p99=106ms err=1.20%
+live_ep_000019_NONE,NONE,payment-service,31.5,1785949816.375318,INFO,,OK cpu=36% p99=119ms err=1.60%
+live_ep_000019_NONE,NONE,payment-service,32.0,1785949816.8756807,INFO,,OK cpu=32% p99=121ms err=2.86%
+live_ep_000019_NONE,NONE,payment-service,32.5,1785949817.3761904,INFO,,OK cpu=45% p99=118ms err=0.58%
+live_ep_000019_NONE,NONE,payment-service,33.0,1785949817.876342,INFO,,OK cpu=32% p99=142ms err=3.32%
+live_ep_000019_NONE,NONE,payment-service,33.5,1785949818.3764772,INFO,,OK cpu=24% p99=143ms err=1.49%
+live_ep_000019_NONE,NONE,payment-service,34.0,1785949818.8769011,INFO,,OK cpu=37% p99=116ms err=2.23%
+live_ep_000019_NONE,NONE,payment-service,34.5,1785949819.3772037,INFO,,OK cpu=34% p99=117ms err=1.29%
+live_ep_000019_NONE,NONE,payment-service,35.0,1785949819.877738,INFO,,OK cpu=35% p99=113ms err=2.25%
+live_ep_000019_NONE,NONE,payment-service,35.5,1785949820.3780699,INFO,,OK cpu=37% p99=117ms err=1.33%
+live_ep_000019_NONE,NONE,payment-service,36.0,1785949820.8782942,INFO,,OK cpu=37% p99=131ms err=0.19%
+live_ep_000019_NONE,NONE,payment-service,36.5,1785949821.378624,INFO,,OK cpu=41% p99=119ms err=1.81%
+live_ep_000019_NONE,NONE,payment-service,37.0,1785949821.8791115,INFO,,OK cpu=36% p99=114ms err=0.78%
+live_ep_000019_NONE,NONE,payment-service,37.5,1785949822.3796234,INFO,,OK cpu=33% p99=119ms err=0.52%
+live_ep_000019_NONE,NONE,payment-service,38.0,1785949822.8800893,INFO,,OK cpu=40% p99=133ms err=1.21%
+live_ep_000019_NONE,NONE,payment-service,38.5,1785949823.3801503,INFO,,OK cpu=37% p99=114ms err=0.80%
+live_ep_000019_NONE,NONE,payment-service,39.0,1785949823.880699,INFO,,OK cpu=34% p99=137ms err=0.33%
+live_ep_000019_NONE,NONE,payment-service,39.5,1785949824.3808699,INFO,,OK cpu=43% p99=99ms err=0.26%
+live_ep_000019_NONE,NONE,payment-service,40.0,1785949824.8809454,INFO,,OK cpu=37% p99=130ms err=0.86%
+live_ep_000019_NONE,NONE,payment-service,40.5,1785949825.3815434,INFO,,OK cpu=34% p99=119ms err=0.72%
+live_ep_000019_NONE,NONE,payment-service,41.0,1785949825.8817043,INFO,,OK cpu=34% p99=99ms err=0.43%
+live_ep_000019_NONE,NONE,payment-service,41.5,1785949826.3820045,INFO,,OK cpu=32% p99=137ms err=0.64%
+live_ep_000019_NONE,NONE,payment-service,42.0,1785949826.8823721,INFO,,OK cpu=38% p99=109ms err=1.79%
+live_ep_000019_NONE,NONE,payment-service,42.5,1785949827.3824496,INFO,,OK cpu=35% p99=122ms err=0.19%
+live_ep_000019_NONE,NONE,payment-service,43.0,1785949827.8826714,INFO,,OK cpu=29% p99=152ms err=2.90%
+live_ep_000019_NONE,NONE,payment-service,43.5,1785949828.3828497,INFO,,OK cpu=37% p99=121ms err=0.38%
+live_ep_000019_NONE,NONE,payment-service,44.0,1785949828.8858814,INFO,,OK cpu=32% p99=141ms err=0.76%
+live_ep_000019_NONE,NONE,payment-service,44.5,1785949829.3861177,INFO,,OK cpu=34% p99=141ms err=1.10%
+live_ep_000019_NONE,NONE,payment-service,45.0,1785949829.8865802,INFO,,OK cpu=41% p99=150ms err=0.42%
+live_ep_000019_NONE,NONE,payment-service,45.5,1785949830.3866246,INFO,,OK cpu=35% p99=127ms err=1.49%
+live_ep_000019_NONE,NONE,payment-service,46.0,1785949830.8870356,INFO,,OK cpu=38% p99=95ms err=0.75%
+live_ep_000019_NONE,NONE,payment-service,46.5,1785949831.3872693,INFO,,OK cpu=41% p99=127ms err=2.48%
+live_ep_000019_NONE,NONE,payment-service,47.0,1785949831.8876672,INFO,,OK cpu=44% p99=112ms err=0.16%
+live_ep_000019_NONE,NONE,payment-service,47.5,1785949832.3881767,INFO,,OK cpu=31% p99=141ms err=0.32%
+live_ep_000019_NONE,NONE,payment-service,48.0,1785949832.8883052,INFO,,OK cpu=36% p99=126ms err=0.59%
+live_ep_000019_NONE,NONE,payment-service,48.5,1785949833.388375,INFO,,OK cpu=25% p99=130ms err=0.73%
+live_ep_000019_NONE,NONE,payment-service,49.0,1785949833.8888614,INFO,,OK cpu=31% p99=83ms err=0.57%
+live_ep_000019_NONE,NONE,payment-service,49.5,1785949834.389426,INFO,,OK cpu=28% p99=119ms err=1.43%
+live_ep_000019_NONE,NONE,payment-service,50.0,1785949834.889922,INFO,,OK cpu=33% p99=92ms err=1.67%
+live_ep_000019_NONE,NONE,payment-service,50.5,1785949835.3901951,INFO,,OK cpu=33% p99=123ms err=0.59%
+live_ep_000019_NONE,NONE,payment-service,51.0,1785949835.8905518,INFO,,OK cpu=28% p99=104ms err=1.87%
+live_ep_000019_NONE,NONE,payment-service,51.5,1785949836.3909779,INFO,,OK cpu=39% p99=119ms err=0.77%
+live_ep_000019_NONE,NONE,payment-service,52.0,1785949836.8914852,INFO,,OK cpu=37% p99=126ms err=2.49%
+live_ep_000019_NONE,NONE,payment-service,52.5,1785949837.3915844,INFO,,OK cpu=32% p99=116ms err=0.30%
+live_ep_000019_NONE,NONE,payment-service,53.0,1785949837.8920617,INFO,,OK cpu=41% p99=134ms err=1.68%
+live_ep_000019_NONE,NONE,payment-service,53.5,1785949838.3922687,INFO,,OK cpu=38% p99=90ms err=1.56%
+live_ep_000019_NONE,NONE,payment-service,54.0,1785949838.8928304,INFO,,OK cpu=37% p99=122ms err=0.36%
+live_ep_000019_NONE,NONE,payment-service,54.5,1785949839.393149,INFO,,OK cpu=31% p99=130ms err=0.54%
+live_ep_000019_NONE,NONE,payment-service,55.0,1785949839.8934815,INFO,,OK cpu=42% p99=94ms err=2.07%
+live_ep_000019_NONE,NONE,payment-service,55.5,1785949840.3940039,INFO,,OK cpu=24% p99=111ms err=0.41%
+live_ep_000019_NONE,NONE,payment-service,56.0,1785949840.894215,INFO,,OK cpu=35% p99=117ms err=0.27%
+live_ep_000019_NONE,NONE,payment-service,56.5,1785949841.3946092,INFO,,OK cpu=31% p99=124ms err=0.76%
+live_ep_000019_NONE,NONE,payment-service,57.0,1785949841.8951125,INFO,,OK cpu=31% p99=109ms err=0.57%
+live_ep_000019_NONE,NONE,payment-service,57.5,1785949842.3955085,INFO,,OK cpu=29% p99=114ms err=0.54%
+live_ep_000019_NONE,NONE,payment-service,58.0,1785949842.896261,INFO,,OK cpu=34% p99=133ms err=0.84%
+live_ep_000019_NONE,NONE,payment-service,58.5,1785949843.4005082,INFO,,OK cpu=30% p99=122ms err=1.67%
+live_ep_000019_NONE,NONE,payment-service,59.0,1785949843.9021506,INFO,,OK cpu=36% p99=118ms err=0.40%
+live_ep_000019_NONE,NONE,payment-service,59.5,1785949844.4025095,INFO,,OK cpu=29% p99=127ms err=0.36%
+live_ep_000020_NONE,NONE,payment-service,0.0,1785949844.9077225,INFO,,OK cpu=35% p99=116ms err=1.74%
+live_ep_000020_NONE,NONE,payment-service,0.5,1785949845.4079359,INFO,,OK cpu=42% p99=94ms err=0.19%
+live_ep_000020_NONE,NONE,payment-service,1.0,1785949845.908106,INFO,,OK cpu=41% p99=78ms err=1.49%
+live_ep_000020_NONE,NONE,payment-service,1.5,1785949846.408601,INFO,,OK cpu=34% p99=120ms err=0.08%
+live_ep_000020_NONE,NONE,payment-service,2.0,1785949846.9089959,INFO,,OK cpu=38% p99=81ms err=0.25%
+live_ep_000020_NONE,NONE,payment-service,2.5,1785949847.4091916,INFO,,OK cpu=35% p99=119ms err=0.25%
+live_ep_000020_NONE,NONE,payment-service,3.0,1785949847.9093251,INFO,,OK cpu=30% p99=119ms err=1.54%
+live_ep_000020_NONE,NONE,payment-service,3.5,1785949848.409654,INFO,,OK cpu=32% p99=134ms err=0.89%
+live_ep_000020_NONE,NONE,payment-service,4.0,1785949848.9099522,INFO,,OK cpu=37% p99=133ms err=0.34%
+live_ep_000020_NONE,NONE,payment-service,4.5,1785949849.4108224,INFO,,OK cpu=33% p99=131ms err=4.19%
+live_ep_000020_NONE,NONE,payment-service,5.0,1785949849.911193,INFO,,OK cpu=36% p99=110ms err=0.72%
+live_ep_000020_NONE,NONE,payment-service,5.5,1785949850.4116132,INFO,,OK cpu=34% p99=125ms err=0.74%
+live_ep_000020_NONE,NONE,payment-service,6.0,1785949850.9121065,INFO,,OK cpu=32% p99=121ms err=0.28%
+live_ep_000020_NONE,NONE,payment-service,6.5,1785949851.4125109,INFO,,OK cpu=36% p99=111ms err=1.65%
+live_ep_000020_NONE,NONE,payment-service,7.0,1785949851.9126303,INFO,,OK cpu=26% p99=106ms err=0.88%
+live_ep_000020_NONE,NONE,payment-service,7.5,1785949852.4130197,INFO,,OK cpu=38% p99=107ms err=2.08%
+live_ep_000020_NONE,NONE,payment-service,8.0,1785949852.9155426,INFO,,OK cpu=29% p99=113ms err=0.84%
+live_ep_000020_NONE,NONE,payment-service,8.5,1785949853.4158561,INFO,,OK cpu=29% p99=131ms err=0.29%
+live_ep_000020_NONE,NONE,payment-service,9.0,1785949853.9160736,INFO,,OK cpu=34% p99=117ms err=0.87%
+live_ep_000020_NONE,NONE,payment-service,9.5,1785949854.4162278,INFO,,OK cpu=40% p99=123ms err=1.08%
+live_ep_000020_NONE,NONE,payment-service,10.0,1785949854.916644,INFO,,OK cpu=34% p99=105ms err=2.29%
+live_ep_000020_NONE,NONE,payment-service,10.5,1785949855.4168892,INFO,,OK cpu=31% p99=127ms err=1.34%
+live_ep_000020_NONE,NONE,payment-service,11.0,1785949855.917358,INFO,,OK cpu=39% p99=144ms err=0.49%
+live_ep_000020_NONE,NONE,payment-service,11.5,1785949856.4175715,INFO,,OK cpu=33% p99=119ms err=0.50%
+live_ep_000020_NONE,NONE,payment-service,12.0,1785949856.9178624,INFO,,OK cpu=35% p99=112ms err=2.29%
+live_ep_000020_NONE,NONE,payment-service,12.5,1785949857.418359,INFO,,OK cpu=35% p99=131ms err=1.00%
+live_ep_000020_NONE,NONE,payment-service,13.0,1785949857.918493,INFO,,OK cpu=27% p99=103ms err=0.74%
+live_ep_000020_NONE,NONE,payment-service,13.5,1785949858.4188912,INFO,,OK cpu=37% p99=122ms err=0.52%
+live_ep_000020_NONE,NONE,payment-service,14.0,1785949858.919392,INFO,,OK cpu=28% p99=107ms err=0.46%
+live_ep_000020_NONE,NONE,payment-service,14.5,1785949859.4194698,INFO,,OK cpu=24% p99=133ms err=0.41%
+live_ep_000020_NONE,NONE,payment-service,15.0,1785949859.919801,INFO,,OK cpu=33% p99=167ms err=1.13%
+live_ep_000020_NONE,NONE,payment-service,15.5,1785949860.4203112,INFO,,OK cpu=33% p99=110ms err=0.25%
+live_ep_000020_NONE,NONE,payment-service,16.0,1785949860.9206502,INFO,,OK cpu=38% p99=142ms err=0.84%
+live_ep_000020_NONE,NONE,payment-service,16.5,1785949861.421052,INFO,,OK cpu=45% p99=139ms err=1.32%
+live_ep_000020_NONE,NONE,payment-service,17.0,1785949861.9213662,INFO,,OK cpu=36% p99=124ms err=0.17%
+live_ep_000020_NONE,NONE,payment-service,17.5,1785949862.4215171,INFO,,OK cpu=28% p99=121ms err=0.94%
+live_ep_000020_NONE,NONE,payment-service,18.0,1785949862.921998,INFO,,OK cpu=45% p99=113ms err=2.32%
+live_ep_000020_NONE,NONE,payment-service,18.5,1785949863.422204,INFO,,OK cpu=36% p99=108ms err=0.44%
+live_ep_000020_NONE,NONE,payment-service,19.0,1785949863.9225588,INFO,,OK cpu=37% p99=117ms err=0.78%
+live_ep_000020_NONE,NONE,payment-service,19.5,1785949864.4453664,INFO,,OK cpu=46% p99=105ms err=1.26%
+live_ep_000020_NONE,NONE,payment-service,20.0,1785949864.9524324,INFO,,OK cpu=38% p99=139ms err=1.27%
+live_ep_000020_NONE,NONE,payment-service,20.5,1785949865.4528823,INFO,,OK cpu=39% p99=115ms err=0.75%
+live_ep_000020_NONE,NONE,payment-service,21.0,1785949865.9530241,INFO,,OK cpu=35% p99=112ms err=0.94%
+live_ep_000020_NONE,NONE,payment-service,21.5,1785949866.453243,INFO,,OK cpu=40% p99=143ms err=0.59%
+live_ep_000020_NONE,NONE,payment-service,22.0,1785949866.9535103,INFO,,OK cpu=33% p99=79ms err=1.21%
+live_ep_000020_NONE,NONE,payment-service,22.5,1785949867.45373,INFO,,OK cpu=27% p99=112ms err=0.91%
+live_ep_000020_NONE,NONE,payment-service,23.0,1785949867.9538932,INFO,,OK cpu=30% p99=144ms err=0.65%
+live_ep_000020_NONE,NONE,payment-service,23.5,1785949868.4543195,INFO,,OK cpu=42% p99=119ms err=1.94%
+live_ep_000020_NONE,NONE,payment-service,24.0,1785949868.9553094,INFO,,OK cpu=39% p99=120ms err=0.65%
+live_ep_000020_NONE,NONE,payment-service,24.5,1785949869.455554,INFO,,OK cpu=44% p99=103ms err=0.85%
+live_ep_000020_NONE,NONE,payment-service,25.0,1785949869.95562,INFO,,OK cpu=37% p99=143ms err=1.48%
+live_ep_000020_NONE,NONE,payment-service,25.5,1785949870.455868,INFO,,OK cpu=27% p99=126ms err=0.28%
+live_ep_000020_NONE,NONE,payment-service,26.0,1785949870.9561546,INFO,,OK cpu=31% p99=103ms err=0.20%
+live_ep_000020_NONE,NONE,payment-service,26.5,1785949871.4564362,INFO,,OK cpu=32% p99=107ms err=1.17%
+live_ep_000020_NONE,NONE,payment-service,27.0,1785949871.960085,INFO,,OK cpu=33% p99=131ms err=2.00%
+live_ep_000020_NONE,NONE,payment-service,27.5,1785949872.460174,INFO,,OK cpu=37% p99=118ms err=0.37%
+live_ep_000020_NONE,NONE,payment-service,28.0,1785949872.9605255,INFO,,OK cpu=31% p99=128ms err=2.32%
+live_ep_000020_NONE,NONE,payment-service,28.5,1785949873.4609754,INFO,,OK cpu=40% p99=117ms err=1.97%
+live_ep_000020_NONE,NONE,payment-service,29.0,1785949873.9611337,INFO,,OK cpu=40% p99=128ms err=0.19%
+live_ep_000020_NONE,NONE,payment-service,29.5,1785949874.4612865,INFO,,OK cpu=34% p99=123ms err=0.49%
+live_ep_000020_NONE,NONE,payment-service,30.0,1785949874.9616416,INFO,,OK cpu=36% p99=112ms err=0.47%
+live_ep_000020_NONE,NONE,payment-service,30.5,1785949875.4621897,INFO,,OK cpu=32% p99=96ms err=1.56%
+live_ep_000020_NONE,NONE,payment-service,31.0,1785949875.9623997,INFO,,OK cpu=39% p99=147ms err=0.45%
+live_ep_000020_NONE,NONE,payment-service,31.5,1785949876.463121,INFO,,OK cpu=34% p99=124ms err=1.20%
+live_ep_000020_NONE,NONE,payment-service,32.0,1785949876.9632761,INFO,,OK cpu=31% p99=147ms err=0.05%
+live_ep_000020_NONE,NONE,payment-service,32.5,1785949877.4635975,INFO,,OK cpu=35% p99=103ms err=1.53%
+live_ep_000020_NONE,NONE,payment-service,33.0,1785949877.963691,INFO,,OK cpu=34% p99=104ms err=0.04%
+live_ep_000020_NONE,NONE,payment-service,33.5,1785949878.4640977,INFO,,OK cpu=44% p99=128ms err=1.41%
+live_ep_000020_NONE,NONE,payment-service,34.0,1785949878.9641693,INFO,,OK cpu=27% p99=111ms err=0.94%
+live_ep_000020_NONE,NONE,payment-service,34.5,1785949879.4642801,INFO,,OK cpu=38% p99=125ms err=0.67%
+live_ep_000020_NONE,NONE,payment-service,35.0,1785949879.9646904,INFO,,OK cpu=36% p99=104ms err=1.01%
+live_ep_000020_NONE,NONE,payment-service,35.5,1785949880.4648936,INFO,,OK cpu=39% p99=157ms err=0.94%
+live_ep_000020_NONE,NONE,payment-service,36.0,1785949880.965007,INFO,,OK cpu=33% p99=139ms err=1.91%
+live_ep_000020_NONE,NONE,payment-service,36.5,1785949881.465574,INFO,,OK cpu=30% p99=126ms err=0.97%
+live_ep_000020_NONE,NONE,payment-service,37.0,1785949881.965841,INFO,,OK cpu=38% p99=117ms err=0.03%
+live_ep_000020_NONE,NONE,payment-service,37.5,1785949882.466228,INFO,,OK cpu=32% p99=111ms err=1.79%
+live_ep_000020_NONE,NONE,payment-service,38.0,1785949882.966359,INFO,,OK cpu=47% p99=108ms err=0.30%
+live_ep_000020_NONE,NONE,payment-service,38.5,1785949883.4666812,INFO,,OK cpu=39% p99=108ms err=0.91%
+live_ep_000020_NONE,NONE,payment-service,39.0,1785949883.966941,INFO,,OK cpu=37% p99=144ms err=1.74%
+live_ep_000020_NONE,NONE,payment-service,39.5,1785949884.4674208,INFO,,OK cpu=30% p99=94ms err=0.60%
+live_ep_000020_NONE,NONE,payment-service,40.0,1785949884.9679644,INFO,,OK cpu=43% p99=126ms err=0.89%
+live_ep_000020_NONE,NONE,payment-service,40.5,1785949885.4685555,INFO,,OK cpu=41% p99=97ms err=2.66%
+live_ep_000020_NONE,NONE,payment-service,41.0,1785949885.9688818,INFO,,OK cpu=32% p99=121ms err=0.77%
+live_ep_000020_NONE,NONE,payment-service,41.5,1785949886.4692676,INFO,,OK cpu=47% p99=119ms err=0.92%
+live_ep_000020_NONE,NONE,payment-service,42.0,1785949886.9694288,INFO,,OK cpu=32% p99=137ms err=0.44%
+live_ep_000020_NONE,NONE,payment-service,42.5,1785949887.4694953,INFO,,OK cpu=30% p99=103ms err=1.10%
+live_ep_000020_NONE,NONE,payment-service,43.0,1785949887.9697847,INFO,,OK cpu=37% p99=142ms err=1.28%
+live_ep_000020_NONE,NONE,payment-service,43.5,1785949888.470269,INFO,,OK cpu=25% p99=106ms err=0.39%
+live_ep_000020_NONE,NONE,payment-service,44.0,1785949888.971075,INFO,,OK cpu=29% p99=146ms err=0.24%
+live_ep_000020_NONE,NONE,payment-service,44.5,1785949889.4714108,INFO,,OK cpu=44% p99=114ms err=0.85%
+live_ep_000020_NONE,NONE,payment-service,45.0,1785949889.9719174,INFO,,OK cpu=40% p99=124ms err=1.48%
+live_ep_000020_NONE,NONE,payment-service,45.5,1785949890.4720824,INFO,,OK cpu=33% p99=117ms err=0.82%
+live_ep_000020_NONE,NONE,payment-service,46.0,1785949890.972214,INFO,,OK cpu=37% p99=106ms err=0.25%
+live_ep_000020_NONE,NONE,payment-service,46.5,1785949891.472411,INFO,,OK cpu=35% p99=99ms err=0.55%
+live_ep_000020_NONE,NONE,payment-service,47.0,1785949891.9726434,INFO,,OK cpu=40% p99=133ms err=2.16%
+live_ep_000020_NONE,NONE,payment-service,47.5,1785949892.4728405,INFO,,OK cpu=35% p99=130ms err=2.73%
+live_ep_000020_NONE,NONE,payment-service,48.0,1785949892.9730268,INFO,,OK cpu=29% p99=113ms err=1.73%
+live_ep_000020_NONE,NONE,payment-service,48.5,1785949893.4731162,INFO,,OK cpu=37% p99=111ms err=0.57%
+live_ep_000020_NONE,NONE,payment-service,49.0,1785949893.973305,INFO,,OK cpu=37% p99=116ms err=0.83%
+live_ep_000020_NONE,NONE,payment-service,49.5,1785949894.473831,INFO,,OK cpu=41% p99=135ms err=0.60%
+live_ep_000020_NONE,NONE,payment-service,50.0,1785949894.97412,INFO,,OK cpu=32% p99=121ms err=0.43%
+live_ep_000020_NONE,NONE,payment-service,50.5,1785949895.4746013,INFO,,OK cpu=42% p99=107ms err=0.88%
+live_ep_000020_NONE,NONE,payment-service,51.0,1785949895.9749026,INFO,,OK cpu=28% p99=133ms err=1.75%
+live_ep_000020_NONE,NONE,payment-service,51.5,1785949896.4750366,INFO,,OK cpu=29% p99=126ms err=0.91%
+live_ep_000020_NONE,NONE,payment-service,52.0,1785949896.975551,INFO,,OK cpu=34% p99=103ms err=1.12%
+live_ep_000020_NONE,NONE,payment-service,52.5,1785949897.4756646,INFO,,OK cpu=42% p99=151ms err=0.55%
+live_ep_000020_NONE,NONE,payment-service,53.0,1785949897.975814,INFO,,OK cpu=40% p99=134ms err=0.13%
+live_ep_000020_NONE,NONE,payment-service,53.5,1785949898.4763165,INFO,,OK cpu=36% p99=114ms err=1.22%
+live_ep_000020_NONE,NONE,payment-service,54.0,1785949898.9776754,INFO,,OK cpu=36% p99=148ms err=1.10%
+live_ep_000020_NONE,NONE,payment-service,54.5,1785949899.47782,INFO,,OK cpu=36% p99=127ms err=2.42%
+live_ep_000020_NONE,NONE,payment-service,55.0,1785949899.9783,INFO,,OK cpu=32% p99=122ms err=0.50%
+live_ep_000020_NONE,NONE,payment-service,55.5,1785949900.4785619,INFO,,OK cpu=37% p99=133ms err=0.32%
+live_ep_000020_NONE,NONE,payment-service,56.0,1785949900.979061,INFO,,OK cpu=32% p99=131ms err=0.53%
+live_ep_000020_NONE,NONE,payment-service,56.5,1785949901.4791505,INFO,,OK cpu=40% p99=99ms err=1.47%
+live_ep_000020_NONE,NONE,payment-service,57.0,1785949901.9795086,INFO,,OK cpu=30% p99=138ms err=0.92%
+live_ep_000020_NONE,NONE,payment-service,57.5,1785949902.4798832,INFO,,OK cpu=36% p99=119ms err=1.26%
+live_ep_000020_NONE,NONE,payment-service,58.0,1785949902.980366,INFO,,OK cpu=34% p99=99ms err=1.86%
+live_ep_000020_NONE,NONE,payment-service,58.5,1785949903.480733,INFO,,OK cpu=27% p99=127ms err=2.22%
+live_ep_000020_NONE,NONE,payment-service,59.0,1785949903.980945,INFO,,OK cpu=35% p99=113ms err=0.28%
+live_ep_000020_NONE,NONE,payment-service,59.5,1785949904.4813302,INFO,,OK cpu=30% p99=113ms err=0.27%
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,0.0,1785949904.9837599,WARNING,,WARN p99=95ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,0.5,1785949905.4842908,WARNING,,WARN p99=109ms gc_p99=12ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,1.0,1785949905.9843545,WARNING,,WARN p99=355ms gc_p99=269ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,1.5,1785949906.484676,WARNING,,WARN p99=112ms gc_p99=17ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,2.0,1785949906.9848757,WARNING,,WARN p99=91ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,2.5,1785949907.4854105,WARNING,,WARN p99=109ms gc_p99=19ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,3.0,1785949907.9857492,WARNING,,WARN p99=110ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,3.5,1785949908.4858425,WARNING,,WARN p99=110ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,4.0,1785949908.9863408,WARNING,,WARN p99=119ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,4.5,1785949909.4865925,WARNING,,WARN p99=134ms gc_p99=31ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,5.0,1785949909.9870949,WARNING,,WARN p99=144ms gc_p99=19ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,5.5,1785949910.488207,WARNING,,WARN p99=111ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,6.0,1785949910.9884925,WARNING,,WARN p99=96ms gc_p99=11ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,6.5,1785949911.488723,WARNING,,WARN p99=108ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,7.0,1785949911.9887695,WARNING,,WARN p99=120ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,7.5,1785949912.4893172,WARNING,,WARN p99=113ms gc_p99=11ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,8.0,1785949912.9896362,WARNING,,WARN p99=105ms gc_p99=45ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,8.5,1785949913.4900596,WARNING,,WARN p99=95ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,9.0,1785949913.9904087,WARNING,,WARN p99=562ms gc_p99=446ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,9.5,1785949914.4913182,WARNING,,WARN p99=128ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,10.0,1785949914.9915974,WARNING,,WARN p99=109ms gc_p99=33ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,10.5,1785949915.4921496,WARNING,,WARN p99=143ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,11.0,1785949915.9928124,WARNING,,WARN p99=270ms gc_p99=251ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,11.5,1785949916.4929144,WARNING,,WARN p99=265ms gc_p99=215ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,12.0,1785949916.9930432,WARNING,,WARN p99=125ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,12.5,1785949917.4931645,WARNING,,WARN p99=123ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,13.0,1785949917.9936051,WARNING,,WARN p99=128ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,13.5,1785949918.4940171,WARNING,,WARN p99=115ms gc_p99=10ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,14.0,1785949918.994362,WARNING,,WARN p99=118ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,14.5,1785949919.4944181,WARNING,,WARN p99=110ms gc_p99=44ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,15.0,1785949919.994746,WARNING,,WARN p99=108ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,15.5,1785949920.4949434,WARNING,,WARN p99=124ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,16.0,1785949920.9953432,WARNING,,WARN p99=524ms gc_p99=437ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,16.5,1785949921.4957478,WARNING,,WARN p99=113ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,17.0,1785949921.995951,WARNING,,WARN p99=96ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,17.5,1785949922.4960265,WARNING,,WARN p99=132ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,18.0,1785949922.9963274,WARNING,,WARN p99=356ms gc_p99=195ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,18.5,1785949923.4967117,WARNING,,WARN p99=114ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,19.0,1785949923.997066,WARNING,,WARN p99=119ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,19.5,1785949924.4978561,WARNING,,WARN p99=105ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,20.0,1785949924.99822,WARNING,,WARN p99=136ms gc_p99=10ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,20.5,1785949925.4985015,WARNING,,WARN p99=117ms gc_p99=36ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,21.0,1785949925.9988482,WARNING,,WARN p99=99ms gc_p99=24ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,21.5,1785949926.4989982,WARNING,,WARN p99=113ms gc_p99=8ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,22.0,1785949926.9995575,WARNING,,WARN p99=103ms gc_p99=13ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,22.5,1785949927.4997334,WARNING,,WARN p99=133ms gc_p99=21ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,23.0,1785949928.0002337,WARNING,,WARN p99=141ms gc_p99=25ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,23.5,1785949928.5004401,WARNING,,WARN p99=120ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,24.0,1785949929.0009642,WARNING,,WARN p99=107ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,24.5,1785949929.501087,WARNING,,WARN p99=128ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,25.0,1785949930.0016673,WARNING,,WARN p99=131ms gc_p99=20ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,25.5,1785949930.5021496,WARNING,,WARN p99=124ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,26.0,1785949931.0026822,WARNING,,WARN p99=137ms gc_p99=52ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,26.5,1785949931.5034206,WARNING,,WARN p99=111ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,27.0,1785949932.004906,WARNING,,WARN p99=147ms gc_p99=19ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,27.5,1785949932.5051022,WARNING,,WARN p99=104ms gc_p99=8ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,28.0,1785949933.0052595,WARNING,,WARN p99=119ms gc_p99=9ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,28.5,1785949933.5055387,WARNING,,WARN p99=132ms gc_p99=32ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,29.0,1785949934.005988,WARNING,,WARN p99=120ms gc_p99=18ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,29.5,1785949934.5062995,WARNING,,WARN p99=422ms gc_p99=339ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,30.0,1785949935.0067203,WARNING,,WARN p99=123ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,30.5,1785949935.5071354,WARNING,,WARN p99=131ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,31.0,1785949936.0075183,WARNING,,WARN p99=137ms gc_p99=20ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,31.5,1785949936.5076394,WARNING,,WARN p99=115ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,32.0,1785949937.0079837,WARNING,,WARN p99=110ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,32.5,1785949937.508335,WARNING,,WARN p99=119ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,33.0,1785949938.0087872,WARNING,,WARN p99=98ms gc_p99=7ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,33.5,1785949938.509259,WARNING,,WARN p99=116ms gc_p99=21ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,34.0,1785949939.0097473,WARNING,,WARN p99=118ms gc_p99=12ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,34.5,1785949939.5098913,WARNING,,WARN p99=297ms gc_p99=230ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,35.0,1785949940.0103137,WARNING,,WARN p99=440ms gc_p99=335ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,35.5,1785949940.510481,WARNING,,WARN p99=143ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,36.0,1785949941.0106091,WARNING,,WARN p99=100ms gc_p99=8ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,36.5,1785949941.5106997,WARNING,,WARN p99=115ms gc_p99=9ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,37.0,1785949942.0109313,WARNING,,WARN p99=117ms gc_p99=3ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,37.5,1785949942.51116,WARNING,,WARN p99=139ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,38.0,1785949943.0116198,WARNING,,WARN p99=136ms gc_p99=40ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,38.5,1785949943.511724,WARNING,,WARN p99=128ms gc_p99=9ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,39.0,1785949944.0121686,WARNING,,WARN p99=142ms gc_p99=10ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,39.5,1785949944.5123148,WARNING,,WARN p99=125ms gc_p99=38ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,40.0,1785949945.0127983,WARNING,,WARN p99=127ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,40.5,1785949945.5131896,WARNING,,WARN p99=120ms gc_p99=41ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,41.0,1785949946.0133066,WARNING,,WARN p99=97ms gc_p99=37ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,41.5,1785949946.5135562,WARNING,,WARN p99=103ms gc_p99=9ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,42.0,1785949947.014643,WARNING,,WARN p99=124ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,42.5,1785949947.516446,WARNING,,WARN p99=103ms gc_p99=57ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,43.0,1785949948.0176158,WARNING,,WARN p99=349ms gc_p99=389ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,43.5,1785949948.5180728,WARNING,,WARN p99=114ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,44.0,1785949949.0186567,WARNING,,WARN p99=121ms gc_p99=44ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,44.5,1785949949.5187278,WARNING,,WARN p99=442ms gc_p99=346ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,45.0,1785949950.0188966,WARNING,,WARN p99=117ms gc_p99=12ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,45.5,1785949950.5192077,WARNING,,WARN p99=115ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,46.0,1785949951.0196087,WARNING,,WARN p99=113ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,46.5,1785949951.5199018,WARNING,,WARN p99=146ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,47.0,1785949952.02038,WARNING,,WARN p99=106ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,47.5,1785949952.5205407,WARNING,,WARN p99=111ms gc_p99=8ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,48.0,1785949953.0206478,WARNING,,WARN p99=142ms gc_p99=42ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,48.5,1785949953.5207503,WARNING,,WARN p99=101ms gc_p99=2ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,49.0,1785949954.0208497,WARNING,,WARN p99=113ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,49.5,1785949954.5212677,WARNING,,WARN p99=134ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,50.0,1785949955.0215986,WARNING,,WARN p99=125ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,50.5,1785949955.522495,WARNING,,WARN p99=313ms gc_p99=186ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,51.0,1785949956.0227206,WARNING,,WARN p99=118ms gc_p99=60ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,51.5,1785949956.5232637,WARNING,,WARN p99=117ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,52.0,1785949957.0236056,WARNING,,WARN p99=97ms gc_p99=18ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,52.5,1785949957.523902,WARNING,,WARN p99=99ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,53.0,1785949958.024182,WARNING,,WARN p99=96ms gc_p99=5ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,53.5,1785949958.52444,WARNING,,WARN p99=117ms gc_p99=16ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,54.0,1785949959.0248768,WARNING,,WARN p99=108ms gc_p99=13ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,54.5,1785949959.5254772,WARNING,,WARN p99=140ms gc_p99=28ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,55.0,1785949960.0268602,WARNING,,WARN p99=109ms gc_p99=4ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,55.5,1785949960.5273523,WARNING,,WARN p99=104ms gc_p99=18ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,56.0,1785949961.0276084,WARNING,,WARN p99=125ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,56.5,1785949961.5279708,WARNING,,WARN p99=304ms gc_p99=195ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,57.0,1785949962.0282044,WARNING,,WARN p99=117ms gc_p99=21ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,57.5,1785949962.5286236,WARNING,,WARN p99=107ms gc_p99=33ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,58.0,1785949963.0288188,WARNING,,WARN p99=114ms gc_p99=18ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,58.5,1785949963.5292792,WARNING,,WARN p99=97ms gc_p99=6ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,59.0,1785949964.0297434,WARNING,,WARN p99=122ms gc_p99=47ms -- latency spike
+live_ep_000021_LATENCY_SPIKE,LATENCY_SPIKE,payment-service,59.5,1785949964.5301406,WARNING,,WARN p99=116ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,0.0,1785949965.0316637,WARNING,,WARN p99=130ms gc_p99=21ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,0.5,1785949965.531755,WARNING,,WARN p99=120ms gc_p99=60ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,1.0,1785949966.0320797,WARNING,,WARN p99=98ms gc_p99=39ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,1.5,1785949966.5322938,WARNING,,WARN p99=102ms gc_p99=16ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,2.0,1785949967.0330486,WARNING,,WARN p99=115ms gc_p99=7ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,2.5,1785949967.5333765,WARNING,,WARN p99=102ms gc_p99=14ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,3.0,1785949968.033902,WARNING,,WARN p99=140ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,3.5,1785949968.534258,WARNING,,WARN p99=144ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,4.0,1785949969.0344872,WARNING,,WARN p99=105ms gc_p99=44ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,4.5,1785949969.534557,WARNING,,WARN p99=105ms gc_p99=21ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,5.0,1785949970.0347211,WARNING,,WARN p99=124ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,5.5,1785949970.5349581,WARNING,,WARN p99=140ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,6.0,1785949971.0351677,WARNING,,WARN p99=127ms gc_p99=13ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,6.5,1785949971.5354116,WARNING,,WARN p99=122ms gc_p99=18ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,7.0,1785949972.0357819,WARNING,,WARN p99=133ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,7.5,1785949972.5360017,WARNING,,WARN p99=135ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,8.0,1785949973.0364814,WARNING,,WARN p99=117ms gc_p99=18ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,8.5,1785949973.5366807,WARNING,,WARN p99=121ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,9.0,1785949974.0368032,WARNING,,WARN p99=105ms gc_p99=7ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,9.5,1785949974.5373955,WARNING,,WARN p99=119ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,10.0,1785949975.0375905,WARNING,,WARN p99=89ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,10.5,1785949975.5377917,WARNING,,WARN p99=118ms gc_p99=37ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,11.0,1785949976.0380204,WARNING,,WARN p99=130ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,11.5,1785949976.5381773,WARNING,,WARN p99=120ms gc_p99=9ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,12.0,1785949977.0385082,WARNING,,WARN p99=150ms gc_p99=9ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,12.5,1785949977.5392547,WARNING,,WARN p99=115ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,13.0,1785949978.039406,WARNING,,WARN p99=124ms gc_p99=26ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,13.5,1785949978.539715,WARNING,,WARN p99=362ms gc_p99=226ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,14.0,1785949979.0463579,WARNING,,WARN p99=134ms gc_p99=12ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,14.5,1785949979.5467718,WARNING,,WARN p99=131ms gc_p99=21ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,15.0,1785949980.0472565,WARNING,,WARN p99=119ms gc_p99=41ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,15.5,1785949980.5474765,WARNING,,WARN p99=120ms gc_p99=18ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,16.0,1785949981.047626,WARNING,,WARN p99=123ms gc_p99=22ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,16.5,1785949981.547947,WARNING,,WARN p99=396ms gc_p99=318ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,17.0,1785949982.0480354,WARNING,,WARN p99=103ms gc_p99=7ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,17.5,1785949982.548423,WARNING,,WARN p99=123ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,18.0,1785949983.0485835,WARNING,,WARN p99=351ms gc_p99=262ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,18.5,1785949983.5486739,WARNING,,WARN p99=358ms gc_p99=262ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,19.0,1785949984.0488544,WARNING,,WARN p99=133ms gc_p99=21ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,19.5,1785949984.548977,WARNING,,WARN p99=323ms gc_p99=278ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,20.0,1785949985.049351,WARNING,,WARN p99=247ms gc_p99=195ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,20.5,1785949985.5496757,WARNING,,WARN p99=114ms gc_p99=21ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,21.0,1785949986.0498023,WARNING,,WARN p99=122ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,21.5,1785949986.5499005,WARNING,,WARN p99=123ms gc_p99=35ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,22.0,1785949987.0501754,WARNING,,WARN p99=137ms gc_p99=38ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,22.5,1785949987.5502505,WARNING,,WARN p99=109ms gc_p99=18ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,23.0,1785949988.0523593,WARNING,,WARN p99=116ms gc_p99=9ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,23.5,1785949988.5530734,WARNING,,WARN p99=102ms gc_p99=24ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,24.0,1785949989.0536795,WARNING,,WARN p99=360ms gc_p99=354ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,24.5,1785949989.5542421,WARNING,,WARN p99=129ms gc_p99=32ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,25.0,1785949990.0545347,WARNING,,WARN p99=126ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,25.5,1785949990.5550706,WARNING,,WARN p99=116ms gc_p99=10ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,26.0,1785949991.0553052,WARNING,,WARN p99=98ms gc_p99=46ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,26.5,1785949991.555556,WARNING,,WARN p99=112ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,27.0,1785949992.0558298,WARNING,,WARN p99=96ms gc_p99=50ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,27.5,1785949992.5560412,WARNING,,WARN p99=116ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,28.0,1785949993.0566478,WARNING,,WARN p99=121ms gc_p99=13ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,28.5,1785949993.5569022,WARNING,,WARN p99=125ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,29.0,1785949994.057001,WARNING,,WARN p99=162ms gc_p99=20ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,29.5,1785949994.557259,WARNING,,WARN p99=125ms gc_p99=8ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,30.0,1785949995.05761,WARNING,,WARN p99=124ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,30.5,1785949995.5581515,WARNING,,WARN p99=115ms gc_p99=14ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,31.0,1785949996.0585802,WARNING,,WARN p99=127ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,31.5,1785949996.5586898,WARNING,,WARN p99=127ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,32.0,1785949997.058983,WARNING,,WARN p99=114ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,32.5,1785949997.5592916,WARNING,,WARN p99=137ms gc_p99=14ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,33.0,1785949998.0594923,WARNING,,WARN p99=130ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,33.5,1785949998.5716898,WARNING,,WARN p99=127ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,34.0,1785949999.0719528,WARNING,,WARN p99=116ms gc_p99=41ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,34.5,1785949999.5722408,WARNING,,WARN p99=157ms gc_p99=10ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,35.0,1785950000.0725048,WARNING,,WARN p99=137ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,35.5,1785950000.572769,WARNING,,WARN p99=116ms gc_p99=12ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,36.0,1785950001.0732715,WARNING,,WARN p99=106ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,36.5,1785950001.5735807,WARNING,,WARN p99=133ms gc_p99=9ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,37.0,1785950002.0740004,WARNING,,WARN p99=131ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,37.5,1785950002.5745184,WARNING,,WARN p99=106ms gc_p99=15ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,38.0,1785950003.0748715,WARNING,,WARN p99=109ms gc_p99=12ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,38.5,1785950003.5753984,WARNING,,WARN p99=132ms gc_p99=4ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,39.0,1785950004.0755305,WARNING,,WARN p99=113ms gc_p99=17ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,39.5,1785950004.5756261,WARNING,,WARN p99=341ms gc_p99=260ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,40.0,1785950005.0758429,WARNING,,WARN p99=430ms gc_p99=310ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,40.5,1785950005.5762541,WARNING,,WARN p99=109ms gc_p99=14ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,41.0,1785950006.0767143,WARNING,,WARN p99=94ms gc_p99=25ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,41.5,1785950006.57703,WARNING,,WARN p99=95ms gc_p99=19ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,42.0,1785950007.077433,WARNING,,WARN p99=131ms gc_p99=22ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,42.5,1785950007.5777583,WARNING,,WARN p99=112ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,43.0,1785950008.0779421,WARNING,,WARN p99=104ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,43.5,1785950008.578503,WARNING,,WARN p99=111ms gc_p99=3ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,44.0,1785950009.078629,WARNING,,WARN p99=134ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,44.5,1785950009.57885,WARNING,,WARN p99=132ms gc_p99=4ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,45.0,1785950010.0790207,WARNING,,WARN p99=115ms gc_p99=18ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,45.5,1785950010.5820234,WARNING,,WARN p99=118ms gc_p99=10ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,46.0,1785950011.082385,WARNING,,WARN p99=118ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,46.5,1785950011.5829594,WARNING,,WARN p99=154ms gc_p99=11ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,47.0,1785950012.083284,WARNING,,WARN p99=440ms gc_p99=318ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,47.5,1785950012.5834126,WARNING,,WARN p99=102ms gc_p99=24ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,48.0,1785950013.0835025,WARNING,,WARN p99=124ms gc_p99=30ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,48.5,1785950013.5839493,WARNING,,WARN p99=106ms gc_p99=23ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,49.0,1785950014.084759,WARNING,,WARN p99=124ms gc_p99=7ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,49.5,1785950014.5853038,WARNING,,WARN p99=89ms gc_p99=24ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,50.0,1785950015.085632,WARNING,,WARN p99=102ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,50.5,1785950015.5857916,WARNING,,WARN p99=155ms gc_p99=11ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,51.0,1785950016.0861015,WARNING,,WARN p99=96ms gc_p99=23ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,51.5,1785950016.5864146,WARNING,,WARN p99=119ms gc_p99=22ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,52.0,1785950017.0866761,WARNING,,WARN p99=95ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,52.5,1785950017.5871322,WARNING,,WARN p99=112ms gc_p99=4ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,53.0,1785950018.0872502,WARNING,,WARN p99=119ms gc_p99=8ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,53.5,1785950018.587472,WARNING,,WARN p99=512ms gc_p99=380ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,54.0,1785950019.0880344,WARNING,,WARN p99=130ms gc_p99=5ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,54.5,1785950019.588449,WARNING,,WARN p99=113ms gc_p99=15ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,55.0,1785950020.0886462,WARNING,,WARN p99=129ms gc_p99=57ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,55.5,1785950020.5890954,WARNING,,WARN p99=124ms gc_p99=6ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,56.0,1785950021.0892222,WARNING,,WARN p99=120ms gc_p99=11ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,56.5,1785950021.5895002,WARNING,,WARN p99=119ms gc_p99=19ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,57.0,1785950022.0896256,WARNING,,WARN p99=101ms gc_p99=14ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,57.5,1785950022.589882,WARNING,,WARN p99=124ms gc_p99=36ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,58.0,1785950023.0900402,WARNING,,WARN p99=130ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,58.5,1785950023.590196,WARNING,,WARN p99=137ms gc_p99=2ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,59.0,1785950024.090576,WARNING,,WARN p99=105ms gc_p99=7ms -- latency spike
+live_ep_000022_LATENCY_SPIKE,LATENCY_SPIKE,inventory-service,59.5,1785950024.591037,WARNING,,WARN p99=141ms gc_p99=37ms -- latency spike
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,0.0,1785950025.0943372,CRITICAL,SystemOverloadException,CRITICAL cpu=37% err=0.27% p99=130ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,0.5,1785950025.5967796,CRITICAL,SystemOverloadException,CRITICAL cpu=29% err=1.49% p99=127ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,1.0,1785950026.0974422,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=0.91% p99=1494ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,1.5,1785950026.5977378,CRITICAL,SystemOverloadException,CRITICAL cpu=91% err=0.52% p99=1496ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,2.0,1785950027.0982792,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=0.67% p99=1355ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,2.5,1785950027.5986693,CRITICAL,SystemOverloadException,CRITICAL cpu=79% err=0.70% p99=1327ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,3.0,1785950028.098804,CRITICAL,SystemOverloadException,CRITICAL cpu=77% err=1.38% p99=1432ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,3.5,1785950028.599232,CRITICAL,SystemOverloadException,CRITICAL cpu=91% err=1.51% p99=1566ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,4.0,1785950029.0994856,CRITICAL,SystemOverloadException,CRITICAL cpu=77% err=1.03% p99=1371ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,4.5,1785950029.5999026,CRITICAL,SystemOverloadException,CRITICAL cpu=92% err=0.75% p99=1579ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,5.0,1785950030.1002176,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=2.06% p99=1549ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,5.5,1785950030.600631,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=1.15% p99=1633ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,6.0,1785950031.1011732,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=2.35% p99=1370ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,6.5,1785950031.601225,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=1.25% p99=1430ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,7.0,1785950032.1014118,CRITICAL,SystemOverloadException,CRITICAL cpu=91% err=1.50% p99=1529ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,7.5,1785950032.6016657,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=1.53% p99=1434ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,8.0,1785950033.101943,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=1.81% p99=1449ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,8.5,1785950033.6020238,CRITICAL,SystemOverloadException,CRITICAL cpu=88% err=2.75% p99=1485ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,9.0,1785950034.102428,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=2.54% p99=1433ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,9.5,1785950034.6035001,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=1.23% p99=1590ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,10.0,1785950035.1035993,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=1.55% p99=1613ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,10.5,1785950035.6049588,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=1.98% p99=1455ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,11.0,1785950036.1052535,CRITICAL,SystemOverloadException,CRITICAL cpu=68% err=2.15% p99=1593ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,11.5,1785950036.6057274,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=1.86% p99=1543ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,12.0,1785950037.1061487,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=1.93% p99=1561ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,12.5,1785950037.6066666,CRITICAL,SystemOverloadException,CRITICAL cpu=79% err=1.86% p99=1305ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,13.0,1785950038.1068661,CRITICAL,SystemOverloadException,CRITICAL cpu=90% err=3.00% p99=1565ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,13.5,1785950038.6071653,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=2.33% p99=1462ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,14.0,1785950039.1072187,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=2.25% p99=1383ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,14.5,1785950039.607422,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=2.60% p99=1370ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,15.0,1785950040.1077576,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=2.70% p99=1552ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,15.5,1785950040.6079073,CRITICAL,SystemOverloadException,CRITICAL cpu=88% err=2.58% p99=1690ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,16.0,1785950041.1081161,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=2.47% p99=1401ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,16.5,1785950041.6083543,CRITICAL,SystemOverloadException,CRITICAL cpu=79% err=4.17% p99=1511ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,17.0,1785950042.114053,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=3.15% p99=1330ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,17.5,1785950042.6144166,CRITICAL,SystemOverloadException,CRITICAL cpu=92% err=2.99% p99=1668ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,18.0,1785950043.114775,CRITICAL,SystemOverloadException,CRITICAL cpu=95% err=4.51% p99=1592ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,18.5,1785950043.615206,CRITICAL,SystemOverloadException,CRITICAL cpu=73% err=4.53% p99=1274ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,19.0,1785950044.1153567,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=3.13% p99=1257ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,19.5,1785950044.6157846,CRITICAL,SystemOverloadException,CRITICAL cpu=78% err=3.79% p99=1570ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,20.0,1785950045.1159394,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=3.01% p99=1413ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,20.5,1785950045.617112,CRITICAL,SystemOverloadException,CRITICAL cpu=63% err=3.11% p99=1147ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,21.0,1785950046.1173806,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=3.77% p99=1537ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,21.5,1785950046.6217475,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=3.72% p99=1446ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,22.0,1785950047.1220548,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=3.25% p99=1460ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,22.5,1785950047.6221507,CRITICAL,SystemOverloadException,CRITICAL cpu=87% err=3.30% p99=1494ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,23.0,1785950048.1227837,CRITICAL,SystemOverloadException,CRITICAL cpu=95% err=4.33% p99=1450ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,23.5,1785950048.6233635,CRITICAL,SystemOverloadException,CRITICAL cpu=86% err=4.66% p99=1388ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,24.0,1785950049.133004,CRITICAL,SystemOverloadException,CRITICAL cpu=73% err=4.72% p99=1621ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,24.5,1785950049.6334653,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=4.87% p99=1488ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,25.0,1785950050.13408,CRITICAL,SystemOverloadException,CRITICAL cpu=92% err=3.84% p99=1567ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,25.5,1785950050.6341858,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=4.20% p99=1300ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,26.0,1785950051.134325,CRITICAL,SystemOverloadException,CRITICAL cpu=71% err=4.02% p99=1405ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,26.5,1785950051.6345572,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=4.41% p99=1348ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,27.0,1785950052.1351528,CRITICAL,SystemOverloadException,CRITICAL cpu=90% err=4.51% p99=1626ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,27.5,1785950052.6353817,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=5.32% p99=1534ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,28.0,1785950053.1359181,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=4.38% p99=1408ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,28.5,1785950053.6363926,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=5.90% p99=1526ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,29.0,1785950054.1365623,CRITICAL,SystemOverloadException,CRITICAL cpu=78% err=4.83% p99=1498ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,29.5,1785950054.637354,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=5.73% p99=1331ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,30.0,1785950055.1376956,CRITICAL,SystemOverloadException,CRITICAL cpu=77% err=5.47% p99=1472ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,30.5,1785950055.638364,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=6.66% p99=1664ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,31.0,1785950056.1388621,CRITICAL,SystemOverloadException,CRITICAL cpu=86% err=5.82% p99=1443ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,31.5,1785950056.6390245,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=8.02% p99=1291ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,32.0,1785950057.1409938,CRITICAL,SystemOverloadException,CRITICAL cpu=78% err=6.81% p99=1485ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,32.5,1785950057.6413157,CRITICAL,SystemOverloadException,CRITICAL cpu=71% err=5.88% p99=1189ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,33.0,1785950058.1414359,CRITICAL,SystemOverloadException,CRITICAL cpu=90% err=6.57% p99=1717ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,33.5,1785950058.6417341,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=5.22% p99=1511ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,34.0,1785950059.1421366,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=6.31% p99=1486ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,34.5,1785950059.6425145,CRITICAL,SystemOverloadException,CRITICAL cpu=92% err=5.81% p99=1662ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,35.0,1785950060.142571,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=6.26% p99=1546ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,35.5,1785950060.6426716,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=7.37% p99=1547ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,36.0,1785950061.1431384,CRITICAL,SystemOverloadException,CRITICAL cpu=72% err=6.02% p99=1350ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,36.5,1785950061.6438687,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=5.86% p99=1367ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,37.0,1785950062.143927,CRITICAL,SystemOverloadException,CRITICAL cpu=73% err=6.47% p99=1421ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,37.5,1785950062.644312,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=6.19% p99=1603ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,38.0,1785950063.1444714,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=5.69% p99=1442ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,38.5,1785950063.6448438,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=5.76% p99=1464ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,39.0,1785950064.1449118,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=5.98% p99=1321ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,39.5,1785950064.6450043,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=6.82% p99=1307ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,40.0,1785950065.1450963,CRITICAL,SystemOverloadException,CRITICAL cpu=78% err=6.36% p99=1345ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,40.5,1785950065.6452367,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=7.87% p99=1608ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,41.0,1785950066.1454656,CRITICAL,SystemOverloadException,CRITICAL cpu=93% err=6.57% p99=1581ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,41.5,1785950066.645579,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=7.07% p99=1309ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,42.0,1785950067.1461365,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=6.49% p99=1369ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,42.5,1785950067.6466022,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=6.65% p99=1570ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,43.0,1785950068.147274,CRITICAL,SystemOverloadException,CRITICAL cpu=88% err=7.34% p99=1568ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,43.5,1785950068.647563,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=7.35% p99=1561ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,44.0,1785950069.1480548,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=6.50% p99=1442ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,44.5,1785950069.6484108,CRITICAL,SystemOverloadException,CRITICAL cpu=81% err=7.61% p99=1532ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,45.0,1785950070.14863,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=7.24% p99=1407ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,45.5,1785950070.6490002,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=7.82% p99=1590ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,46.0,1785950071.149399,CRITICAL,SystemOverloadException,CRITICAL cpu=68% err=7.39% p99=1407ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,46.5,1785950071.6499395,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=7.23% p99=1564ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,47.0,1785950072.150199,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=7.19% p99=1442ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,47.5,1785950072.6505547,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=7.60% p99=1596ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,48.0,1785950073.1507206,CRITICAL,SystemOverloadException,CRITICAL cpu=88% err=8.00% p99=1374ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,48.5,1785950073.6507819,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=7.29% p99=1537ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,49.0,1785950074.151097,CRITICAL,SystemOverloadException,CRITICAL cpu=93% err=7.55% p99=1648ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,49.5,1785950074.651423,CRITICAL,SystemOverloadException,CRITICAL cpu=72% err=9.91% p99=1473ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,50.0,1785950075.151628,CRITICAL,SystemOverloadException,CRITICAL cpu=89% err=8.95% p99=1704ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,50.5,1785950075.6519508,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=7.74% p99=1440ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,51.0,1785950076.1521094,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=8.10% p99=1498ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,51.5,1785950076.6527388,CRITICAL,SystemOverloadException,CRITICAL cpu=85% err=7.89% p99=1463ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,52.0,1785950077.1532571,CRITICAL,SystemOverloadException,CRITICAL cpu=80% err=8.27% p99=1390ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,52.5,1785950077.6533232,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=7.99% p99=1418ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,53.0,1785950078.1537228,CRITICAL,SystemOverloadException,CRITICAL cpu=86% err=8.40% p99=1449ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,53.5,1785950078.6541574,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=8.74% p99=1485ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,54.0,1785950079.1543415,CRITICAL,SystemOverloadException,CRITICAL cpu=76% err=8.48% p99=1401ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,54.5,1785950079.6544576,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=7.85% p99=1504ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,55.0,1785950080.1549945,CRITICAL,SystemOverloadException,CRITICAL cpu=83% err=9.19% p99=1390ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,55.5,1785950080.655041,CRITICAL,SystemOverloadException,CRITICAL cpu=78% err=8.24% p99=1492ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,56.0,1785950081.1554232,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=8.33% p99=1517ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,56.5,1785950081.655735,CRITICAL,SystemOverloadException,CRITICAL cpu=82% err=9.08% p99=1320ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,57.0,1785950082.1561315,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=9.77% p99=1552ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,57.5,1785950082.6565256,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=9.86% p99=1354ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,58.0,1785950083.1567836,CRITICAL,SystemOverloadException,CRITICAL cpu=75% err=9.72% p99=1401ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,58.5,1785950083.657431,CRITICAL,SystemOverloadException,CRITICAL cpu=84% err=8.93% p99=1282ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,59.0,1785950084.157517,CRITICAL,SystemOverloadException,CRITICAL cpu=86% err=9.45% p99=1456ms -- cascade
+live_ep_000023_CASCADING_FAILURE,CASCADING_FAILURE,auth-service,59.5,1785950084.6577792,CRITICAL,SystemOverloadException,CRITICAL cpu=74% err=9.01% p99=1450ms -- cascade
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,0.0,1785950085.1595466,WARNING,,WARN cpu=35% -- saturated p99=121ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,0.5,1785950085.6605575,WARNING,,WARN cpu=30% -- saturated p99=118ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,1.0,1785950086.1607034,WARNING,,WARN cpu=34% -- saturated p99=120ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,1.5,1785950086.661005,WARNING,,WARN cpu=91% -- saturated p99=424ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,2.0,1785950087.1614811,WARNING,,WARN cpu=92% -- saturated p99=375ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,2.5,1785950087.6616962,WARNING,,WARN cpu=97% -- saturated p99=447ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,3.0,1785950088.162143,WARNING,,WARN cpu=95% -- saturated p99=380ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,3.5,1785950088.6622558,WARNING,,WARN cpu=89% -- saturated p99=352ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,4.0,1785950089.1627102,WARNING,,WARN cpu=90% -- saturated p99=376ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,4.5,1785950089.663059,WARNING,,WARN cpu=82% -- saturated p99=287ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,5.0,1785950090.1637077,WARNING,,WARN cpu=89% -- saturated p99=361ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,5.5,1785950090.6642172,WARNING,,WARN cpu=89% -- saturated p99=312ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,6.0,1785950091.1643734,WARNING,,WARN cpu=84% -- saturated p99=348ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,6.5,1785950091.6645248,WARNING,,WARN cpu=91% -- saturated p99=312ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,7.0,1785950092.1646626,WARNING,,WARN cpu=84% -- saturated p99=362ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,7.5,1785950092.664719,WARNING,,WARN cpu=83% -- saturated p99=297ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,8.0,1785950093.1651464,WARNING,,WARN cpu=86% -- saturated p99=322ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,8.5,1785950093.6653202,WARNING,,WARN cpu=90% -- saturated p99=328ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,9.0,1785950094.1656704,WARNING,,WARN cpu=89% -- saturated p99=402ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,9.5,1785950094.6657622,WARNING,,WARN cpu=86% -- saturated p99=305ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,10.0,1785950095.1660428,WARNING,,WARN cpu=85% -- saturated p99=292ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,10.5,1785950095.6665206,WARNING,,WARN cpu=88% -- saturated p99=377ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,11.0,1785950096.1667042,WARNING,,WARN cpu=92% -- saturated p99=390ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,11.5,1785950096.666779,WARNING,,WARN cpu=87% -- saturated p99=361ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,12.0,1785950097.1671028,WARNING,,WARN cpu=87% -- saturated p99=296ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,12.5,1785950097.667645,WARNING,,WARN cpu=90% -- saturated p99=339ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,13.0,1785950098.167904,WARNING,,WARN cpu=91% -- saturated p99=382ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,13.5,1785950098.6682234,WARNING,,WARN cpu=92% -- saturated p99=362ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,14.0,1785950099.1685371,WARNING,,WARN cpu=80% -- saturated p99=286ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,14.5,1785950099.6687949,WARNING,,WARN cpu=92% -- saturated p99=364ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,15.0,1785950100.1689887,WARNING,,WARN cpu=83% -- saturated p99=292ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,15.5,1785950100.6695979,WARNING,,WARN cpu=88% -- saturated p99=301ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,16.0,1785950101.1702564,WARNING,,WARN cpu=81% -- saturated p99=272ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,16.5,1785950101.6704326,WARNING,,WARN cpu=88% -- saturated p99=339ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,17.0,1785950102.1708188,WARNING,,WARN cpu=86% -- saturated p99=398ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,17.5,1785950102.6709397,WARNING,,WARN cpu=93% -- saturated p99=401ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,18.0,1785950103.1711314,WARNING,,WARN cpu=89% -- saturated p99=319ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,18.5,1785950103.6713786,WARNING,,WARN cpu=85% -- saturated p99=322ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,19.0,1785950104.1720138,WARNING,,WARN cpu=88% -- saturated p99=417ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,19.5,1785950104.6722271,WARNING,,WARN cpu=87% -- saturated p99=316ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,20.0,1785950105.1726665,WARNING,,WARN cpu=90% -- saturated p99=338ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,20.5,1785950105.6730366,WARNING,,WARN cpu=90% -- saturated p99=379ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,21.0,1785950106.173572,WARNING,,WARN cpu=89% -- saturated p99=328ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,21.5,1785950106.6741965,WARNING,,WARN cpu=96% -- saturated p99=422ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,22.0,1785950107.1744921,WARNING,,WARN cpu=83% -- saturated p99=258ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,22.5,1785950107.6745908,WARNING,,WARN cpu=81% -- saturated p99=295ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,23.0,1785950108.1749218,WARNING,,WARN cpu=91% -- saturated p99=332ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,23.5,1785950108.6752765,WARNING,,WARN cpu=86% -- saturated p99=295ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,24.0,1785950109.1757853,WARNING,,WARN cpu=89% -- saturated p99=339ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,24.5,1785950109.6759512,WARNING,,WARN cpu=90% -- saturated p99=352ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,25.0,1785950110.1764886,WARNING,,WARN cpu=92% -- saturated p99=398ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,25.5,1785950110.6766286,WARNING,,WARN cpu=94% -- saturated p99=380ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,26.0,1785950111.1767547,WARNING,,WARN cpu=88% -- saturated p99=374ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,26.5,1785950111.6771479,WARNING,,WARN cpu=90% -- saturated p99=351ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,27.0,1785950112.1774418,WARNING,,WARN cpu=100% -- saturated p99=428ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,27.5,1785950112.6777737,WARNING,,WARN cpu=86% -- saturated p99=290ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,28.0,1785950113.177843,WARNING,,WARN cpu=85% -- saturated p99=338ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,28.5,1785950113.6782858,WARNING,,WARN cpu=90% -- saturated p99=417ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,29.0,1785950114.1784797,WARNING,,WARN cpu=89% -- saturated p99=424ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,29.5,1785950114.6787624,WARNING,,WARN cpu=90% -- saturated p99=418ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,30.0,1785950115.1790104,WARNING,,WARN cpu=86% -- saturated p99=329ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,30.5,1785950115.6791034,WARNING,,WARN cpu=87% -- saturated p99=334ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,31.0,1785950116.179519,WARNING,,WARN cpu=93% -- saturated p99=367ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,31.5,1785950116.6800494,WARNING,,WARN cpu=89% -- saturated p99=423ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,32.0,1785950117.1804254,WARNING,,WARN cpu=85% -- saturated p99=359ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,32.5,1785950117.6808174,WARNING,,WARN cpu=86% -- saturated p99=337ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,33.0,1785950118.181208,WARNING,,WARN cpu=89% -- saturated p99=367ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,33.5,1785950118.681465,WARNING,,WARN cpu=85% -- saturated p99=296ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,34.0,1785950119.181627,WARNING,,WARN cpu=83% -- saturated p99=311ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,34.5,1785950119.6817129,WARNING,,WARN cpu=81% -- saturated p99=266ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,35.0,1785950120.1819985,WARNING,,WARN cpu=91% -- saturated p99=409ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,35.5,1785950120.6822202,WARNING,,WARN cpu=90% -- saturated p99=347ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,36.0,1785950121.1823552,WARNING,,WARN cpu=95% -- saturated p99=351ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,36.5,1785950121.6828787,WARNING,,WARN cpu=88% -- saturated p99=367ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,37.0,1785950122.1833086,WARNING,,WARN cpu=92% -- saturated p99=365ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,37.5,1785950122.6835349,WARNING,,WARN cpu=83% -- saturated p99=261ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,38.0,1785950123.1839485,WARNING,,WARN cpu=93% -- saturated p99=388ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,38.5,1785950123.6841004,WARNING,,WARN cpu=90% -- saturated p99=368ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,39.0,1785950124.1846027,WARNING,,WARN cpu=82% -- saturated p99=274ms
+live_ep_000024_CPU_SATURATION,CPU_SATURATION,payment-service,39.5,1785950124.684888,WARNING,,WARN cpu=81% -- saturated p99=341ms

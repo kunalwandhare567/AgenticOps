@@ -41,13 +41,13 @@ PROJECT_ROOT = _HERE.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app_data_generator.config import HUMAN_GATE_AUDIT_DB, HUMAN_GATE_OUTPUT_CSV
+from Simulator.app_data_generator_for_offline.config import HUMAN_GATE_AUDIT_DB, HUMAN_GATE_OUTPUT_CSV
 from nodes.human_gate.approval_engine import ApprovalResult
 from nodes.human_gate.review_builder  import HumanReviewRequest
 
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
-    from app_data_generator.storage.db_writer import DbWriter
+    from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 
 
 # ---------------------------------------------------------------------------

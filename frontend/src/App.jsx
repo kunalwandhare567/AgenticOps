@@ -8,7 +8,8 @@ import PredictionCard from "./components/PredictionCard";
 import EvidenceCard from "./components/EvidenceCard";
 import MultiTrendCharts from "./components/MultiTrendCharts";
 import ReliabilityCard from "./components/ReliabilityCard";
-import HumanGatePanel from "./components/HumanGatePanel";
+import ReliabilityGraphSection from "./components/ReliabilityGraphSection";
+import AIOpsChat from "./components/AIOpsChat";
 
 const BACKEND_URL = "http://localhost:8080";
 
@@ -134,8 +135,13 @@ export default function App() {
   const [episodes, setEpisodes] = useState([]);
   const [selectedEpisodeId, setSelectedEpisodeId] = useState(null);
   const [isLive, setIsLive] = useState(true);
+  const [isLiveFeed, setIsLiveFeed] = useState(false);
+  const [liveFeedEpisodes, setLiveFeedEpisodes] = useState([]);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [activeMobileTab, setActiveMobileTab] = useState("metrics"); // "metrics" | "incident"
+  const [reliabilitySummary, setReliabilitySummary] = useState(null);
+  const [refreshCountdown, setRefreshCountdown] = useState(20);
+  const [showReliabilityGridModal, setShowReliabilityGridModal] = useState(false);
 
   // Helper to load list of episodes
   const fetchEpisodes = async () => {
@@ -147,6 +153,21 @@ export default function App() {
       }
     } catch (err) {
       console.warn("Failed to fetch episodes list", err);
+    }
+  };
+
+  // Helper to load 4-group reliability summary
+  const fetchReliabilitySummary = async () => {
+    try {
+      const res = await fetch(`${BACKEND_URL}/api/reliability/summary`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.groups) {
+          setReliabilitySummary(data.groups);
+        }
+      }
+    } catch (err) {
+      console.log("Awaiting reliability summary API...");
     }
   };
 
@@ -179,18 +200,112 @@ export default function App() {
   // Fetch episodes list on load
   useEffect(() => {
     fetchEpisodes();
-    const interval = setInterval(fetchEpisodes, 10000); // refresh list every 10s
-    return () => clearInterval(interval);
+    fetchReliabilitySummary();
+    const intervalEp = setInterval(fetchEpisodes, 10000); // refresh list every 10s
+    return () => clearInterval(intervalEp);
   }, []);
 
-  // Poll live incident details
+  // Live feed episodes polling (when live feed is active)
   useEffect(() => {
-    if (!isLive) return;
+    if (!isLiveFeed) {
+      setLiveFeedEpisodes([]);
+      return;
+    }
+    const fetchLiveFeedEpisodes = async () => {
+      try {
+        const res = await fetch(`${BACKEND_URL}/api/live-feed/episodes`);
+        if (res.ok) setLiveFeedEpisodes(await res.json());
+      } catch {}
+    };
+    fetchLiveFeedEpisodes();
+    const interval = setInterval(fetchLiveFeedEpisodes, 5000);
+    return () => clearInterval(interval);
+  }, [isLiveFeed]);
+
+  // SSE EventSource — primary live feed push (connects when isLiveFeed = true)
+  useEffect(() => {
+    if (!isLiveFeed) return;
+
+    let eventSource = null;
+    let fallbackInterval = null;
+
+    const connectSSE = () => {
+      eventSource = new EventSource(`${BACKEND_URL}/api/live-stream`);
+      eventSource.onmessage = (e) => {
+        try {
+          const data = JSON.parse(e.data);
+          if (data && data.episode_id) setIncident(data);
+        } catch {}
+      };
+      eventSource.onerror = () => {
+        // SSE failed — fall back to REST polling at 500ms
+        if (eventSource) {
+          eventSource.close();
+          eventSource = null;
+        }
+        if (!fallbackInterval) {
+          const poll = async () => {
+            try {
+              const res = await fetch(`${BACKEND_URL}/api/live-feed/state`);
+              if (res.ok) {
+                const data = await res.json();
+                if (data && data.episode_id) setIncident(data);
+              }
+            } catch {}
+          };
+          poll();
+          fallbackInterval = setInterval(poll, 500);
+        }
+      };
+    };
+
+    connectSSE();
+
+    return () => {
+      if (eventSource) eventSource.close();
+      if (fallbackInterval) clearInterval(fallbackInterval);
+    };
+  }, [isLiveFeed]);
+
+  // 20-Second Auto-Refresh Countdown Ticker for 4-Group Reliability Engine
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRefreshCountdown((prev) => {
+        if (prev <= 1) {
+          fetchReliabilitySummary();
+          return 20; // reset countdown back to 20s
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  // Poll live incident details (historical mode — disabled when live feed is on)
+  useEffect(() => {
+    if (!isLive || isLiveFeed) return;
 
     fetchLiveState(); // fetch immediately
     const interval = setInterval(fetchLiveState, 2000); // poll every 2s
     return () => clearInterval(interval);
-  }, [isLive]);
+  }, [isLive, isLiveFeed]);
+
+  // Toggle live feed mode
+  const handleToggleLiveFeed = () => {
+    const next = !isLiveFeed;
+    setIsLiveFeed(next);
+    if (next) {
+      // Switch to live feed: stop historical polling
+      setIsLive(false);
+      setSelectedEpisodeId(null);
+      setIncident(DEMO_FALLBACK); // clear stale historical data while waiting for first SSE push
+    } else {
+      // Switch back to historical
+      setIsLive(true);
+      setIncident(DEMO_FALLBACK);
+    }
+  };
 
   // Handle manual status changes via dropdown
   const handleStatusChange = async (newStatus) => {
@@ -215,6 +330,7 @@ export default function App() {
   // Switch to viewing a specific past incident log
   const handleSelectEpisode = (id) => {
     setIsLive(false);
+    setIsLiveFeed(false);
     setSelectedEpisodeId(id);
     fetchEpisodeDetails(id);
     setMobileSidebarOpen(false);
@@ -223,6 +339,7 @@ export default function App() {
   // Switch back to viewing live updates
   const handleViewLive = () => {
     setIsLive(true);
+    setIsLiveFeed(false);
     setSelectedEpisodeId(null);
     fetchLiveState();
     setMobileSidebarOpen(false);
@@ -271,13 +388,20 @@ export default function App() {
         onSelectEpisode={handleSelectEpisode}
         onViewLive={handleViewLive}
         isLive={isLive}
+        isLiveFeed={isLiveFeed}
+        onToggleLiveFeed={handleToggleLiveFeed}
+        liveFeedEpisodes={liveFeedEpisodes}
         mobileSidebarOpen={mobileSidebarOpen}
         setMobileSidebarOpen={setMobileSidebarOpen}
       />
 
       {/* COLUMN 2: MIDDLE AREA (NOC Charts Panel) */}
       <div className={`center-panel ${activeMobileTab === "metrics" ? "mobile-active" : "mobile-hidden"}`}>
-        <TopHeader />
+        <TopHeader
+          isLiveFeed={isLiveFeed}
+          liveFeedMode={incident?.failure_mode || ""}
+          liveFeedTick={incident?.cycle || 0}
+        />
         
         {/* NOC grid displaying 7 core metrics graphs */}
         <MultiTrendCharts charts={incident.charts} failureMode={incident.failure_mode} />
@@ -292,11 +416,26 @@ export default function App() {
         <PredictionCard incident={incident} />
         <EvidenceCard incident={incident} />
         <DiagnosisCard incident={incident} />
-        <ReliabilityCard incident={incident} />
+        <ReliabilityCard 
+          incident={incident} 
+          reliabilitySummary={reliabilitySummary} 
+          refreshCountdown={refreshCountdown}
+          onOpenModal={() => setShowReliabilityGridModal(true)}
+        />
       </div>
 
-      {/* HUMAN GATE PANEL — floats above all content as an overlay */}
-      <HumanGatePanel />
+      {/* 4-GROUP RELIABILITY GRID MODAL / SECTION */}
+      {showReliabilityGridModal && (
+        <ReliabilityGraphSection
+          reliabilitySummary={reliabilitySummary}
+          incident={incident}
+          refreshCountdown={refreshCountdown}
+          onClose={() => setShowReliabilityGridModal(false)}
+        />
+      )}
+
+      {/* ── AIOps Chatbot — Right-Side Drawer (QueryLangGraph02) ── */}
+      <AIOpsChat chatbotApiUrl="http://localhost:8001" />
     </div>
   );
 }

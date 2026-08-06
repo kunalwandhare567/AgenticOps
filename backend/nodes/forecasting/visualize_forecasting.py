@@ -33,7 +33,7 @@ import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
 
-from app_data_generator.config import FORECASTING_OUTPUT_CSV, PIPELINE_OUTPUT_DIR
+from Simulator.app_data_generator_for_offline.config import FORECASTING_OUTPUT_CSV, PIPELINE_OUTPUT_DIR
 
 PLOT_DIR = PIPELINE_OUTPUT_DIR / "forecasting_plots"
 

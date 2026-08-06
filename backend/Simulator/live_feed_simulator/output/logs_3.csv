@@ -1,0 +1,346 @@
+episode_id,failure_mode,service,elapsed_s,timestamp,log_level,exception_type,log_message
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,0.0,1785922612.8270116,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.20% p99=115ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,0.5,1785922613.327091,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.22% p99=89ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,1.0,1785922613.827685,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.74% p99=118ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,1.5,1785922614.3282375,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.34% p99=129ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,2.0,1785922614.8288693,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.19% p99=102ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,2.5,1785922615.3293128,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.33% p99=145ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,3.0,1785922615.8295898,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.79% p99=131ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,3.5,1785922616.329957,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.96% p99=133ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,4.0,1785922616.8301766,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.28% p99=101ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,4.5,1785922617.3306072,ERROR,SocketTimeoutException,ERROR upstream_timeout=0.00% p99=89ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,5.0,1785922617.8308473,ERROR,SocketTimeoutException,ERROR upstream_timeout=46.82% p99=830ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,5.5,1785922618.3311682,ERROR,SocketTimeoutException,ERROR upstream_timeout=48.56% p99=720ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,6.0,1785922618.831297,ERROR,SocketTimeoutException,ERROR upstream_timeout=49.70% p99=854ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,6.5,1785922619.3317182,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=658ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,7.0,1785922619.8321385,ERROR,SocketTimeoutException,ERROR upstream_timeout=17.49% p99=496ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,7.5,1785922620.3323898,ERROR,SocketTimeoutException,ERROR upstream_timeout=17.00% p99=520ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,8.0,1785922620.8327363,ERROR,SocketTimeoutException,ERROR upstream_timeout=29.18% p99=581ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,8.5,1785922621.3329377,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.67% p99=714ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,9.0,1785922621.8333359,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=1060ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,9.5,1785922622.3338253,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=813ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,10.0,1785922622.8340642,ERROR,SocketTimeoutException,ERROR upstream_timeout=28.31% p99=624ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,10.5,1785922623.3346367,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=947ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,11.0,1785922623.8351452,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=661ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,11.5,1785922624.3353784,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.41% p99=736ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,12.0,1785922624.8375347,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=807ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,12.5,1785922625.3400104,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=841ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,13.0,1785922625.840554,ERROR,SocketTimeoutException,ERROR upstream_timeout=17.46% p99=509ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,13.5,1785922626.3408542,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=867ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,14.0,1785922626.8416471,ERROR,SocketTimeoutException,ERROR upstream_timeout=34.52% p99=794ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,14.5,1785922627.3427591,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=910ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,15.0,1785922627.8430223,ERROR,SocketTimeoutException,ERROR upstream_timeout=33.25% p99=524ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,15.5,1785922628.3436499,ERROR,SocketTimeoutException,ERROR upstream_timeout=44.80% p99=829ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,16.0,1785922628.8443034,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=906ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,16.5,1785922629.344955,ERROR,SocketTimeoutException,ERROR upstream_timeout=53.68% p99=849ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,17.0,1785922629.8452759,ERROR,SocketTimeoutException,ERROR upstream_timeout=23.41% p99=531ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,17.5,1785922630.345376,ERROR,SocketTimeoutException,ERROR upstream_timeout=26.55% p99=589ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,18.0,1785922630.8457873,ERROR,SocketTimeoutException,ERROR upstream_timeout=39.52% p99=619ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,18.5,1785922631.3463542,ERROR,SocketTimeoutException,ERROR upstream_timeout=52.19% p99=655ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,19.0,1785922631.8468087,ERROR,SocketTimeoutException,ERROR upstream_timeout=54.48% p99=733ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,19.5,1785922632.3469946,ERROR,SocketTimeoutException,ERROR upstream_timeout=50.87% p99=843ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,20.0,1785922632.8470988,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=832ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,20.5,1785922633.3475251,ERROR,SocketTimeoutException,ERROR upstream_timeout=37.98% p99=622ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,21.0,1785922633.847651,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=844ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,21.5,1785922634.3479965,ERROR,SocketTimeoutException,ERROR upstream_timeout=52.21% p99=827ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,22.0,1785922634.8483584,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=767ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,22.5,1785922635.348683,ERROR,SocketTimeoutException,ERROR upstream_timeout=20.36% p99=598ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,23.0,1785922635.8491948,ERROR,SocketTimeoutException,ERROR upstream_timeout=52.07% p99=861ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,23.5,1785922636.349547,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=855ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,24.0,1785922636.8496852,ERROR,SocketTimeoutException,ERROR upstream_timeout=17.66% p99=591ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,24.5,1785922637.349841,ERROR,SocketTimeoutException,ERROR upstream_timeout=54.12% p99=937ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,25.0,1785922637.8500037,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.33% p99=698ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,25.5,1785922638.3502781,ERROR,SocketTimeoutException,ERROR upstream_timeout=49.67% p99=828ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,26.0,1785922638.8507533,ERROR,SocketTimeoutException,ERROR upstream_timeout=20.47% p99=402ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,26.5,1785922639.3513062,ERROR,SocketTimeoutException,ERROR upstream_timeout=35.49% p99=740ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,27.0,1785922639.851433,ERROR,SocketTimeoutException,ERROR upstream_timeout=36.90% p99=687ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,27.5,1785922640.351648,ERROR,SocketTimeoutException,ERROR upstream_timeout=44.51% p99=637ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,28.0,1785922640.8517654,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.53% p99=769ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,28.5,1785922641.352139,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.45% p99=677ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,29.0,1785922641.8525531,ERROR,SocketTimeoutException,ERROR upstream_timeout=31.75% p99=552ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,29.5,1785922642.3531115,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=795ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,30.0,1785922642.8536682,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.88% p99=731ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,30.5,1785922643.3538642,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=818ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,31.0,1785922643.8541503,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=974ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,31.5,1785922644.3546603,ERROR,SocketTimeoutException,ERROR upstream_timeout=48.12% p99=871ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,32.0,1785922644.8550675,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=749ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,32.5,1785922645.3554788,ERROR,SocketTimeoutException,ERROR upstream_timeout=26.47% p99=544ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,33.0,1785922645.8557155,ERROR,SocketTimeoutException,ERROR upstream_timeout=26.57% p99=653ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,33.5,1785922646.3559225,ERROR,SocketTimeoutException,ERROR upstream_timeout=35.26% p99=608ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,34.0,1785922646.8564725,ERROR,SocketTimeoutException,ERROR upstream_timeout=53.56% p99=908ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,34.5,1785922647.3573558,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=848ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,35.0,1785922647.8577828,ERROR,SocketTimeoutException,ERROR upstream_timeout=38.43% p99=693ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,35.5,1785922648.3582368,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.53% p99=733ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,36.0,1785922648.8584592,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.66% p99=784ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,36.5,1785922649.3588152,ERROR,SocketTimeoutException,ERROR upstream_timeout=36.15% p99=804ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,37.0,1785922649.8589723,ERROR,SocketTimeoutException,ERROR upstream_timeout=32.60% p99=593ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,37.5,1785922650.3595374,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=731ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,38.0,1785922650.8598466,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=833ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,38.5,1785922651.360339,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=849ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,39.0,1785922651.8605888,ERROR,SocketTimeoutException,ERROR upstream_timeout=34.15% p99=673ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,39.5,1785922652.3608122,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=734ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,40.0,1785922652.8609807,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=807ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,40.5,1785922653.3610575,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=882ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,41.0,1785922653.8613296,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=785ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,41.5,1785922654.3615913,ERROR,SocketTimeoutException,ERROR upstream_timeout=27.44% p99=616ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,42.0,1785922654.8661733,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.99% p99=582ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,42.5,1785922655.3664308,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=926ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,43.0,1785922655.8669963,ERROR,SocketTimeoutException,ERROR upstream_timeout=52.81% p99=787ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,43.5,1785922656.3674922,ERROR,SocketTimeoutException,ERROR upstream_timeout=53.27% p99=931ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,44.0,1785922656.8680434,ERROR,SocketTimeoutException,ERROR upstream_timeout=54.45% p99=922ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,44.5,1785922657.3683925,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=974ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,45.0,1785922657.8685544,ERROR,SocketTimeoutException,ERROR upstream_timeout=41.20% p99=877ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,45.5,1785922658.3689115,ERROR,SocketTimeoutException,ERROR upstream_timeout=40.21% p99=437ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,46.0,1785922658.8692925,ERROR,SocketTimeoutException,ERROR upstream_timeout=29.58% p99=678ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,46.5,1785922659.3698199,ERROR,SocketTimeoutException,ERROR upstream_timeout=54.03% p99=761ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,47.0,1785922659.8704872,ERROR,SocketTimeoutException,ERROR upstream_timeout=31.00% p99=718ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,47.5,1785922660.372406,ERROR,SocketTimeoutException,ERROR upstream_timeout=29.83% p99=617ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,48.0,1785922660.8726547,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=845ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,48.5,1785922661.3728545,ERROR,SocketTimeoutException,ERROR upstream_timeout=36.03% p99=841ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,49.0,1785922661.87302,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.18% p99=813ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,49.5,1785922662.4155562,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=916ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,50.0,1785922662.9160156,ERROR,SocketTimeoutException,ERROR upstream_timeout=19.62% p99=521ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,50.5,1785922663.4161398,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=708ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,51.0,1785922663.9165285,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=917ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,51.5,1785922664.416926,ERROR,SocketTimeoutException,ERROR upstream_timeout=38.55% p99=643ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,52.0,1785922664.9172962,ERROR,SocketTimeoutException,ERROR upstream_timeout=31.49% p99=653ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,52.5,1785922665.4174457,ERROR,SocketTimeoutException,ERROR upstream_timeout=36.89% p99=468ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,53.0,1785922665.9176195,ERROR,SocketTimeoutException,ERROR upstream_timeout=47.79% p99=851ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,53.5,1785922666.4181669,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=817ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,54.0,1785922666.9184537,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=834ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,54.5,1785922667.418984,ERROR,SocketTimeoutException,ERROR upstream_timeout=44.20% p99=759ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,55.0,1785922667.919143,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=857ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,55.5,1785922668.4195378,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=760ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,56.0,1785922668.9202995,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=876ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,56.5,1785922669.420753,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=925ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,57.0,1785922669.9212725,ERROR,SocketTimeoutException,ERROR upstream_timeout=44.62% p99=532ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,57.5,1785922670.4213734,ERROR,SocketTimeoutException,ERROR upstream_timeout=41.30% p99=714ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,58.0,1785922670.9218411,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=804ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,58.5,1785922671.4222763,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=829ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,59.0,1785922671.9227164,ERROR,SocketTimeoutException,ERROR upstream_timeout=51.02% p99=825ms
+live_ep_000004_DEPENDENCY_TIMEOUT,DEPENDENCY_TIMEOUT,inventory-service,59.5,1785922672.4234982,ERROR,SocketTimeoutException,ERROR upstream_timeout=55.00% p99=865ms
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,0.0,1785922672.92469,WARNING,,WARN retry_cnt=0.02 rps=146 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,0.5,1785922673.4248455,WARNING,,WARN retry_cnt=0.00 rps=198 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,1.0,1785922673.9257407,WARNING,,WARN retry_cnt=0.10 rps=184 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,1.5,1785922674.4280393,WARNING,,WARN retry_cnt=0.02 rps=200 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,2.0,1785922674.9291234,WARNING,,WARN retry_cnt=0.00 rps=207 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,2.5,1785922675.4292288,WARNING,,WARN retry_cnt=0.09 rps=218 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,3.0,1785922675.9301689,WARNING,,WARN retry_cnt=0.01 rps=166 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,3.5,1785922676.430264,WARNING,,WARN retry_cnt=0.07 rps=213 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,4.0,1785922676.9306967,WARNING,,WARN retry_cnt=0.01 rps=219 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,4.5,1785922677.4311702,WARNING,,WARN retry_cnt=0.10 rps=199 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,5.0,1785922677.9314914,WARNING,,WARN retry_cnt=0.10 rps=200 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,5.5,1785922678.4317708,WARNING,,WARN retry_cnt=0.04 rps=176 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,6.0,1785922678.9323127,WARNING,,WARN retry_cnt=0.02 rps=212 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,6.5,1785922679.4328363,WARNING,,WARN retry_cnt=0.03 rps=213 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,7.0,1785922679.933166,WARNING,,WARN retry_cnt=0.02 rps=208 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,7.5,1785922680.4333527,WARNING,,WARN retry_cnt=0.03 rps=191 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,8.0,1785922680.9338548,WARNING,,WARN retry_cnt=0.01 rps=183 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,8.5,1785922681.4342036,WARNING,,WARN retry_cnt=0.02 rps=200 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,9.0,1785922681.9345605,WARNING,,WARN retry_cnt=0.66 rps=598 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,9.5,1785922682.4347541,WARNING,,WARN retry_cnt=0.49 rps=496 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,10.0,1785922682.9351723,WARNING,,WARN retry_cnt=0.75 rps=650 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,10.5,1785922683.4357057,WARNING,,WARN retry_cnt=0.76 rps=654 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,11.0,1785922683.9358711,WARNING,,WARN retry_cnt=0.68 rps=609 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,11.5,1785922684.4360456,WARNING,,WARN retry_cnt=0.59 rps=555 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,12.0,1785922684.9361217,WARNING,,WARN retry_cnt=0.53 rps=519 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,12.5,1785922685.4366503,WARNING,,WARN retry_cnt=0.73 rps=636 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,13.0,1785922685.9369998,WARNING,,WARN retry_cnt=0.82 rps=690 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,13.5,1785922686.438275,WARNING,,WARN retry_cnt=0.75 rps=651 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,14.0,1785922686.938528,WARNING,,WARN retry_cnt=0.70 rps=619 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,14.5,1785922687.4389563,WARNING,,WARN retry_cnt=0.74 rps=645 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,15.0,1785922687.9393766,WARNING,,WARN retry_cnt=0.69 rps=613 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,15.5,1785922688.4398274,WARNING,,WARN retry_cnt=0.65 rps=591 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,16.0,1785922688.9402537,WARNING,,WARN retry_cnt=0.77 rps=665 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,16.5,1785922689.4405265,WARNING,,WARN retry_cnt=0.83 rps=696 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,17.0,1785922689.9407136,WARNING,,WARN retry_cnt=0.56 rps=536 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,17.5,1785922690.441183,WARNING,,WARN retry_cnt=0.47 rps=483 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,18.0,1785922690.9414136,WARNING,,WARN retry_cnt=0.63 rps=581 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,18.5,1785922691.4417477,WARNING,,WARN retry_cnt=0.60 rps=563 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,19.0,1785922691.9439209,WARNING,,WARN retry_cnt=0.83 rps=696 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,19.5,1785922692.4472055,WARNING,,WARN retry_cnt=0.66 rps=595 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,20.0,1785922692.9475093,WARNING,,WARN retry_cnt=0.59 rps=553 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,20.5,1785922693.447684,WARNING,,WARN retry_cnt=0.77 rps=665 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,21.0,1785922693.9481304,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,21.5,1785922694.448511,WARNING,,WARN retry_cnt=0.74 rps=646 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,22.0,1785922694.949008,WARNING,,WARN retry_cnt=0.72 rps=631 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,22.5,1785922695.4491274,WARNING,,WARN retry_cnt=0.68 rps=609 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,23.0,1785922695.949227,WARNING,,WARN retry_cnt=0.66 rps=598 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,23.5,1785922696.449561,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,24.0,1785922696.9497545,WARNING,,WARN retry_cnt=0.71 rps=624 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,24.5,1785922697.4501615,WARNING,,WARN retry_cnt=0.60 rps=559 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,25.0,1785922697.9503944,WARNING,,WARN retry_cnt=0.79 rps=673 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,25.5,1785922698.450783,WARNING,,WARN retry_cnt=0.81 rps=685 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,26.0,1785922698.9508786,WARNING,,WARN retry_cnt=0.69 rps=612 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,26.5,1785922699.451034,WARNING,,WARN retry_cnt=0.67 rps=600 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,27.0,1785922699.9511304,WARNING,,WARN retry_cnt=0.76 rps=655 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,27.5,1785922700.4513867,WARNING,,WARN retry_cnt=0.69 rps=611 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,28.0,1785922700.9516125,WARNING,,WARN retry_cnt=0.60 rps=559 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,28.5,1785922701.4518816,WARNING,,WARN retry_cnt=0.56 rps=535 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,29.0,1785922701.9523165,WARNING,,WARN retry_cnt=0.71 rps=628 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,29.5,1785922702.4529033,WARNING,,WARN retry_cnt=0.75 rps=647 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,30.0,1785922702.9534104,WARNING,,WARN retry_cnt=0.81 rps=683 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,30.5,1785922703.4535193,WARNING,,WARN retry_cnt=0.90 rps=740 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,31.0,1785922703.9537702,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,31.5,1785922704.453975,WARNING,,WARN retry_cnt=0.81 rps=689 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,32.0,1785922704.9542966,WARNING,,WARN retry_cnt=0.56 rps=536 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,32.5,1785922705.4545002,WARNING,,WARN retry_cnt=0.70 rps=621 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,33.0,1785922705.9548974,WARNING,,WARN retry_cnt=0.40 rps=440 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,33.5,1785922706.4550986,WARNING,,WARN retry_cnt=0.50 rps=499 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,34.0,1785922706.955516,WARNING,,WARN retry_cnt=0.54 rps=521 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,34.5,1785922707.4557242,WARNING,,WARN retry_cnt=0.76 rps=655 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,35.0,1785922707.9565504,WARNING,,WARN retry_cnt=0.41 rps=446 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,35.5,1785922708.4570165,WARNING,,WARN retry_cnt=0.65 rps=588 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,36.0,1785922708.9574,WARNING,,WARN retry_cnt=0.66 rps=598 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,36.5,1785922709.4575121,WARNING,,WARN retry_cnt=0.53 rps=520 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,37.0,1785922709.9577916,WARNING,,WARN retry_cnt=0.76 rps=658 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,37.5,1785922710.4582276,WARNING,,WARN retry_cnt=0.63 rps=576 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,38.0,1785922710.9584203,WARNING,,WARN retry_cnt=0.51 rps=505 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,38.5,1785922711.4586778,WARNING,,WARN retry_cnt=0.69 rps=616 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,39.0,1785922711.9590168,WARNING,,WARN retry_cnt=0.73 rps=640 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,39.5,1785922712.4593732,WARNING,,WARN retry_cnt=0.65 rps=588 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,40.0,1785922712.9596786,WARNING,,WARN retry_cnt=0.73 rps=636 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,40.5,1785922713.4598265,WARNING,,WARN retry_cnt=0.68 rps=606 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,41.0,1785922713.9603553,WARNING,,WARN retry_cnt=0.58 rps=548 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,41.5,1785922714.4609046,WARNING,,WARN retry_cnt=0.83 rps=701 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,42.0,1785922714.9611974,WARNING,,WARN retry_cnt=0.52 rps=511 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,42.5,1785922715.4616282,WARNING,,WARN retry_cnt=0.51 rps=508 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,43.0,1785922715.9617739,WARNING,,WARN retry_cnt=0.78 rps=669 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,43.5,1785922716.4618902,WARNING,,WARN retry_cnt=0.90 rps=740 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,44.0,1785922716.962017,WARNING,,WARN retry_cnt=0.59 rps=555 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,44.5,1785922717.4624188,WARNING,,WARN retry_cnt=0.73 rps=635 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,45.0,1785922717.9628396,WARNING,,WARN retry_cnt=0.64 rps=586 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,45.5,1785922718.4632342,WARNING,,WARN retry_cnt=0.54 rps=526 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,46.0,1785922718.9635844,WARNING,,WARN retry_cnt=0.84 rps=702 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,46.5,1785922719.4642124,WARNING,,WARN retry_cnt=0.61 rps=565 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,47.0,1785922719.9645653,WARNING,,WARN retry_cnt=0.64 rps=586 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,47.5,1785922720.4649482,WARNING,,WARN retry_cnt=0.79 rps=674 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,48.0,1785922720.9652886,WARNING,,WARN retry_cnt=0.70 rps=621 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,48.5,1785922721.465504,WARNING,,WARN retry_cnt=0.74 rps=645 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,49.0,1785922721.9657016,WARNING,,WARN retry_cnt=0.69 rps=617 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,49.5,1785922722.4661663,WARNING,,WARN retry_cnt=0.61 rps=568 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,50.0,1785922722.966812,WARNING,,WARN retry_cnt=0.67 rps=603 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,50.5,1785922723.4671876,WARNING,,WARN retry_cnt=0.83 rps=701 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,51.0,1785922723.9673185,WARNING,,WARN retry_cnt=0.52 rps=511 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,51.5,1785922724.4674764,WARNING,,WARN retry_cnt=0.66 rps=595 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,52.0,1785922724.9678981,WARNING,,WARN retry_cnt=0.60 rps=557 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,52.5,1785922725.4684489,WARNING,,WARN retry_cnt=0.79 rps=674 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,53.0,1785922725.972914,WARNING,,WARN retry_cnt=0.63 rps=578 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,53.5,1785922726.4732258,WARNING,,WARN retry_cnt=0.64 rps=584 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,54.0,1785922726.9734383,WARNING,,WARN retry_cnt=0.70 rps=622 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,54.5,1785922727.4735765,WARNING,,WARN retry_cnt=0.48 rps=489 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,55.0,1785922727.9739423,WARNING,,WARN retry_cnt=0.60 rps=557 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,55.5,1785922728.4741328,WARNING,,WARN retry_cnt=0.53 rps=519 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,56.0,1785922728.974714,WARNING,,WARN retry_cnt=0.88 rps=726 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,56.5,1785922729.4752562,WARNING,,WARN retry_cnt=0.62 rps=572 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,57.0,1785922729.9761925,WARNING,,WARN retry_cnt=0.65 rps=592 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,57.5,1785922730.476635,WARNING,,WARN retry_cnt=0.72 rps=632 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,58.0,1785922730.9770327,WARNING,,WARN retry_cnt=0.70 rps=620 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,58.5,1785922731.4775422,WARNING,,WARN retry_cnt=0.78 rps=665 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,59.0,1785922731.9778864,WARNING,,WARN retry_cnt=0.80 rps=679 -- retry storm
+live_ep_000005_RETRY_STORM,RETRY_STORM,auth-service,59.5,1785922732.4784563,WARNING,,WARN retry_cnt=0.57 rps=545 -- retry storm
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,0.0,1785922732.9804382,WARNING,,WARN cpu=41% -- saturated p99=106ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,0.5,1785922733.4808028,WARNING,,WARN cpu=35% -- saturated p99=113ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,1.0,1785922733.9810872,WARNING,,WARN cpu=34% -- saturated p99=135ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,1.5,1785922734.4812024,WARNING,,WARN cpu=41% -- saturated p99=99ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,2.0,1785922734.9815168,WARNING,,WARN cpu=22% -- saturated p99=117ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,2.5,1785922735.4852042,WARNING,,WARN cpu=38% -- saturated p99=124ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,3.0,1785922735.9854178,WARNING,,WARN cpu=40% -- saturated p99=133ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,3.5,1785922736.4858458,WARNING,,WARN cpu=29% -- saturated p99=123ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,4.0,1785922736.98609,WARNING,,WARN cpu=41% -- saturated p99=117ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,4.5,1785922737.486513,WARNING,,WARN cpu=35% -- saturated p99=99ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,5.0,1785922737.9867513,WARNING,,WARN cpu=30% -- saturated p99=124ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,5.5,1785922738.4872398,WARNING,,WARN cpu=34% -- saturated p99=110ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,6.0,1785922738.987604,WARNING,,WARN cpu=36% -- saturated p99=121ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,6.5,1785922739.4881167,WARNING,,WARN cpu=32% -- saturated p99=125ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,7.0,1785922739.9883995,WARNING,,WARN cpu=34% -- saturated p99=105ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,7.5,1785922740.48896,WARNING,,WARN cpu=96% -- saturated p99=302ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,8.0,1785922740.9895208,WARNING,,WARN cpu=86% -- saturated p99=335ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,8.5,1785922741.4897203,WARNING,,WARN cpu=80% -- saturated p99=284ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,9.0,1785922741.9900134,WARNING,,WARN cpu=94% -- saturated p99=384ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,9.5,1785922742.490427,WARNING,,WARN cpu=84% -- saturated p99=358ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,10.0,1785922742.9905128,WARNING,,WARN cpu=85% -- saturated p99=352ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,10.5,1785922743.4910793,WARNING,,WARN cpu=88% -- saturated p99=376ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,11.0,1785922743.9913664,WARNING,,WARN cpu=83% -- saturated p99=313ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,11.5,1785922744.4916668,WARNING,,WARN cpu=89% -- saturated p99=277ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,12.0,1785922744.991891,WARNING,,WARN cpu=86% -- saturated p99=328ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,12.5,1785922745.4921203,WARNING,,WARN cpu=92% -- saturated p99=375ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,13.0,1785922745.9923463,WARNING,,WARN cpu=92% -- saturated p99=336ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,13.5,1785922746.4927802,WARNING,,WARN cpu=88% -- saturated p99=367ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,14.0,1785922746.9932368,WARNING,,WARN cpu=87% -- saturated p99=315ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,14.5,1785922747.493486,WARNING,,WARN cpu=87% -- saturated p99=433ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,15.0,1785922747.993695,WARNING,,WARN cpu=93% -- saturated p99=387ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,15.5,1785922748.4940326,WARNING,,WARN cpu=90% -- saturated p99=386ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,16.0,1785922748.9941733,WARNING,,WARN cpu=85% -- saturated p99=321ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,16.5,1785922749.4945261,WARNING,,WARN cpu=98% -- saturated p99=424ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,17.0,1785922749.9958441,WARNING,,WARN cpu=85% -- saturated p99=362ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,17.5,1785922750.4962678,WARNING,,WARN cpu=86% -- saturated p99=336ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,18.0,1785922750.996468,WARNING,,WARN cpu=90% -- saturated p99=353ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,18.5,1785922751.4969718,WARNING,,WARN cpu=86% -- saturated p99=312ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,19.0,1785922751.9971013,WARNING,,WARN cpu=88% -- saturated p99=372ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,19.5,1785922752.497536,WARNING,,WARN cpu=83% -- saturated p99=280ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,20.0,1785922752.9980717,WARNING,,WARN cpu=85% -- saturated p99=324ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,20.5,1785922753.4984243,WARNING,,WARN cpu=92% -- saturated p99=343ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,21.0,1785922753.998973,WARNING,,WARN cpu=84% -- saturated p99=311ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,21.5,1785922754.4993746,WARNING,,WARN cpu=91% -- saturated p99=362ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,22.0,1785922754.999943,WARNING,,WARN cpu=89% -- saturated p99=330ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,22.5,1785922755.5004053,WARNING,,WARN cpu=87% -- saturated p99=332ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,23.0,1785922756.0007043,WARNING,,WARN cpu=85% -- saturated p99=337ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,23.5,1785922756.5008402,WARNING,,WARN cpu=82% -- saturated p99=262ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,24.0,1785922757.00105,WARNING,,WARN cpu=85% -- saturated p99=280ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,24.5,1785922757.501355,WARNING,,WARN cpu=89% -- saturated p99=388ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,25.0,1785922758.001607,WARNING,,WARN cpu=90% -- saturated p99=357ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,25.5,1785922758.501781,WARNING,,WARN cpu=89% -- saturated p99=314ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,26.0,1785922759.002389,WARNING,,WARN cpu=92% -- saturated p99=373ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,26.5,1785922759.502837,WARNING,,WARN cpu=86% -- saturated p99=295ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,27.0,1785922760.0031633,WARNING,,WARN cpu=87% -- saturated p99=371ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,27.5,1785922760.5035198,WARNING,,WARN cpu=87% -- saturated p99=349ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,28.0,1785922761.0041378,WARNING,,WARN cpu=84% -- saturated p99=306ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,28.5,1785922761.5042977,WARNING,,WARN cpu=94% -- saturated p99=435ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,29.0,1785922762.0048172,WARNING,,WARN cpu=87% -- saturated p99=337ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,29.5,1785922762.505326,WARNING,,WARN cpu=89% -- saturated p99=353ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,30.0,1785922763.0057929,WARNING,,WARN cpu=86% -- saturated p99=324ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,30.5,1785922763.5060601,WARNING,,WARN cpu=88% -- saturated p99=322ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,31.0,1785922764.0064464,WARNING,,WARN cpu=86% -- saturated p99=367ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,31.5,1785922764.5068266,WARNING,,WARN cpu=89% -- saturated p99=397ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,32.0,1785922765.0074022,WARNING,,WARN cpu=85% -- saturated p99=283ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,32.5,1785922765.5081525,WARNING,,WARN cpu=87% -- saturated p99=346ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,33.0,1785922766.008437,WARNING,,WARN cpu=90% -- saturated p99=388ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,33.5,1785922766.508857,WARNING,,WARN cpu=83% -- saturated p99=284ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,34.0,1785922767.009134,WARNING,,WARN cpu=88% -- saturated p99=307ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,34.5,1785922767.5095398,WARNING,,WARN cpu=88% -- saturated p99=310ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,35.0,1785922768.0098245,WARNING,,WARN cpu=90% -- saturated p99=286ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,35.5,1785922768.5099955,WARNING,,WARN cpu=87% -- saturated p99=337ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,36.0,1785922769.0104578,WARNING,,WARN cpu=75% -- saturated p99=256ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,36.5,1785922769.5116208,WARNING,,WARN cpu=99% -- saturated p99=435ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,37.0,1785922770.0118773,WARNING,,WARN cpu=85% -- saturated p99=327ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,37.5,1785922770.5119586,WARNING,,WARN cpu=89% -- saturated p99=403ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,38.0,1785922771.012432,WARNING,,WARN cpu=75% -- saturated p99=248ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,38.5,1785922771.5128975,WARNING,,WARN cpu=88% -- saturated p99=386ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,39.0,1785922772.0131748,WARNING,,WARN cpu=86% -- saturated p99=266ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,39.5,1785922772.5136442,WARNING,,WARN cpu=91% -- saturated p99=399ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,40.0,1785922773.013969,WARNING,,WARN cpu=77% -- saturated p99=215ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,40.5,1785922773.51457,WARNING,,WARN cpu=92% -- saturated p99=386ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,41.0,1785922774.014977,WARNING,,WARN cpu=89% -- saturated p99=303ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,41.5,1785922774.515079,WARNING,,WARN cpu=91% -- saturated p99=406ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,42.0,1785922775.0156417,WARNING,,WARN cpu=96% -- saturated p99=409ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,42.5,1785922775.5161893,WARNING,,WARN cpu=87% -- saturated p99=325ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,43.0,1785922776.0165277,WARNING,,WARN cpu=81% -- saturated p99=310ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,43.5,1785922776.5168996,WARNING,,WARN cpu=90% -- saturated p99=372ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,44.0,1785922777.0173743,WARNING,,WARN cpu=88% -- saturated p99=351ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,44.5,1785922777.5178547,WARNING,,WARN cpu=89% -- saturated p99=384ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,45.0,1785922778.0182176,WARNING,,WARN cpu=87% -- saturated p99=237ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,45.5,1785922778.5184076,WARNING,,WARN cpu=96% -- saturated p99=444ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,46.0,1785922779.018517,WARNING,,WARN cpu=85% -- saturated p99=284ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,46.5,1785922779.5190177,WARNING,,WARN cpu=92% -- saturated p99=300ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,47.0,1785922780.0197794,WARNING,,WARN cpu=92% -- saturated p99=373ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,47.5,1785922780.5201745,WARNING,,WARN cpu=84% -- saturated p99=298ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,48.0,1785922781.0219147,WARNING,,WARN cpu=89% -- saturated p99=314ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,48.5,1785922781.522187,WARNING,,WARN cpu=79% -- saturated p99=324ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,49.0,1785922782.022757,WARNING,,WARN cpu=84% -- saturated p99=291ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,49.5,1785922782.5233958,WARNING,,WARN cpu=93% -- saturated p99=409ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,50.0,1785922783.0236642,WARNING,,WARN cpu=89% -- saturated p99=357ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,50.5,1785922783.5241568,WARNING,,WARN cpu=85% -- saturated p99=375ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,51.0,1785922784.0242803,WARNING,,WARN cpu=83% -- saturated p99=319ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,51.5,1785922784.5248644,WARNING,,WARN cpu=88% -- saturated p99=327ms
+live_ep_000006_CPU_SATURATION,CPU_SATURATION,payment-service,52.0,1785922785.0250611,WARNING,,WARN cpu=89% -- saturated p99=337ms

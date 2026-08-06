@@ -31,7 +31,7 @@ from __future__ import annotations
 
 import sqlite3
 
-from app_data_generator.config import RAW_METRIC_FEATURE_COLS
+from Simulator.app_data_generator_for_offline.config import RAW_METRIC_FEATURE_COLS
 
 # Map circuit_breaker_state string → int for classifier
 CB_ENCODE = {"closed": 0, "half-open": 1, "open": 2}

@@ -35,14 +35,14 @@ _HERE = Path(__file__).resolve().parent
 PROJECT_ROOT = _HERE
 sys.path.insert(0, str(PROJECT_ROOT))
 
-from app_data_generator.config import (
+from Simulator.app_data_generator_for_offline.config import (
     DB_PATH, DRAIN_INI, DRAIN_STATE, KNOWN_TEMPLATES_JSON,
     PIPELINE_OUTPUT_DIR, PIPELINE_RESULTS_CSV,
     PRELIM_SEVERITY_CSV, TUMBLING_WINDOW_CSV,
 )
-from app_data_generator.storage.db_writer import DbWriter
+from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 from nodes.collect.queue_bridge import TelemetryQueue
-from app_data_generator.state import PipelineState
+from Simulator.app_data_generator_for_offline.state import PipelineState
 from nodes.preliminary_severity.severity_node import SeverityNode
 from nodes.classification.classifier import load_classifier, classify
 from nodes.tumbling_window.tumbling_window import TumblingWindow

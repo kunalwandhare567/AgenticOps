@@ -15,6 +15,16 @@ pmdarima>=2.0.0
 statsmodels>=0.14.0
 scipy>=1.10.0
 
+# Reliability & Survival Analysis
+lifelines>=0.27.0
+reliability>=0.8.0
+
+# Hyperparameter Optimization
+optuna>=3.4.0
+
+# LangGraph Pipeline Orchestration
+langgraph>=0.2.0
+
 # Log parsing
 drain3>=0.9.11
 

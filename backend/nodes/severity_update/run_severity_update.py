@@ -15,9 +15,18 @@ Usage:
 """
 from __future__ import annotations
 
+import io
 import json
+import re
+import shutil
 import sys
 from pathlib import Path
+
+# Force UTF-8 stdout encoding on Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
@@ -26,11 +35,31 @@ if str(PROJECT_ROOT) not in sys.path:
 import pandas as pd
 from tqdm import tqdm
 
-from app_data_generator.config import PIPELINE_OUTPUT_DIR, FORECASTING_OUTPUT_CSV, PIPELINE_RESULTS_CSV, DB_PATH
+from Simulator.app_data_generator_for_offline.config import (
+    PIPELINE_OUTPUT_DIR,
+    FORECASTING_OUTPUT_CSV,
+    PIPELINE_RESULTS_CSV,
+    DB_PATH,
+    SEVERITY_UPDATE_OUTPUT_DIR,
+    SEVERITY_UPDATE_CSV,
+)
 
-SEVERITY_UPDATE_CSV = PIPELINE_OUTPUT_DIR / "severity_update_output.csv"
+from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
+from nodes.severity_update import SeverityUpdater
 
-from app_data_generator.storage.db_writer import DbWriter
+
+def _get_next_version(out_dir: Path) -> int:
+    """Find next version N by scanning out_dir for severity_update_output_N.csv files."""
+    pattern = re.compile(r"^severity_update_output_(\d+)\.csv$")
+    max_v = 0
+    if out_dir.exists():
+        for f in out_dir.iterdir():
+            m = pattern.match(f.name)
+            if m:
+                max_v = max(max_v, int(m.group(1)))
+    return max_v + 1
+
+from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 from nodes.severity_update import SeverityUpdater
 
 _OUTPUT_COLS = [
@@ -195,10 +224,18 @@ def main() -> None:
     out_df = pd.DataFrame(output_rows)
     cols   = [c for c in _OUTPUT_COLS if c in out_df.columns]
     out_df = out_df[cols]
-    SEVERITY_UPDATE_CSV.parent.mkdir(parents=True, exist_ok=True)
+    
+    SEVERITY_UPDATE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    version = _get_next_version(SEVERITY_UPDATE_OUTPUT_DIR)
+    versioned_csv = SEVERITY_UPDATE_OUTPUT_DIR / f"severity_update_output_{version}.csv"
+
+    out_df.to_csv(versioned_csv, index=False)
     out_df.to_csv(SEVERITY_UPDATE_CSV, index=False)
 
-    print(f"\n[run_severity_update] Done: {len(out_df):,} rows -> {SEVERITY_UPDATE_CSV}")
+    print(f"\n[run_severity_update] SUCCESS! Done: {len(out_df):,} rows")
+    print(f"  [CSV Output Version {version}] : {versioned_csv}")
+    print(f"  [CSV Output Latest]    : {SEVERITY_UPDATE_CSV}")
+    print(f"  [SQLite Table]         : node_severity_update in {DB_PATH.name}")
     print("\n-- Summary -----------------------------------------------------------")
     print(f"  Episodes processed  : {len(out_df):,}")
     if "revised_severity" in out_df.columns:

@@ -35,7 +35,7 @@ PROJECT_ROOT = _HERE.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from app_data_generator.config import HUMAN_GATE_TIMEOUT_SECONDS
+from Simulator.app_data_generator_for_offline.config import HUMAN_GATE_TIMEOUT_SECONDS
 
 
 class TimeoutManager:

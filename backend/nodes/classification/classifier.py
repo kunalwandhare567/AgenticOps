@@ -26,10 +26,18 @@ import subprocess
 import sys
 from pathlib import Path
 
-import numpy as np
+_HERE = Path(__file__).resolve().parent
+_PROJECT_ROOT = _HERE.parent.parent
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
 
-from app_data_generator.state import PipelineState
-from app_data_generator.config import (
+import warnings
+
+import numpy as np
+import pandas as pd
+
+from Simulator.app_data_generator_for_offline.state import PipelineState
+from Simulator.app_data_generator_for_offline.config import (
     ENGINEERED_FEAT_CSV,
     FEATURE_NAMES_JSON,
     LABEL_ENCODER_PKL,
@@ -242,11 +250,15 @@ def classify(state: PipelineState) -> PipelineState:
         except (TypeError, ValueError):
             row.append(0.0)
 
-    X = np.array([row], dtype=float)
+    # Use a named DataFrame so LightGBM receives the exact feature names it
+    # was trained with — eliminates the sklearn feature-name UserWarning.
+    X = pd.DataFrame([row], columns=_FEATURE_NAMES)
 
     try:
-        pred_enc  = _MODEL.predict(X)[0]
-        proba     = _MODEL.predict_proba(X)[0]
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", UserWarning)
+            pred_enc = _MODEL.predict(X)[0]
+            proba    = _MODEL.predict_proba(X)[0]
 
         # Decode int → string label
         predicted_mode = _LABEL_ENC.inverse_transform([int(pred_enc)])[0]
@@ -261,3 +273,38 @@ def classify(state: PipelineState) -> PipelineState:
         state.prediction_probability = 0.0
 
     return state
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="Classification Node — Standalone Test")
+    parser.add_argument("--all", action="store_true", help="Process ALL telemetry rows in DB")
+    parser.add_argument("--limit", type=int, default=1, help="Number of cycles to run (default: 1)")
+    args = parser.parse_args()
+
+    from Inference_langgraph.nodes import n01_collect, n02_feature_engineering, n04_classify, n10_db_writer
+    print("=" * 60)
+    print(f"  Classification Node — Standalone Test ({'ALL rows' if args.all else f'{args.limit} cycle(s)'})")
+    print("=" * 60)
+
+    count = 0
+    max_cycles = 999999 if args.all else args.limit
+
+    while count < max_cycles:
+        state1 = n01_collect.run({})
+        if state1.get("error") == "no_data":
+            print("No more telemetry data found in DB.")
+            break
+        state2 = n02_feature_engineering.run(state1)
+        state4 = n04_classify.run({**state1, **state2})
+        n10_db_writer.run({**state1, **state2, **state4})
+        count += 1
+        pred = state4.get("predicted_failure", "NONE")
+        prob = state4.get("prediction_probability", 0.0)
+        if not args.all or count % 1000 == 0 or count == 1:
+            print(f"[Cycle {count:>6}] Ep: {state1.get('episode_id'):<26} | Mode: {state1.get('failure_mode'):<20} | Pred: {pred}({prob:.2f})")
+
+    print("-" * 60)
+    print(f"Completed {count:,} cycle(s). Output saved to node_classification AND simulator_db.sqlite!")
+    print("=" * 60)
+
