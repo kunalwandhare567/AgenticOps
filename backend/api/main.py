@@ -6,6 +6,7 @@ Provides real-time endpoints and past episode history.
 """
 from __future__ import annotations
 
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -150,6 +151,68 @@ def get_live_feed_state() -> Dict[str, Any]:
 def get_live_feed_episodes() -> List[Dict[str, Any]]:
     """List all episodes from the live feed database (newest first)."""
     return LiveFeedService.get_live_feed_episodes()
+
+
+# ── Live Process Manager (Start/Stop Live Feed & LangGraph) ──────────────────
+_live_feed_proc = None
+_langgraph_proc = None
+
+@app.post("/api/live/start")
+def start_live_feed(speed: float = 1.0) -> Dict[str, Any]:
+    """Launch live telemetry simulator and LangGraph pipeline in background."""
+    global _live_feed_proc, _langgraph_proc
+    backend_dir = _HERE.parent
+
+    if _live_feed_proc is None or _live_feed_proc.poll() is not None:
+        sim_script = backend_dir / "Simulator" / "live_feed_simulator" / "run_live_feed.py"
+        _live_feed_proc = subprocess.Popen(
+            [sys.executable, str(sim_script), "--speed", str(speed)],
+            cwd=str(backend_dir),
+        )
+
+    if _langgraph_proc is None or _langgraph_proc.poll() is not None:
+        lg_script = backend_dir / "run_langgraph.py"
+        _langgraph_proc = subprocess.Popen(
+            [sys.executable, str(lg_script), "--live"],
+            cwd=str(backend_dir),
+        )
+
+    return {
+        "status": "started",
+        "message": "Live feed simulator and LangGraph pipeline started.",
+        "running": True,
+    }
+
+@app.post("/api/live/stop")
+def stop_live_feed() -> Dict[str, Any]:
+    """Terminate background live feed simulator and LangGraph pipeline."""
+    global _live_feed_proc, _langgraph_proc
+
+    if _live_feed_proc and _live_feed_proc.poll() is None:
+        _live_feed_proc.terminate()
+        _live_feed_proc = None
+
+    if _langgraph_proc and _langgraph_proc.poll() is None:
+        _langgraph_proc.terminate()
+        _langgraph_proc = None
+
+    return {
+        "status": "stopped",
+        "message": "Live feed simulation and LangGraph pipeline stopped.",
+        "running": False,
+    }
+
+@app.get("/api/live/simulation-status")
+@app.get("/api/live/status-check")
+def live_simulation_status() -> Dict[str, Any]:
+    """Check if background simulation and pipeline processes are running."""
+    sim_running = _live_feed_proc is not None and _live_feed_proc.poll() is None
+    lg_running = _langgraph_proc is not None and _langgraph_proc.poll() is None
+    return {
+        "running": sim_running or lg_running,
+        "simulator_running": sim_running,
+        "langgraph_running": lg_running,
+    }
 
 
 @app.get("/api/live-feed/status")

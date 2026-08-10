@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Activity, Radio } from "lucide-react";
+import { Activity, Radio, Play, Square } from "lucide-react";
 
-export default function TopHeader({ isLiveFeed = false, liveFeedMode = "", liveFeedTick = 0 }) {
+export default function TopHeader({
+  isLiveFeed = false,
+  liveFeedMode = "",
+  liveFeedTick = 0,
+  onToggleLiveFeed = () => {},
+}) {
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
 
@@ -28,9 +33,43 @@ export default function TopHeader({ isLiveFeed = false, liveFeedMode = "", liveF
         <h1>AIOps Incident Detection Dashboard</h1>
         <span className="topbar-subtitle">Real-time failure classification &amp; forecasting</span>
       </div>
-      <div className="topbar-right">
+      <div className="topbar-right" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
 
-        {/* Live Feed Badge — only shown when live mode is active */}
+        {/* Interactive Start / Stop Live Feed Button */}
+        <button
+          id="toggle-live-feed-btn"
+          onClick={onToggleLiveFeed}
+          title={isLiveFeed ? "Stop live feed simulation & LangGraph runner" : "Start live feed simulation & LangGraph runner"}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "6px",
+            padding: "6px 14px",
+            borderRadius: "8px",
+            fontSize: "12px",
+            fontWeight: 600,
+            cursor: "pointer",
+            border: isLiveFeed ? "1px solid rgba(239, 68, 68, 0.5)" : "1px solid rgba(34, 197, 94, 0.5)",
+            background: isLiveFeed ? "rgba(239, 68, 68, 0.15)" : "rgba(34, 197, 94, 0.15)",
+            color: isLiveFeed ? "#ef4444" : "#22c55e",
+            transition: "all 0.2s ease",
+            boxShadow: isLiveFeed ? "0 0 10px rgba(239, 68, 68, 0.2)" : "0 0 10px rgba(34, 197, 94, 0.2)",
+          }}
+        >
+          {isLiveFeed ? (
+            <>
+              <Square size={13} fill="currentColor" />
+              <span>Stop Live Feed</span>
+            </>
+          ) : (
+            <>
+              <Play size={13} fill="currentColor" />
+              <span>Start Live Feed</span>
+            </>
+          )}
+        </button>
+
+        {/* Live Feed Badge — shown when live mode is active */}
         {isLiveFeed && (
           <div
             className="status-chip"
@@ -54,7 +93,7 @@ export default function TopHeader({ isLiveFeed = false, liveFeedMode = "", liveF
                 animation: "livePulse 1s ease-in-out infinite",
               }}
             />
-            LIVE FEED
+            LIVE FEED ACTIVE
             {liveFeedMode && (
               <span style={{ opacity: 0.8, fontSize: "10px", fontWeight: 500 }}>
                 &nbsp;·&nbsp;{liveFeedMode.replace(/_/g, " ")}

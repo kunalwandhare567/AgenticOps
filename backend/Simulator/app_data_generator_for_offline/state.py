@@ -62,6 +62,6 @@ class SimulatorState:
 
 # Re-export PipelineState so all node files can use:
 #     from Simulator.app_data_generator_for_offline.state import PipelineState
-from nodes.collect.state import PipelineState  # noqa: F401
+from Inference_langgraph.nodes.collect.state import PipelineState  # noqa: F401
 
 __all__ = ["SimulatorState", "PipelineState"]

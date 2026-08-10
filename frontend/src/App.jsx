@@ -197,10 +197,26 @@ export default function App() {
     }
   };
 
-  // Fetch episodes list on load
+  // Fetch episodes list and check live status on load
   useEffect(() => {
     fetchEpisodes();
     fetchReliabilitySummary();
+
+    // Check if live simulation is already running on backend
+    const checkLiveStatus = async () => {
+      try {
+        const res = await fetch(`${BACKEND_URL}/api/live/simulation-status`);
+        if (res.ok) {
+          const data = await res.json();
+          if (data.running) {
+            setIsLiveFeed(true);
+            setIsLive(false);
+          }
+        }
+      } catch {}
+    };
+    checkLiveStatus();
+
     const intervalEp = setInterval(fetchEpisodes, 10000); // refresh list every 10s
     return () => clearInterval(intervalEp);
   }, []);
@@ -291,19 +307,25 @@ export default function App() {
     return () => clearInterval(interval);
   }, [isLive, isLiveFeed]);
 
-  // Toggle live feed mode
-  const handleToggleLiveFeed = () => {
+  // Toggle live feed mode (triggers backend simulation & LangGraph process)
+  const handleToggleLiveFeed = async () => {
     const next = !isLiveFeed;
     setIsLiveFeed(next);
-    if (next) {
-      // Switch to live feed: stop historical polling
-      setIsLive(false);
-      setSelectedEpisodeId(null);
-      setIncident(DEMO_FALLBACK); // clear stale historical data while waiting for first SSE push
-    } else {
-      // Switch back to historical
-      setIsLive(true);
-      setIncident(DEMO_FALLBACK);
+    try {
+      if (next) {
+        // Switch to live feed: trigger backend to start live feed simulator & LangGraph runner
+        await fetch(`${BACKEND_URL}/api/live/start`, { method: "POST" });
+        setIsLive(false);
+        setSelectedEpisodeId(null);
+        setIncident(DEMO_FALLBACK); // clear stale historical data while waiting for first push
+      } else {
+        // Switch back to historical: trigger backend to stop live feed simulator & LangGraph runner
+        await fetch(`${BACKEND_URL}/api/live/stop`, { method: "POST" });
+        setIsLive(true);
+        setIncident(DEMO_FALLBACK);
+      }
+    } catch (err) {
+      console.error("Failed to toggle live feed simulation on backend:", err);
     }
   };
 
@@ -401,6 +423,7 @@ export default function App() {
           isLiveFeed={isLiveFeed}
           liveFeedMode={incident?.failure_mode || ""}
           liveFeedTick={incident?.cycle || 0}
+          onToggleLiveFeed={handleToggleLiveFeed}
         />
         
         {/* NOC grid displaying 7 core metrics graphs */}

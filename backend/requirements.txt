@@ -1,7 +1,7 @@
-# AIOps Backend — Python Dependencies
+# AIOps Backend & QueryLangGraph — Python Dependencies
 # Install: pip install -r requirements.txt
 
-# Core data
+# Core Data & Numerics
 pandas>=1.5.0
 numpy>=1.23.0
 
@@ -22,22 +22,27 @@ reliability>=0.8.0
 # Hyperparameter Optimization
 optuna>=3.4.0
 
-# LangGraph Pipeline Orchestration
+# LangGraph Pipeline Orchestration & LLM
 langgraph>=0.2.0
+google-genai>=0.1.0
+google-auth>=2.0.0
 
-# Log parsing
+# Log Parsing & Mining
 drain3>=0.9.11
 
-# Progress bars
+# Progress Bars & CLI Utilities
 tqdm>=4.64.0
 
 # Visualization
 matplotlib>=3.7.0
 
-# API Web Server
+# API Web Server & Microservices
 fastapi>=0.95.0
 uvicorn>=0.20.0
 pydantic>=2.0.0
 
-# Configuration parsing
+# Configuration Parsing
 PyYAML>=6.0
+
+# Testing
+pytest>=7.0.0

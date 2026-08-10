@@ -67,14 +67,14 @@ from Simulator.app_data_generator_for_offline.config import (
 )
 
 # ── Import node init functions (called once at startup) ───────────────────────
-from Inference_langgraph.nodes import n01_collect
-from Inference_langgraph.nodes import n02_feature_engineering
-from Inference_langgraph.nodes import n03_prelim_severity
-from Inference_langgraph.nodes import n04_classify
-from Inference_langgraph.nodes import n05_tumbling_window
-from Inference_langgraph.nodes import n07_severity_update
-from Inference_langgraph.nodes import n08_reliability
-from Inference_langgraph.nodes import n10_db_writer
+from Inference_langgraph.Graph_node import n01_collect
+from Inference_langgraph.Graph_node import n02_feature_engineering
+from Inference_langgraph.Graph_node import n03_prelim_severity
+from Inference_langgraph.Graph_node import n04_classify
+from Inference_langgraph.Graph_node import n05_tumbling_window
+from Inference_langgraph.Graph_node import n07_severity_update
+from Inference_langgraph.Graph_node import n08_reliability
+from Inference_langgraph.Graph_node import n10_db_writer
 from Inference_langgraph.graph import build_graph, get_graph_ascii
 from Inference_langgraph.state import make_empty_state
 
@@ -213,7 +213,7 @@ def run_pipeline(poll_ms: int, verbose: bool, dry_run: bool) -> None:
             # Carry forward the last_processed_id so we don't re-process rows
             # (The graph uses module-level state in n01_collect, but we also
             #  pass it here for visibility / future checkpointing replay.)
-            from Inference_langgraph.nodes.n01_collect import _lock as _cl
+            from Inference_langgraph.Graph_node.n01_collect import _lock as _cl
             # We don't expose last_processed_id externally; n01_collect manages it
 
             # ── Run the graph ─────────────────────────────────────────────────

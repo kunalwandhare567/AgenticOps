@@ -1,1 +1,1 @@
-"""LangGraph pipeline node wrappers package."""
+"""nodes — Pipeline stage implementations."""

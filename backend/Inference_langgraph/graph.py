@@ -33,7 +33,7 @@ except ImportError:
     _HAS_SAVER = False
 
 from Inference_langgraph.state import AIOpsLangState
-from Inference_langgraph.nodes import (
+from Inference_langgraph.Graph_node import (
     n01_collect,
     n02_feature_engineering,
     n03_prelim_severity,

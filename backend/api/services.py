@@ -274,15 +274,15 @@ class AIOpsDashboardService:
             metric_val = str(charts_data.get(critical_metric, {}).get("current_value", "0.50"))
 
         # Reliability & 4-Group Weibull parameters calculation
-        from nodes.reliability.extractor import FAILURE_GROUP_MAP
-        from nodes.reliability.weibull_fitter import GROUPS, fit_weibull_censored
+        from Inference_langgraph.nodes.reliability.extractor import FAILURE_GROUP_MAP
+        from Inference_langgraph.nodes.reliability.weibull_fitter import GROUPS, fit_weibull_censored
 
         active_group = FAILURE_GROUP_MAP.get(failure_mode, "Healthy / Unassigned")
         elapsed_s = float(pip_row.get("elapsed_s", 0.0))
 
         group_beta = 2.0
         group_eta = 46.5
-        life_csv = _HERE.parent / "nodes" / "reliability" / "output" / "life_data_extracted.csv"
+        life_csv = _HERE.parent / "Inference_langgraph" / "nodes" / "reliability" / "output" / "life_data_extracted.csv"
         if life_csv.exists() and active_group in GROUPS:
             try:
                 df_life = pd.read_csv(life_csv)
@@ -350,11 +350,11 @@ class AIOpsDashboardService:
     @staticmethod
     def get_reliability_summary() -> Dict[str, Any]:
         """Compute and return 4-group Weibull parameters, KM step points, and Weibull curves."""
-        from nodes.reliability.weibull_fitter import (
+        from Inference_langgraph.nodes.reliability.weibull_fitter import (
             GROUPS, fit_weibull_censored, kaplan_meier, weibull_survival
         )
 
-        life_csv = _HERE.parent / "nodes" / "reliability" / "output" / "life_data_extracted.csv"
+        life_csv = _HERE.parent / "Inference_langgraph" / "nodes" / "reliability" / "output" / "life_data_extracted.csv"
         if not life_csv.exists():
             return {"groups": {}, "status": "no_data"}
 
@@ -484,13 +484,13 @@ class HumanGateService:
     @staticmethod
     def _get_manager():
         """Lazy-import InterruptManager to avoid circular imports at startup."""
-        from nodes.human_gate.interrupt_manager import get_interrupt_manager
+        from Inference_langgraph.nodes.human_gate.interrupt_manager import get_interrupt_manager
         return get_interrupt_manager()
 
     @staticmethod
     def _get_logger():
         """Lazy-import AuditLogger."""
-        from nodes.human_gate.audit_logger import AuditLogger
+        from Inference_langgraph.nodes.human_gate.audit_logger import AuditLogger
         return AuditLogger()
 
     # ------------------------------------------------------------------

@@ -41,13 +41,13 @@ from Simulator.app_data_generator_for_offline.config import (
     PRELIM_SEVERITY_CSV, TUMBLING_WINDOW_CSV,
 )
 from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
-from nodes.collect.queue_bridge import TelemetryQueue
+from Inference_langgraph.nodes.collect.queue_bridge import TelemetryQueue
 from Simulator.app_data_generator_for_offline.state import PipelineState
-from nodes.preliminary_severity.severity_node import SeverityNode
-from nodes.classification.classifier import load_classifier, classify
-from nodes.tumbling_window.tumbling_window import TumblingWindow
-from nodes.feature_engineering.orchestrator import run_feature_engineering_from_raw
-from nodes.feature_engineering.log_features import (
+from Inference_langgraph.nodes.preliminary_severity.severity_node import SeverityNode
+from Inference_langgraph.nodes.classification.classifier import load_classifier, classify
+from Inference_langgraph.nodes.tumbling_window.tumbling_window import TumblingWindow
+from Inference_langgraph.nodes.feature_engineering.orchestrator import run_feature_engineering_from_raw
+from Inference_langgraph.nodes.feature_engineering.log_features import (
     load_template_miner, load_known_template_ids,
 )
 

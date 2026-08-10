@@ -57,7 +57,7 @@ from Simulator.app_data_generator_for_offline.generators.log_generator import Lo
 from Simulator.app_data_generator_for_offline.generators.trace_generator import TraceGenerator
 from Simulator.app_data_generator_for_offline.storage.db_writer import DbWriter
 from Simulator.app_data_generator_for_offline.storage.csv_writer import CsvWriter
-from nodes.collect.queue_bridge import TelemetryQueue
+from Inference_langgraph.nodes.collect.queue_bridge import TelemetryQueue
 
 
 # ─────────────────────────────────────────────────────────────────────────────
