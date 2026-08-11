@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentinel AIOps — Complete Technical Documentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   PRINT + PAGE SETUP
+═══════════════════════════════════════════════════════════ */
+@page {
+  size: Letter;
+  margin: 0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { background:#050505; color:#F5F5F5; font-family:'Inter',Arial,sans-serif; font-size:12px; line-height:1.65; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════════════════ */
+:root {
+  --bg:       #050505;
+  --bg2:      #0B0B0B;
+  --card:     #111111;
+  --code-bg:  #0D1117;
+  --border:   #282828;
+  --border2:  #1E1E1E;
+  --orange:   #F0783C;
+  --green:    #57C98A;
+  --yellow:   #F2B134;
+  --blue:     #6F8FE0;
+  --red:      #E85C55;
+  --text:     #F5F5F5;
+  --text2:    #C4C4C4;
+  --muted:    #888888;
+  --tbl-hdr:  #1A0F06;
+  --tbl-row:  #0C0C0C;
+  --tbl-alt:  #121212;
+  --page-w:   8.5in;
+  --page-h:   11in;
+  --pad-x:    0.62in;
+  --pad-y:    0.55in;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PAGE CONTAINER
+═══════════════════════════════════════════════════════════ */
+.page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  padding: var(--pad-y) var(--pad-x);
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  break-before: page;
+  page-break-before: always;
+}
+.page:first-child { break-before: auto; page-break-before: auto; }
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════════════════ */
+.footer {
+  position: absolute;
+  bottom: 0.3in;
+  left: var(--pad-x);
+  right: var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:9px;
+  color: var(--muted);
+  border-top: 1px solid var(--border2);
+  padding-top: 8px;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:0.3px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════════════════════ */
+.label {
+  font-size:10px; font-weight:700; text-transform:uppercase;
+  letter-spacing:3px; color:var(--orange); margin-bottom:8px;
+}
+.section-label {
+  font-size:10px; font-weight:700; text-transform:uppercase;
+  letter-spacing:3px; color:var(--orange); margin-bottom:10px;
+}
+.page-title {
+  font-size:34px; font-weight:800; color:#fff; line-height:1.12;
+  margin-bottom:18px; letter-spacing:-0.5px;
+}
+.page-title span { color:var(--orange); }
+.section-title {
+  font-size:28px; font-weight:800; color:#fff; line-height:1.15;
+  margin-bottom:14px; letter-spacing:-0.3px;
+}
+.sub-title {
+  font-size:17px; font-weight:700; color:#fff; margin:22px 0 10px;
+}
+.sub2-title {
+  font-size:14px; font-weight:700; color:var(--text2); margin:16px 0 8px;
+}
+.lead {
+  font-size:13px; font-style:italic; color:var(--text2); line-height:1.7;
+  border-left:3px solid var(--orange); padding-left:14px;
+  margin-bottom:20px;
+}
+p { font-size:12px; color:var(--text2); margin-bottom:12px; line-height:1.7; }
+strong { color:#fff; font-weight:600; }
+em { color:var(--orange); font-style:normal; }
+
+/* ═══════════════════════════════════════════════════════════
+   HORIZONTAL RULE
+═══════════════════════════════════════════════════════════ */
+.accent-line { height:2px; background:linear-gradient(90deg,var(--orange),transparent); margin:18px 0; border:none; }
+.divider { height:1px; background:var(--border2); margin:16px 0; border:none; }
+
+/* ═══════════════════════════════════════════════════════════
+   COVER STYLES
+═══════════════════════════════════════════════════════════ */
+.cover { padding:0; display:flex; flex-direction:column; justify-content:space-between; }
+.cover-bg {
+  position:absolute; inset:0;
+  background: linear-gradient(135deg, #050505 0%, #0A0710 30%, #070507 60%, #050505 100%);
+}
+.cover-bg::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:52%;
+  background: linear-gradient(180deg, #0C0815 0%, #070512 40%, transparent 100%);
+}
+.cover-bg::after {
+  content:''; position:absolute; top:10%; right:0; width:55%; height:65%;
+  background: radial-gradient(ellipse at top right, rgba(240,120,60,0.06) 0%, transparent 65%);
+}
+.cover-panel1 {
+  position:absolute; top:8%; left:-2%; width:30%; height:28%;
+  background:linear-gradient(135deg,#0D0A18,#080612); border:1px solid #1A1530;
+  opacity:0.9;
+}
+.cover-panel2 {
+  position:absolute; top:30%; right:-1%; width:22%; height:40%;
+  background:linear-gradient(135deg,#0F0C09,#120E06); border:1px solid #1E1808;
+  opacity:0.8;
+}
+.cover-panel3 {
+  position:absolute; bottom:15%; left:20%; width:40%; height:18%;
+  background:linear-gradient(90deg,#0A0A0D,#0D0D10); border:1px solid #181820;
+  opacity:0.6;
+}
+.cover-content {
+  position:relative; z-index:10; padding:0.65in 0.7in; height:100%;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.cover-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:4px; color:var(--orange); margin-bottom:16px; }
+.cover-title { font-size:46px; font-weight:900; color:#fff; line-height:1.08; margin-bottom:8px; letter-spacing:-1px; }
+.cover-subtitle { font-size:46px; font-weight:900; color:var(--orange); line-height:1.08; margin-bottom:30px; letter-spacing:-1px; }
+.cover-desc { font-size:13px; color:var(--text2); line-height:1.75; max-width:70%; margin-bottom:22px; }
+.pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:30px; }
+.pill {
+  font-size:10px; font-weight:600; padding:5px 14px; border-radius:20px;
+  border:1px solid #333; color:var(--text2); background:rgba(255,255,255,0.04);
+  letter-spacing:0.5px;
+}
+.cover-meta { border-top:1px solid #222; padding-top:20px; display:grid; grid-template-columns:1fr 1fr; gap:10px 30px; }
+.meta-item { font-size:10px; }
+.meta-key { color:var(--muted); text-transform:uppercase; letter-spacing:2px; font-size:9px; margin-bottom:3px; }
+.meta-val { color:var(--text2); font-family:'JetBrains Mono',monospace; font-size:10px; }
+
+/* ═══════════════════════════════════════════════════════════
+   CALLOUT CARDS
+═══════════════════════════════════════════════════════════ */
+.callout {
+  border-radius:8px; padding:18px 20px; margin:18px 0;
+  background:var(--card); border:1px solid var(--border);
+  break-inside:avoid; page-break-inside:avoid;
+}
+.callout-orange { border-left:4px solid var(--orange); background:#150D07; }
+.callout-green  { border-left:4px solid var(--green);  background:#07120D; }
+.callout-blue   { border-left:4px solid var(--blue);   background:#080C18; }
+.callout-yellow { border-left:4px solid var(--yellow); background:#141007; }
+.callout-red    { border-left:4px solid var(--red);    background:#150808; }
+.callout-label {
+  font-size:9px; font-weight:800; text-transform:uppercase;
+  letter-spacing:3px; margin-bottom:8px;
+}
+.callout-orange .callout-label { color:var(--orange); }
+.callout-green  .callout-label { color:var(--green); }
+.callout-blue   .callout-label { color:var(--blue); }
+.callout-yellow .callout-label { color:var(--yellow); }
+.callout-red    .callout-label { color:var(--red); }
+.callout p { margin-bottom:0; }
+
+/* ═══════════════════════════════════════════════════════════
+   METRIC CARDS
+═══════════════════════════════════════════════════════════ */
+.metrics-row { display:grid; gap:12px; margin:18px 0; }
+.metrics-3 { grid-template-columns:repeat(3,1fr); }
+.metrics-4 { grid-template-columns:repeat(4,1fr); }
+.metrics-5 { grid-template-columns:repeat(5,1fr); }
+.metric-card {
+  background:var(--card); border:1px solid var(--border);
+  border-top:3px solid var(--orange); border-radius:8px;
+  padding:16px 14px; text-align:center;
+  break-inside:avoid;
+}
+.metric-num { font-size:30px; font-weight:900; color:#fff; line-height:1; margin-bottom:6px; }
+.metric-num.orange { color:var(--orange); }
+.metric-num.green  { color:var(--green); }
+.metric-num.blue   { color:var(--blue); }
+.metric-label { font-size:9px; font-weight:700; text-transform:uppercase; letter-spacing:2px; color:var(--muted); }
+
+/* ═══════════════════════════════════════════════════════════
+   STATUS BADGES
+═══════════════════════════════════════════════════════════ */
+.badge { display:inline-block; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; padding:3px 9px; border-radius:12px; }
+.badge-green  { background:#0D2018; color:var(--green);  border:1px solid #1A4030; }
+.badge-yellow { background:#1A1408; color:var(--yellow); border:1px solid #362808; }
+.badge-orange { background:#1A1008; color:var(--orange); border:1px solid #3A2010; }
+.badge-blue   { background:#0A0E1E; color:var(--blue);   border:1px solid #1A2248; }
+.badge-red    { background:#180A0A; color:var(--red);    border:1px solid #341414; }
+
+/* ═══════════════════════════════════════════════════════════
+   TABLES
+═══════════════════════════════════════════════════════════ */
+.tbl-wrap { overflow:hidden; border-radius:8px; border:1px solid var(--border); margin:16px 0; break-inside:avoid; page-break-inside:avoid; }
+table { width:100%; border-collapse:collapse; }
+thead th {
+  background:var(--tbl-hdr); color:var(--orange); font-weight:700;
+  font-size:9.5px; text-transform:uppercase; letter-spacing:1.5px;
+  padding:11px 14px; text-align:left; border-bottom:1px solid #2A1A0A;
+}
+tbody tr { border-bottom:1px solid var(--border2); }
+tbody tr:nth-child(even) { background:var(--tbl-alt); }
+tbody tr:nth-child(odd)  { background:var(--tbl-row); }
+tbody td { padding:9px 14px; font-size:11px; color:var(--text2); vertical-align:top; }
+tbody td:first-child { color:#fff; font-weight:500; }
+.mono { font-family:'JetBrains Mono',monospace; font-size:10px; }
+
+/* ═══════════════════════════════════════════════════════════
+   CODE BLOCKS
+═══════════════════════════════════════════════════════════ */
+.code-block {
+  background:var(--code-bg); border:1px solid #1C2030;
+  border-left:4px solid var(--blue); border-radius:8px;
+  padding:18px 20px; margin:16px 0; overflow:hidden;
+  break-inside:avoid; page-break-inside:avoid;
+}
+.code-block pre {
+  font-family:'JetBrains Mono',monospace; font-size:10.5px;
+  color:#A8D8FF; line-height:1.65; white-space:pre-wrap; word-break:break-all;
+}
+.code-block .kw  { color:#FF79C6; }
+.code-block .fn  { color:#50FA7B; }
+.code-block .str { color:#F1FA8C; }
+.code-block .cm  { color:#6272A4; font-style:italic; }
+.code-block .nm  { color:#BD93F9; }
+.code-label { font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:2px; margin-bottom:8px; font-family:'JetBrains Mono',monospace; }
+
+/* ═══════════════════════════════════════════════════════════
+   FORMULA BLOCK
+═══════════════════════════════════════════════════════════ */
+.formula-block {
+  background:#0A0A12; border:1px solid #1C1C2E; border-radius:8px;
+  padding:16px 24px; margin:14px 0; text-align:center;
+  break-inside:avoid;
+}
+.formula { font-size:14px; color:#fff; font-family:'JetBrains Mono',monospace; letter-spacing:0.5px; margin-bottom:8px; }
+.formula-vars { font-size:10px; color:var(--muted); line-height:1.7; }
+.formula-vars span { color:var(--text2); }
+
+/* ═══════════════════════════════════════════════════════════
+   BEFORE/AFTER CARDS
+═══════════════════════════════════════════════════════════ */
+.ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0; }
+.ba-card { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:16px; }
+.ba-card.before { border-top:3px solid var(--red); }
+.ba-card.after  { border-top:3px solid var(--green); }
+.ba-label { font-size:9px; font-weight:800; text-transform:uppercase; letter-spacing:3px; margin-bottom:12px; }
+.ba-card.before .ba-label { color:var(--red); }
+.ba-card.after  .ba-label { color:var(--green); }
+.ba-item { font-size:11px; color:var(--text2); padding:5px 0; border-bottom:1px solid var(--border2); line-height:1.5; }
+.ba-item:last-child { border:none; }
+
+/* ═══════════════════════════════════════════════════════════
+   TWO-COLUMN
+═══════════════════════════════════════════════════════════ */
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:14px 0; }
+.three-col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:14px 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   FEATURE LIST
+═══════════════════════════════════════════════════════════ */
+.feature-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:14px 0; }
+.feature-pill {
+  background:#0F0F0F; border:1px solid var(--border); border-radius:6px;
+  padding:7px 10px; font-family:'JetBrains Mono',monospace; font-size:9px;
+  color:var(--text2); text-align:center;
+}
+.feature-pill.metric { border-left:2px solid var(--blue); }
+.feature-pill.log    { border-left:2px solid var(--green); }
+
+/* ═══════════════════════════════════════════════════════════
+   TOC TABLE
+═══════════════════════════════════════════════════════════ */
+.toc-table { width:100%; border-collapse:collapse; }
+.toc-table tr { border-bottom:1px solid var(--border2); }
+.toc-table td { padding:10px 14px; font-size:11.5px; }
+.toc-num { color:var(--orange); font-weight:800; font-size:12px; width:40px; }
+.toc-section { color:#fff; font-weight:600; }
+.toc-desc { color:var(--muted); font-size:10.5px; font-style:italic; }
+
+/* ═══════════════════════════════════════════════════════════
+   NODE CARD
+═══════════════════════════════════════════════════════════ */
+.node-card {
+  background:var(--card); border:1px solid var(--border);
+  border-left:3px solid var(--orange); border-radius:8px;
+  padding:14px 16px; margin:10px 0;
+  break-inside:avoid;
+}
+.node-id { font-size:9px; font-weight:800; text-transform:uppercase; letter-spacing:2px; color:var(--orange); margin-bottom:5px; font-family:'JetBrains Mono',monospace; }
+.node-name { font-size:14px; font-weight:700; color:#fff; margin-bottom:6px; }
+.node-desc { font-size:11px; color:var(--text2); line-height:1.65; }
+
+/* ═══════════════════════════════════════════════════════════
+   API CARD
+═══════════════════════════════════════════════════════════ */
+.api-card {
+  background:#0A0A0A; border:1px solid var(--border2);
+  border-radius:6px; margin:8px 0; padding:12px 14px;
+}
+.api-method {
+  display:inline-block; font-size:9px; font-weight:800;
+  text-transform:uppercase; letter-spacing:1.5px; padding:2px 8px;
+  border-radius:4px; margin-right:8px; font-family:'JetBrains Mono',monospace;
+}
+.api-get    { background:#0D1E1A; color:var(--green); }
+.api-post   { background:#0E1018; color:var(--blue); }
+.api-patch  { background:#1A150A; color:var(--yellow); }
+.api-path   { font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; font-weight:600; }
+.api-desc   { font-size:10.5px; color:var(--muted); margin-top:5px; }
+
+/* ═══════════════════════════════════════════════════════════
+   MATRIX TABLE
+═══════════════════════════════════════════════════════════ */
+.matrix-table { width:100%; border-collapse:collapse; margin:14px 0; }
+.matrix-table th, .matrix-table td { border:1px solid var(--border); padding:10px 14px; text-align:center; font-size:11px; }
+.matrix-table th { background:var(--tbl-hdr); color:var(--orange); font-size:9.5px; text-transform:uppercase; letter-spacing:1px; }
+.matrix-table td { background:var(--tbl-row); }
+.matrix-p1 { background:#1A0808 !important; color:var(--red) !important; font-weight:700; }
+.matrix-p2 { background:#1A0F04 !important; color:var(--orange) !important; font-weight:700; }
+.matrix-p3 { background:#101A08 !important; color:var(--yellow) !important; font-weight:700; }
+.matrix-p4 { background:#08100A !important; color:var(--green) !important; font-weight:700; }
+
+/* ═══════════════════════════════════════════════════════════
+   SUMMARY CALLOUT (end of doc)
+═══════════════════════════════════════════════════════════ */
+.summary-box {
+  background:#0C1A0C; border:2px solid var(--green);
+  border-radius:10px; padding:28px 30px; margin:20px 0;
+}
+.summary-box .summary-label { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:3px; color:var(--green); margin-bottom:16px; }
+.summary-box ol { padding-left:20px; }
+.summary-box li { font-size:12px; color:var(--text2); padding:5px 0; line-height:1.7; }
+.summary-box li strong { color:#fff; }
+
+/* ═══════════════════════════════════════════════════════════
+   HORIZONTAL STEPS
+═══════════════════════════════════════════════════════════ */
+.steps-row { display:flex; align-items:flex-start; gap:0; margin:16px 0; }
+.step-item { flex:1; text-align:center; position:relative; }
+.step-item:not(:last-child)::after {
+  content:'→'; position:absolute; right:-10px; top:14px;
+  color:var(--orange); font-size:16px; font-weight:700;
+}
+.step-box {
+  background:var(--card); border:1px solid var(--border);
+  border-top:2px solid var(--orange); border-radius:6px;
+  padding:12px 8px; margin:0 10px;
+}
+.step-num { font-size:9px; font-weight:800; color:var(--orange); text-transform:uppercase; letter-spacing:2px; margin-bottom:4px; }
+.step-label { font-size:10px; font-weight:600; color:#fff; }
+.step-detail { font-size:9px; color:var(--muted); margin-top:3px; }
+
+/* ═══════════════════════════════════════════════════════════
+   FLOW LIST
+═══════════════════════════════════════════════════════════ */
+.flow-list { margin:14px 0; }
+.flow-item { display:flex; align-items:flex-start; gap:12px; padding:8px 0; border-bottom:1px solid var(--border2); }
+.flow-item:last-child { border:none; }
+.flow-num { width:22px; height:22px; border-radius:50%; background:var(--orange); color:#000; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.flow-content { flex:1; }
+.flow-title { font-size:11.5px; font-weight:700; color:#fff; margin-bottom:3px; }
+.flow-desc  { font-size:10.5px; color:var(--muted); line-height:1.6; }
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT: break avoidance
+═══════════════════════════════════════════════════════════ */
+h2,h3,h4 { break-after:avoid; page-break-after:avoid; }
+.tbl-wrap, .code-block, .callout, .node-card, .metric-card { break-inside:avoid; page-break-inside:avoid; }
+</style>
+</head>
+<body>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 1 — COVER
+████████████████████████████████████████████████████████ -->
+<div class="page cover" style="min-height:11in; padding:0;">
+  <div class="cover-bg"></div>
+  <div class="cover-panel1"></div>
+  <div class="cover-panel2"></div>
+  <div class="cover-panel3"></div>
+  <div class="cover-content">
+    <div>
+      <div class="cover-label">Complete Technical Documentation</div>
+      <div class="cover-title">Sentinel AIOps:</div>
+      <div class="cover-subtitle">AI-Powered Incident Intelligence</div>
+      <div class="cover-desc">
+        An agentic AIOps platform that correlates metrics, logs, and distributed traces,
+        then drives a 10-node LangGraph inference pipeline to detect, classify, forecast,
+        and manage infrastructure incidents — all in real time, without human triage.
+      </div>
+      <hr class="accent-line" style="max-width:60%;">
+      <div class="pills">
+        <span class="pill">AI Incident Intelligence</span>
+        <span class="pill">Metrics + Logs + Traces</span>
+        <span class="pill">LangGraph StateGraph</span>
+        <span class="pill">LightGBM Classifier</span>
+        <span class="pill">Forecasting + TTF</span>
+        <span class="pill">Weibull + Kaplan-Meier</span>
+        <span class="pill">Human-in-the-Loop Gate</span>
+        <span class="pill">FastAPI + React + Vite</span>
+        <span class="pill">QueryLangGraph Chatbot</span>
+        <span class="pill">SSE Real-Time Push</span>
+      </div>
+    </div>
+    <div>
+      <div class="metrics-row metrics-5" style="margin-bottom:24px;">
+        <div class="metric-card"><div class="metric-num orange">13</div><div class="metric-label">Failure Modes</div></div>
+        <div class="metric-card"><div class="metric-num orange">10</div><div class="metric-label">Pipeline Nodes</div></div>
+        <div class="metric-card"><div class="metric-num orange">37</div><div class="metric-label">ML Features</div></div>
+        <div class="metric-card"><div class="metric-num orange">20+</div><div class="metric-label">API Endpoints</div></div>
+        <div class="metric-card"><div class="metric-num orange">11</div><div class="metric-label">DB Tables</div></div>
+      </div>
+      <div class="cover-meta">
+        <div class="meta-item"><div class="meta-key">Project</div><div class="meta-val">Sentinel AIOps</div></div>
+        <div class="meta-item"><div class="meta-key">Repository</div><div class="meta-val">kunalwandhare567/AgenticOps</div></div>
+        <div class="meta-item"><div class="meta-key">Stack</div><div class="meta-val">Python · FastAPI · LangGraph · LightGBM · SQLite · React/Vite</div></div>
+        <div class="meta-item"><div class="meta-key">Compiled</div><div class="meta-val">August 2026 · Author: Kunal Wandhare</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 2 — CONTENTS
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="label">Contents</div>
+  <div class="section-title">What This Document Covers</div>
+  <p style="margin-bottom:20px; color:var(--muted);">
+    Sentinel AIOps — from the problem it solves to every algorithm, formula, API endpoint, and database table it uses.
+  </p>
+  <div class="tbl-wrap">
+    <table class="toc-table">
+      <thead><tr><th style="width:45px;">#</th><th>Section</th><th>What you will understand after reading it</th></tr></thead>
+      <tbody>
+        <tr><td class="toc-num">01</td><td class="toc-section">The Incident Problem</td><td class="toc-desc">Why traditional monitoring creates alert overload, manual triage, and MTTD blindspots</td></tr>
+        <tr><td class="toc-num">02</td><td class="toc-section">What Sentinel AIOps Is</td><td class="toc-desc">The complete platform — objectives, operating modes, scope, and impact</td></tr>
+        <tr><td class="toc-num">03</td><td class="toc-section">System Architecture</td><td class="toc-desc">Four-process architecture, communication map, port assignments, unified launch</td></tr>
+        <tr><td class="toc-num">04</td><td class="toc-section">Telemetry Architecture</td><td class="toc-desc">Metrics, logs, traces — the three pillars, 13 failure modes, and how telemetry is correlated</td></tr>
+        <tr><td class="toc-num">05</td><td class="toc-section">Feature Engineering</td><td class="toc-desc">How 37 features are extracted from raw telemetry — 32 metrics + 5 log features + CB encoding</td></tr>
+        <tr><td class="toc-num">06</td><td class="toc-section">ML Classification — LightGBM</td><td class="toc-desc">Gradient boosting model, Optuna HPO, Drain3 log parsing, auto-training, evaluation</td></tr>
+        <tr><td class="toc-num">07</td><td class="toc-section">LangGraph Inference Pipeline</td><td class="toc-desc">All 10 nodes, the AIOpsLangState schema, conditional routing, checkpointing, error handling</td></tr>
+        <tr><td class="toc-num">08</td><td class="toc-section">Tumbling Window</td><td class="toc-desc">10-cycle majority-vote smoother — formula, worked example, margin, flap suppression</td></tr>
+        <tr><td class="toc-num">09</td><td class="toc-section">Forecasting & Time-to-Failure</td><td class="toc-desc">Mode-specific routing, ARIMA, linear, exponential algorithms — formulas and examples</td></tr>
+        <tr><td class="toc-num">10</td><td class="toc-section">Severity Update & Hysteresis</td><td class="toc-desc">4-step Impact × Urgency matrix, dwell counter formula, escalation vs de-escalation logic</td></tr>
+        <tr><td class="toc-num">11</td><td class="toc-section">Reliability & Survival Analysis</td><td class="toc-desc">Kaplan-Meier and 2-Parameter Weibull MLE — formulas, 4 failure groups, survival probability</td></tr>
+        <tr><td class="toc-num">12</td><td class="toc-section">Human-in-the-Loop Gate</td><td class="toc-desc">Escalation trigger condition, review lifecycle, auto-approval timeout, audit trail</td></tr>
+        <tr><td class="toc-num">13</td><td class="toc-section">QueryLangGraph Chatbot</td><td class="toc-desc">11-node guarded chatbot pipeline — guardrails, intent routing, retrieval, LLM synthesis</td></tr>
+        <tr><td class="toc-num">14</td><td class="toc-section">API & SSE Architecture</td><td class="toc-desc">All 20 REST endpoints + SSE broadcaster — request-response flows, subprocess management</td></tr>
+        <tr><td class="toc-num">15</td><td class="toc-section">Frontend Dashboard</td><td class="toc-desc">React/Vite SPA — 13 components, SSE lifecycle, live feed toggle, chatbot panel</td></tr>
+        <tr><td class="toc-num">16</td><td class="toc-section">Database & Persistence</td><td class="toc-desc">Two SQLite databases, WAL mode, all 11 table schemas, DbWriter atomic writes</td></tr>
+        <tr><td class="toc-num">17</td><td class="toc-section">Technology Stack & Conclusion</td><td class="toc-desc">Full technology rationale, outputs, quick reference, 10 golden rules, future scope</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout callout-orange" style="margin-top:22px;">
+    <div class="callout-label">One-Line Summary</div>
+    <p style="font-size:13px; color:#fff; font-style:italic;">
+      Sentinel AIOps transforms raw microservice telemetry into a classified, severity-graded, time-to-failure-predicted incident record — autonomously, in under 500 milliseconds per cycle, using a 10-node LangGraph AI pipeline.
+    </p>
+  </div>
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>AI Incident Intelligence</span>
+    <span>2 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 3 — SECTION 01: THE INCIDENT PROBLEM
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 01</div>
+  <div class="section-title">The Incident Problem</div>
+  <div class="lead">Modern cloud-native infrastructure generates thousands of telemetry signals per second — but the tools to make sense of them in real time have not kept pace with system complexity.</div>
+
+  <p>A production microservice environment is never truly static. Services scale, traffic patterns shift, dependencies fail, and code deploys introduce regressions. When something goes wrong, the on-call engineer is immediately presented with an overwhelming volume of signals: hundreds of Prometheus alerts, dozens of Grafana dashboards, a wall of error logs in Kibana, and dozens of Datadog traces — all simultaneously.</p>
+
+  <p>The fundamental challenge is not a shortage of observability data. It is the cognitive burden of correlating that data in real time, under pressure, to identify the <strong>failure mode</strong>, its <strong>root cause</strong>, the correct <strong>severity</strong>, and the projected <strong>time remaining before critical threshold breach</strong>.</p>
+
+  <div class="sub-title">Core Production Challenges</div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Challenge</th><th>What It Means</th><th>Business Impact</th></tr></thead>
+      <tbody>
+        <tr><td>Alert Storm</td><td>100+ alerts fire simultaneously for one root cause</td><td>Engineer paralysis; true signal buried in noise</td></tr>
+        <tr><td>Manual Correlation</td><td>Engineer must mentally join CPU, memory, DB latency, logs across 5+ dashboards</td><td>MTTD of 15–45 minutes for cascading failures</td></tr>
+        <tr><td>Static Severity</td><td>P1/P2/P3 assigned from a single metric threshold</td><td>Misclassification → under-reaction or false-alarm fatigue</td></tr>
+        <tr><td>No TTF Prediction</td><td>Teams are notified after a threshold is breached, not before</td><td>Reactive posture; damage already done</td></tr>
+        <tr><td>Siloed Signals</td><td>Metrics, logs, and traces analyzed independently</td><td>Multi-signal failures (e.g., CASCADING_FAILURE) missed</td></tr>
+        <tr><td>No Audit Trail</td><td>Severity decisions made verbally or in chat</td><td>Post-mortem is guesswork; no accountability</td></tr>
+        <tr><td>Query Barrier</td><td>Engineers must write SQL / PromQL to investigate historical incidents</td><td>Senior engineer time wasted on data retrieval</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ba-grid">
+    <div class="ba-card before">
+      <div class="ba-label">Before Sentinel</div>
+      <div class="ba-item">Manual alert correlation from 5+ dashboards</div>
+      <div class="ba-item">MTTD: 15–45 minutes for complex failures</div>
+      <div class="ba-item">P1/P2 based on a single metric breach</div>
+      <div class="ba-item">No time-to-failure visibility</div>
+      <div class="ba-item">Severity decisions: unaccountable, verbal</div>
+      <div class="ba-item">Historical queries require SQL expertise</div>
+    </div>
+    <div class="ba-card after">
+      <div class="ba-label">With Sentinel AIOps</div>
+      <div class="ba-item">Automated multi-signal correlation per cycle</div>
+      <div class="ba-item">Detection in &lt;10 seconds via LangGraph pipeline</div>
+      <div class="ba-item">Compound severity: impact × urgency × forecast</div>
+      <div class="ba-item">ARIMA/linear TTF prediction per failure mode</div>
+      <div class="ba-item">Full audit trail in SQLite (every decision recorded)</div>
+      <div class="ba-item">Natural-language chatbot via QueryLangGraph</div>
+    </div>
+  </div>
+
+  <div class="callout callout-orange">
+    <div class="callout-label">The Core Insight</div>
+    <p>The problem is not that monitoring systems lack data — it is that data correlation, failure classification, and severity judgment require a cognitive load that scales with system complexity. When a senior engineer leaves the on-call rotation, that institutional knowledge leaves with them. Sentinel makes that knowledge executable.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 01 — The Incident Problem</span>
+    <span>3 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 4 — SECTION 02: WHAT SENTINEL AIOPS IS
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 02</div>
+  <div class="section-title">What Sentinel AIOps Is</div>
+  <div class="lead">Sentinel is not a monitoring tool. It is an autonomous AI agent that transforms raw telemetry into classified, severity-graded, time-to-failure-predicted incident records — in real time.</div>
+
+  <p>Sentinel AIOps is a multi-layer agentic platform built around a <strong>LangGraph StateGraph</strong> — a directed graph of AI/ML analysis nodes that share a common state object and execute in sequence for every telemetry tick. Each node has exactly one responsibility, and the graph routes data through those responsibilities with conditional error handling.</p>
+
+  <div class="sub-title">Three Operating Modes</div>
+  <div class="three-col">
+    <div class="node-card">
+      <div class="node-id">Mode 01</div>
+      <div class="node-name">Historical Pipeline</div>
+      <div class="node-desc">Processes pre-generated simulator data from <span style="font-family:monospace; color:var(--orange);">simulator_db.sqlite</span> for model training, evaluation, and replay.</div>
+    </div>
+    <div class="node-card">
+      <div class="node-id">Mode 02</div>
+      <div class="node-name">Live Feed Mode</div>
+      <div class="node-desc">Streams real-time simulated telemetry from <span style="font-family:monospace; color:var(--orange);">live_feed_db.sqlite</span> through the full 10-node inference pipeline.</div>
+    </div>
+    <div class="node-card">
+      <div class="node-id">Mode 03</div>
+      <div class="node-name">Chat Query Mode</div>
+      <div class="node-desc">Enables natural-language queries over the incident database via an 11-node LLM-guarded <span style="font-family:monospace; color:var(--orange);">QueryLangGraph</span> agent.</div>
+    </div>
+  </div>
+
+  <div class="sub-title">Project Objectives</div>
+  <div class="flow-list">
+    <div class="flow-item"><div class="flow-num">1</div><div class="flow-content"><div class="flow-title">Automate failure detection</div><div class="flow-desc">Across 13 cloud-native failure modes with ≥95% classification accuracy using LightGBM with Optuna HPO.</div></div></div>
+    <div class="flow-item"><div class="flow-num">2</div><div class="flow-content"><div class="flow-title">Reduce MTTD to &lt;10 seconds</div><div class="flow-desc">From 15–45 minutes (manual triage) to sub-10-second automated detection per 500ms pipeline cycle.</div></div></div>
+    <div class="flow-item"><div class="flow-num">3</div><div class="flow-content"><div class="flow-title">Provide TTF prediction</div><div class="flow-desc">Mode-specific ARIMA/linear/exponential forecasters compute seconds until threshold breach.</div></div></div>
+    <div class="flow-item"><div class="flow-num">4</div><div class="flow-content"><div class="flow-title">Compound severity scoring</div><div class="flow-desc">Revised P1–P4 accounts for current impact + forecast urgency + hysteresis stabilization.</div></div></div>
+    <div class="flow-item"><div class="flow-num">5</div><div class="flow-content"><div class="flow-title">Human-in-the-Loop Gate</div><div class="flow-desc">Operator approval workflow for large severity jumps (≥2 levels), with full audit trail.</div></div></div>
+    <div class="flow-item"><div class="flow-num">6</div><div class="flow-content"><div class="flow-title">Natural-language incident queries</div><div class="flow-desc">Guarded LLM agent pipeline answers questions about past and current incidents without SQL.</div></div></div>
+    <div class="flow-item"><div class="flow-num">7</div><div class="flow-content"><div class="flow-title">Real-time dashboard via SSE</div><div class="flow-desc">React frontend subscribes to Server-Sent Events, rendering updated incident state every 500ms.</div></div></div>
+  </div>
+
+  <div class="sub-title">Project Scope</div>
+  <div class="two-col">
+    <div>
+      <div class="sub2-title" style="color:var(--green);">✓ In Scope</div>
+      <p style="font-size:11px;">Telemetry simulation for 13 failure modes across 4 microservices · 10-node LangGraph inference pipeline · Full SQLite schema (11 tables) · Kaplan-Meier + Weibull survival analysis · FastAPI REST + SSE (port 8080) · QueryLangGraph chatbot (port 8001) · React/Vite dashboard (port 5173) · Live feed simulator with WAL-mode SQLite · Human Gate with timeout auto-approval.</p>
+    </div>
+    <div>
+      <div class="sub2-title" style="color:var(--red);">✗ Out of Scope</div>
+      <p style="font-size:11px;">Production Kubernetes deployment · Real Prometheus/OpenTelemetry integration · Multi-tenant support · Authentication/authorization layer · GPU-accelerated inference · External alerting (PagerDuty/Slack/OpsGenie) · Distributed SQLite (replaced by single-node WAL mode).</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 02 — What Sentinel AIOps Is</span>
+    <span>4 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 5 — SECTION 03: SYSTEM ARCHITECTURE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 03</div>
+  <div class="section-title">System Architecture</div>
+  <div class="lead">Sentinel runs as four independent Python processes communicating through SQLite, REST, and SSE — unified by a single launcher script.</div>
+
+  <!-- SVG Architecture Diagram -->
+  <svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:14px 0;background:#0A0A0A;border-radius:8px;border:1px solid #282828;padding:16px;">
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#F0783C"/>
+      </marker>
+      <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L8,3 z" fill="#6F8FE0"/>
+      </marker>
+    </defs>
+    <!-- Simulator Box -->
+    <rect x="20" y="30" width="150" height="75" rx="6" fill="#111" stroke="#F0783C" stroke-width="1.5"/>
+    <text x="95" y="52" text-anchor="middle" fill="#F0783C" font-size="9" font-weight="700" font-family="JetBrains Mono">SIMULATOR</text>
+    <text x="95" y="68" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">live_feed_simulator/</text>
+    <text x="95" y="82" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">run_live_feed.py</text>
+    <text x="95" y="96" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">0.5s/tick → SQLite WAL</text>
+    <!-- Arrow Sim → Pipeline -->
+    <line x1="170" y1="67" x2="210" y2="67" stroke="#F0783C" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="190" y="62" text-anchor="middle" fill="#F0783C" font-size="8">SQLite</text>
+    <!-- LangGraph Box -->
+    <rect x="210" y="30" width="180" height="75" rx="6" fill="#111" stroke="#F0783C" stroke-width="1.5"/>
+    <text x="300" y="52" text-anchor="middle" fill="#F0783C" font-size="9" font-weight="700" font-family="JetBrains Mono">INFERENCE PIPELINE</text>
+    <text x="300" y="68" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">LangGraph StateGraph</text>
+    <text x="300" y="82" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">n01 → n02 → ... → n10</text>
+    <text x="300" y="96" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">run_langgraph.py --live</text>
+    <!-- Arrow Pipeline → API -->
+    <line x1="300" y1="105" x2="300" y2="145" stroke="#F0783C" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="314" y="130" fill="#888" font-size="8">SSE + DB</text>
+    <!-- FastAPI Box -->
+    <rect x="180" y="145" width="240" height="70" rx="6" fill="#111" stroke="#6F8FE0" stroke-width="1.5"/>
+    <text x="300" y="167" text-anchor="middle" fill="#6F8FE0" font-size="9" font-weight="700" font-family="JetBrains Mono">SENTINEL DASHBOARD API</text>
+    <text x="300" y="181" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">FastAPI + Uvicorn — Port 8080</text>
+    <text x="300" y="196" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">REST + SSE /api/live-stream</text>
+    <text x="300" y="207" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">api/main.py</text>
+    <!-- Arrow API → Frontend -->
+    <line x1="300" y1="215" x2="300" y2="252" stroke="#6F8FE0" stroke-width="1.5" marker-end="url(#arr2)"/>
+    <text x="314" y="238" fill="#888" font-size="8">SSE / REST</text>
+    <!-- React Box -->
+    <rect x="180" y="252" width="240" height="50" rx="6" fill="#111" stroke="#57C98A" stroke-width="1.5"/>
+    <text x="300" y="272" text-anchor="middle" fill="#57C98A" font-size="9" font-weight="700" font-family="JetBrains Mono">REACT DASHBOARD</text>
+    <text x="300" y="287" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">Vite SPA — Port 5173</text>
+    <text x="300" y="298" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">EventSource → React useState → render</text>
+    <!-- QueryLangGraph Box -->
+    <rect x="470" y="145" width="190" height="70" rx="6" fill="#111" stroke="#F2B134" stroke-width="1.5"/>
+    <text x="565" y="167" text-anchor="middle" fill="#F2B134" font-size="9" font-weight="700" font-family="JetBrains Mono">CHATBOT API</text>
+    <text x="565" y="181" text-anchor="middle" fill="#C4C4C4" font-size="9" font-family="Inter">QueryLangGraph — Port 8001</text>
+    <text x="565" y="196" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">11-node guarded query pipeline</text>
+    <text x="565" y="207" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">POST /query → LLM synthesis</text>
+    <!-- Arrow API → QueryLG -->
+    <line x1="420" y1="180" x2="470" y2="180" stroke="#F2B134" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+    <!-- Arrow QueryLG → Frontend -->
+    <line x1="565" y1="215" x2="430" y2="277" stroke="#F2B134" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+    <!-- run_server.py Label -->
+    <rect x="20" y="155" width="150" height="40" rx="6" fill="#0F0F0F" stroke="#282828" stroke-width="1"/>
+    <text x="95" y="171" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">run_server.py</text>
+    <text x="95" y="186" text-anchor="middle" fill="#888" font-size="8" font-family="Inter">Unified launcher (8080+8001)</text>
+  </svg>
+
+  <div class="sub-title">Port & Process Map</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Process</th><th>Port</th><th>Entry Point</th><th>Triggered By</th><th>Type</th></tr></thead>
+      <tbody>
+        <tr><td>Sentinel Dashboard API</td><td class="mono">8080</td><td class="mono">api/main.py</td><td>run_server.py (main)</td><td><span class="badge badge-green">HTTP + SSE</span></td></tr>
+        <tr><td>QueryLangGraph Chatbot API</td><td class="mono">8001</td><td class="mono">start_chatbot_server.py</td><td>run_server.py (subprocess)</td><td><span class="badge badge-green">HTTP</span></td></tr>
+        <tr><td>LangGraph Inference Pipeline</td><td class="mono">—</td><td class="mono">run_langgraph.py</td><td>POST /api/live/start</td><td><span class="badge badge-blue">Background Process</span></td></tr>
+        <tr><td>Live Feed Simulator</td><td class="mono">—</td><td class="mono">run_live_feed.py</td><td>POST /api/live/start</td><td><span class="badge badge-blue">Background Process</span></td></tr>
+        <tr><td>React Frontend Dev Server</td><td class="mono">5173</td><td class="mono">npm run dev</td><td>Manual (separate terminal)</td><td><span class="badge badge-yellow">Dev Server</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-label">Startup Sequence</div>
+    <p><strong>Terminal 1:</strong> <span class="mono" style="color:var(--orange);">python backend/run_server.py</span> — starts Chatbot API (8001) as a background subprocess, then blocks on Uvicorn serving the Dashboard API (8080).<br>
+    <strong>Terminal 2:</strong> <span class="mono" style="color:var(--orange);">cd frontend &amp;&amp; npm run dev</span> — starts the React/Vite dev server on port 5173.<br>
+    The simulator and LangGraph pipeline start only when the operator clicks <strong>"Start Live Feed"</strong> in the UI, triggering <span class="mono">POST /api/live/start</span>.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 03 — System Architecture</span>
+    <span>5 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 6 — SECTION 04: TELEMETRY ARCHITECTURE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 04</div>
+  <div class="section-title">Telemetry Architecture</div>
+  <div class="lead">Three telemetry pillars — metrics, logs, and distributed traces — model a realistic four-service microservice environment and are the raw material for everything the AI pipeline reasons over.</div>
+
+  <div class="three-col">
+    <div class="node-card" style="border-left-color:var(--blue);">
+      <div class="node-id" style="color:var(--blue);">Pillar 01 — Metrics</div>
+      <div class="node-name">32 Numeric Signals</div>
+      <div class="node-desc">CPU, memory, latency percentiles, error rates, GC pauses, DB query times, cache ratios, queue depth, network errors, circuit breaker state — one row per tick per service in the <span class="mono">metrics</span> table.</div>
+    </div>
+    <div class="node-card" style="border-left-color:var(--green);">
+      <div class="node-id" style="color:var(--green);">Pillar 02 — Logs</div>
+      <div class="node-name">Structured Log Events</div>
+      <div class="node-desc">Log level (INFO/WARN/ERROR/CRITICAL), exception type (RuntimeException, SocketTimeoutException, etc.), and message text — one row per log entry per tick in the <span class="mono">logs</span> table.</div>
+    </div>
+    <div class="node-card" style="border-left-color:var(--yellow);">
+      <div class="node-id" style="color:var(--yellow);">Pillar 03 — Traces</div>
+      <div class="node-name">Distributed Spans</div>
+      <div class="node-desc">Trace ID, span ID, parent span ID, span name, duration_ms, span status (OK/ERROR), and peer service — 2–5 spans per tick modeling request propagation in the <span class="mono">traces</span> table.</div>
+    </div>
+  </div>
+
+  <div class="sub-title">13 Failure Modes</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Failure Mode</th><th>Primary Signal Injection</th><th>Log Level</th><th>Exception</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">NONE</td><td>All metrics at healthy baseline</td><td>INFO</td><td>—</td></tr>
+        <tr><td class="mono">MEMORY_LEAK</td><td>heap_mb grows linearly; gc_pause_p99 increases</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">CPU_SATURATION</td><td>cpu_utilization ramps to 95%+; p99_latency degrades</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">LATENCY_SPIKE</td><td>p99_latency spikes; gc_pause_p99 elevated</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">ERROR_STORM</td><td>error_rate + http_5xx_rate spike</td><td>ERROR</td><td>RuntimeException</td></tr>
+        <tr><td class="mono">DB_SLOWDOWN</td><td>db_p99 + db_connection_wait increase</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">CACHE_STAMPEDE</td><td>cache_miss_rate spikes; db_p99 secondary increase</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">QUEUE_BACKUP</td><td>queue_lag + thread_pool_queue saturate</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">DEPENDENCY_TIMEOUT</td><td>upstream_timeout_rate high; p99_latency degrades</td><td>ERROR</td><td>SocketTimeoutException</td></tr>
+        <tr><td class="mono">BAD_DEPLOY</td><td>error_rate + http_5xx_rate immediate spike</td><td>ERROR</td><td>NullPointerException</td></tr>
+        <tr><td class="mono">RETRY_STORM</td><td>retry_count_per_request + rps both high</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">DISK_IO_SATURATION</td><td>iops_utilization + disk_read_latency saturate</td><td>WARNING</td><td>—</td></tr>
+        <tr><td class="mono">CASCADING_FAILURE</td><td>Multiple metrics breach P1 simultaneously</td><td>CRITICAL</td><td>SystemOverloadException</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Healthy Baseline Values</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Healthy Baseline</th><th>Metric</th><th>Healthy Baseline</th></tr></thead>
+      <tbody>
+        <tr><td>cpu_utilization</td><td>22.0%</td><td>p50_latency</td><td>90 ms</td></tr>
+        <tr><td>memory_utilization</td><td>25%</td><td>p99_latency</td><td>130 ms</td></tr>
+        <tr><td>heap_mb</td><td>510 MB</td><td>error_rate</td><td>1%</td></tr>
+        <tr><td>gc_pause_ms</td><td>15 ms</td><td>cache_hit_ratio</td><td>95%</td></tr>
+        <tr><td>db_query_latency</td><td>21 ms</td><td>network_errors</td><td>2/tick</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Gaussian noise of <strong>±4%</strong> (<span class="mono">NOISE_LEVEL = 0.04</span>) is applied to all metric values to simulate real-world jitter and prevent the classifier from memorizing deterministic patterns.</p>
+
+  <div class="sub-title">Temporal Correlation (n01_collect)</div>
+  <p>Every telemetry tick is correlated across all three pillars by <strong>(episode_id, timestamp)</strong>. The collect node issues three sequential SQL queries against the same SQLite database:</p>
+
+  <div class="code-block">
+    <div class="code-label">n01_collect.py — temporal join</div>
+    <pre><span class="cm"># Step 1: Fetch next metric row by monotonic id</span>
+metric = <span class="fn">conn.execute</span>(<span class="str">"SELECT * FROM metrics WHERE id > ? LIMIT 1"</span>, (last_id,))
+
+<span class="cm"># Step 2: Fetch all log entries at the same (episode_id, timestamp)</span>
+logs   = <span class="fn">conn.execute</span>(<span class="str">"SELECT log_level, exception_type, log_message
+          FROM logs WHERE episode_id = ? AND timestamp = ?"</span>, (ep_id, ts))
+
+<span class="cm"># Step 3: Fetch all trace spans at the same (episode_id, timestamp)</span>
+spans  = <span class="fn">conn.execute</span>(<span class="str">"SELECT * FROM traces WHERE episode_id = ? AND timestamp = ?"</span>, (ep_id, ts))</pre>
+  </div>
+
+  <p>This produces a perfectly correlated snapshot: metrics, logs, and traces share the same <span class="mono">episode_id</span> and <span class="mono">timestamp</span>, guaranteeing that feature engineering receives a coherent multi-signal view of a single point in time.</p>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 04 — Telemetry Architecture</span>
+    <span>6 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 7 — SECTION 05: FEATURE ENGINEERING
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 05</div>
+  <div class="section-title">Feature Engineering</div>
+  <div class="lead">Raw correlated telemetry — a metric row, a set of log entries, and a set of trace spans — is transformed into a 37-dimensional numeric feature vector that LightGBM can reason over in under a millisecond.</div>
+
+  <p>Node <strong>n02_feature_engineering</strong> is the boundary between raw observability data and machine-readable signal. It performs no ML — it is pure signal extraction, normalization, and encoding. The 37-feature vector is the sole input to both the preliminary severity engine (rule-based) and the LightGBM classifier (ML-based).</p>
+
+  <div class="sub-title">Feature Vector Composition</div>
+  <div class="two-col">
+    <div>
+      <div class="sub2-title" style="color:var(--blue);">Metric Features (32)</div>
+      <p style="font-size:11px; margin-bottom:10px;">Direct extraction from <span class="mono">raw_metric</span> with type coercion to float. The <span class="mono">circuit_breaker_state</span> field is ordinally encoded.</p>
+      <div class="feature-grid">
+        <div class="feature-pill metric">cpu_utilization</div>
+        <div class="feature-pill metric">memory_utilization</div>
+        <div class="feature-pill metric">heap_mb</div>
+        <div class="feature-pill metric">db_p99</div>
+        <div class="feature-pill metric">disk_read_latency</div>
+        <div class="feature-pill metric">disk_write_latency</div>
+        <div class="feature-pill metric">error_rate</div>
+        <div class="feature-pill metric">gc_pause_p99</div>
+        <div class="feature-pill metric">cache_hit_rate</div>
+        <div class="feature-pill metric">cache_miss_rate</div>
+        <div class="feature-pill metric">active_connections</div>
+        <div class="feature-pill metric">network_errors</div>
+        <div class="feature-pill metric">p50_latency</div>
+        <div class="feature-pill metric">p95_latency</div>
+        <div class="feature-pill metric">p99_latency</div>
+        <div class="feature-pill metric">queue_lag</div>
+        <div class="feature-pill metric">retry_count</div>
+        <div class="feature-pill metric">rps</div>
+        <div class="feature-pill metric">upstream_timeout</div>
+        <div class="feature-pill metric">cb_state (enc)</div>
+        <div class="feature-pill metric">http_4xx_rate</div>
+        <div class="feature-pill metric">http_5xx_rate</div>
+        <div class="feature-pill metric">iops_utilization</div>
+        <div class="feature-pill metric">thread_pool_queue</div>
+        <div class="feature-pill metric">cpu_saturation</div>
+        <div class="feature-pill metric">db_connection_pool</div>
+        <div class="feature-pill metric">db_connection_wait</div>
+        <div class="feature-pill metric">+5 more</div>
+      </div>
+    </div>
+    <div>
+      <div class="sub2-title" style="color:var(--green);">Log Features (5)</div>
+      <p style="font-size:11px; margin-bottom:10px;">Derived from <span class="mono">raw_log</span> list via aggregation. Drain3 provides template novelty detection.</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>Derivation</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">log_count</td><td>len(raw_log)</td></tr>
+            <tr><td class="mono">log_max_severity</td><td>max(level_numeric) — INFO=0, WARN=1, ERROR=2, CRIT=3</td></tr>
+            <tr><td class="mono">log_critical_count</td><td>count(level == CRITICAL)</td></tr>
+            <tr><td class="mono">log_has_exception</td><td>1 if any log has exception_type, else 0</td></tr>
+            <tr><td class="mono">log_has_novel_template</td><td>1 if Drain3 sees unseen template, else 0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="sub2-title" style="color:var(--orange); margin-top:16px;">Circuit Breaker Encoding</div>
+      <div class="code-block" style="margin:8px 0;">
+        <pre><span class="cm"># Ordinal encoding — must match training data</span>
+CB_ENCODE = {
+    <span class="str">"closed"</span>:    <span class="nm">0</span>,  <span class="cm"># Normal</span>
+    <span class="str">"half-open"</span>: <span class="nm">1</span>,  <span class="cm"># Recovering</span>
+    <span class="str">"open"</span>:      <span class="nm">2</span>,  <span class="cm"># Failing</span>
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-label">Design Decision</div>
+    <p>No dimensionality reduction (PCA, t-SNE) is applied before passing features to LightGBM. Gradient boosted trees handle 37 features efficiently without transformation — reducing features would risk losing the specific signal combinations (e.g., <strong>high heap_mb AND high gc_pause_p99</strong>) that distinguish MEMORY_LEAK from LATENCY_SPIKE.</p>
+  </div>
+
+  <div class="sub-title">Drain3 — Log Template Mining</div>
+  <p><strong>Drain3</strong> is a streaming log parser that identifies structured templates from free-text log messages. For example, the message <span class="mono" style="color:var(--yellow);">"WARN heap=847MB gc_p99=312ms -- memory leak"</span> is parsed into the template <span class="mono" style="color:var(--yellow);">"WARN heap=&lt;*&gt;MB gc_p99=&lt;*&gt;ms -- memory leak"</span>. When Drain3 sees a template it has never encountered before, it sets <span class="mono">log_has_novel_template = 1</span>, which is a strong signal for failure mode transitions — particularly <span class="mono">BAD_DEPLOY</span> (where a new code deployment introduces entirely new log patterns) and <span class="mono">CASCADING_FAILURE</span>.</p>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 05 — Feature Engineering</span>
+    <span>7 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 8 — SECTION 06: ML CLASSIFICATION
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 06</div>
+  <div class="section-title">ML Classification — LightGBM</div>
+  <div class="lead">A LightGBM gradient-boosted tree classifier, tuned by Optuna's Tree-structured Parzen Estimator, identifies the failure mode from the 37-feature vector with sub-millisecond inference latency.</div>
+
+  <div class="sub-title">Why LightGBM?</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Alternative</th><th>Limitation for Sentinel</th><th>LightGBM Advantage</th></tr></thead>
+      <tbody>
+        <tr><td>XGBoost</td><td>Level-wise tree growth slower on wide data</td><td>Leaf-wise growth: faster convergence on 37 features</td></tr>
+        <tr><td>Random Forest</td><td>No sequential error correction; weaker on imbalanced data</td><td>Boosting corrects systematic errors between trees</td></tr>
+        <tr><td>LSTM/Transformer</td><td>Requires sequential fixed-length input; heavy inference</td><td>Single-row inference; no sequence needed per cycle</td></tr>
+        <tr><td>SVM</td><td>Slow training on 120k+ rows; no native probability output</td><td>Native predict_proba() gives confidence for TTF gating</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Hyperparameter Tuning — Optuna TPE</div>
+  <p>Optuna's <strong>Tree-structured Parzen Estimator (TPE)</strong> sampler performs a directed Bayesian search over 9 hyperparameters. Each trial trains a LightGBM model and evaluates it on a held-out fold using <strong>macro-averaged F1</strong>, giving equal weight to all 13 failure mode classes regardless of frequency.</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Configuration</th><th>Value</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Trials</td><td class="mono">80</td><td>Practical sweet-spot for 9-parameter LightGBM search</td></tr>
+        <tr><td>CV Folds</td><td class="mono">5</td><td>StratifiedKFold: 20% per fold, stable per-class F1 estimates</td></tr>
+        <tr><td>Metric</td><td class="mono">macro F1</td><td>Equal weight to all 13 classes; penalizes minority mode neglect</td></tr>
+        <tr><td>Early Stopping</td><td class="mono">50 rounds</td><td>Stop adding trees if validation F1 hasn't improved in 50 rounds</td></tr>
+        <tr><td>Random Seed</td><td class="mono">42</td><td>Shared across Optuna, StratifiedKFold, and train/test split</td></tr>
+        <tr><td>Train/Test Split</td><td class="mono">80/20</td><td>Held-out test set never seen during tuning</td></tr>
+        <tr><td>Study Persistence</td><td class="mono">optuna_study.db</td><td>SQLite-backed; interrupted tuning runs are resumable</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Search Space (9 Parameters)</div>
+  <div class="code-block">
+    <div class="code-label">Optuna trial definition</div>
+    <pre>params = {
+    <span class="str">"n_estimators"</span>:      trial.<span class="fn">suggest_int</span>(<span class="str">"n_estimators"</span>,      100, 1000),
+    <span class="str">"learning_rate"</span>:     trial.<span class="fn">suggest_float</span>(<span class="str">"learning_rate"</span>,     0.01, 0.3,  log=True),
+    <span class="str">"max_depth"</span>:         trial.<span class="fn">suggest_int</span>(<span class="str">"max_depth"</span>,          3,  10),
+    <span class="str">"num_leaves"</span>:        trial.<span class="fn">suggest_int</span>(<span class="str">"num_leaves"</span>,         16, 256),
+    <span class="str">"min_child_samples"</span>: trial.<span class="fn">suggest_int</span>(<span class="str">"min_child_samples"</span>,  5,  100),
+    <span class="str">"reg_alpha"</span>:         trial.<span class="fn">suggest_float</span>(<span class="str">"reg_alpha"</span>,          1e-8, 10.0, log=True),
+    <span class="str">"reg_lambda"</span>:        trial.<span class="fn">suggest_float</span>(<span class="str">"reg_lambda"</span>,         1e-8, 10.0, log=True),
+    <span class="str">"feature_fraction"</span>:  trial.<span class="fn">suggest_float</span>(<span class="str">"feature_fraction"</span>,  0.4, 1.0),
+    <span class="str">"bagging_fraction"</span>:  trial.<span class="fn">suggest_float</span>(<span class="str">"bagging_fraction"</span>,  0.4, 1.0),
+}</pre>
+  </div>
+
+  <div class="sub-title">Runtime Inference</div>
+  <p>At inference time, a single-row DataFrame is constructed from the 37-feature dict, ordered by the saved <span class="mono">feature_names.json</span>, and passed to the loaded model:</p>
+
+  <div class="code-block">
+    <div class="code-label">n04_classify.py — inference path</div>
+    <pre>df = pd.<span class="fn">DataFrame</span>([features_dict])[feature_names]     <span class="cm"># enforce column order</span>
+proba       = model.<span class="fn">predict_proba</span>(df)[0]               <span class="cm"># shape: (13,)</span>
+idx         = proba.<span class="fn">argmax</span>()
+predicted   = label_encoder.<span class="fn">inverse_transform</span>([idx])[0]  <span class="cm"># e.g. "MEMORY_LEAK"</span>
+confidence  = <span class="fn">float</span>(proba[idx])                          <span class="cm"># e.g. 0.94</span></pre>
+  </div>
+
+  <div class="sub-title">Graceful Degradation — Auto-Train</div>
+  <p>If <span class="mono">lgbm_model.pkl</span> is missing at pipeline startup, the classifier checks row count in <span class="mono">engineered_features.csv</span>. If <span class="mono">MIN_TRAIN_ROWS = None</span> (or enough rows exist), it launches <span class="mono">train_classifier.py</span> as a subprocess, blocks until completion, then loads the freshly trained model. While training, it returns <strong>"PENDING"</strong> with 0.0 confidence so downstream nodes can continue without crashing.</p>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 06 — ML Classification</span>
+    <span>8 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 9 — SECTION 07: PRELIMINARY SEVERITY (P1-P4)
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 07</div>
+  <div class="section-title">Preliminary Severity — Rule Engine</div>
+  <div class="lead">Before the ML classifier runs, a fast rule-based engine assigns an initial P1–P4 severity from five critical metric thresholds. It takes microseconds and requires no model.</div>
+
+  <p>Node <strong>n03_prelim_severity</strong> uses explicit threshold conditions from <span class="mono">config.py</span>. The engine evaluates checks in descending severity order and returns the first severity level that is triggered. If no threshold is breached, the service is classified as <strong>P4 (healthy baseline)</strong>.</p>
+
+  <div class="sub-title">Severity Levels</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Level</th><th>Name</th><th>Response SLA</th><th>Color</th></tr></thead>
+      <tbody>
+        <tr><td class="mono" style="color:var(--red);font-weight:700;">P1</td><td>CRITICAL</td><td>Immediate response required</td><td style="color:var(--red);">■ Red</td></tr>
+        <tr><td class="mono" style="color:var(--orange);font-weight:700;">P2</td><td>HIGH</td><td>Response within 15 minutes</td><td style="color:var(--orange);">■ Orange</td></tr>
+        <tr><td class="mono" style="color:var(--yellow);font-weight:700;">P3</td><td>MEDIUM</td><td>Response within 1 hour</td><td style="color:var(--yellow);">■ Yellow</td></tr>
+        <tr><td class="mono" style="color:var(--green);font-weight:700;">P4</td><td>LOW</td><td>Monitor, no immediate action</td><td style="color:var(--green);">■ Green</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Threshold Conditions (from config.py)</div>
+
+  <div class="code-block">
+    <div class="code-label">Preliminary Severity — all threshold conditions</div>
+    <pre><span class="cm"># P1 — CRITICAL: ANY of these conditions → immediate response</span>
+P1 <span class="kw">if</span> cpu_utilization    > <span class="nm">90</span>    <span class="cm"># reason: "cpu=91.2%>90%"</span>
+P1 <span class="kw">if</span> memory_utilization > <span class="nm">90</span>    <span class="cm"># reason: "mem=92.1%>90%"</span>
+P1 <span class="kw">if</span> p99_latency        > <span class="nm">1000</span>  <span class="cm"># reason: "p99=1043ms>1000ms"</span>
+P1 <span class="kw">if</span> log_critical_count > <span class="nm">5</span>     <span class="cm"># reason: "critical_logs=6>5"</span>
+P1 <span class="kw">if</span> error_rate         > <span class="nm">0.10</span>  <span class="cm"># reason: "err=12.4%>10%"</span>
+
+<span class="cm"># P2 — HIGH: ANY of these (only if no P1 triggered)</span>
+P2 <span class="kw">if</span> cpu_utilization    > <span class="nm">80</span>
+P2 <span class="kw">if</span> memory_utilization > <span class="nm">80</span>
+P2 <span class="kw">if</span> p99_latency        > <span class="nm">700</span>
+P2 <span class="kw">if</span> error_rate         > <span class="nm">0.05</span>
+P2 <span class="kw">if</span> gc_pause_p99       > <span class="nm">200</span>
+P2 <span class="kw">if</span> log_has_exception  == <span class="nm">1</span>
+
+<span class="cm"># P3 — MEDIUM: ANY of these (only if no P1/P2 triggered)</span>
+P3 <span class="kw">if</span> cpu_utilization > <span class="nm">60</span>
+P3 <span class="kw">if</span> p99_latency      > <span class="nm">400</span>
+P3 <span class="kw">if</span> error_rate       > <span class="nm">0.02</span>
+P3 <span class="kw">if</span> cache_miss_rate  > <span class="nm">0.50</span>
+
+<span class="cm"># P4 — LOW: all metrics within normal range</span>
+P4 <span class="kw">otherwise</span>  <span class="cm"># reason: "baseline — all metrics within normal range"</span></pre>
+  </div>
+
+  <div class="callout callout-yellow">
+    <div class="callout-label">Important: Why Preliminary Severity Exists</div>
+    <p>The LightGBM classifier identifies <em>what kind</em> of failure is occurring. The preliminary severity engine answers <em>how bad is it right now</em> — purely from threshold violations. These are complementary signals: an ERROR_STORM episode might be P1 while a MEMORY_LEAK early in its trajectory is P3. Both assessments flow into the severity update node together.</p>
+  </div>
+
+  <div class="sub-title">Worked Example</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Metric</th><th>Measured Value</th><th>P1 Threshold</th><th>Triggered?</th><th>Reason String</th></tr></thead>
+      <tbody>
+        <tr><td>cpu_utilization</td><td>91.2%</td><td>90%</td><td style="color:var(--red);">✓ YES</td><td class="mono" style="font-size:9px;">cpu=91.2%>90%</td></tr>
+        <tr><td>p99_latency</td><td>1,050 ms</td><td>1,000 ms</td><td style="color:var(--red);">✓ YES</td><td class="mono" style="font-size:9px;">p99=1050ms>1000ms</td></tr>
+        <tr><td>memory_utilization</td><td>78%</td><td>90%</td><td style="color:var(--green);">✗ NO</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Result: <strong style="color:var(--red);">P1 — CRITICAL</strong> · Reason string: <span class="mono" style="color:var(--orange);">"cpu=91.2%>90%, p99=1050ms>1000ms"</span></p>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 07 — Preliminary Severity</span>
+    <span>9 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 10 — SECTION 08: LANGGRAPH PIPELINE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 08</div>
+  <div class="section-title">The LangGraph Inference Pipeline</div>
+  <div class="lead">Ten specialized analysis nodes, assembled into a LangGraph StateGraph, share a single TypedDict state and execute sequentially per telemetry tick with conditional error routing and SQLite checkpointing.</div>
+
+  <!-- SVG 10-node pipeline -->
+  <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:14px 0;background:#0A0A0A;border-radius:8px;border:1px solid #282828;padding:12px;">
+    <defs>
+      <marker id="pa" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F0783C"/></marker>
+      <marker id="pe" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#E85C55"/></marker>
+    </defs>
+    <!-- Node boxes, row 1: n01-n05 -->
+    <rect x="10"  y="20" width="110" height="50" rx="5" fill="#111" stroke="#F0783C" stroke-width="1.2"/>
+    <text x="65"  y="40" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">n01</text>
+    <text x="65"  y="53" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Collect</text>
+    <text x="65"  y="64" text-anchor="middle" fill="#888" font-size="7.5">SQLite poll</text>
+
+    <rect x="132" y="20" width="110" height="50" rx="5" fill="#111" stroke="#F0783C" stroke-width="1.2"/>
+    <text x="187" y="40" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">n02</text>
+    <text x="187" y="53" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Feature Eng.</text>
+    <text x="187" y="64" text-anchor="middle" fill="#888" font-size="7.5">37 features</text>
+
+    <rect x="254" y="20" width="110" height="50" rx="5" fill="#111" stroke="#F0783C" stroke-width="1.2"/>
+    <text x="309" y="40" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">n03</text>
+    <text x="309" y="53" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Prelim. Severity</text>
+    <text x="309" y="64" text-anchor="middle" fill="#888" font-size="7.5">P1–P4 rules</text>
+
+    <rect x="376" y="20" width="110" height="50" rx="5" fill="#111" stroke="#F0783C" stroke-width="1.2"/>
+    <text x="431" y="40" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">n04</text>
+    <text x="431" y="53" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Classify</text>
+    <text x="431" y="64" text-anchor="middle" fill="#888" font-size="7.5">LightGBM</text>
+
+    <rect x="498" y="20" width="110" height="50" rx="5" fill="#111" stroke="#F0783C" stroke-width="1.2"/>
+    <text x="553" y="40" text-anchor="middle" fill="#F0783C" font-size="8" font-weight="700" font-family="JetBrains Mono">n05</text>
+    <text x="553" y="53" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Tumbling Window</text>
+    <text x="553" y="64" text-anchor="middle" fill="#888" font-size="7.5">10-cycle vote</text>
+
+    <!-- Arrows row 1 -->
+    <line x1="120" y1="45" x2="132" y2="45" stroke="#F0783C" stroke-width="1.2" marker-end="url(#pa)"/>
+    <line x1="242" y1="45" x2="254" y2="45" stroke="#F0783C" stroke-width="1.2" marker-end="url(#pa)"/>
+    <line x1="364" y1="45" x2="376" y2="45" stroke="#F0783C" stroke-width="1.2" marker-end="url(#pa)"/>
+    <line x1="486" y1="45" x2="498" y2="45" stroke="#F0783C" stroke-width="1.2" marker-end="url(#pa)"/>
+
+    <!-- Turn arrow n05 → n06 -->
+    <line x1="553" y1="70" x2="553" y2="95" stroke="#F0783C" stroke-width="1.2"/>
+    <line x1="553" y1="95" x2="498" y2="95" stroke="#F0783C" stroke-width="1.2" marker-end="url(#pa)"/>
+
+    <!-- Row 2: n06-n10 (right to left) -->
+    <rect x="376" y="110" width="110" height="50" rx="5" fill="#111" stroke="#6F8FE0" stroke-width="1.2"/>
+    <text x="431" y="130" text-anchor="middle" fill="#6F8FE0" font-size="8" font-weight="700" font-family="JetBrains Mono">n06</text>
+    <text x="431" y="143" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Forecasting</text>
+    <text x="431" y="154" text-anchor="middle" fill="#888" font-size="7.5">TTF prediction</text>
+
+    <rect x="254" y="110" width="110" height="50" rx="5" fill="#111" stroke="#6F8FE0" stroke-width="1.2"/>
+    <text x="309" y="130" text-anchor="middle" fill="#6F8FE0" font-size="8" font-weight="700" font-family="JetBrains Mono">n07</text>
+    <text x="309" y="143" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Severity Update</text>
+    <text x="309" y="154" text-anchor="middle" fill="#888" font-size="7.5">Impact × Urgency</text>
+
+    <rect x="132" y="110" width="110" height="50" rx="5" fill="#111" stroke="#6F8FE0" stroke-width="1.2"/>
+    <text x="187" y="130" text-anchor="middle" fill="#6F8FE0" font-size="8" font-weight="700" font-family="JetBrains Mono">n08</text>
+    <text x="187" y="143" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Reliability</text>
+    <text x="187" y="154" text-anchor="middle" fill="#888" font-size="7.5">Weibull P(survival)</text>
+
+    <rect x="10" y="110" width="110" height="50" rx="5" fill="#111" stroke="#F2B134" stroke-width="1.2"/>
+    <text x="65" y="130" text-anchor="middle" fill="#F2B134" font-size="8" font-weight="700" font-family="JetBrains Mono">n09</text>
+    <text x="65" y="143" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="Inter">Human Gate</text>
+    <text x="65" y="154" text-anchor="middle" fill="#888" font-size="7.5">Operator approval</text>
+
+    <!-- Arrows row 2 (right to left) -->
+    <line x1="376" y1="135" x2="364" y2="135" stroke="#6F8FE0" stroke-width="1.2" marker-end="url(#pa)"/>
+    <line x1="254" y1="135" x2="242" y2="135" stroke="#6F8FE0" stroke-width="1.2" marker-end="url(#pa)"/>
+    <line x1="132" y1="135" x2="120" y2="135" stroke="#6F8FE0" stroke-width="1.2" marker-end="url(#pa)"/>
+
+    <!-- n09 → n10 (down) -->
+    <line x1="65" y1="160" x2="65" y2="185" stroke="#57C98A" stroke-width="1.2"/>
+    <rect x="10" y="180" width="220" height="14" rx="4" fill="#0C1A0C" stroke="#57C98A" stroke-width="1"/>
+    <text x="120" y="190" text-anchor="middle" fill="#57C98A" font-size="8" font-weight="700" font-family="JetBrains Mono">n10_db_writer → END (SQLite + SSE broadcast)</text>
+
+    <!-- Error path label -->
+    <text x="620" y="92" text-anchor="end" fill="#E85C55" font-size="7.5" font-style="italic">error → db_writer</text>
+  </svg>
+
+  <div class="sub-title">All 10 Nodes</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Node</th><th>File</th><th>Input from State</th><th>Output to State</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">n01_collect</td><td class="mono">Graph_node/n01_collect.py</td><td>last_processed_id</td><td>raw_metric, raw_log, raw_traces, episode_id, failure_mode, timestamp</td></tr>
+        <tr><td class="mono">n02_feature_eng</td><td class="mono">Graph_node/n02_feature_engineering.py</td><td>raw_metric, raw_log, raw_traces</td><td>classifier_input (37 features), evidence</td></tr>
+        <tr><td class="mono">n03_prelim_sev</td><td class="mono">Graph_node/n03_prelim_severity.py</td><td>classifier_input</td><td>preliminary_severity, severity_result</td></tr>
+        <tr><td class="mono">n04_classify</td><td class="mono">Graph_node/n04_classify.py</td><td>classifier_input</td><td>predicted_failure, prediction_probability</td></tr>
+        <tr><td class="mono">n05_tumbling_win</td><td class="mono">Graph_node/n05_tumbling_window.py</td><td>predicted_failure</td><td>dominant_state, vote_distribution, window_margin, window_full</td></tr>
+        <tr><td class="mono">n06_forecasting</td><td class="mono">Graph_node/n06_forecasting.py</td><td>dominant_state, classifier_input, episode_id</td><td>time_to_failure, forecast_confidence, threshold_crossed, forecast_algorithm</td></tr>
+        <tr><td class="mono">n07_severity_upd</td><td class="mono">Graph_node/n07_severity_update.py</td><td>preliminary_severity, forecast_result</td><td>revised_severity, impact_band, urgency_band, is_escalated, dwell_count</td></tr>
+        <tr><td class="mono">n08_reliability</td><td class="mono">Graph_node/n08_reliability.py</td><td>failure_mode, elapsed_s</td><td>survival_probability, weibull_beta, weibull_eta, active_failure_group</td></tr>
+        <tr><td class="mono">n09_human_gate</td><td class="mono">Graph_node/n09_human_gate.py</td><td>revised_severity, committed_severity</td><td>hg_needed, hg_review_id, hg_decision, hg_final_severity</td></tr>
+        <tr><td class="mono">n10_db_writer</td><td class="mono">Graph_node/n10_db_writer.py</td><td>full AIOpsLangState</td><td>Writes 11 tables; calls SSEBroadcaster.update()</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Conditional Routing</div>
+  <div class="two-col">
+    <div class="callout callout-orange" style="margin:0;">
+      <div class="callout-label">After n01_collect</div>
+      <p style="font-size:11px;"><span class="mono">state.error == "no_data"</span> → <strong>END</strong> (outer loop retries after POLL_INTERVAL_MS)<br><span class="mono">no error</span> → <strong>feature_eng</strong></p>
+    </div>
+    <div class="callout callout-red" style="margin:0;">
+      <div class="callout-label">After n02–n09 (any node)</div>
+      <p style="font-size:11px;"><span class="mono">state.error is set</span> → <strong>db_writer</strong> (write partial state, then END)<br><span class="mono">no error</span> → next node in linear chain</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 08 — LangGraph Pipeline</span>
+    <span>10 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 11 — SECTION 09: TUMBLING WINDOW
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 09</div>
+  <div class="section-title">Tumbling Window — Label Smoother</div>
+  <div class="lead">Raw per-cycle classifier output is inherently noisy. The tumbling window accumulates 10 consecutive predictions and selects the majority label, suppressing transient misclassifications.</div>
+
+  <p>The LightGBM classifier makes a statistically independent decision every 500ms. Because real metrics have ±4% jitter, a <strong>MEMORY_LEAK</strong> episode might produce an occasional <strong>CPU_SATURATION</strong> or <strong>NONE</strong> prediction during a single anomalous tick. Without smoothing, the pipeline would fire false severity escalations and TTF forecasts for failure modes that were only momentarily dominant.</p>
+
+  <p>Node <strong>n05_tumbling_window</strong> uses a <span class="mono">collections.deque(maxlen=10)</span> buffer. Each cycle, the new prediction is appended (the oldest is dropped when full). A majority vote determines the <span class="mono">dominant_state</span>.</p>
+
+  <div class="sub-title">Mathematical Definition</div>
+
+  <div class="formula-block">
+    <div class="formula">dominant_state = argmax<sub>mode</sub> (count of mode in buffer)</div>
+    <div class="formula" style="margin-top:10px;">margin = votes<sub>winner</sub> − votes<sub>runner-up</sub></div>
+    <div class="formula-vars" style="margin-top:10px;">
+      <span>buffer</span> = deque of last N=10 predicted_failure strings<br>
+      <span>votes<sub>m</sub></span> = number of times mode m appears in buffer<br>
+      <span>margin</span> = confidence indicator (high margin → stable dominant state)
+    </div>
+  </div>
+
+  <div class="sub-title">Worked Example</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Cycle</th><th>Classifier Output</th><th>Buffer Contents</th><th>Dominant State</th><th>Margin</th><th>Window Full</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="mono">MEMORY_LEAK</td><td>[ML]</td><td class="mono">MEMORY_LEAK</td><td>1</td><td style="color:var(--red);">No</td></tr>
+        <tr><td>3</td><td class="mono">CPU_SATURATION</td><td>[ML, ML, CS]</td><td class="mono">MEMORY_LEAK</td><td>1</td><td style="color:var(--red);">No</td></tr>
+        <tr><td>7</td><td class="mono">MEMORY_LEAK</td><td>[ML,ML,CS,ML,ML,ML,ML]</td><td class="mono">MEMORY_LEAK</td><td>5</td><td style="color:var(--red);">No</td></tr>
+        <tr><td>10</td><td class="mono">MEMORY_LEAK</td><td>[ML,ML,CS,ML,ML,ML,ML,ML,CS,ML]</td><td class="mono" style="color:var(--green);">MEMORY_LEAK</td><td>6</td><td style="color:var(--green);">Yes</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;">At cycle 10: vote_distribution = <span class="mono">{"MEMORY_LEAK": 8, "CPU_SATURATION": 2}</span>, margin = 8−2 = 6.</p>
+
+  <div class="sub-title">Design Rules</div>
+  <div class="two-col">
+    <div class="callout callout-green" style="margin:0;">
+      <div class="callout-label">What IS Smoothed</div>
+      <p style="font-size:11px;">Only the <strong>label sequence</strong> (Y) — the string of predicted failure mode names across 10 cycles. This is the classifier's categorical output.</p>
+    </div>
+    <div class="callout callout-red" style="margin:0;">
+      <div class="callout-label">What is NOT Smoothed</div>
+      <p style="font-size:11px;">Raw metric features. Averaging 10 cycles of CPU% would destroy genuine spikes. A CPU spike at cycle 8 would be diluted by 7 calm cycles before it.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top:14px;">
+    <div class="callout-label">Episode Boundary Behavior</div>
+    <p>The buffer is <strong>not reset</strong> when the <span class="mono">episode_id</span> changes. Labels carry forward across episode boundaries to prevent cold-start instability when a new episode begins. This means the window's dominant state reflects the recent historical trend, not just the current episode.</p>
+  </div>
+
+  <div class="sub-title">Output State Fields</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">dominant_state</td><td>str</td><td>Majority-vote winner from the 10-cycle buffer (used by Forecasting)</td></tr>
+        <tr><td class="mono">vote_distribution</td><td>dict</td><td>JSON map of all modes → vote counts in current buffer</td></tr>
+        <tr><td class="mono">window_margin</td><td>float</td><td>Winner votes minus runner-up votes; higher = more stable classification</td></tr>
+        <tr><td class="mono">window_full</td><td>bool</td><td>True once the buffer has ≥ 10 predictions; gates forecasting decisions</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 09 — Tumbling Window</span>
+    <span>11 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 12 — SECTION 10: FORECASTING ENGINE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 10</div>
+  <div class="section-title">Forecasting & Time-to-Failure</div>
+  <div class="lead">Each failure mode has a unique degradation trajectory. The forecasting engine routes the dominant failure state to a dedicated algorithm that computes the seconds remaining before a critical threshold breach.</div>
+
+  <p>Node <strong>n06_forecasting</strong> calls <span class="mono">route_forecast()</span>, which dispatches to one of 12 dedicated forecasting functions based on <span class="mono">dominant_state</span>. Each function maintains a per-episode rolling buffer of feature rows and fits its model to that buffer to compute the current slope or trajectory.</p>
+
+  <div class="sub-title">Algorithm Routing Table</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Failure Mode</th><th>Primary Metric</th><th>Algorithm</th><th>Threshold</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">MEMORY_LEAK</td><td>heap_mb</td><td>Linear Extrapolation</td><td>Max heap capacity</td></tr>
+        <tr><td class="mono">CPU_SATURATION</td><td>cpu_utilization</td><td>auto_arima / Exponential</td><td>95%</td></tr>
+        <tr><td class="mono">LATENCY_SPIKE</td><td>p99_latency</td><td>auto_arima</td><td>1,000 ms</td></tr>
+        <tr><td class="mono">DB_SLOWDOWN</td><td>db_p99</td><td>Linear Extrapolation</td><td>500 ms</td></tr>
+        <tr><td class="mono">CACHE_STAMPEDE</td><td>cache_miss_rate</td><td>Linear Extrapolation</td><td>80%</td></tr>
+        <tr><td class="mono">QUEUE_BACKUP</td><td>queue_lag</td><td>Linear Extrapolation</td><td>Critical lag</td></tr>
+        <tr><td class="mono">DEPENDENCY_TIMEOUT</td><td>upstream_timeout_rate</td><td>Threshold Convergence</td><td>50%</td></tr>
+        <tr><td class="mono">ERROR_STORM</td><td>error_rate</td><td>auto_arima</td><td>10%</td></tr>
+        <tr><td class="mono">RETRY_STORM</td><td>retry_count_per_request</td><td>Linear Extrapolation</td><td>Max retries</td></tr>
+        <tr><td class="mono">DISK_IO_SATURATION</td><td>iops_utilization</td><td>Linear Extrapolation</td><td>95%</td></tr>
+        <tr><td class="mono">BAD_DEPLOY</td><td>error_rate</td><td>Step-function Detection</td><td>Immediate</td></tr>
+        <tr><td class="mono">CASCADING_FAILURE</td><td>Multi-feature</td><td>Convergence (min TTF)</td><td>Any P1 threshold</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Forecasting Algorithms — Formulas</div>
+
+  <div class="two-col">
+    <div>
+      <div class="sub2-title">1. Linear Extrapolation</div>
+      <div class="formula-block" style="margin:8px 0;">
+        <div class="formula">TTF = (Threshold − Current) ÷ Slope</div>
+        <div class="formula-vars">
+          <span>Slope</span> = Δvalue / Δtime (regression over buffer)<br>
+          <span>Threshold</span> = critical breach value for this mode<br>
+          <span>TTF</span> = seconds until breach (None if slope ≤ 0)
+        </div>
+      </div>
+      <p style="font-size:10.5px; color:var(--muted);">Used for: MEMORY_LEAK, DB_SLOWDOWN, CACHE_STAMPEDE, QUEUE_BACKUP, RETRY_STORM, DISK_IO_SATURATION</p>
+    </div>
+    <div>
+      <div class="sub2-title">2. Exponential Growth</div>
+      <div class="formula-block" style="margin:8px 0;">
+        <div class="formula">TTF = ln(Threshold / Current) ÷ r</div>
+        <div class="formula-vars">
+          <span>r</span> = exponential growth rate (fit to log of values)<br>
+          <span>ln</span> = natural logarithm<br>
+          <span>TTF</span> = None if Current ≥ Threshold (already breached)
+        </div>
+      </div>
+      <p style="font-size:10.5px; color:var(--muted);">Used for: CPU_SATURATION in accelerating phase</p>
+    </div>
+  </div>
+
+  <div class="sub2-title" style="margin-top:10px;">3. ARIMA (Auto-Regressive Integrated Moving Average)</div>
+  <div class="formula-block">
+    <div class="formula">y<sub>t</sub> = c + Σ φᵢ·y<sub>t−i</sub> + Σ θⱼ·ε<sub>t−j</sub> + ε<sub>t</sub></div>
+    <div class="formula-vars">
+      <span>φᵢ</span> = autoregressive coefficients (past values)<br>
+      <span>θⱼ</span> = moving-average coefficients (past errors)<br>
+      <span>ε<sub>t</sub></span> = white noise error term<br>
+      <span>auto_arima</span> from pmdarima selects optimal (p,d,q) order automatically<br>
+      TTF is computed by finding the first forecast horizon where predicted value ≥ threshold
+    </div>
+  </div>
+
+  <div class="sub2-title">4. Multi-Feature Convergence (CASCADING_FAILURE)</div>
+  <p>Each feature's individual TTF is computed via its own algorithm. The <strong>minimum TTF across all features</strong> is reported, along with <span class="mono">earliest_ttf_feature</span> (which metric will breach first):</p>
+
+  <div class="formula-block">
+    <div class="formula">TTF<sub>final</sub> = min(TTF<sub>cpu</sub>, TTF<sub>mem</sub>, TTF<sub>p99</sub>, TTF<sub>error</sub>, ...)</div>
+    <div class="formula-vars"><span>earliest_ttf_feature</span> = the feature name with minimum TTF</div>
+  </div>
+
+  <div class="callout callout-yellow">
+    <div class="callout-label">Forecast Confidence Gate</div>
+    <p>Before a TTF estimate influences severity, it must pass a confidence gate. If <span class="mono">forecast_confidence &lt; 0.75</span> (min_confidence), the urgency_band defaults to "Distant" regardless of TTF value. This prevents premature severity escalation when the forecast model has insufficient history (buffer length &lt; minimum required cycles).</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 10 — Forecasting & TTF</span>
+    <span>12 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 13 — SECTION 11: SEVERITY UPDATE & HYSTERESIS
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 11</div>
+  <div class="section-title">Severity Update & Hysteresis</div>
+  <div class="lead">Preliminary severity answers "how bad is it now?" — but severity must also reflect urgency (how fast is it getting worse?) and stability (is this a genuine trend, or a transient spike?). The severity update node provides all three.</div>
+
+  <p>Node <strong>n07_severity_update</strong> implements a four-step process that cross-references the preliminary severity (current impact) with the forecast result (future urgency) to produce a <strong>revised severity</strong> that is then stabilized through hysteresis to prevent severity flapping.</p>
+
+  <div class="steps-row">
+    <div class="step-item"><div class="step-box"><div class="step-num">Step 1</div><div class="step-label">Impact Band</div><div class="step-detail">preliminary_severity → High / Moderate / None</div></div></div>
+    <div class="step-item"><div class="step-box"><div class="step-num">Step 2</div><div class="step-label">Urgency Band</div><div class="step-detail">TTF + confidence → Imminent / Near / Distant</div></div></div>
+    <div class="step-item"><div class="step-box"><div class="step-num">Step 3</div><div class="step-label">Matrix Lookup</div><div class="step-detail">Impact × Urgency → candidate severity</div></div></div>
+    <div class="step-item"><div class="step-box"><div class="step-num">Step 4</div><div class="step-label">Hysteresis</div><div class="step-detail">Dwell counter → revised severity</div></div></div>
+  </div>
+
+  <div class="sub-title">Step 1: Impact Band Mapping</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Preliminary Severity</th><th>Impact Band</th></tr></thead>
+      <tbody>
+        <tr><td class="mono" style="color:var(--red);">P1</td><td><strong style="color:var(--red);">High</strong></td></tr>
+        <tr><td class="mono" style="color:var(--orange);">P2</td><td><strong style="color:var(--orange);">Moderate</strong></td></tr>
+        <tr><td class="mono" style="color:var(--yellow);">P3</td><td><strong style="color:var(--muted);">None</strong></td></tr>
+        <tr><td class="mono" style="color:var(--green);">P4</td><td><strong style="color:var(--muted);">None</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Step 2: Urgency Band (Gated by Confidence)</div>
+  <div class="code-block">
+    <div class="code-label">Urgency band logic</div>
+    <pre><span class="kw">if</span> forecast_confidence < <span class="nm">0.75</span>:
+    urgency_band = <span class="str">"Distant"</span>       <span class="cm"># gate FAILS — not enough forecast history</span>
+<span class="kw">elif</span> time_to_failure < <span class="nm">60</span>:
+    urgency_band = <span class="str">"Imminent"</span>     <span class="cm"># &lt; 60 seconds to breach</span>
+<span class="kw">elif</span> time_to_failure < <span class="nm">300</span>:
+    urgency_band = <span class="str">"Near"</span>         <span class="cm"># 60–300 seconds to breach</span>
+<span class="kw">else</span>:
+    urgency_band = <span class="str">"Distant"</span>      <span class="cm"># &gt; 300 seconds or no TTF</span></pre>
+  </div>
+
+  <div class="sub-title">Step 3: Impact × Urgency Matrix</div>
+  <table class="matrix-table">
+    <thead>
+      <tr><th></th><th>Imminent (TTF &lt; 60s)</th><th>Near (60–300s)</th><th>Distant (&gt; 300s)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td style="background:#1A0F06; color:var(--orange); font-weight:700; font-size:11px;">High</td><td class="matrix-p1">P1 — CRITICAL</td><td class="matrix-p1">P1 — CRITICAL</td><td class="matrix-p2">P2 — HIGH</td></tr>
+      <tr><td style="background:#1A0F06; color:var(--orange); font-weight:700; font-size:11px;">Moderate</td><td class="matrix-p1">P1 — CRITICAL</td><td class="matrix-p2">P2 — HIGH</td><td class="matrix-p3">P3 — MEDIUM</td></tr>
+      <tr><td style="background:#1A0F06; color:var(--orange); font-weight:700; font-size:11px;">None</td><td class="matrix-p2">P2 — HIGH</td><td class="matrix-p3">P3 — MEDIUM</td><td class="matrix-p4">P4 — LOW</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">Step 4: Hysteresis Reconciliation</div>
+  <div class="formula-block">
+    <div class="formula">Escalation:   revised = candidate   (immediate, if candidate &gt; current)</div>
+    <div class="formula" style="margin-top:6px;">De-escalation: revised = candidate   only if dwell_count ≥ k</div>
+    <div class="formula-vars" style="margin-top:8px;">
+      <span>k</span> = dwell_k = 5 cycles (default = 10 seconds of telemetry)<br>
+      <span>dwell_count</span>: increments each cycle that candidate &lt; current<br>
+      Resets to 0 whenever candidate changes or matches current
+    </div>
+  </div>
+
+  <div class="callout callout-orange">
+    <div class="callout-label">The Core Insight</div>
+    <p>Escalation is always immediate — a jump to P1 fires right away because the cost of delayed escalation is an unresolved critical failure. De-escalation is deliberately slow — a drop to P3 requires 5 consecutive cycles at the lower level before it is accepted. This prevents false "recovery" signals from a single clean tick after 9 bad ones.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 11 — Severity Update & Hysteresis</span>
+    <span>13 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 14 — SECTION 12: RELIABILITY & SURVIVAL ANALYSIS
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 12</div>
+  <div class="section-title">Reliability & Survival Analysis</div>
+  <div class="lead">Beyond detecting that a failure is happening, Sentinel quantifies the historical probability of system survival — how long episodes of this type typically last before they terminate or resolve.</div>
+
+  <p>Node <strong>n08_reliability</strong> applies <strong>Kaplan-Meier non-parametric estimation</strong> and <strong>2-Parameter Weibull Maximum Likelihood Estimation</strong> to the historical episode database. Together, these tell the dashboard: "given that this service is in a MEMORY_LEAK episode that has been running for 90 seconds, what is the survival probability?"</p>
+
+  <div class="sub-title">Four Failure Mode Groups (Weibull Stratification)</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Group</th><th>Failure Modes</th><th>Expected β</th><th>Behavior</th></tr></thead>
+      <tbody>
+        <tr><td>Immediate Trigger</td><td class="mono" style="font-size:9px;">BAD_DEPLOY, CACHE_STAMPEDE, CASCADING_FAILURE, CPU_SATURATION, DEPENDENCY_TIMEOUT, ERROR_STORM</td><td>&gt; 1</td><td>Wear-out; failure rate increases over time</td></tr>
+        <tr><td>Fast Accumulation</td><td class="mono">QUEUE_BACKUP, RETRY_STORM</td><td>&gt; 1</td><td>Rapid growth pattern, high early failure rate</td></tr>
+        <tr><td>Progressive Degradation</td><td class="mono">DISK_IO_SATURATION</td><td>≈ 1</td><td>Near-constant hazard rate</td></tr>
+        <tr><td>Slow / Latent Degradation</td><td class="mono">DB_SLOWDOWN, MEMORY_LEAK, LATENCY_SPIKE</td><td>&lt; 1 → 1+</td><td>Slow onset; hazard increases late</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Kaplan-Meier Non-Parametric Survival Estimate</div>
+  <p>The KM estimator computes a step-function survival curve from historical episode durations, handling right-censored episodes (episodes that ended before resolution):</p>
+
+  <div class="formula-block">
+    <div class="formula">S(t) = ∏<sub>tᵢ ≤ t</sub> (1 − dᵢ / nᵢ)</div>
+    <div class="formula-vars">
+      <span>dᵢ</span> = number of episodes that ended (failed) at time tᵢ<br>
+      <span>nᵢ</span> = number of episodes at risk just before tᵢ (not yet ended or censored)<br>
+      <span>S(0)</span> = 1.0 (all episodes survive at time zero)
+    </div>
+  </div>
+
+  <p><strong>Greenwood Standard Error</strong> — 95% confidence interval for the KM curve:</p>
+  <div class="formula-block">
+    <div class="formula">SE(t) = S(t) × √( Σ<sub>tᵢ ≤ t</sub> dᵢ / (nᵢ(nᵢ − dᵢ)) )</div>
+  </div>
+
+  <div class="sub-title">2-Parameter Weibull Maximum Likelihood Estimation</div>
+  <p>The Weibull distribution models failure time with two parameters: <strong>β (shape/slope)</strong> and <strong>η (scale/characteristic life)</strong>:</p>
+
+  <div class="formula-block">
+    <div class="formula">f(t; β, η) = (β/η) · (t/η)^(β−1) · exp(−(t/η)^β)</div>
+    <div class="formula" style="margin-top:8px;">R(t) = exp(−(t/η)^β)   [Survival / Reliability function]</div>
+    <div class="formula" style="margin-top:8px;">h(t) = (β/η) · (t/η)^(β−1)   [Hazard rate]</div>
+    <div class="formula-vars" style="margin-top:10px;">
+      <span>β &lt; 1</span>: decreasing hazard rate (early failures; "burn-in" period)<br>
+      <span>β = 1</span>: constant hazard rate (random / exponential failure)<br>
+      <span>β &gt; 1</span>: increasing hazard rate (wear-out; most production failure modes)<br>
+      <span>η</span>: scale parameter — time at which 63.2% of episodes have ended
+    </div>
+  </div>
+
+  <div class="sub-title">MLE Fitting Priority</div>
+  <div class="flow-list">
+    <div class="flow-item"><div class="flow-num" style="background:var(--green);">1</div><div class="flow-content"><div class="flow-title">reliability library (Reid) — Primary</div><div class="flow-desc">Most accurate for small samples; handles right-censored data with Fit_Weibull_2P()</div></div></div>
+    <div class="flow-item"><div class="flow-num" style="background:var(--blue);">2</div><div class="flow-content"><div class="flow-title">lifelines (Davidson-Pilon) — Secondary</div><div class="flow-desc">WeibullFitter().fit(); rho_ → β, lambda_ → η</div></div></div>
+    <div class="flow-item"><div class="flow-num" style="background:var(--muted);">3</div><div class="flow-content"><div class="flow-title">SciPy L-BFGS-B — Fallback</div><div class="flow-desc">Native negative log-likelihood minimization; always available</div></div></div>
+  </div>
+
+  <div class="sub-title">Runtime Survival Probability</div>
+  <p>In the live pipeline, pre-fitted Weibull parameters (<span class="mono">weibull_params.json</span>) are loaded once at startup. For each cycle, the current episode's <span class="mono">elapsed_s</span> is used to compute survival probability:</p>
+
+  <div class="formula-block">
+    <div class="formula">P(survival at elapsed_s) = exp(−(elapsed_s / η)^β)</div>
+    <div class="formula-vars">Written to state as <span>survival_probability</span>, displayed in the frontend ReliabilityCard.</div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 12 — Reliability & Survival Analysis</span>
+    <span>14 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 15 — SECTION 13: HUMAN GATE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 13</div>
+  <div class="section-title">Human-in-the-Loop Gate</div>
+  <div class="lead">Fully automated severity escalation is appropriate for gradual changes — but a sudden jump from P4 to P1 should not wake up an entire on-call team without a human confirming it first.</div>
+
+  <p>Node <strong>n09_human_gate</strong> intercepts the pipeline when a <strong>large severity jump</strong> is detected. The pipeline does not proceed to <span class="mono">n10_db_writer</span> until the operator either approves or rejects the proposed severity change — or until the auto-approval timeout fires.</p>
+
+  <div class="sub-title">Trigger Condition</div>
+  <div class="code-block">
+    <div class="code-label">escalation_detector.py — trigger logic</div>
+    <pre><span class="cm"># Map severity to numeric level: P1=4, P2=3, P3=2, P4=1</span>
+committed_level  = SEV_MAP[committed_severity]   <span class="cm"># last confirmed severity</span>
+candidate_level  = SEV_MAP[candidate_severity]   <span class="cm"># proposed new severity</span>
+
+jump = candidate_level - committed_level
+
+<span class="cm"># Large jump: ≥ 2 severity levels OR first-time P1</span>
+is_large_jump = (jump >= <span class="nm">2</span>) <span class="kw">or</span> (candidate_severity == <span class="str">"P1"</span> <span class="kw">and</span>
+                 committed_severity <span class="kw">not in</span> (<span class="str">"P1"</span>,))
+
+<span class="kw">if</span> is_large_jump:
+    <span class="fn">create_review</span>(episode_id, committed_severity, candidate_severity)
+    state[<span class="str">"hg_needed"</span>] = <span class="kw">True</span></pre>
+  </div>
+
+  <div class="sub-title">Gate Lifecycle</div>
+  <!-- Human Gate SVG -->
+  <svg viewBox="0 0 660 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;margin:10px 0;background:#0A0A0A;border-radius:8px;border:1px solid #282828;padding:12px;">
+    <defs><marker id="hga" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#F0783C"/></marker></defs>
+    <rect x="10"  y="30" width="100" height="45" rx="5" fill="#111" stroke="#F2B134" stroke-width="1.2"/>
+    <text x="60"  y="50" text-anchor="middle" fill="#F2B134" font-size="8" font-weight="700">DETECT JUMP</text>
+    <text x="60"  y="63" text-anchor="middle" fill="#888" font-size="8">candidate vs</text>
+    <text x="60"  y="73" text-anchor="middle" fill="#888" font-size="8">committed (≥2)</text>
+
+    <rect x="130" y="30" width="100" height="45" rx="5" fill="#111" stroke="#F2B134" stroke-width="1.2"/>
+    <text x="180" y="50" text-anchor="middle" fill="#F2B134" font-size="8" font-weight="700">CREATE REVIEW</text>
+    <text x="180" y="63" text-anchor="middle" fill="#888" font-size="8">review_id + old/</text>
+    <text x="180" y="73" text-anchor="middle" fill="#888" font-size="8">new severity</text>
+
+    <rect x="250" y="30" width="100" height="45" rx="5" fill="#111" stroke="#6F8FE0" stroke-width="1.2"/>
+    <text x="300" y="50" text-anchor="middle" fill="#6F8FE0" font-size="8" font-weight="700">WAIT / POLL</text>
+    <text x="300" y="63" text-anchor="middle" fill="#888" font-size="8">API or timeout</text>
+    <text x="300" y="73" text-anchor="middle" fill="#888" font-size="8">(2s default)</text>
+
+    <!-- Branch: APPROVED -->
+    <rect x="370" y="10" width="100" height="35" rx="5" fill="#0C1A0C" stroke="#57C98A" stroke-width="1.2"/>
+    <text x="420" y="28" text-anchor="middle" fill="#57C98A" font-size="8" font-weight="700">APPROVED</text>
+    <text x="420" y="39" text-anchor="middle" fill="#888" font-size="8">candidate accepted</text>
+
+    <!-- Branch: REJECTED -->
+    <rect x="370" y="55" width="100" height="35" rx="5" fill="#180A0A" stroke="#E85C55" stroke-width="1.2"/>
+    <text x="420" y="73" text-anchor="middle" fill="#E85C55" font-size="8" font-weight="700">REJECTED</text>
+    <text x="420" y="84" text-anchor="middle" fill="#888" font-size="8">committed retained</text>
+
+    <!-- Final DB Write -->
+    <rect x="490" y="30" width="130" height="45" rx="5" fill="#111" stroke="#57C98A" stroke-width="1.2"/>
+    <text x="555" y="50" text-anchor="middle" fill="#57C98A" font-size="8" font-weight="700">n10_db_writer</text>
+    <text x="555" y="63" text-anchor="middle" fill="#888" font-size="8">Write hg_decision,</text>
+    <text x="555" y="73" text-anchor="middle" fill="#888" font-size="8">hg_final_severity</text>
+
+    <line x1="110" y1="52" x2="130" y2="52" stroke="#F0783C" stroke-width="1.2" marker-end="url(#hga)"/>
+    <line x1="230" y1="52" x2="250" y2="52" stroke="#F0783C" stroke-width="1.2" marker-end="url(#hga)"/>
+    <line x1="350" y1="45" x2="370" y2="27" stroke="#57C98A" stroke-width="1"/>
+    <line x1="350" y1="55" x2="370" y2="72" stroke="#E85C55" stroke-width="1"/>
+    <line x1="470" y1="27" x2="490" y2="45" stroke="#57C98A" stroke-width="1" marker-end="url(#hga)"/>
+    <line x1="470" y1="72" x2="490" y2="57" stroke="#E85C55" stroke-width="1" marker-end="url(#hga)"/>
+  </svg>
+
+  <div class="sub-title">Auto-Approval Timeout</div>
+  <p>The gate waits up to <strong><span class="mono">HUMAN_GATE_TIMEOUT_SECONDS = 2</span></strong> seconds (configurable in <span class="mono">config.py</span>) for an operator decision. If no decision arrives in that window, the <span class="mono">timeout_manager</span> auto-approves with decision <span class="mono">AUTO_APPROVED</span> and operator <span class="mono">"auto-timeout"</span>. This prevents the pipeline from stalling indefinitely in production.</p>
+
+  <div class="sub-title">Audit Trail — node_human_gate Table</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Field</th><th>Description</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">review_id</td><td>UUID primary key for this review</td><td class="mono" style="font-size:9px;">a3f2-91bc-...</td></tr>
+        <tr><td class="mono">old_severity</td><td>Committed severity before the jump</td><td class="mono">P4</td></tr>
+        <tr><td class="mono">new_severity</td><td>Proposed (candidate) severity</td><td class="mono">P2</td></tr>
+        <tr><td class="mono">final_severity</td><td>Actual severity applied after decision</td><td class="mono">P2</td></tr>
+        <tr><td class="mono">decision</td><td>APPROVED / REJECTED / AUTO_APPROVED</td><td class="mono">APPROVED</td></tr>
+        <tr><td class="mono">operator</td><td>Username of reviewer (or "auto-timeout")</td><td class="mono">kunal.w</td></tr>
+        <tr><td class="mono">response_ms</td><td>Milliseconds from create to decision</td><td class="mono">1,840</td></tr>
+        <tr><td class="mono">escalation_summary</td><td>Human-readable escalation context</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-label">Design Principle</div>
+    <p>The Human Gate does <strong>not</strong> block the pipeline thread. It uses an interrupt mechanism (<span class="mono">interrupt_manager.py</span>) that polls for a decision while the background simulator and other processes continue running. Only the final DB write for this specific episode's severity is deferred until the gate resolves.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 13 — Human Gate</span>
+    <span>15 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 16 — SECTION 14: QUERYLANGGRAPH CHATBOT
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 14</div>
+  <div class="section-title">QueryLangGraph — Chatbot Agent</div>
+  <div class="lead">Instead of writing SQL, operators ask: "What caused the P1 incident at 3am?" — and a guarded LLM agent pipeline retrieves the data and synthesizes a human-readable answer.</div>
+
+  <p>The <strong>QueryLangGraph</strong> chatbot is a separate FastAPI service (port 8001) powered by its own 11-node <span class="mono">StateGraph</span>. It is entirely independent of the inference pipeline — it reads from the same SQLite databases but does not write to them. Its architecture is designed around a principle of <strong>defense in depth</strong>: four separate guardrail nodes screen the query at different stages before any LLM inference is triggered.</p>
+
+  <div class="sub-title">11-Node Guarded Pipeline</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Node</th><th>Type</th><th>Purpose</th><th>Gate Condition</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="mono">parse_guard</td><td><span class="badge badge-red">Guardrail</span></td><td>Block SQL injection, prompt injection, PII queries</td><td>is_safe = False → respond</td></tr>
+        <tr><td>2</td><td class="mono">parse_query</td><td><span class="badge badge-blue">Processing</span></td><td>NLP extraction: intent + entities from query</td><td>—</td></tr>
+        <tr><td>3</td><td class="mono">validation_guard</td><td><span class="badge badge-red">Guardrail</span></td><td>Validate parsed output format against expected schema</td><td>is_safe = False → respond</td></tr>
+        <tr><td>4</td><td class="mono">validation</td><td><span class="badge badge-blue">Processing</span></td><td>Semantic validation: entities against DB schema</td><td>is_validated = False → respond</td></tr>
+        <tr><td>5</td><td class="mono">intent_router</td><td><span class="badge badge-yellow">Router</span></td><td>Route to correct query strategy (episode_lookup, trend, etc.)</td><td>—</td></tr>
+        <tr><td>6</td><td class="mono">retrieval_guard</td><td><span class="badge badge-red">Guardrail</span></td><td>Prevent unauthorized DB access patterns</td><td>is_safe = False → respond</td></tr>
+        <tr><td>7</td><td class="mono">retrieval</td><td><span class="badge badge-blue">Processing</span></td><td>Execute structured SQLite query → raw data</td><td>—</td></tr>
+        <tr><td>8</td><td class="mono">sufficiency_router</td><td><span class="badge badge-yellow">Router</span></td><td>Check if retrieved data is sufficient to answer</td><td>is_sufficient = False → respond</td></tr>
+        <tr><td>9</td><td class="mono">synthesis_guard</td><td><span class="badge badge-red">Guardrail</span></td><td>Validate raw data before passing to LLM</td><td>is_safe = False → respond</td></tr>
+        <tr><td>10</td><td class="mono">synthesis</td><td><span class="badge badge-green">LLM</span></td><td>Google Gemini / OpenAI generates human-readable response</td><td>—</td></tr>
+        <tr><td>11</td><td class="mono">respond</td><td><span class="badge badge-green">Output</span></td><td>Format final JSON response payload</td><td>→ END</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <div class="sub2-title">QueryState Schema</div>
+      <div class="code-block" style="margin:8px 0;">
+        <pre><span class="kw">class</span> <span class="nm">QueryState</span>(TypedDict):
+    user_query:          <span class="nm">str</span>
+    parsed_intent:       <span class="nm">dict</span>
+    is_safe:             <span class="nm">bool</span>
+    is_validated:        <span class="nm">bool</span>
+    is_sufficient:       <span class="nm">bool</span>
+    retrieved_data:      <span class="nm">dict</span>
+    synthesized_response:<span class="nm">str</span>
+    final_response:      <span class="nm">dict</span></pre>
+      </div>
+    </div>
+    <div>
+      <div class="sub2-title">Example Queries</div>
+      <div class="callout callout-blue" style="margin:8px 0; padding:14px;">
+        <p style="font-size:11px; margin-bottom:8px;">• "What was the root cause of the last P1 incident?"</p>
+        <p style="font-size:11px; margin-bottom:8px;">• "Show me all MEMORY_LEAK episodes in the last 24 hours"</p>
+        <p style="font-size:11px; margin-bottom:8px;">• "What is the time-to-failure for the current episode?"</p>
+        <p style="font-size:11px; margin-bottom:0;">• "How many Human Gate reviews were auto-approved today?"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-title">Fallback — PurePythonQueryGraphRunner</div>
+  <p>If the <span class="mono">langgraph</span> package is not installed, a <span class="mono">PurePythonQueryGraphRunner</span> executes the same 11 nodes sequentially without the StateGraph routing infrastructure. This guarantees that the chatbot remains functional even in minimal environments.</p>
+
+  <div class="callout callout-yellow">
+    <div class="callout-label">Important: Separation of Concerns</div>
+    <p>The QueryLangGraph is a <strong>read-only agent</strong>. It queries existing incident data from SQLite but never writes to it. The LLM synthesis step uses Google Gemini (or OpenAI) only to convert retrieved structured data into natural language — it cannot modify incidents, change severities, or trigger pipeline actions.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 14 — QueryLangGraph Chatbot</span>
+    <span>16 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 17 — SECTION 15: API ARCHITECTURE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 15</div>
+  <div class="section-title">API & SSE Architecture</div>
+  <div class="lead">A FastAPI service on port 8080 serves all REST endpoints and the real-time SSE stream that drives the React dashboard. A second FastAPI service on port 8001 handles chatbot queries.</div>
+
+  <div class="sub-title">Complete API Reference — Port 8080</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Method + Path</th><th>Purpose</th><th>Response</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">GET /api/health</td><td>Service health check</td><td class="mono" style="font-size:9px;">{"status":"healthy"}</td></tr>
+        <tr><td class="mono">GET /api/live</td><td>Latest pipeline state (historical CSV)</td><td>Full incident object</td></tr>
+        <tr><td class="mono">GET /api/episodes</td><td>All historical episodes list</td><td>List[EpisodeSummary]</td></tr>
+        <tr><td class="mono">GET /api/episodes/{id}</td><td>Full detail for one historical episode</td><td>EpisodeDetail</td></tr>
+        <tr><td class="mono">PATCH /api/incident/{id}</td><td>Update incident status (OPEN/ACK/IN_PROGRESS/RESOLVED)</td><td>StatusResponse</td></tr>
+        <tr><td class="mono">GET /api/reliability/summary</td><td>4-group Weibull params + KM curves</td><td>ReliabilitySummary</td></tr>
+        <tr><td class="mono">GET /api/live-stream</td><td><strong>SSE stream</strong> — real-time pipeline state every 500ms</td><td>text/event-stream</td></tr>
+        <tr><td class="mono">GET /api/live-feed/state</td><td>Latest live pipeline state (REST fallback for SSE)</td><td>LiveFeedState</td></tr>
+        <tr><td class="mono">GET /api/live-feed/episodes</td><td>All episodes from live_feed_db.sqlite</td><td>List[Episode]</td></tr>
+        <tr><td class="mono">GET /api/live-feed/status</td><td>Queue depth, episode count, latest mode</td><td>StatusObject</td></tr>
+        <tr><td class="mono">POST /api/live/start</td><td>Start simulator + LangGraph subprocesses</td><td class="mono" style="font-size:9px;">{"status":"started"}</td></tr>
+        <tr><td class="mono">POST /api/live/stop</td><td>Terminate both subprocesses</td><td class="mono" style="font-size:9px;">{"status":"stopped"}</td></tr>
+        <tr><td class="mono">GET /api/live/simulation-status</td><td>Check if subprocesses are alive</td><td class="mono" style="font-size:9px;">{"running":true,...}</td></tr>
+        <tr><td class="mono">GET /api/human-gate/pending</td><td>All reviews awaiting operator decision</td><td>List[ReviewSummary]</td></tr>
+        <tr><td class="mono">GET /api/human-gate/review/{id}</td><td>Full review detail + marks as REVIEWING</td><td>ReviewDetail</td></tr>
+        <tr><td class="mono">POST /api/human-gate/decision/{id}</td><td>Submit APPROVED / REJECTED decision</td><td>DecisionResult</td></tr>
+        <tr><td class="mono">GET /api/human-gate/metrics</td><td>Gate KPIs: approval rate, avg response time</td><td>GateMetrics</td></tr>
+        <tr><td class="mono">GET /api/human-gate/history</td><td>Recent audit records, newest first</td><td>List[AuditRecord]</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">SSE Broadcaster Architecture</div>
+  <div class="code-block">
+    <div class="code-label">sse_broadcaster.py — thread-safe SSE push</div>
+    <pre><span class="kw">class</span> <span class="nm">SSEBroadcaster</span>:
+    _lock:          threading.Lock   <span class="cm"># protects _latest_state</span>
+    _latest_state:  dict             <span class="cm"># most recent pipeline state</span>
+
+    <span class="kw">@classmethod</span>
+    <span class="kw">def</span> <span class="fn">update</span>(cls, state: dict):          <span class="cm"># called from pipeline thread (sync)</span>
+        <span class="kw">with</span> cls._lock:
+            cls._latest_state = <span class="fn">safe_serialize</span>(state)
+
+    <span class="kw">@classmethod</span>
+    <span class="kw">async def</span> <span class="fn">stream</span>(cls, interval_s=<span class="nm">0.5</span>):  <span class="cm"># async generator for FastAPI</span>
+        <span class="kw">while</span> <span class="kw">True</span>:
+            payload = LiveFeedService.<span class="fn">get_live_feed_state</span>()
+            <span class="kw">yield</span> <span class="fn">f</span><span class="str">"data: {json.dumps(payload)}\n\n"</span>
+            <span class="kw">await</span> asyncio.<span class="fn">sleep</span>(interval_s)</pre>
+  </div>
+
+  <p>The pipeline thread (synchronous) calls <span class="mono">SSEBroadcaster.update()</span> after every <span class="mono">n10_db_writer</span> cycle. The FastAPI SSE endpoint uses an async generator that yields the latest enriched dashboard payload every 500ms to all connected clients simultaneously. Thread safety is guaranteed by the <span class="mono">threading.Lock</span>.</p>
+
+  <div class="callout callout-blue">
+    <div class="callout-label">Process Management via API</div>
+    <p><span class="mono">POST /api/live/start</span> spawns two subprocesses stored as module-level globals <span class="mono">_live_feed_proc</span> and <span class="mono">_langgraph_proc</span>. Liveness is checked with <span class="mono">proc.poll() is None</span>. Termination uses <span class="mono">proc.terminate()</span> which sends SIGTERM, allowing graceful shutdown. The subprocess approach avoids threading complexity while giving the API full lifecycle control.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 15 — API & SSE Architecture</span>
+    <span>17 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 18 — SECTION 16: FRONTEND DASHBOARD
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 16</div>
+  <div class="section-title">Frontend Dashboard</div>
+  <div class="lead">A React + Vite single-page application subscribes to the SSE stream and renders live incident state — severity, failure mode, forecast, survival probability, and chatbot — all updated every 500 milliseconds.</div>
+
+  <div class="sub-title">13 Components and their Data Sources</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Component</th><th>File</th><th>Purpose</th><th>Data Source</th></tr></thead>
+      <tbody>
+        <tr><td>TopHeader</td><td class="mono">TopHeader.jsx</td><td>App title + Live Feed on/off toggle button</td><td>POST /api/live/start or stop</td></tr>
+        <tr><td>Sidebar</td><td class="mono">Sidebar.jsx</td><td>Historical episode list navigation</td><td>GET /api/episodes</td></tr>
+        <tr><td>SummaryCard</td><td class="mono">SummaryCard.jsx</td><td>Current incident headline (mode, severity, status)</td><td>SSE incident state</td></tr>
+        <tr><td>PredictionCard</td><td class="mono">PredictionCard.jsx</td><td>LightGBM output: predicted_failure + confidence</td><td>SSE predicted_failure, prediction_probability</td></tr>
+        <tr><td>DiagnosisCard</td><td class="mono">DiagnosisCard.jsx</td><td>Root-cause diagnosis + evidence display</td><td>SSE evidence, dominant_state</td></tr>
+        <tr><td>EvidenceCard</td><td class="mono">EvidenceCard.jsx</td><td>Raw telemetry evidence (anomalous metrics)</td><td>SSE raw_metric, raw_log</td></tr>
+        <tr><td>MultiTrendCharts</td><td class="mono">MultiTrendCharts.jsx</td><td>7 time-series metric charts (Recharts)</td><td>SSE chart_data</td></tr>
+        <tr><td>AIOpsChartRenderer</td><td class="mono">AIOpsChartRenderer.jsx</td><td>Dynamic chart selector for individual metrics</td><td>MultiTrendCharts sub-component</td></tr>
+        <tr><td>ReliabilityCard</td><td class="mono">ReliabilityCard.jsx</td><td>Weibull survival curve + KM overlay</td><td>SSE reliability fields</td></tr>
+        <tr><td>ReliabilityGraphSection</td><td class="mono">ReliabilityGraphSection.jsx</td><td>Full 4-group reliability dashboard</td><td>GET /api/reliability/summary</td></tr>
+        <tr><td>HumanGatePanel</td><td class="mono">HumanGatePanel.jsx</td><td>Review queue + APPROVE / REJECT buttons</td><td>GET /api/human-gate/pending</td></tr>
+        <tr><td>HumanGateSidebarSection</td><td class="mono">HumanGateSidebarSection.jsx</td><td>Compact sidebar gate alerts</td><td>GET /api/human-gate/pending</td></tr>
+        <tr><td>AIOpsChat</td><td class="mono">AIOpsChat.jsx</td><td>LLM chatbot panel (port 8001)</td><td>POST http://localhost:8001/query</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">SSE Connection Lifecycle</div>
+  <div class="code-block">
+    <div class="code-label">App.jsx — EventSource setup</div>
+    <pre><span class="cm">// Established on component mount; auto-reconnects on disconnect</span>
+<span class="kw">const</span> es = <span class="kw">new</span> EventSource(<span class="str">'http://localhost:8080/api/live-stream'</span>);
+
+es.onmessage = (e) => {
+  <span class="kw">const</span> data = JSON.<span class="fn">parse</span>(e.data);
+  <span class="fn">setIncident</span>(data);        <span class="cm">// triggers component re-renders</span>
+};
+
+es.onerror = () => {
+  <span class="cm">// Browser auto-reconnects after a brief delay</span>
+};</pre>
+  </div>
+
+  <div class="callout callout-blue">
+    <div class="callout-label">State Management Pattern</div>
+    <p><span class="mono">App.jsx</span> owns all shared state via React <span class="mono">useState</span> hooks. There is no Redux, Zustand, or Context API — the SSE payload is rich enough that each component receives its needed fields directly as props. The SSE payload is enriched server-side by <span class="mono">LiveFeedService.get_live_feed_state()</span> before transmission, so the frontend performs zero data transformation.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 16 — Frontend Dashboard</span>
+    <span>18 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 19 — SECTION 17: DATABASE & PERSISTENCE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 17</div>
+  <div class="section-title">Database & Persistence</div>
+  <div class="lead">All telemetry, pipeline outputs, and audit records are persisted to SQLite using WAL mode for concurrent read/write access across multiple processes.</div>
+
+  <div class="sub-title">Two SQLite Databases</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Database</th><th>Path</th><th>Written By</th><th>Read By</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">simulator_db.sqlite</td><td class="mono" style="font-size:9px;">Simulator/app_data_generator_for_offline/output/</td><td>Offline simulator</td><td>run_langgraph.py (historical)</td></tr>
+        <tr><td class="mono">live_feed_db.sqlite</td><td class="mono" style="font-size:9px;">Simulator/live_feed_simulator/output/</td><td>run_live_feed.py</td><td>run_langgraph.py --live, FastAPI services</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">WAL Mode — Why It Matters</div>
+  <p>SQLite's default journal mode locks the database file during writes, which would block the LangGraph reader while the simulator is writing. <strong>WAL (Write-Ahead Logging)</strong> mode appends writes to a separate WAL file without blocking readers. Readers see the last committed checkpoint; the writer never locks the main database file.</p>
+
+  <div class="code-block">
+    <div class="code-label">DbWriter.setup() — WAL configuration</div>
+    <pre>conn.<span class="fn">execute</span>(<span class="str">"PRAGMA journal_mode=WAL"</span>)    <span class="cm"># concurrent reads OK</span>
+conn.<span class="fn">execute</span>(<span class="str">"PRAGMA synchronous=NORMAL"</span>)  <span class="cm"># faster, still crash-safe</span>
+conn.<span class="fn">execute</span>(<span class="str">"PRAGMA foreign_keys=ON"</span>)     <span class="cm"># referential integrity</span></pre>
+  </div>
+
+  <div class="sub-title">All 11 Tables</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Table</th><th>Written By</th><th>Key Columns</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">metrics</td><td>Simulator</td><td>id (PK, AUTOINCREMENT), episode_id, timestamp, 32 metric columns</td></tr>
+        <tr><td class="mono">logs</td><td>Simulator</td><td>episode_id, timestamp, log_level, exception_type, log_message</td></tr>
+        <tr><td class="mono">traces</td><td>Simulator</td><td>episode_id, timestamp, trace_id, span_id, span_duration_ms, span_status</td></tr>
+        <tr><td class="mono">node_feature_engineering</td><td>n10_db_writer</td><td>cycle, episode_id, 37 feature columns</td></tr>
+        <tr><td class="mono">node_preliminary_severity</td><td>n10_db_writer</td><td>preliminary_severity, weighted_score, blast_size, reason</td></tr>
+        <tr><td class="mono">node_classification</td><td>n10_db_writer</td><td>predicted_failure, prediction_probability</td></tr>
+        <tr><td class="mono">node_tumbling_window</td><td>n10_db_writer</td><td>dominant_state, vote_distribution (JSON), window_margin, window_full</td></tr>
+        <tr><td class="mono">node_forecasting</td><td>n10_db_writer</td><td>time_to_failure, forecast_confidence, algorithm_used, feature_ttfs (JSON)</td></tr>
+        <tr><td class="mono">node_severity_update</td><td>n10_db_writer</td><td>impact_band, urgency_band, revised_severity, is_escalated, dwell_count</td></tr>
+        <tr><td class="mono">node_reliability</td><td>n10_db_writer</td><td>group_name, survival_probability, beta, eta, ttf_seconds</td></tr>
+        <tr><td class="mono">node_human_gate</td><td>n10_db_writer</td><td>review_id (PK), decision, operator, response_ms, is_large_jump</td></tr>
+        <tr><td class="mono">pipeline_results</td><td>n10_db_writer</td><td>Denormalized: all node outputs combined (50+ columns) — primary read by API</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-orange">
+    <div class="callout-label">The Core Insight — DbWriter Design</div>
+    <p>The <span class="mono">DbWriter</span> class in <span class="mono">nodes/db_writer/db_writer.py</span> uses Python's <span class="mono">with conn:</span> context manager for atomic transactions. Every node's output is written as a single <span class="mono">INSERT OR IGNORE</span> statement within one transaction. If any write fails, the entire transaction rolls back — no partial row is ever committed to the database.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 17 — Database & Persistence</span>
+    <span>19 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 20 — SECTION 18: TECHNOLOGY STACK
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 18</div>
+  <div class="section-title">Technology Stack</div>
+  <div class="lead">Every technology in Sentinel was chosen for a specific engineering reason — not default convention — and each serves a clearly bounded responsibility.</div>
+
+  <div class="sub-title">Backend Stack</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Technology</th><th>Version</th><th>Role</th><th>Why This Choice</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Python</strong></td><td>3.11+</td><td>Language</td><td>Mature ML/data ecosystem; type hints for StateGraph correctness</td></tr>
+        <tr><td><strong>LangGraph</strong></td><td>0.1.x</td><td>Pipeline Orchestration</td><td>Stateful directed graph with conditional routing + SQLite checkpointing; native StateGraph primitive</td></tr>
+        <tr><td><strong>LightGBM</strong></td><td>4.x</td><td>ML Classifier</td><td>Leaf-wise growth faster than XGBoost on 37 features; native predict_proba(); no normalization needed</td></tr>
+        <tr><td><strong>Optuna</strong></td><td>3.x</td><td>HPO</td><td>TPE sampler outperforms grid/random search for 9-parameter LightGBM space</td></tr>
+        <tr><td><strong>Drain3</strong></td><td>0.9.x</td><td>Log Parser</td><td>Streaming log template miner; detects novel patterns without retraining</td></tr>
+        <tr><td><strong>FastAPI</strong></td><td>0.111.x</td><td>REST + SSE API</td><td>Native async + StreamingResponse for SSE; automatic OpenAPI docs</td></tr>
+        <tr><td><strong>Uvicorn</strong></td><td>0.29.x</td><td>ASGI Server</td><td>High-performance ASGI runtime for FastAPI async endpoints</td></tr>
+        <tr><td><strong>SQLite (WAL)</strong></td><td>3.x</td><td>Persistence</td><td>Embedded; WAL mode enables concurrent reads from multiple processes without locking</td></tr>
+        <tr><td><strong>Pandas</strong></td><td>2.x</td><td>Data Processing</td><td>Feature engineering, CSV I/O, episode aggregation</td></tr>
+        <tr><td><strong>SciPy</strong></td><td>1.13.x</td><td>Statistical Analysis</td><td>L-BFGS-B optimization for Weibull MLE fallback</td></tr>
+        <tr><td><strong>pmdarima</strong></td><td>2.x</td><td>Time-Series Forecast</td><td>auto_arima automatically selects ARIMA (p,d,q) order; no manual tuning</td></tr>
+        <tr><td><strong>Pydantic v2</strong></td><td>2.x</td><td>State Validation</td><td>Field-level validation of AIOpsLangState at every node boundary</td></tr>
+        <tr><td><strong>Google Gemini / OpenAI</strong></td><td>latest</td><td>LLM Synthesis</td><td>QueryLangGraph synthesis node; natural language generation from structured DB results</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Frontend Stack</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Technology</th><th>Version</th><th>Role</th><th>Why This Choice</th></tr></thead>
+      <tbody>
+        <tr><td><strong>React</strong></td><td>18.x</td><td>UI Framework</td><td>Component-based; fine-grained re-rendering on SSE state updates</td></tr>
+        <tr><td><strong>Vite</strong></td><td>5.x</td><td>Build Tool</td><td>Sub-second HMR; ES module native bundling; faster than Create React App</td></tr>
+        <tr><td><strong>Recharts</strong></td><td>2.x</td><td>Charting</td><td>React-native charts; AreaChart and LineChart for time-series; ComposedChart for KM overlay</td></tr>
+        <tr><td><strong>Vanilla CSS</strong></td><td>—</td><td>Styling</td><td>Full design-system control; no Tailwind configuration overhead; custom dark theme</td></tr>
+        <tr><td><strong>EventSource (browser)</strong></td><td>native</td><td>SSE Client</td><td>Native browser API; auto-reconnect; no additional library needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 18 — Technology Stack</span>
+    <span>20 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 21 — SECTION 19: AIOps STATE SCHEMA
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 19</div>
+  <div class="section-title">The AIOps State Schema</div>
+  <div class="lead">The AIOpsLangState TypedDict is the single shared memory that flows through all 10 pipeline nodes. Every node reads from it and returns only the keys it updated — LangGraph merges the partial dict into the full state.</div>
+
+  <div class="two-col">
+    <div>
+      <div class="sub2-title">Cycle Identity</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">cycle</td><td>int — pipeline cycle counter</td></tr>
+        <tr><td class="mono">last_processed_id</td><td>int — last SQLite metrics row id consumed</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Raw Telemetry</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">raw_metric</td><td>dict — 35 columns from metrics table</td></tr>
+        <tr><td class="mono">raw_log</td><td>list[dict] — log entries for this tick</td></tr>
+        <tr><td class="mono">raw_traces</td><td>list[dict] — span entries for this tick</td></tr>
+        <tr><td class="mono">episode_id</td><td>str — ep_MEMORY_LEAK_20260801_001</td></tr>
+        <tr><td class="mono">failure_mode</td><td>str — ground truth from simulator</td></tr>
+        <tr><td class="mono">timestamp</td><td>float — Unix epoch</td></tr>
+        <tr><td class="mono">elapsed_s</td><td>float — seconds since episode start</td></tr>
+        <tr><td class="mono">service</td><td>str — auth-service, payment-service, etc.</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Feature Engineering</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">classifier_input</td><td>dict — 37-feature vector for LightGBM</td></tr>
+        <tr><td class="mono">evidence</td><td>dict — anomalous metrics + diagnostic metadata</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Classification</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">preliminary_severity</td><td>str — P1 / P2 / P3 / P4</td></tr>
+        <tr><td class="mono">severity_result</td><td>dict — weighted score, blast_size, reason</td></tr>
+        <tr><td class="mono">predicted_failure</td><td>str — MEMORY_LEAK, CPU_SATURATION, etc.</td></tr>
+        <tr><td class="mono">prediction_probability</td><td>float — confidence 0.0–1.0</td></tr>
+      </tbody></table></div>
+    </div>
+    <div>
+      <div class="sub2-title">Tumbling Window</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">dominant_state</td><td>str — majority-vote label</td></tr>
+        <tr><td class="mono">vote_distribution</td><td>dict — {mode: count}</td></tr>
+        <tr><td class="mono">window_margin</td><td>float — winner − runner-up votes</td></tr>
+        <tr><td class="mono">window_full</td><td>bool — True after 10 predictions</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Forecasting</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">forecast_result</td><td>dict — full raw forecasting output</td></tr>
+        <tr><td class="mono">forecast_algorithm</td><td>Optional[str] — algorithm used</td></tr>
+        <tr><td class="mono">time_to_failure</td><td>Optional[float] — seconds until breach</td></tr>
+        <tr><td class="mono">forecast_confidence</td><td>Optional[float] — 0.0–1.0</td></tr>
+        <tr><td class="mono">threshold_crossed</td><td>Optional[bool]</td></tr>
+        <tr><td class="mono">earliest_ttf_feature</td><td>Optional[str] — first-to-breach metric</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Severity Update</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">revised_severity</td><td>Optional[str] — final P1–P4</td></tr>
+        <tr><td class="mono">impact_band</td><td>Optional[str] — High / Moderate / None</td></tr>
+        <tr><td class="mono">urgency_band</td><td>Optional[str] — Imminent / Near / Distant</td></tr>
+        <tr><td class="mono">is_escalated</td><td>Optional[bool]</td></tr>
+        <tr><td class="mono">is_deescalated</td><td>Optional[bool]</td></tr>
+        <tr><td class="mono">dwell_count</td><td>Optional[int]</td></tr>
+      </tbody></table></div>
+
+      <div class="sub2-title">Human Gate</div>
+      <div class="tbl-wrap"><table><thead><tr><th>Field</th><th>Type</th></tr></thead><tbody>
+        <tr><td class="mono">hg_needed</td><td>Optional[bool]</td></tr>
+        <tr><td class="mono">hg_review_id</td><td>Optional[str] — UUID</td></tr>
+        <tr><td class="mono">hg_decision</td><td>Optional[str] — APPROVED / REJECTED / AUTO</td></tr>
+        <tr><td class="mono">hg_final_severity</td><td>Optional[str]</td></tr>
+        <tr><td class="mono">hg_response_ms</td><td>Optional[int]</td></tr>
+        <tr><td class="mono">error</td><td>Optional[str] — triggers db_writer shortcut</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top:14px;">
+    <div class="callout-label">Technical Note — TypedDict + Pydantic</div>
+    <p>LangGraph's StateGraph requires a <span class="mono">TypedDict</span> (not a Pydantic BaseModel). A mirrored <span class="mono">_AIOpsStateModel</span> (Pydantic BaseModel) is used only for validation at node boundaries via the <span class="mono">validate_state()</span> helper. This provides field-level type coercion and range checks without changing the underlying dict-based state mechanism.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 19 — State Schema</span>
+    <span>21 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 22 — SECTION 20: END-TO-END FLOW
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 20</div>
+  <div class="section-title">End-to-End Data Flow</div>
+  <div class="lead">A single telemetry tick travels through seven distinct layers in under 500 milliseconds — from raw metric generation to a rendered React dashboard update.</div>
+
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div class="flow-content">
+        <div class="flow-title">Simulator generates one tick (0.5s interval)</div>
+        <div class="flow-desc"><span class="mono">run_live_feed.py</span> writes one row each to <span class="mono">metrics</span>, <span class="mono">logs</span>, and <span class="mono">traces</span> tables in <span class="mono">live_feed_db.sqlite</span> using WAL-mode INSERT. Each row is identified by (episode_id, timestamp).</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div class="flow-content">
+        <div class="flow-title">n01_collect reads the new row</div>
+        <div class="flow-desc"><span class="mono">run_langgraph.py</span> polls the DB every 100–500ms. When a new row appears with <span class="mono">id > last_processed_id</span>, n01 fetches the metric row plus correlated logs and traces by (episode_id, timestamp), populating <span class="mono">AIOpsLangState</span>.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div class="flow-content">
+        <div class="flow-title">n02 builds the 37-feature vector</div>
+        <div class="flow-desc">32 metric fields are extracted from raw_metric with type coercion. 5 log features are computed from raw_log (count, severity, critical count, exception flag, Drain3 novel template). Result written to state.classifier_input.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div class="flow-content">
+        <div class="flow-title">n03 assigns preliminary severity P1–P4 (microseconds)</div>
+        <div class="flow-desc">Rule engine evaluates threshold conditions in order P1 → P2 → P3 → P4. The first triggered level is assigned. A human-readable reason string (e.g., "cpu=91.2%>90%") is written to the state.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">5</div>
+      <div class="flow-content">
+        <div class="flow-title">n04 classifies the failure mode (LightGBM inference, &lt;1ms)</div>
+        <div class="flow-desc">Single-row DataFrame → model.predict_proba() → argmax label → inverse_transform(). Sets state.predicted_failure and state.prediction_probability.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">6</div>
+      <div class="flow-content">
+        <div class="flow-title">n05 majority-votes the prediction into dominant_state</div>
+        <div class="flow-desc">New prediction appended to deque(maxlen=10). Counter applied. Winner and margin computed. state.dominant_state reflects the stable label; state.window_full gates forecasting.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">7</div>
+      <div class="flow-content">
+        <div class="flow-title">n06 computes time-to-failure (mode-specific algorithm)</div>
+        <div class="flow-desc">router.route_forecast(dominant_state, episode_id, features) dispatches to the dedicated forecasting function. Episode buffer receives the new feature row. Linear/ARIMA/exponential algorithm computes TTF. state.time_to_failure set in seconds.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">8</div>
+      <div class="flow-content">
+        <div class="flow-title">n07 derives revised severity through impact × urgency matrix + hysteresis</div>
+        <div class="flow-desc">preliminary_severity → impact_band. TTF + confidence → urgency_band. Matrix lookup → candidate_severity. Dwell counter determines whether to apply or hold the new severity.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">9</div>
+      <div class="flow-content">
+        <div class="flow-title">n08 computes survival probability from Weibull parameters</div>
+        <div class="flow-desc">Pre-fitted β and η for the current failure_mode's group are loaded from weibull_params.json. R(t) = exp(−(elapsed_s / η)^β) is computed. state.survival_probability is set (0–100%).</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">10</div>
+      <div class="flow-content">
+        <div class="flow-title">n09 checks for large severity jump → Human Gate or pass-through</div>
+        <div class="flow-desc">If candidate severity differs by ≥2 levels from committed_severity, a review is created and the gate waits up to 2 seconds for operator decision (or auto-approves).</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">11</div>
+      <div class="flow-content">
+        <div class="flow-title">n10 writes 11 tables + broadcasts SSE event</div>
+        <div class="flow-desc">DbWriter.write_pipeline_results() writes the denormalized combined row to pipeline_results. All per-node tables are also updated. SSEBroadcaster.update(state) is called; the FastAPI /api/live-stream generator picks it up within 500ms and pushes it to connected browsers.</div>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">12</div>
+      <div class="flow-content">
+        <div class="flow-title">React re-renders all affected components</div>
+        <div class="flow-desc">App.jsx receives the SSE event payload, calls setIncident(data), triggering re-renders of SummaryCard, PredictionCard, MultiTrendCharts, ReliabilityCard, HumanGatePanel — all with fresh data from this cycle.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 20 — End-to-End Flow</span>
+    <span>22 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 23 — SECTION 21: OUTPUTS & RUNNING
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 21</div>
+  <div class="section-title">Outputs & Running the Project</div>
+  <div class="lead">Sentinel produces both structured database records and live dashboard visualizations — every pipeline output is persisted and observable.</div>
+
+  <div class="sub-title">Pipeline Output Files</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>File</th><th>Location</th><th>Content</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">engineered_features.csv</td><td class="mono" style="font-size:9px;">nodes/feature_engineering/output/</td><td>37-feature vector per cycle — primary training data for LightGBM</td></tr>
+        <tr><td class="mono">preliminary_severity.csv</td><td class="mono" style="font-size:9px;">nodes/preliminary_severity/output/</td><td>P1–P4 per cycle with weighted score, blast_size, and reason</td></tr>
+        <tr><td class="mono">pipeline_results.csv</td><td class="mono" style="font-size:9px;">nodes/classification/output/</td><td>Full classification results per cycle</td></tr>
+        <tr><td class="mono">tumbling_window_output.csv</td><td class="mono" style="font-size:9px;">nodes/tumbling_window/output/</td><td>Dominant state, vote distribution, margin per cycle</td></tr>
+        <tr><td class="mono">forecasting_output.csv</td><td class="mono" style="font-size:9px;">nodes/forecasting/output/</td><td>TTF predictions, algorithm used, confidence per cycle</td></tr>
+        <tr><td class="mono">severity_update_output.csv</td><td class="mono" style="font-size:9px;">nodes/severity_update/output/</td><td>Revised severity history with hysteresis dwell count</td></tr>
+        <tr><td class="mono">weibull_params.json</td><td class="mono" style="font-size:9px;">nodes/reliability/</td><td>Pre-fitted Weibull β and η per failure group</td></tr>
+        <tr><td class="mono">lgbm_model.pkl</td><td class="mono" style="font-size:9px;">nodes/classification/models/</td><td>Trained LightGBM classifier artifact</td></tr>
+        <tr><td class="mono">langgraph_checkpoints.db</td><td class="mono" style="font-size:9px;">nodes/classification/models/</td><td>LangGraph SqliteSaver — full state per node for crash recovery</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Running the Project</div>
+  <div class="code-block">
+    <div class="code-label">Step 1 — Install dependencies</div>
+    <pre>pip install -r backend/requirements.txt
+cd frontend &amp;&amp; npm install</pre>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label">Step 2 — Terminal 1: Start all backend services</div>
+    <pre>cd d:/AIOps_Incident_Management
+python backend/run_server.py
+<span class="cm"># → Port 8001: QueryLangGraph Chatbot API (subprocess)
+# → Port 8080: Sentinel Dashboard API (blocking)</span></pre>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label">Step 3 — Terminal 2: Start frontend</div>
+    <pre>cd d:/AIOps_Incident_Management/frontend
+npm run dev
+<span class="cm"># → http://localhost:5173</span></pre>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label">Step 4 — Optional: Manual pipeline</div>
+    <pre><span class="cm"># Historical mode (offline data)</span>
+python backend/run_langgraph.py
+
+<span class="cm"># Live mode only (simulator + pipeline separate)</span>
+python backend/Simulator/live_feed_simulator/run_live_feed.py
+python backend/run_langgraph.py --live
+
+<span class="cm"># Reset all databases and output files</span>
+python backend/reset_all.py</pre>
+  </div>
+
+  <div class="callout callout-green">
+    <div class="callout-label">Live Feed — Single-Click Start</div>
+    <p>The simplest way to start the full live pipeline is to open <span class="mono">http://localhost:5173</span> and click the <strong>"Start Live Feed"</strong> button. This sends <span class="mono">POST /api/live/start</span>, which spawns both subprocesses and starts streaming telemetry within 2 seconds.</p>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Section 21 — Outputs & Running</span>
+    <span>23 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 24 — QUICK REFERENCE
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Quick Reference</div>
+  <div class="section-title">System Metrics at a Glance</div>
+  <div class="lead">Key numerical facts about the Sentinel AIOps implementation — all verified from actual source code.</div>
+
+  <div class="metrics-row metrics-4">
+    <div class="metric-card"><div class="metric-num orange">13</div><div class="metric-label">Failure Modes</div></div>
+    <div class="metric-card"><div class="metric-num orange">10</div><div class="metric-label">Inference Nodes</div></div>
+    <div class="metric-card"><div class="metric-num orange">11</div><div class="metric-label">Query Nodes</div></div>
+    <div class="metric-card"><div class="metric-num orange">37</div><div class="metric-label">ML Features</div></div>
+  </div>
+  <div class="metrics-row metrics-4">
+    <div class="metric-card"><div class="metric-num" style="color:var(--blue);">4</div><div class="metric-label">Guardrail Nodes</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--blue);">11</div><div class="metric-label">Database Tables</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--blue);">20+</div><div class="metric-label">API Endpoints</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--blue);">3</div><div class="metric-label">Server Ports</div></div>
+  </div>
+  <div class="metrics-row metrics-4">
+    <div class="metric-card"><div class="metric-num" style="color:var(--green);">80</div><div class="metric-label">Optuna Trials</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--green);">10</div><div class="metric-label">Window Size</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--green);">5</div><div class="metric-label">Dwell Cycles K</div></div>
+    <div class="metric-card"><div class="metric-num" style="color:var(--green);">2s</div><div class="metric-label">Gate Timeout</div></div>
+  </div>
+
+  <div class="sub-title" style="margin-top:20px;">Formulas Reference Card</div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Module</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>P1 Trigger</td><td class="mono" style="font-size:10px;">cpu &gt; 90 OR mem &gt; 90 OR p99 &gt; 1000 OR err &gt; 0.10 OR crit_logs &gt; 5</td></tr>
+        <tr><td>Tumbling Window Margin</td><td class="mono" style="font-size:10px;">margin = votes_winner − votes_runner_up</td></tr>
+        <tr><td>Linear TTF</td><td class="mono" style="font-size:10px;">TTF = (threshold − current) / slope</td></tr>
+        <tr><td>Exponential TTF</td><td class="mono" style="font-size:10px;">TTF = ln(threshold / current) / growth_rate</td></tr>
+        <tr><td>ARIMA</td><td class="mono" style="font-size:10px;">y_t = c + Σφᵢy_{t-i} + Σθⱼε_{t-j} + ε_t</td></tr>
+        <tr><td>Cascading TTF</td><td class="mono" style="font-size:10px;">TTF_final = min(TTF_cpu, TTF_mem, TTF_p99, ...)</td></tr>
+        <tr><td>Kaplan-Meier</td><td class="mono" style="font-size:10px;">S(t) = ∏(1 − dᵢ/nᵢ) for all tᵢ ≤ t</td></tr>
+        <tr><td>Weibull Survival</td><td class="mono" style="font-size:10px;">R(t) = exp(−(t/η)^β)</td></tr>
+        <tr><td>Weibull Hazard</td><td class="mono" style="font-size:10px;">h(t) = (β/η)·(t/η)^(β−1)</td></tr>
+        <tr><td>Hysteresis Dwell</td><td class="mono" style="font-size:10px;">revised = candidate iff dwell_count ≥ k (de-escalation)</td></tr>
+        <tr><td>Severity Matrix P1</td><td class="mono" style="font-size:10px;">Impact=High ∩ Urgency=Imminent → P1 | Impact=High ∩ Near → P1</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub-title">Port Reference</div>
+  <div class="three-col">
+    <div class="node-card" style="border-left-color:var(--blue);">
+      <div class="node-id" style="color:var(--blue);">PORT 8080</div>
+      <div class="node-name">Sentinel Dashboard API</div>
+      <div class="node-desc">REST + SSE. All incident endpoints, live feed control, human gate, reliability summary.</div>
+    </div>
+    <div class="node-card" style="border-left-color:var(--yellow);">
+      <div class="node-id" style="color:var(--yellow);">PORT 8001</div>
+      <div class="node-name">QueryLangGraph Chatbot</div>
+      <div class="node-desc">Natural language query API. POST /query → 11-node pipeline → JSON response.</div>
+    </div>
+    <div class="node-card" style="border-left-color:var(--green);">
+      <div class="node-id" style="color:var(--green);">PORT 5173</div>
+      <div class="node-name">React Dashboard</div>
+      <div class="node-desc">Vite dev server. SPA with 13 components, SSE subscriber, chatbot panel.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · AgenticOps</span>
+    <span>Quick Reference</span>
+    <span>24 / 25</span>
+  </div>
+</div>
+
+<!-- ████████████████████████████████████████████████████████
+     PAGE 25 — CONCLUSION
+████████████████████████████████████████████████████████ -->
+<div class="page">
+  <div class="section-label">Section 22</div>
+  <div class="section-title">Conclusion</div>
+  <div class="lead">Sentinel AIOps demonstrates that the knowledge required for expert-level incident management can be encoded, structured, and executed autonomously — making institutional knowledge permanent and scalable.</div>
+
+  <p>Production infrastructure generates more observability data than any human can process in real time. Sentinel's architecture accepts that premise and builds around it: <strong>the system correlates, the system classifies, the system forecasts, the system escalates</strong> — and then it tells the human what it found and why.</p>
+
+  <p>Every design decision in Sentinel has an engineering reason. LangGraph was chosen because its StateGraph allows each analysis node to have a single, testable responsibility and a clear interface (the shared state dict). LightGBM was chosen because gradient boosted trees make no assumptions about feature normalization and produce calibrated probability outputs that gate downstream decisions. WAL-mode SQLite was chosen because it allows concurrent access from multiple processes without a message broker.</p>
+
+  <div class="summary-box">
+    <div class="summary-label">The Architecture's Golden Rules</div>
+    <ol>
+      <li><strong>Telemetry is correlated before intelligence is applied.</strong> Metrics, logs, and traces are joined by (episode_id, timestamp) before any feature is extracted.</li>
+      <li><strong>Each pipeline node has exactly one responsibility.</strong> Collection, engineering, severity, classification, smoothing, forecasting, and persistence are distinct nodes — not mixed concerns.</li>
+      <li><strong>Rule-based and ML classification are complementary.</strong> Preliminary severity (P1–P4 rules) answers "how bad is it now"; LightGBM answers "what kind of failure is this" — both are needed.</li>
+      <li><strong>Label stability is the responsibility of the tumbling window.</strong> Raw per-cycle classifier output is inherently noisy; the 10-cycle majority vote provides the stable label that forecasting and severity update rely on.</li>
+      <li><strong>Forecasting contributes urgency, not severity.</strong> Time-to-failure estimates gate the urgency_band which feeds into the severity matrix — forecasting influences severity but does not set it directly.</li>
+      <li><strong>Escalation is immediate; de-escalation is earned.</strong> A severity jump fires instantly. A severity drop requires 5 consecutive confirming cycles (the hysteresis dwell counter).</li>
+      <li><strong>Human Gate preserves operator accountability.</strong> Large severity jumps require explicit human confirmation or auto-timeout; every decision is logged to the audit table.</li>
+      <li><strong>The database is the source of truth, not in-memory state.</strong> Every pipeline cycle writes to SQLite before the SSE broadcast; the API reads from the database, not from in-process variables.</li>
+      <li><strong>The chatbot is a read-only intelligence layer.</strong> QueryLangGraph queries incident data and synthesizes language — it never modifies state, triggers pipeline actions, or escalates incidents.</li>
+      <li><strong>Graceful degradation is designed, not accidental.</strong> Missing model → auto-train. No data → retry after poll interval. Node failure → db_writer writes partial state → checkpoint resume.</li>
+    </ol>
+  </div>
+
+  <div class="two-col" style="margin-top:20px;">
+    <div>
+      <div class="sub2-title">Future Scope</div>
+      <p style="font-size:11px; color:var(--muted);">Production Kubernetes deployment · Real Prometheus/OpenTelemetry integration · Multi-tenant incident isolation · GPU-accelerated LightGBM inference · External alerting (PagerDuty/Slack) · Drift detection for LightGBM model retraining · Graph neural network for cross-service correlation</p>
+    </div>
+    <div>
+      <div class="sub2-title">Repository</div>
+      <p style="font-size:11px; color:var(--muted); margin-bottom:8px;"><span class="mono" style="color:var(--orange);">kunalwandhare567/AgenticOps</span></p>
+      <p style="font-size:11px; color:var(--muted);">Stack: Python · FastAPI · LangGraph · LightGBM · SQLite · React/Vite · Recharts · Pydantic · pmdarima · Optuna</p>
+      <p style="font-size:11px; color:var(--muted);">Author: Kunal Wandhare · August 2026</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Sentinel AIOps · Metrics · Logs · Traces · LangGraph · LightGBM · FastAPI · React</span>
+    <span>Compiled August 2026</span>
+    <span>25 / 25</span>
+  </div>
+</div>
+
+</body>
+</html>
