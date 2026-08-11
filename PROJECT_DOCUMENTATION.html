@@ -50,13 +50,14 @@ html, body { background:#F4F7FF; color:#1E1B4B; font-family:'Inter',Arial,sans-s
 .page {
   width: var(--page-w);
   min-height: var(--page-h);
-  padding: var(--pad-y) var(--pad-x);
+  padding: var(--pad-y) var(--pad-x) 0.8in var(--pad-x);
   background: var(--bg);
   box-shadow: 0 1px 0 var(--border2);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   break-before: page;
   page-break-before: always;
+  margin: 0 auto;
 }
 .page:first-child { break-before: auto; page-break-before: auto; }
 
@@ -402,6 +403,50 @@ tbody td:first-child { color:var(--text); font-weight:600; }
 ═══════════════════════════════════════════════════════════ */
 h2,h3,h4 { break-after:avoid; page-break-after:avoid; }
 .tbl-wrap, .code-block, .callout, .node-card, .metric-card { break-inside:avoid; page-break-inside:avoid; }
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT OVERRIDES FOR PERFECT PDF DOWNLOAD
+═══════════════════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: Letter portrait;
+    margin: 0.4in 0.4in 0.4in 0.4in;
+  }
+  html, body {
+    background: #FFFFFF !important;
+    color: #1E1B4B !important;
+    font-size: 11px !important;
+  }
+  .page {
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding: 0 0 30px 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    break-before: page !important;
+    page-break-before: always !important;
+    margin: 0 !important;
+  }
+  .page:first-child {
+    break-before: auto !important;
+    page-break-before: auto !important;
+  }
+  .page.cover {
+    min-height: 9.8in !important;
+    padding: 0 !important;
+  }
+  .footer {
+    position: relative !important;
+    bottom: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 24px !important;
+    padding-top: 8px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
 </style>
 </head>
 <body>
@@ -448,7 +493,7 @@ h2,h3,h4 { break-after:avoid; page-break-after:avoid; }
       </div>
       <div class="cover-meta">
         <div class="meta-item"><div class="meta-key">Project</div><div class="meta-val">Sentinel AIOps</div></div>
-        <div class="meta-item"><div class="meta-key">Stack</div><div class="meta-val">Python � FastAPI � LangGraph � LightGBM � SQLite � React/Vite</div></div>
+        <div class="meta-item"><div class="meta-key">Stack</div><div class="meta-val">• Python •FastAPI • LangGraph • LightGBM • SQLite  • React/Vite</div></div>
         <div class="meta-item"><div class="meta-key">Compiled</div><div class="meta-val">August 2026</div></div>
       </div>
     </div>
